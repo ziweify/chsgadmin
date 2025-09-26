@@ -20,4 +20,5 @@ yarn-error.log
 /upload
 .user.ini
 storage/logs/laravel-2025-09-26.log
-storage/logs、
+storage/logs/
+storage/logs/laravel-2025-09-26.log
