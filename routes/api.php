@@ -31,6 +31,11 @@ Route::prefix('api')->group(function (){
             Route::get('/getOtherConfig','Common\ComController@getOtherConfig');//获取其他配置信息
             Route::get('/getGameListByIfok','Common\ComController@getGameListByIfok');//获取游戏列表
             Route::get('/getRoomConfig','Common\ComController@getRoomConfig');//获取房间配置
+            
+            // 打单中心相关接口
+            Route::get('/getBettingCenterRecords','Member\app\CommonController@getBettingCenterRecords');//获取打单中心记录
+            Route::get('/getTodayBettingFailCount','Member\app\CommonController@getTodayBettingFailCount');//获取今日失败次数
+            Route::post('/increaseBettingFailCount','Member\app\CommonController@increaseBettingFailCount');//增加失败次数
         });
     });
     Route::prefix('member')->group(function (){

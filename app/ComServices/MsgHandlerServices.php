@@ -261,6 +261,9 @@ class MsgHandlerServices
         }
         $betres = (new GameServices())->bet($result['data'],$game,$user,$userpatt,$gid,$uid,$ruid,$ip);
         if($betres['code'] == 0){
+            // 投注失败，增加失败次数统计
+            $this->increaseBettingFailCount($ruid, $uid, $gid);
+            
             $chatData['content'] = $betres['msg'];
             ComServices::saveMsg($chatListKey,$chatData,$ruid,$gid);
             return ComServices::sendMsg($server,$fds,$eventType,$chatData,$gid);
@@ -507,5 +510,30 @@ class MsgHandlerServices
         
         // 用<br>连接各组，形成最终的简洁显示格式
         return '<br>' . implode('<br>', $lines);
+    }
+    
+    /**
+     * 增加投注失败次数统计
+     * @param int $ruid 房间ID
+     * @param int $uid 用户ID  
+     * @param int $gid 游戏ID
+     */
+    private function increaseBettingFailCount($ruid, $uid, $gid)
+    {
+        try {
+            // 缓存key，按日期区分
+            $cacheKey = "betting_fail_count:{$ruid}:{$uid}:{$gid}:" . date('Y-m-d');
+            $currentCount = \Illuminate\Support\Facades\Cache::get($cacheKey, 0);
+            
+            // 增加失败次数，缓存到第二天6点
+            $tomorrow6am = strtotime(date('Y-m-d 06:00:00', strtotime('+1 day')));
+            $expiresAt = $tomorrow6am - time();
+            
+            \Illuminate\Support\Facades\Cache::put($cacheKey, $currentCount + 1, $expiresAt);
+            
+            \Illuminate\Support\Facades\Log::info("投注失败次数增加: {$cacheKey} -> " . ($currentCount + 1));
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error("增加投注失败次数失败: " . $e->getMessage());
+        }
     }
 }

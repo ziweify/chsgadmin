@@ -258,4 +258,101 @@ class CommonController
         Link::where('token',$qtoken)->update(['use_count'=>$use_count,'count'=>$link['count']-1]);
         return AppJson::success('登陆成功',$result);
     }
+
+    /**
+     * 获取打单中心记录
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getBettingCenterRecords(Request $request)
+    {
+        $gid = $request->input('gid');
+        $uid = $request->uid;
+        $ruid = $request->ruid;
+        
+        // 生成更丰富的示例数据
+        $records = [
+            [
+                'period' => '91',
+                'gameName' => '宾果',
+                'betCount' => 8,
+                'createdTime' => date('H:i:s'),
+                'status' => '成功'
+            ],
+            [
+                'period' => '90',
+                'gameName' => '宾果',
+                'betCount' => 5,
+                'createdTime' => date('H:i:s', time() - 300),
+                'status' => '失败',
+                'failReason' => '余额不足'
+            ],
+            [
+                'period' => '89',
+                'gameName' => '宾果',
+                'betCount' => 3,
+                'createdTime' => date('H:i:s', time() - 600),
+                'status' => '成功'
+            ],
+            [
+                'period' => '88',
+                'gameName' => '宾果',
+                'betCount' => 12,
+                'createdTime' => date('H:i:s', time() - 900),
+                'status' => '失败',
+                'failReason' => '投注金额超限'
+            ],
+            [
+                'period' => '87',
+                'gameName' => '宾果',
+                'betCount' => 6,
+                'createdTime' => date('H:i:s', time() - 1200),
+                'status' => '成功'
+            ]
+        ];
+        
+        return AppJson::success('获取成功', ['records' => $records]);
+    }
+    
+    /**
+     * 获取今日打单失败次数
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getTodayBettingFailCount(Request $request)
+    {
+        $gid = $request->input('gid');
+        $uid = $request->uid;
+        $ruid = $request->ruid;
+        
+        // 从Redis或缓存中获取今日失败次数
+        $cacheKey = "betting_fail_count:{$ruid}:{$uid}:{$gid}:" . date('Y-m-d');
+        $failCount = Cache::get($cacheKey, 0);
+        
+        return AppJson::success('获取成功', ['failCount' => $failCount]);
+    }
+    
+    /**
+     * 增加打单失败次数
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function increaseBettingFailCount(Request $request)
+    {
+        $gid = $request->input('gid');
+        $uid = $request->uid;
+        $ruid = $request->ruid;
+        
+        // 缓存key，按日期区分
+        $cacheKey = "betting_fail_count:{$ruid}:{$uid}:{$gid}:" . date('Y-m-d');
+        $currentCount = Cache::get($cacheKey, 0);
+        
+        // 增加失败次数，缓存到第二天6点
+        $tomorrow6am = strtotime(date('Y-m-d 06:00:00', strtotime('+1 day')));
+        $expiresAt = $tomorrow6am - time();
+        
+        Cache::put($cacheKey, $currentCount + 1, $expiresAt);
+        
+        return AppJson::success('更新成功', ['failCount' => $currentCount + 1]);
+    }
 }
