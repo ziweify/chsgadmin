@@ -705,49 +705,26 @@ class MangeCenterController
         if(!is_numeric($kmoney) && $kmoney <= 0){
             return AppJson::error('金额错误');
         }
-        $db = DB::connection();
-        $db->beginTransaction();
-        try {
-            $user = User::where(['ruid'=>$ruid,'userid'=>$userid])->select(['kmoney','kmaxmoney'])->lockForUpdate()->first();
-            if(empty($user)){
-                $db->rollBack();
-                return AppJson::error('用户不存在');
-            }
-            if($type == 2 && $user->kmoney < $kmoney){
-                $db->rollBack();
-                return AppJson::error('余额不足，可用余额：'.ComFunc::pr2($user->kmoney));
-            }
-            //添加资金记录//
-            $savemoneylog = [];
-            $savemoneylog['ruid'] = $ruid;
-            $savemoneylog['userid'] = $userid;
-            $savemoneylog['beforeMoney'] = $user->kmoney;
-            $savemoneylog['money'] = $kmoney;
-            $savemoneylog['operateType'] = $type == 1 ? 1 : 2;
-            $savemoneylog['moneyType'] = $type == 1 ? 3 : 4;
-            $savemoneylog['operUserid'] = $request->uid;
-            $savemoneylog['time'] = time();
-            $savemoneylog['dates'] = strtotime(ComFunc::getthisdateend());
-            $savemoneylog['bz'] = '管理操作';
-            MoneyLog::create($savemoneylog);
-            $update = [];
-            if($type == 1){
-                $update['kmoney'] = $user->kmoney + $kmoney;
-                $update['kmaxmoney'] = $user->kmaxmoney + $kmoney;
-            }else{
-                $update['kmoney'] = $user->kmoney - $kmoney;
-                $update['kmaxmoney'] = $user->kmaxmoney - $kmoney;
-            }
-            User::where(['ruid'=>$ruid,'userid'=>$userid])->update($update);
-            //添加日志
-            $tstr = $type == 1 ? '上分' : '下分';
-            ComFunc::adduseredit(['ruid'=>$ruid,'userid'=>$userid,'mduserid'=>$ruid,'sonuid'=>$request->uid,'action'=>$tstr.$kmoney,'old'=>'','new'=>'','moduleKey'=>'platform','functionKey'=>'user','actionKey'=>'update']);
-            $db->commit();
-            return AppJson::success('操作成功');
-        }catch (\Exception $e){
-            $db->rollBack();
-            return AppJson::error('操作失败');
+        // 使用UserService的统一余额操作方法，确保并发安全
+        $logArr = [
+            'moneyType' => $type == 1 ? 3 : 4,
+            'gid' => 0,
+            'qishu' => 0,
+            'operUserid' => $request->uid,
+            'bz' => '管理操作'
+        ];
+        
+        $operateType = $type; // type 1增加 2减少，与operBalance保持一致
+        $result = UserService::operBalance($userid, $ruid, $kmoney, 1, $operateType, $logArr);
+        if($result['code'] == 0){
+            return AppJson::error($result['msg'] ?? '余额操作失败');
         }
+        
+        //添加日志
+        $tstr = $type == 1 ? '上分' : '下分';
+        ComFunc::adduseredit(['ruid'=>$ruid,'userid'=>$userid,'mduserid'=>$ruid,'sonuid'=>$request->uid,'action'=>$tstr.$kmoney,'old'=>'','new'=>'','moduleKey'=>'platform','functionKey'=>'user','actionKey'=>'update']);
+        
+        return AppJson::success('操作成功');
     }
 
     /**

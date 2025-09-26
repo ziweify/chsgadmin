@@ -416,34 +416,41 @@ class UserService
      * @throws \Throwable
      */
     public static function operBalance($userid,$ruid,$money,$iswritelog = 1,$operateType = 1,$logArr = [],$libmodel = null,$bets = []){
-        $retryCount = 10; // 设置重试次数
+        $retryCount = 5; // 减少重试次数，避免长时间等待
         $db = Db::connection();
         do {
             try {
                 // 启动数据库事务
                 $db->beginTransaction();
-                // 获取当前余额并锁定选定的行
-                $user = User::where(['userid'=>$userid,'ruid'=>$ruid])->select(['kmoney','version'])->first();
+                // 获取当前余额并锁定选定的行 - 增加行锁和版本控制双重保护
+                $user = User::where(['userid'=>$userid,'ruid'=>$ruid])->lockForUpdate()->select(['kmoney','version'])->first();
+                if (empty($user)) {
+                    throw new \Exception('用户不存在');
+                }
                 $version = $user['version'];
-                $update = [];
+                $currentBalance = $user['kmoney'];
+                
                 // 根据类型更新余额
                 if ($operateType == 1) {//增加
-                    $newBalance = $user['kmoney'] + $money; // 示例：加 100
+                    $newBalance = $currentBalance + $money;
                 } elseif ($operateType == 2) {//减少
-                    //判断余额是否足够
-                    if($money > $user['kmoney']){
+                    //再次检查余额是否足够（防止并发情况下余额变化）
+                    if($money > $currentBalance){
                         throw new \Exception('余额不足');
                     }
-                    $newBalance = $user['kmoney'] - $money; // 示例：减 100
+                    $newBalance = $currentBalance - $money;
                 } else {
                     throw new \Exception('余额操作失败');
                 }
+                
+                $update = [];
                 $update['kmoney'] = $newBalance;
                 $update['version'] = $version + 1;
-                // 更新余额
+                
+                // 使用版本号更新余额，确保并发安全
                 $res = User::where(['userid'=>$userid,'ruid'=>$ruid,'version'=>$version])->update($update);
                 if($res <= 0){
-                    throw new \Exception('余额更新失败');
+                    throw new \Exception('余额更新失败，版本冲突');
                 }
                 // 写入日志（如果需要）
                 if ($iswritelog == 1) {
@@ -474,11 +481,23 @@ class UserService
                 Log::info("余额更新失败：".$e->getMessage().$e->getTraceAsString());
                 // 发生异常时回滚事务
                 $db->rollBack();
-                if ($retryCount <= 0 || !str_contains($e->getMessage(), 'Lock wait timeout exceeded')) {
-                    return ['code'=>0]; // 不是锁超时异常或者重试次数已用完，则抛出异常
+                
+                // 判断是否需要重试
+                $isRetryableError = str_contains($e->getMessage(), 'Lock wait timeout exceeded') || 
+                                   str_contains($e->getMessage(), 'Deadlock') ||
+                                   str_contains($e->getMessage(), '版本冲突') ||
+                                   str_contains($e->getMessage(), 'Try restarting transaction');
+                
+                if ($retryCount <= 0 || !$isRetryableError) {
+                    // 对于余额不足等业务异常，直接返回错误，不重试
+                    if (str_contains($e->getMessage(), '余额不足') || str_contains($e->getMessage(), '用户不存在')) {
+                        return ['code'=>0, 'msg'=>$e->getMessage()];
+                    }
+                    return ['code'=>0, 'msg'=>'系统繁忙，请稍后重试'];
                 }
                 $retryCount--; // 减少重试次数
-                //usleep(rand(10000,50000)); // 等待一段时间后重试
+                // 随机等待时间，避免惊群效应
+                usleep(rand(50000, 200000)); // 50-200ms随机延迟
             }
         } while (true);
         return ['code'=>1,'balance'=>$newBalance];

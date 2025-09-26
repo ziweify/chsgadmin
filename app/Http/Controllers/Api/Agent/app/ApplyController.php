@@ -124,51 +124,43 @@ class ApplyController
         if($apply['status'] != 1){
             return AppJson::error('申请已处理');
         }
-        $db = DB::connection();
-        $db->beginTransaction();
+        // 先获取基础数据，减少事务中的查询时间
         $roomConfig = Userroom::where('userid',$ruid)->select(['roomNickname','roomAvatar','userid'])->first();
         $name = Userreg::where('userid',$apply['userid'])->value('name');
+        
+        $db = DB::connection();
+        $db->beginTransaction();
         try{
             Apply::where(['id'=>$id,'ruid'=>$ruid])->update(['status'=>$status,'operator'=>$uid,'reviewTime'=>time()]);
+            
+            $chatData = null; // 用于事务外发送消息
+            $gid = $apply['relationid'];
+            
             //通过
             if($apply['applyType'] == 2 || $apply['applyType'] == 3){//上分或者下分
                 if($status == 3){//已通过
-                    $user = User::where(['userid'=>$apply['userid'],'ruid'=>$ruid])->select(['kmoney','kmaxmoney'])->lockForUpdate()->first();
-                    $beforeMoney = $user->kmoney;
-                    $update = [];
-                    if($apply['applyType'] == 2){//上分
-                        $update['kmoney'] = $user->kmoney + $apply['value'];
-                        $update['kmaxmoney'] = $user->kmaxmoney + $apply['value'];
-                    }else{
-                        //交易当前余额是否足够下分
-                        if($user->kmoney < $apply['value']){
-                            $db->rollBack();
-                            return AppJson::error('当前余额不足下分');
-                        }
-                        $update['kmoney'] = $user->kmoney - $apply['value'];
-                        $update['kmaxmoney'] = $user->kmaxmoney - $apply['value'];
+                    // 使用UserService的统一余额操作方法，确保并发安全
+                    $operateType = ($apply['applyType'] == 2) ? 1 : 2; // 1增加 2减少
+                    $logArr = [
+                        'moneyType' => $apply['applyType'] == 2 ? 3 : 4,
+                        'gid' => 0,
+                        'qishu' => 0
+                    ];
+                    
+                    $result = UserService::operBalance($apply['userid'], $ruid, $apply['value'], 1, $operateType, $logArr);
+                    if($result['code'] == 0){
+                        $db->rollBack();
+                        return AppJson::error($result['msg'] ?? '余额操作失败');
                     }
-                    User::where(['userid'=>$apply['userid'],'ruid'=>$ruid])->update($update);
-                    //添加资金记录
-                    $savemoneylog = [];
-                    $savemoneylog['ruid'] = $ruid;
-                    $savemoneylog['userid'] = $apply['userid'];
-                    $savemoneylog['beforeMoney'] = $beforeMoney;
-                    $savemoneylog['money'] = $apply['value'];
-                    $savemoneylog['operateType'] = $apply['applyType'] == 2 ? 1 : 2;
-                    $savemoneylog['moneyType'] = $apply['applyType'] == 2 ? 3 : 4;
-                    $savemoneylog['gid'] = 0;
-                    $savemoneylog['qishu'] = 0;
-                    $savemoneylog['time'] = time();
-                    $savemoneylog['dates'] = strtotime(ComFunc::getthisdateend());
-                    MoneyLog::create($savemoneylog);
-                    //发送websocket消息
-                    $kmoney = ComFunc::pr2($update['kmoney']);
+                    
+                    $kmoney = ComFunc::pr2($result['balance']);
                     if($apply['applyType'] == 2) {
                         $msg = "您的上分申请已通过,上分金额{$apply['value']},当前余额{$kmoney}";
                     }else{
                         $msg = "您的下分申请已通过,下分金额{$apply['value']},当前余额{$kmoney}";
                     }
+                    
+                    // 准备聊天消息数据，但在事务外发送
                     $chatData = [
                         'type' => 'game',
                         'chatType' => 'text',
@@ -179,18 +171,13 @@ class ApplyController
                         'time'=>time(),
                         'content'=>$msg
                     ];
-                    $gid = $apply['relationid'];
-                    $chatListKey = WebsocketConstants::$chatListKeyPre.':'.$ruid.':'.$gid;
-                    ComServices::saveMsg($chatListKey,$chatData,$ruid,$gid);
-                    $fds = ComServices::getRoomAllFd($ruid);
-                    ComServices::sendMsg(null,$fds,'gamechat',$chatData,$gid,['getBalanceInfo'=>1]);
                 }elseif($status == 2){//拒绝
-                    //发送websocket消息
                     if($apply['applyType'] == 2) {
                         $msg = "您的上分申请已被拒绝,上分金额{$apply['value']}";
                     }else{
                         $msg = "您的下分申请已被拒绝,下分金额{$apply['value']}";
                     }
+                    // 准备聊天消息数据，但在事务外发送
                     $chatData = [
                         'type' => 'game',
                         'chatType' => 'text',
@@ -201,11 +188,6 @@ class ApplyController
                         'time'=>time(),
                         'content'=>$msg
                     ];
-                    $gid = $apply['relationid'];
-                    $chatListKey = WebsocketConstants::$chatListKeyPre.':'.$ruid.':'.$gid;
-                    ComServices::saveMsg($chatListKey,$chatData,$ruid,$gid);
-                    $fds = ComServices::getRoomAllFd($ruid);
-                    ComServices::sendMsg(null,$fds,'gamechat',$chatData,$gid,['getBalanceInfo'=>1]);
                 }
             }elseif ($apply['applyType'] == 1){//入群
                 if($status == 3){//已通过
@@ -214,6 +196,15 @@ class ApplyController
                 }
             }
             $db->commit();
+            
+            // 事务提交成功后，发送聊天消息（避免在事务中进行非关键操作）
+            if($chatData !== null){
+                $chatListKey = WebsocketConstants::$chatListKeyPre.':'.$ruid.':'.$gid;
+                ComServices::saveMsg($chatListKey,$chatData,$ruid,$gid);
+                $fds = ComServices::getRoomAllFd($ruid);
+                ComServices::sendMsg(null,$fds,'gamechat',$chatData,$gid,['getBalanceInfo'=>1]);
+            }
+            
             return AppJson::success('操作成功');
         }catch (\Exception $e){
             $db->rollBack();
