@@ -59,7 +59,9 @@ class MsgHandlerServices
         $userpatt = Userpatt::where(['userid'=>$ruid,'gid'=>$gid,'ifopen'=>1,'ifok'=>1])->select(['patt', 'fpseconds','thisqishu','upqishu'])->first();
         //向所有在线用户发送消息
         $fds = ComServices::getRoomAllFd($ruid);
-        ComServices::sendMsg($server,$fds,$eventType,$chatData,$gid,['msgid'=>$msgid]);
+        // 如果是普通聊天消息，使用send事件类型返回以确保前端正确接收响应
+        $responseEventType = ($eventType === 'gamechat') ? 'send' : $eventType;
+        ComServices::sendMsg($server,$fds,$responseEventType,$chatData,$gid,['msgid'=>$msgid]);
         if($userreg['type'] == 1){//如果是房主不处理下面任何操作
             return true;
         }
