@@ -28,6 +28,9 @@ Route::get('/test-simple', function() {
     return response()->json(['message' => 'Simple test works', 'time' => time()]);
 });
 
+//测试下注验证
+Route::get('/test-betting-validation', 'Manage\TestBettingValidation@test');
+
 //测试URL生成
 Route::get('/test-url', function(Request $request) {
     return response()->json([

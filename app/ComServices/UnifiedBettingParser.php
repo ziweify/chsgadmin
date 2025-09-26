@@ -51,13 +51,22 @@ class UnifiedBettingParser extends CmdBase
     }
     
     /**
-     * 清理输入内容
+     * 清理输入内容并验证格式严格性
      */
     private function cleanInput($content)
     {
-        // 移除多余空格和特殊字符
+        // 移除空格（这是唯一允许的容错）
         $content = trim($content);
         $content = str_replace([' ', '　', '\t'], '', $content);
+        
+        // 严格验证：只允许数字、中文玩法字符、逗号和梭哈
+        // 允许的字符：数字0-9、中文玩法字符、逗号、梭哈
+        $allowedPattern = '/^[0-9大小单双龙虎尾合福禄寿喜梭哈,，]+$/u';
+        
+        if (!preg_match($allowedPattern, $content)) {
+            throw new \Exception('格式不正确，包含不允许的字符');
+        }
+        
         return $content;
     }
     
@@ -76,16 +85,11 @@ class UnifiedBettingParser extends CmdBase
      */
     private function parseSingleSegment($segment, $userBalance)
     {
-        // 提取金额
-        $amountInfo = $this->extractAmount($segment);
-        $amount = $amountInfo['amount'];
-        $betContent = $amountInfo['content'];
-        
-        // 词法分析：提取位置、玩法和金额的组合
-        $tokens = $this->tokenize($betContent);
+        // 词法分析：提取位置、玩法和金额的组合（tokenize内部会处理金额提取）
+        $tokens = $this->tokenize($segment);
         
         // 语法分析：将词法单元组合成投注项
-        $bets = $this->parse($tokens, $amount, $userBalance);
+        $bets = $this->parse($tokens, $userBalance);
         
         return $this->CmdResult(count($bets), $bets, '', false);
     }
@@ -107,15 +111,41 @@ class UnifiedBettingParser extends CmdBase
     
     /**
      * 词法分析：将输入拆分成词法单元（数字+玩法为一个作用域）
+     * 严格验证格式，确保完全匹配预期模式
      */
     private function tokenize($content)
     {
         $tokens = [];
         
-        // 使用正则表达式提取数字+玩法的组合
-        $pattern = '/(\d+)([^0-9]+)/u';
+        // 严格的正则表达式：数字+玩法组合，最后必须是数字或梭哈
+        $strictPattern = '/^((?:\d+[大小单双龙虎尾合福禄寿喜]+)+)(\d+|梭哈)$/u';
         
-        if (preg_match_all($pattern, $content, $matches, PREG_SET_ORDER)) {
+        if (!preg_match($strictPattern, $content)) {
+            throw new \Exception('格式不正确，不符合预期的下注格式');
+        }
+        
+        // 提取金额部分
+        if (preg_match('/(\d+|梭哈)$/', $content, $amountMatch)) {
+            $amount = $amountMatch[1];
+            $betContent = substr($content, 0, -strlen($amount));
+        } else {
+            throw new \Exception('未找到有效金额');
+        }
+        
+        // 解析数字+玩法的组合
+        $pattern = '/(\d+)([大小单双龙虎尾合福禄寿喜]+)/u';
+        
+        if (preg_match_all($pattern, $betContent, $matches, PREG_SET_ORDER)) {
+            // 验证是否完全匹配（没有剩余字符）
+            $reconstructed = '';
+            foreach ($matches as $match) {
+                $reconstructed .= $match[1] . $match[2];
+            }
+            
+            if ($reconstructed !== $betContent) {
+                throw new \Exception('格式不正确，包含无法识别的字符组合');
+            }
+            
             foreach ($matches as $match) {
                 $positions = $match[1]; // 位置数字，如 "12", "45", "3"
                 $playsText = $match[2];  // 玩法文本，如 "大", "小单", "尾大龙"
@@ -123,9 +153,12 @@ class UnifiedBettingParser extends CmdBase
                 $tokens[] = [
                     'type' => 'POSITION_PLAYS', 
                     'positions' => $positions,
-                    'plays' => $playsText
+                    'plays' => $playsText,
+                    'amount' => $amount
                 ];
             }
+        } else {
+            throw new \Exception('格式不正确，无法解析下注内容');
         }
         
         return $tokens;
@@ -134,7 +167,7 @@ class UnifiedBettingParser extends CmdBase
     /**
      * 语法分析：将词法单元解析成投注项（每个数字+玩法为独立作用域）
      */
-    private function parse($tokens, $amount, $userBalance)
+    private function parse($tokens, $userBalance)
     {
         $bets = [];
         
@@ -142,6 +175,7 @@ class UnifiedBettingParser extends CmdBase
             if ($token['type'] === 'POSITION_PLAYS') {
                 $positions = str_split($token['positions']); // 将数字字符串拆分为位置数组
                 $playsText = $token['plays']; // 玩法文本
+                $amount = $token['amount']; // 金额
                 
                 // 从玩法文本中提取所有玩法
                 $plays = $this->extractPlays($playsText);
@@ -160,8 +194,8 @@ class UnifiedBettingParser extends CmdBase
             }
         }
         
-        // 处理梭哈
-        if ($amount === '梭哈') {
+        // 处理梭哈（取第一个token的金额用于判断）
+        if (!empty($tokens) && $tokens[0]['amount'] === '梭哈') {
             $this->distributeSuohaAmount($bets, $userBalance);
         }
         

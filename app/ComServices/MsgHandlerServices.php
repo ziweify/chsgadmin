@@ -279,21 +279,8 @@ class MsgHandlerServices
                 $msg_content = str_replace("{余额}",$betres['balance'],$msg_content);
                 //$msgh = $msg_content;
                 if($roomConfig['orderSummaryDisplay'] == 0){//订单内容不简化
-                    $msgh = '';//"<p>【{$game['gname']}-{$userpatt['thisqishu']}】下单成功</p>";
-                    foreach ($map as $pn=>$cons){
-                        $msgh .= "<p>".$pn."[";
-                        foreach ($cons as $c){
-                            if($c != end($cons)){
-                                $msgh .= $c['play'].'/'.$c['amount'].' ';
-                            }else{
-                                $msgh .= $c['play'].'/'.$c['amount'];
-                            }
-                        }
-                        $msgh .= "]</p>";
-                    }
-                    //$msgh .= "<br>\n";
-                    //$msgh .= "<p>使用:{$betres['zje']}</p>";
-                    //$msgh .= "<p>剩余:{$betres['balance']}</p>";
+                    // 使用新的简洁格式
+                    $msgh = $this->formatBetResultCompact($map);
                     $msg_content = str_replace("{账单}",$msgh,$msg_content);
                     $msg_content = str_replace('<br><br>','<br>',$msg_content);
                     //</p><br>替换为</p>
@@ -451,5 +438,74 @@ class MsgHandlerServices
         $ruid = $data['ruid'];$uid = $data['uid'];$fd = $frame->fd;
         $result = UserService::getBalanceInfo($uid,$ruid);
         ComServices::sendMsg($server,$fd,$data['eventType'],$result,0);
+    }
+
+    /**
+     * 格式化下注结果为简洁格式
+     * 将原格式：平码一[大/100]平码二[大/100]平码三[合单/100]平码四[单/100 小/100]特码[单/100 小/100]和值[龙/100]
+     * 转换为：1大/2大|100*2<br>3合单/4单/4小/5单/5小|100*5<br>和值龙|100*1
+     * 
+     * 新格式要求：
+     * - 同金额的投注项用/分隔
+     * - 每行末尾显示|金额*注数
+     * - 不同金额分行显示
+     */
+    private function formatBetResultCompact($map) {
+        // 按金额分组投注项
+        $amountGroups = [];
+        
+        // 位置名称映射为简短格式
+        $positionMap = [
+            '平码一' => '1',
+            '平码二' => '2', 
+            '平码三' => '3',
+            '平码四' => '4',
+            '特码' => '5',
+            '前五和值' => '和值',
+            '冠军' => '1',
+            '第一名' => '1',
+            '亚军' => '2',
+            '第二名' => '2',
+            '第三名' => '3',
+            '第四名' => '4',
+            '第五名' => '5',
+            '第六名' => '6',
+            '第七名' => '7',
+            '第八名' => '8',
+            '第九名' => '9',
+            '第十名' => '10',
+            '冠亚和' => '冠亚和'
+        ];
+        
+        // 遍历所有投注项，按金额分组
+        foreach ($map as $positionName => $bets) {
+            $shortPosition = $positionMap[$positionName] ?? $positionName;
+            
+            foreach ($bets as $bet) {
+                $amount = $bet['amount'];
+                $play = $bet['play'];
+                
+                if (!isset($amountGroups[$amount])) {
+                    $amountGroups[$amount] = [];
+                }
+                
+                $amountGroups[$amount][] = $shortPosition . $play;
+            }
+        }
+        
+        // 按金额排序（从高到低）
+        krsort($amountGroups);
+        
+        // 生成格式化字符串
+        $lines = [];
+        foreach ($amountGroups as $amount => $items) {
+            $betCount = count($items);
+            // 新格式：投注项用/分隔，末尾显示|金额*注数
+            $line = implode('/', $items) . '|' . $amount . '*' . $betCount;
+            $lines[] = $line;
+        }
+        
+        // 用<br>连接各组，形成最终的简洁显示格式
+        return '<br>' . implode('<br>', $lines);
     }
 }

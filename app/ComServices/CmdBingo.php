@@ -21,7 +21,7 @@ class CmdBingo extends CmdBase
     public function commandBetting($content, $amount_all = 0, $json = false)
     {
         try {
-            // 优先使用统一词法分析引擎
+            // 使用严格的统一词法分析引擎
             $unifiedParser = new UnifiedBettingParser();
             $result = $unifiedParser->parseBetting($content, $amount_all);
             
@@ -29,10 +29,11 @@ class CmdBingo extends CmdBase
                 return $this->CmdResult($result['status'], $result['data'], $result['msg'], $json);
             }
             
-            // 如果统一解析失败，尝试原有解析方案作为备用
-            return $this->legacyCommandBetting($content, $amount_all, $json);
+            // 不再回退到旧解析器，严格按照新规则执行
+            return $this->CmdResult(0, [], '格式不正确，请检查输入格式', $json);
             
         } catch (\Exception $e) {
+            // 对于格式验证错误，直接返回错误信息，不尝试旧解析器
             return $this->CmdResult(-1, [], $e->getMessage(), $json);
         }
     }
