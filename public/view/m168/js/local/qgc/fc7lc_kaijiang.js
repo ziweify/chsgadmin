@@ -1,0 +1,1 @@
+var lotCode=lotCode.fcqlc,boxId="#headerData",headMethod={};headMethod.loadHeadData=function(e){setTimeout(function(){pubmethod.ajaxHead.qgc(e)},config.kaiCountTimes)},headMethod.headData=function(e,a){pubmethod.creatHead.qgc(e,a),tools.resetRed(a)};

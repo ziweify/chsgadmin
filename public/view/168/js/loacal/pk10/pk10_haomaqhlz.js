@@ -1,0 +1,370 @@
+function tongjiCount(t) {
+    var e = $(t), a = e.parent().find(".txtNum").val(), n = e.parent().find(".secType").val(),
+        s = e.parent().parent().find(".ifds").text(), i = "";
+    "单双" == s ? i = 1 == n ? "单" : "双" : "大小" == s ? i = 1 == n ? "大" : "小" : "龙虎" == s ? i = 1 == n ? "龙" : "虎" : "前后" == s && (i = 1 == n ? "前" : "后"), e.parent().parent().parent().parent().parent().find(".tablebox").html();
+    var l = 0;
+    e.parent().parent().parent().parent().parent().find(".tablebox").children().each(function (t) {
+        var e = $(this).find("p").length;
+        $(this).css({
+            "background-color": "",
+            color: "#666666"
+        }), e >= a && i == $(this).children("p").html() && ($(this).css({
+            "background-color": "rgb(253, 173, 86)",
+            color: "#fff"
+        }), l += 1)
+    }), e.parent().parent().find(".sec_count").text(l)
+}
+
+function doCheck(t, e) {
+    var a = $("." + t + "  .item_" + e + " .lz_table_head td .txtNum").val(),
+        n = $("." + t + "  .item_" + e + " .lz_table_head td .secType").val(), s = Number("0" + a), i = 0;
+    $("." + t + "  .item_" + e + " .lz_table_con td").each(function () {
+        $(this).removeClass("shaw"), $(this).children("p").html() == n && $(this).children("p").length >= s && ($(this).removeAttr("style"), $(this).addClass("shaw"), i++)
+    }), $("." + t + "  .item_" + e + " .lz_table_head td .sec_count").html(i), $("." + t + "  .item_" + e + "  .lz_table_head td .count").each(function () {
+        var a = $(this).attr("data"), n = 0;
+        $("." + t + "  .item_" + e + " .lz_table_con td p").each(function () {
+            $(this).html() == a && n++
+        }), $(this).html(n)
+    });
+    var l = 0, o = $("." + t + "  .item_" + e + " .lz_table_con td:first-child p:last ");
+    o.css("font-weight", "bold");
+    var c = setTimeout(function () {
+        o.fadeOut(100).fadeIn(100), 1 == ++l && (c = setInterval(arguments.callee, 600)), 5 == l && window.clearInterval(c)
+    }, 1e3)
+}
+
+function excutenum() {
+    return Math.floor(10 * Math.random())
+}
+
+function excutenum1_6() {
+    return Math.floor(6 * Math.random())
+}
+
+function sendj(t) {
+    var e = setTimeout("sendj()", 100), a = "";
+    lilength == t.length - 1 && (a = "li_after", clearTimeout(e), lilength = 0), $("#jnumber").append("<li class='nub" + t[lilength] + " " + a + "'></li>"), lilength++
+}
+
+function excutek() {
+    for (var t = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], e = 0, a = t.length; e < a; e++) {
+        var n = Math.floor(Math.random() * t.length);
+        res[e] = t[n], t.splice(n, 1)
+    }
+    for (var s = 0, a = jnumber.length; s < a; s++) jnumber[s].className = "nub" + res[s], s == a - 1 && (jnumber[s].style.marginRight = "0");
+    time++;
+    var i = setTimeout("excutek()", 200);
+    if (time >= 25) {
+        clearTimeout(i), $("#jnumber").html("");
+        sendj()
+    }
+}
+
+function loadotherData() {
+    listData(), $(".listheadrl span").siblings().removeClass("checked"), $("#today").addClass("checked"), $(".jinri").text("今天")
+}
+
+function listData(t) {
+    t = void 0 == t ? "" : t, $.ajax({
+        url: urlbublic + "pks/queryFbRoadBead.do?date=" + t,
+        type: "GET",
+        data: {lotCode: lotCode},
+        success: function (t) {
+            createHtmlList(t)
+        },
+        error: function (t) {
+            setTimeout(function () {
+                loadotherData()
+            }, config.listTime), config.ifdebug
+        }
+    })
+}
+
+function repeatGetData(t) {
+    $.ajax({
+        url: urlbublic + "pks/getFbRoadBeadStateByIssue.do?preIssue=" + t,
+        type: "GET",
+        data: {lotCode: lotCode},
+        success: function (t) {
+            createHtmlGetData(t)
+        },
+        error: function (t) {
+            config.ifdebug
+        }
+    })
+}
+
+function parseTonum(t) {
+    return 1 * t.charAt(0) <= 0 ? t.charAt(1) : t
+}
+
+function loadTodayData(t) {
+}
+
+function minci(t, e) {
+    if ("rank" == e) switch (1 * t) {
+        case 1:
+            return "冠军";
+        case 2:
+            return "亚军";
+        case 3:
+            return "三";
+        case 4:
+            return "四";
+        case 5:
+            return "五";
+        case 6:
+            return "六";
+        case 7:
+            return "七";
+        case 8:
+            return "八";
+        case 9:
+            return "九";
+        case 10:
+            return "十";
+        case 11:
+            return "冠亚和"
+    } else if ("state" == e) switch (1 * t) {
+        case 1:
+            return "单";
+        case 2:
+            return "双";
+        case 3:
+            return "大";
+        case 4:
+            return "小";
+        case 5:
+            return "龙";
+        case 6:
+            return "虎"
+    }
+}
+
+function loadLongData(t) {
+    "object" != (void 0 === t ? "undefined" : _typeof(t)) ? data = JSON.parse(t) : (data = JSON.stringify(t), data = JSON.parse(data)), data = data.result.data, $("#cltxul").html("");
+    for (var e = 0, a = data.length; e < a; e++) {
+        var n = minci(data[e].rank, "rank"), s = minci(data[e].state, "state"),
+            i = data[e].count >= 5 ? "<span style='color:#f11821'>" + data[e].count + "</span>" : "<span>" + data[e].count + "</span>",
+            l = "<li>第<span>" + n + "</span>名：&nbsp;&nbsp;<span>" + s + "</span>&nbsp;&nbsp;" + i + "期</li>";
+        11 != data[e].rank && 1 != data[e].rank && 2 != data[e].rank || (l = "<li><span>" + n + "</span>：&nbsp;&nbsp;<span>" + s + "</span>&nbsp;&nbsp;" + i + "期</li>"), $("#cltxul").append(l)
+    }
+}
+
+function excuteAnimate(t, e) {
+    var e = e, a = (t = t).length, n = 0, s = $(e);
+    $(s).html("");
+    var i = setInterval(function () {
+        if (n < a) {
+            var e = "<li class='nub" + t[n] + "'><i style='font-size:10px'>" + t[n] + "</i></li>";
+            $(s).append(e), n++
+        } else clearInterval(i)
+    }, 100)
+}
+
+function getSystime() {
+    var t = new Date, e = t.getFullYear(), a = t.getMonth() + 1, n = t.getDate();
+    t.getDay(), t.getHours(), t.getMinutes(), t.getSeconds(), document.getElementById("Date");
+    return e + "-" + a + "-" + n
+}
+
+function clearinterval(t) {
+    clearInterval(intervalPk10)
+}
+
+function lmmsMcMethod(t, e) {
+    var a = $(e);
+    if (a.removeClass("hoverli"), "all" == t) (lmmssxmc = []).length >= 10 || $($("#lmms").find(".sinli")).each(function (t) {
+        $(this).hasClass("title") || $(this).hasClass("zhcheckall") || $(this).hasClass("zhclear") || (lmmssxmc.push($(this).find("i").text()), $(this).addClass("checked"))
+    }), config.ifdebug; else if ("zhclear" == t) $($("#lmms").find(".sinli")).each(function (t) {
+        $(this).hasClass("checked") && ($(this).removeClass("checked"), lmmssxmc = [])
+    }); else if ("zhchecksing" == t) {
+        var n = a.find("i").text();
+        if (a.hasClass("checked")) {
+            a.removeClass("checked");
+            for (var s = 0, i = lmmssxmc.length; s < i; s++) lmmssxmc[s] == n && lmmssxmc.splice(s, 1)
+        } else if (a.addClass("hoverli"), a.addClass("checked"), lmmssxmc.length <= 0) lmmssxmc.push(n); else {
+            for (var s = 0, i = lmmssxmc.length; s < i && lmmssxmc[s] != n; s++) ;
+            lmmssxmc.push(n)
+        }
+    }
+    config.ifdebug, $(lmmssxmc).each(function (t) {
+        $("#box" + $(this) + "4").show()
+    }), excuteZhmsSelect(lmmssxmc, ["4"])
+}
+
+function excuteZhmsSelect(t, e) {
+    for (var a = [], n = 0, s = t.length; n < s; n++) for (var i = 0, l = e.length; i < l; i++) a.push(t[n] + "" + e[i]);
+    config.ifdebug, $(".box .item").hide(), $(a).each(function (t) {
+        $("#box" + a[t]).show()
+    })
+}
+
+function dxmsMethod() {
+    $($("#zhms").find("li")).each(function (t) {
+        config.ifdebug
+    })
+}
+
+function lmmsMethod() {
+    $($("#zhms").find("li")).each(function (t) {
+        config.ifdebug
+    })
+}
+
+function typeOf(t, e) {
+    if ("rank" == e) switch (1 * t) {
+        case 1:
+            return "号码1";
+        case 2:
+            return "号码2";
+        case 3:
+            return "号码3";
+        case 4:
+            return "号码4";
+        case 5:
+            return "号码5";
+        case 6:
+            return "号码6";
+        case 7:
+            return "号码7";
+        case 8:
+            return "号码8";
+        case 9:
+            return "号码9";
+        case 10:
+            return "号码10";
+        case 11:
+            return "冠亚和"
+    } else switch (1 * t) {
+        case 1:
+            return "单双";
+        case 2:
+            return "大小";
+        case 3:
+            return "龙虎";
+        case 4:
+            return "前后"
+    }
+}
+
+function createHtmlList(t) {
+    var e = null;
+    "object" != (void 0 === t ? "undefined" : _typeof(t)) ? e = JSON.parse(t) : (e = JSON.stringify(t), e = JSON.parse(e));
+    var a = e.result.data;
+    tools.toggleNoTodayOpenTip({
+        data: a, nextCb: function (t) {
+            $(t).each(function (t) {
+                forRank(this.code, this)
+            })
+        }, contentClass: ".listcontent .box", insertClass: ".listcontent"
+    })
+}
+
+function createHtmlGetData(t) {
+    config.ifdebug;
+    var e = null;
+    "object" != (void 0 === t ? "undefined" : _typeof(t)) ? e = JSON.parse(t) : (e = JSON.stringify(t), e = JSON.parse(e));
+    var a = e.result.data;
+    $(a).each(function (t) {
+        forRankYibu(a[t].code, a[t])
+    })
+}
+
+function bgPostionX(t) {
+    t.find(".tablebox td").length % 2 != 0 ? t.find(".item_con").css({"background-positionX": "0"}) : t.find(".item_con").css({"background-positionX": "-29px"})
+}
+
+function forRank(t, e) {
+    var a = $("#box" + boxList(t, e));
+    a.find(".left_count").text(e.totals[0]), a.find(".right_count").text(e.totals[1]), a.find(".ifgj").text(typeOf(e.code, "rank")), a.find(".ifds").text(typeOf(e.state, "state"));
+    var n = "";
+    a.find(".tablebox").empty();
+    var s = e.roadBeads.length - jsCode.count;
+    $(e.roadBeads).each(function (t) {
+        if (!(t < s && -1 != $.inArray(lotCode, jsCode.code))) {
+            var i = "", l = a.find(".tablebox td:nth-child(1) p:last-child").text();
+            a.find(".tablebox td:nth-child(1) p:last-child").css({"font-weight": "normal"});
+            var o = e.state, c = "";
+            if ("1" == o ? c = 1 == e.roadBeads[t] ? "单" : "双" : "2" == o ? c = 1 == e.roadBeads[t] ? "大" : "小" : "3" == o ? c = 1 == e.roadBeads[t] ? "龙" : "虎" : "4" == o && (c = 1 == e.roadBeads[t] ? "前" : "后"), "双" != c && "龙" != c && "大" != c && "前" != c || (i = "style='color:#f1020b'"), l == c) n = "<p  " + i + ">" + c + "</p>", a.find(".tablebox td:nth-child(1)").append(n); else {
+                var r = "";
+                a.find(".tablebox td:nth-child(1)").hasClass("bgcolor") || (r = "bgcolor"), n = "<td class='" + r + "'><p " + i + ">" + c + "</p></td>", "" == l ? a.find(".tablebox").append(n) : a.find(".tablebox td:nth-child(1)").before(n)
+            }
+        }
+    }), bgPostionX(a);
+    var i = 0, l = a.find(".tablebox td:nth-child(1) p:last-child");
+    l.css({"font-weight": "bold"});
+    var o = setTimeout(function () {
+        l.fadeOut(100).fadeIn(100), 1 == ++i && (o = setInterval(arguments.callee, 600)), 5 == i && window.clearInterval(o)
+    }, 1e3)
+}
+
+function boxList(t, e) {
+    var a = "";
+    return 1 == t && 1 == e.state ? a = "" + t + e.state : 1 == t && 2 == e.state ? a = "" + t + e.state : 1 == t && 3 == e.state ? a = "" + t + e.state : 2 == t && 1 == e.state ? a = "" + t + e.state : 2 == t && 2 == e.state ? a = "" + t + e.state : 2 == t && 3 == e.state ? a = "" + t + e.state : 3 == t && 1 == e.state ? a = "" + t + e.state : 3 == t && 2 == e.state ? a = "" + t + e.state : 3 == t && 3 == e.state ? a = "" + t + e.state : 4 == t && 1 == e.state ? a = "" + t + e.state : 4 == t && 2 == e.state ? a = "" + t + e.state : 4 == t && 3 == e.state ? a = "" + t + e.state : 5 == t && 1 == e.state ? a = "" + t + e.state : 5 == t && 2 == e.state ? a = "" + t + e.state : 5 == t && 3 == e.state ? a = "" + t + e.state : 6 == t && 1 == e.state ? a = "" + t + e.state : 6 == t && 2 == e.state ? a = "" + t + e.state : 7 == t && 1 == e.state ? a = "" + t + e.state : 7 == t && 2 == e.state ? a = "" + t + e.state : 8 == t && 1 == e.state ? a = "" + t + e.state : 8 == t && 2 == e.state ? a = "" + t + e.state : 9 == t && 1 == e.state ? a = "" + t + e.state : 9 == t && 2 == e.state ? a = "" + t + e.state : 10 == t && 1 == e.state ? a = "" + t + e.state : 10 == t && 2 == e.state ? a = "" + t + e.state : 11 == t && 1 == e.state ? a = "" + t + e.state : 11 == t && 2 == e.state ? a = "" + t + e.state : 1 == t && 4 == e.state ? a = "" + t + e.state : 2 == t && 4 == e.state ? a = "" + t + e.state : 3 == t && 4 == e.state ? a = "" + t + e.state : 4 == t && 4 == e.state ? a = "" + t + e.state : 5 == t && 4 == e.state ? a = "" + t + e.state : 6 == t && 4 == e.state ? a = "" + t + e.state : 7 == t && 4 == e.state ? a = "" + t + e.state : 8 == t && 4 == e.state ? a = "" + t + e.state : 9 == t && 4 == e.state ? a = "" + t + e.state : 10 == t && 4 == e.state && (a = "" + t + e.state), a
+}
+
+function forRankYibu(t, e) {
+    var a = $("#box" + boxList(t, e)), n = "", s = "", i = a.find(".tablebox td:nth-child(1) p:last-child").text();
+    a.find(".tablebox td:nth-child(1) p:last-child").css({"font-weight": "normal"});
+    var l = e.state, o = "";
+    "1" == l ? o = 1 == e.value ? "单" : "双" : "2" == l ? o = 1 == e.value ? "大" : "小" : "3" == l ? o = 1 == e.value ? "龙" : "虎" : "4" == l && (o = 1 == e.value ? "前" : "后"), "双" != o && "龙" != o && "大" != o && "前" != o || (s = "style='color:#f1020b'");
+    var c = a.find(".left_count"), r = a.find(".right_count"), d = 1 * c.text() + 1, h = 1 * r.text() + 1;
+    if ("单" == o ? c.text(d) : "双" == o ? r.text(h) : "大" == o ? c.text(d) : "小" == o ? r.text(h) : "龙" == o ? c.text(d) : "虎" == o && r.text(h), i == o) n = "<p  " + s + ">" + i + "</p>", a.find(".tablebox td:nth-child(1)").append(n); else {
+        var u = "";
+        a.find(".tablebox td:nth-child(1)").hasClass("bgcolor") || (u = "bgcolor"), n = "<td class='" + u + "'><p " + s + ">" + o + "</p></td>", "" == i ? a.find(".tablebox").append(n) : a.find(".tablebox td:nth-child(1)").before(n)
+    }
+    bgPostionX(a);
+    var f = 0, m = a.find(".tablebox td:nth-child(1) p:last-child");
+    m.css({"font-weight": "bold"});
+    var b = setTimeout(function () {
+        m.fadeOut(100).fadeIn(100), 1 == ++f && (b = setInterval(arguments.callee, 600)), 5 == f && window.clearInterval(b)
+    }, 1e3)
+}
+
+var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t) {
+    return typeof t
+} : function (t) {
+    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
+};
+$(function () {
+    config.formatDate();
+    $("#gotop").click(function () {
+        return $("body,html").animate({scrollTop: 0}, 500), $(this).hide(), !1
+    }), $(document).scroll(function () {
+        $(this).scrollTop() > 10 ? $("#gotop").show() : $("#gotop").hide()
+    }), $("#lmms .zhclear").live("click", function () {
+        lmmsMcMethod("zhclear", this)
+    }), $("#lmms .zhcheckall").live("click", function () {
+        lmmsMcMethod("all", this)
+    }), $("#lmms li").hover(function () {
+        $(this).hasClass("checked") && $(this).addClass("hoverli")
+    }, function () {
+        $(this).hasClass("hoverli") && $(this).removeClass("hoverli")
+    }), $("#lmms .sinli").live("click", function () {
+        lmmsMcMethod("zhchecksing", this)
+    });
+    $(".box .btnCheck").live("click", function () {
+        tongjiCount($(this))
+    }), $("#daxiaodsfb").delegate("li", "click", function () {
+    }), $("#waringbox").delegate("i", "click", function () {
+        $(this).parent().parent().hide("200")
+    }), $("#datebox").calendar({
+        trigger: "#date", zIndex: 999, format: "yyyy-mm-dd", onSelected: function (t, e, a) {
+            listData(e = config.formatDate(e)), config.ifdebug;
+            var n = e.split("-");
+            checkseletime(n);
+            var s = n[1] + "/" + n[2];
+            $(".now_l").css("display", "none"), $(".jinri").css("display", "inline-block").text(s)
+        }, onClose: function (t, e, a) {
+            config.ifdebug
+        }
+    }), lmmsMcMethod("all", null), listData()
+});
+var jnumber = $("#jnumber>li"), res = [], lilength = 0, time = 0;
+$(".bothover").hover(function () {
+    $(this).find(".toright").css("background-color", "#FFFFFF"), $(".botline").css("border", "none"), $(this).find(".childmenu").show()
+}, function () {
+    $(this).find(".toright").css("background-color", ""), $(".botline").css("border", ""), $(this).find(".childmenu").hide()
+});
+var localllistdata = {}, localheaddata = {}, intervalPk10 = null, lmmssxmc = [], lmmssxlz = [];

@@ -1,0 +1,425 @@
+@CHARSET "UTF-8";
+
+#drawTable table {
+	width: 100%;
+}
+
+#drawTable .page_info {
+	width: 590px;
+}
+
+.table_ball .name {
+	width: 27px;
+}
+
+.table_lm .name {
+	width: 50px;
+}
+
+.split_panel table {
+	float: left;
+	width: 150px;
+	margin: 10px 1px 0 0;
+}
+
+.split_panel .odds {
+  width: 55px;
+}
+
+.table_ts .odds {
+  width: 55px;
+}
+
+.table_ball .name span,#drawInfo .balls b {
+	background: url("images/ball_2.png") no-repeat;
+	display: inline-block;
+	width: 27px;
+	height: 27px;
+	font-size: 0px;
+	text-indent: -99999px;
+	  margin-top: 4px;
+}
+
+#SSCResult .GDX_X, #SSCResult .GDX_D, #SSCResult .GDS_D, #SSCResult .GDS_S {
+	background: url("images/SSC_dx.png") no-repeat center;
+	width: 24px;
+	height: 27px;
+	margin:0 13px;
+}
+
+#SSCResult .other{
+	padding:4px 0 0 0;
+}
+#SSCResult .GLHT_L, #SSCResult .GLHT_H, #SSCResult .GLHT_T {
+	padding:0;
+	text-align:center;
+}
+#SSCResult .GDX_X, .table_ball .big_small .b1, .table_ball .big_small .b2, .table_ball .big_small .b3, .table_ball .big_small .b4, .table_ball .big_small .b0 {
+	background-position: 0 -27px;
+}
+
+#SSCResult .GDX_D, .table_ball .big_small .b6, .table_ball .big_small .b7, .table_ball .big_small .b8, .table_ball .big_small .b9, .table_ball .big_small .b5 {
+	background-position: 0 0;
+}
+
+#SSCResult .GDS_D, .table_ball .odd_even .b1, .table_ball .odd_even .b3, .table_ball .odd_even .b5, .table_ball .odd_even .b7, .table_ball .odd_even .b9 {
+	background-position: 0 -54px;
+}
+
+#SSCResult .GDS_S, .table_ball .odd_even .b2, .table_ball .odd_even .b4, .table_ball .odd_even .b6, .table_ball .odd_even .b8, .table_ball .odd_even .b0 {
+	background-position: 0 -81px;
+}
+
+.table_ball .big_small span, .table_ball .odd_even span {
+	background: url("images/SSC_dx.png") no-repeat;
+	width: 24px;
+	height: 27px;
+	margin: 0 1px;
+	font-size: 0px;
+	text-indent: -99999px;
+	display: inline-block;
+	margin-top: 4px;
+	padding-left:1px;
+}
+
+.result_button {
+	cursor:pointer;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+.num_button {
+	float:left;
+	margin-right: 2px;
+	width:34px;
+}
+.zhlh_button {
+	float:left;
+	margin-right: 2px;
+	width:60px;
+}
+.result_button:hover {
+	background-color:#2161b3;
+	color:white;
+}
+
+/*	CQHLSX	*/
+.L_CQHLSX .table_ball .name span, #drawInfo .balls b {
+    background-image: url(images/ball_cqhlsx.png);
+    background-size: 100% auto;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: auto;
+    font-size: 36px;
+}
+.L_CQHLSX .table_ball .name span {
+    -moz-transform-origin: 0 0;
+    transform-origin: center;
+}
+.L_CQHLSX .table_ball .name .b0,#drawInfo .balls .b0 {	background-position: 0 -0em;	}
+.L_CQHLSX .table_ball .name .b1,#drawInfo .balls .b1 {	background-position: 0 -1em;    }
+.L_CQHLSX .table_ball .name .b2,#drawInfo .balls .b2 {	background-position: 0 -2em;    }
+.L_CQHLSX .table_ball .name .b3,#drawInfo .balls .b3 {	background-position: 0 -3em;	}
+.L_CQHLSX .table_ball .name .b4,#drawInfo .balls .b4 {	background-position: 0 -4em;	}
+.L_CQHLSX .table_ball .name .b5,#drawInfo .balls .b5 {	background-position: 0 -5em;	}
+.L_CQHLSX .table_ball .name .b6,#drawInfo .balls .b6 {	background-position: 0 -6em;	}
+.L_CQHLSX .table_ball .name .b7,#drawInfo .balls .b7 {	background-position: 0 -7em;	}
+.L_CQHLSX .table_ball .name .b8,#drawInfo .balls .b8 {	background-position: 0 -8em;	}
+.L_CQHLSX .table_ball .name .b9,#drawInfo .balls .b9 {	background-position: 0 -9em;	}
+
+.L_CQHLSX .split_panel table .name span, #drawInfo .balls b {
+    background-image: url(images/ball_cqhlsx.png);
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: auto;
+    font-size: 40px;
+}
+.L_CQHLSX .split_panel table .name span {
+    -moz-transform-origin: 0 0;
+    transform-origin: center;
+}
+
+.L_CQHLSX .split_panel table .name .b0,#drawInfo .balls .b0 {	background-position: 0 -0em;   }
+.L_CQHLSX .split_panel table .name .b1,#drawInfo .balls .b1 {	background-position: 0 -1em;   }
+.L_CQHLSX .split_panel table .name .b2,#drawInfo .balls .b2 {	background-position: 0 -2em;   }
+.L_CQHLSX .split_panel table .name .b3,#drawInfo .balls .b3 {	background-position: 0 -3em;   }
+.L_CQHLSX .split_panel table .name .b4,#drawInfo .balls .b4 {	background-position: 0 -4em;	}
+.L_CQHLSX .split_panel table .name .b5,#drawInfo .balls .b5 {	background-position: 0 -5em;	}
+.L_CQHLSX .split_panel table .name .b6,#drawInfo .balls .b6 {	background-position: 0 -6em;	}
+.L_CQHLSX .split_panel table .name .b7,#drawInfo .balls .b7 {	background-position: 0 -7em;	}
+.L_CQHLSX .split_panel table .name .b8,#drawInfo .balls .b8 {	background-position: 0 -8em;	}
+.L_CQHLSX .split_panel table .name .b9,#drawInfo .balls .b9 {	background-position: 0 -9em;	}
+/*	CQHLSX	*/
+
+.table_ball .name .b0,#drawInfo .balls .b0 {
+	background-position: 0 0;
+}
+
+.table_ball .name .b1,#drawInfo .balls .b1 {
+	background-position: 0 -27px;
+}
+
+.table_ball .name .b2,#drawInfo .balls .b2 {
+	background-position: 0 -54px;
+}
+
+.table_ball .name .b3,#drawInfo .balls .b3 {
+	background-position: 0 -81px;
+}
+
+.table_ball .name .b4,#drawInfo .balls .b4 {
+	background-position: 0 -108px;
+}
+
+.table_ball .name .b5,#drawInfo .balls .b5 {
+	background-position: 0 -135px;
+}
+
+.table_ball .name .b6,#drawInfo .balls .b6 {
+	background-position: 0 -162px;
+}
+
+.table_ball .name .b7,#drawInfo .balls .b7 {
+	background-position: 0 -189px;
+}
+
+.table_ball .name .b8,#drawInfo .balls .b8 {
+	background-position: 0 -216px;
+}
+
+.table_ball .name .b9,#drawInfo .balls .b9 {
+	background-position: 0 -243px;
+}
+
+/*
+#resultPanel .ballTable th,#resultPanel .ballTable td {
+	width: 10%;
+}
+ */
+
+.split_panel table .name span,#drawInfo .balls b {
+	background: url("images/ball_2.png") no-repeat;
+	display: inline-block;
+	width: 27px;
+	height: 27px;
+	font-size: 0px;
+	text-indent: -99999px;
+	  margin-top: 4px;
+}
+
+.split_panel table .name .b0,#drawInfo .balls .b0 {
+	background-position: 0 0;
+}
+
+.split_panel table .name .b1,#drawInfo .balls .b1 {
+	background-position: 0 -27px;
+}
+
+.split_panel table .name .b2,#drawInfo .balls .b2 {
+	background-position: 0 -54px;
+}
+
+.split_panel table .name .b3,#drawInfo .balls .b3 {
+	background-position: 0 -81px;
+}
+
+.split_panel table .name .b4,#drawInfo .balls .b4 {
+	background-position: 0 -108px;
+}
+
+.split_panel table .name .b5,#drawInfo .balls .b5 {
+	background-position: 0 -135px;
+}
+
+.split_panel table .name .b6,#drawInfo .balls .b6 {
+	background-position: 0 -162px;
+}
+
+.split_panel table .name .b7,#drawInfo .balls .b7 {
+	background-position: 0 -189px;
+}
+
+.split_panel table .name .b8,#drawInfo .balls .b8 {
+	background-position: 0 -216px;
+}
+
+.split_panel table .name .b9,#drawInfo .balls .b9 {
+	background-position: 0 -243px;
+}
+
+.quick_sec_table_dw{ border:0px;}
+.quick_sec_table_dw td{ border:0px;}
+.quick_sec_table_dw td.t{width:20px;}
+.quick_sec_table_dw td.sec_ez_qw{ width:230px;}
+.quick_sec_table_dw td.sec_ez_hw{ width:230px;} 
+.quick_sec_table_dw td.sec_3z_touw{ width:230px;}
+.quick_sec_table_dw td.sec_3z_zhongw{ width:230px;}
+.quick_sec_table_dw td.sec_3z_weiw{ width:230px;}
+.quick_sec_table_dw td span{ margin-left:5px; display: block; float:left;width: 17px;height: 18px;background: url(../images/red/img_bg2.png) no-repeat 0 0;text-decoration: none;line-height: 18px;text-align: center;}
+.quick_sec_table_dw td{ border:0px;}
+
+
+.quick_sec_table_fw{ border:0px;}
+.quick_sec_table_fw td{ border:0px;text-align:left;}
+.quick_sec_table_fw td.t{width:80px;padding-left:5px;} 
+.quick_sec_table_fw td.c{} 
+.quick_sec_table_fw .text{
+	background: url("../images/blue/text_input.gif") repeat-x left top;
+  	border: #B9C2CB 1px solid;
+  	padding: 0 2px;
+  	width: 48px;
+  	height: 18px;
+} 
+.quick_sec_table_fw td input.button{margin-left:5px; cursor:pointer;  }
+
+
+#fastBetChoose p {
+	color: red;
+}
+
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #888;
+	opacity: 0.3;
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+.ui-dialog {
+	position: absolute;
+	height: auto;
+	width: 350px;
+	top: 40px;
+	left: 330px;
+	display: block;
+	z-index: 101;
+	border: 5px solid #DF678D;
+	background: white;
+
+}
+
+.ui-dialog-titlebar {
+	padding: 4px 0;
+	line-height: 16px;
+}
+
+.ui-dialog-icon {
+	display: inline-block;
+	background-position: -52px -52px;
+	height: 11px;
+	width: 14px;
+	margin: 0 4px 0 10px;
+}
+
+.ui-dialog-title {
+	font-size: 13px;
+	font-weight: 700;
+	color: #B30B00;
+	margin-left: 7px;
+}
+
+.ui-dialog-titlebar-close {
+	background-position: -52px -42px;
+	height: 9px;
+	width: 11px;
+	border: none;
+	margin: 3px 4px 0 0;
+	padding: 0;
+	float: right;
+	text-indent: 99999px;
+	font-size: 0;
+}
+
+.ui-dialog-buttonset {
+	border: 1px solid white;
+	text-align: center;
+	padding: 8px 0;
+}
+
+.ui-dialog-buttonset .ui-button {
+	border: none;
+	width: 66px;
+	line-height: 18px;
+	margin-right: 5px;
+	color: #fff;
+	letter-spacing: 3px;
+	padding-top: 3px;
+}
+
+.ui-dialog-buttonset .ui-state-hover {
+	background-position: 0 -19px;
+	color: #FFE400;
+	font-weight: bold;
+}
+
+.skin_blue .ui-dialog-title {
+	color: #35406d;
+}
+
+.skin_blue .ui-dialog {
+	border-color: #6C8AC2;
+}
+
+.skin_blue .ui-dialog-content {
+	border-bottom: 1px solid #b9c2cb;
+}
+
+.skin_blue .ui-dialog-buttonset {
+	background: #edf4fe;
+}
+
+.skin_blue .ui-dialog-titlebar {
+	background: url("images/blue/openwinbg.png") repeat-x top;
+}
+
+.skin_blue .ui-dialog-icon,.skin_blue .ui-dialog-titlebar-close {
+	background-image: url("images/blue/btn.png");
+}
+
+.skin_blue .ui-dialog-content {
+	padding: 8px 8px 16px 8px;
+}
+
+.skin_blue .ui-dialog-buttonset .ui-button {
+	background: linear-gradient(to bottom, #2b91d9 0%, #1375b1 100%);
+	border: 1px solid #1b4e88;
+	color: #fff;
+}
+
+.ui-dialog-buttonset .ui-button{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#fastBetSettingTh{
+	color : #ff6e39;
+	border : none;
+	cursor: pointer;
+	padding-left: 35px;
+	padding-right: 12px;
+	padding-top: 5px;
+}
+
+#fastBetSetting{
+	background: url("../images/fastbetsetting.png") no-repeat 2px 2.5px;
+	background-size: 12% 80%;
+}
+
+#fastBetChoose ul{
+	-webkit-column-count: 4; /* Chrome, Safari */
+	-moz-column-count: 4; /* Firefox */
+	column-count: 4;
+}
+
+ul li {
+	list-style: none outside none;
+}

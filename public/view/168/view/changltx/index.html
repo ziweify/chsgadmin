@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+		<title>长龙提醒</title>
+		<link rel="stylesheet" href="../../css/style.css?v=20228171133" />
+		<link rel="stylesheet" href="../../css/headorfood.css?v=20228171133" />
+		<link rel="stylesheet" href="../../css/changltx_index.css?v=20228171133" />
+		<script type="text/javascript" src="../../js/lib/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../../js/lib/config.js?v=20228171133"></script>
+		<script type="text/javascript" src="../../js/lib/GA.js?v=20228171133"></script>
+		<script type="text/javascript" src="../../js/loacal/changltx/index.js?v=202281711331"></script>
+	</head>
+
+	<body>
+		<div class="bodybox">
+			<div id="headdivbox"></div>
+
+			<!--关于我们-->
+			<div class="changltx">
+				<div class="contain">
+					<div class="contain_top">
+						<div class="head">
+							<span>长龙提醒</span>
+						</div>
+						<div class="footerDiv">
+							<div class="right">
+								<div class="navcheck">
+									<span class="select">选择彩种</span>
+									<span id="checkAll" class="all">全选</span>
+									<span id="cancelAll" class="cancel">取消</span>
+								</div>
+								<div class="navBtn">
+									<!--热门彩menu单-->
+									<span id="rmc_menuBtn" class="menu-title">热门彩<i class="bottomshowList"></i></span>
+									<div class="rmc_showBox menu-childlist">
+										<ul id="k3" class="czList_only">
+											<!--热门彩6-->
+											<!-- <li id="10060" class="czListBg"><i></i>重庆欢乐生肖</li> -->
+											<li id="10075" class="czListBg"><i></i>SG时时彩</li>
+											<li id="10076" class="czListBg"><i></i>SG快3</li>
+											<li id="10058" class="czListBg"><i></i>SG飞艇</li>
+											<li id="10059" class="czListBg"><i></i>幸运时时彩</li>
+											<li id="10057" class="czListBg"><i></i>幸运飞艇</li>
+											<li id="10064"><i></i>台湾5分彩</li>
+											<!-- <li id="10004"><i></i>新疆时时彩<img src="../../img/icon/icon_stop.png?v=20228171133"></li> -->
+											<!-- <li id="10001" class="czListBg"><i></i>北京PK10</li> -->
+											<!--<li id="10002" class="czListBg"><i></i>重庆时时彩</li>-->
+											<!-- <li id="10007"><i></i>江苏快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li> -->
+											<!-- <li id="10038"><i></i>广西快乐十分</li> -->
+											<!-- <li id="10003"><i></i>天津时时彩</li> -->
+										</ul>
+									</div>
+									<!--极速彩menu单-->
+									<span id="jisuc_menuBtn" class="menu-title">极速彩<i class="bottomshowList"></i></span>
+									<div class="jisuc_showBox menu-childlist">
+										<ul class="czList_only">
+											<!--极速彩7-->
+											<li id="10037" class="czListBg"><i></i>极速赛车</li>
+											<li id="10035"><i></i>极速飞艇</li>
+											<li id="10036"><i></i>极速时时彩</li>
+											<li id="10052"><i></i>极速快3</li>
+											<li id="10053"><i></i>极速快乐十分</li>
+											<li id="10055"><i></i>极速11选5</li>
+											<li id="10054"><i></i>极速快乐8</li>
+										</ul>
+									</div>
+									<span id="sgc_menuBtn" class="menu-title">SG彩<i class="bottomshowList"></i></span>
+									<div class="sgc_showBox menu-childlist">
+										<ul class="czList_only">
+											<!--极速彩7-->
+											<li id="10082"><i></i>SG快乐8</li>
+											<li id="10083"><i></i>SG快乐十分</li>
+											<li id="10084"><i></i>SG11选5</li>
+										</ul>
+									</div>
+									<!--高频彩menu单-->
+									<span style="display: none" id="gpc_menuBtn" class="menu-title">高频彩<i class="bottomshowList"></i></span>
+									<div style="display: none" class="gpc_showBox menu-childlist">
+										<ul id="" class="czList_only">
+											<!--高频彩25-->
+											<!--<li id="10048"><i></i>香港彩</li>-->
+											<li id="10008"><i></i>十一运夺金<img src="../../img/icon/icon_stop.png?v=20228171133"></li></li>
+											<li id="10009"><i></i>重庆幸运农场<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10005"><i></i>广东快乐十分<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10034"><i></i>天津快乐十分<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10014"><i></i>北京快乐8<img src="../../img/icon/icon_stop.png?v=20228171133"></li></li>
+											<!--<li id="10056"><i></i>腾讯分分彩</li>-->
+											<li id="10061"><i></i>上海快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10062"><i></i>贵州快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10063"><i></i>甘肃快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10027"><i></i>吉林快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10028"><i></i>河北快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10029"><i></i>内蒙古快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10030"><i></i>安徽快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<!-- <li id="10031"><i></i>福建快3</li> -->
+											<li id="10032"><i></i>湖北快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10033"><i></i>北京快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10026"><i></i>广西快3<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10006"><i></i>广东11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10018"><i></i>上海11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10017"><i></i>安徽11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10015"><i></i>江西11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10016"><i></i>江苏11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10019"><i></i>辽宁11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10020"><i></i>湖北11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10022"><i></i>广西11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+											<li id="10023"><i></i>吉林11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li></li>
+											<li id="10024"><i></i>内蒙古11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li></li>
+											<li id="10025"><i></i>浙江11选5<img src="../../img/icon/icon_stop.png?v=20228171133"></li>
+										</ul>
+									</div>
+									
+									<!--境外彩menu单-->
+									<span id="jwc_menuBtn" class="menu-title">境外彩<i class="bottomshowList"></i></span>
+									<div class="jwc_showBox menu-childlist">
+										<ul class="czList_only">
+											<!--境外彩4-->
+											<li id="10010"><i></i>澳洲幸运5</li>
+											<li id="10011"><i></i>澳洲幸运8</li>
+											<li id="10012"><i></i>澳洲幸运10</li>
+											<li id="10013"><i></i>澳洲幸运20</li>
+											<!-- <li id="10077"><i></i>英国乐透5</li>
+											<li id="10078"><i></i>英国乐透8</li>
+											<li id="10079"><i></i>英国乐透10</li>
+											<li id="10080"><i></i>英国乐透20</li> -->
+										</ul>
+									</div>
+									<!--全国彩menu单-->
+									<!-- <span id="qgc_menuBtn" class="menu-title">全国彩<i class="bottomshowList"></i></span>
+									<div class="qgc_showBox menu-childlist">
+										<ul class="czList_only">
+											<li id="10041"><i></i>福彩3D</li>
+											<li id="10043"><i></i>体彩排列3</li>
+										</ul>
+									</div> -->
+								</div>
+							</div>
+							<div class="left">
+								<div class="left_head">
+									<ul id="display">
+										<li id="kaiLi" class="liactiveBG">连续开出</li>
+										<li style="display: none;" id="nokaiLi">连续未开</li>
+									</ul>
+									<div class="l_left">
+										只显示
+										<select id="selectNum">
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+										</select>
+										期及以上的长龙
+										<!--<span id="soundsCtrl"><i></i>声音报警</span>-->
+									</div>
+								</div>
+								<div id="kaiDetial">
+									<table id="kaiYes" width="100%" border="0" cellspacing="1" cellpadding="1">
+										<thead>
+											<tr>
+												<th height="50px" width="222px">彩种</th>
+												<th height="50px">位置</th>
+												<th height="50px"  width='120px'>连续开出期数</th>
+												<th height="50px" width='50px'>路珠</th>
+												<!-- <th height="50px" width='100px'>长龙统计</th> -->
+											</tr>											
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+									<table id="kaiYes6" width="100%" border="0" cellspacing="1" cellpadding="1">
+										<tbody>
+										</tbody>
+									</table>
+									<table id="kaiNo" width="100%" border="0" cellspacing="1" cellpadding="1" style="display:none">
+										<thead>
+											<tr>
+												<th height="50px" width="222px">彩种</th>
+												<th height="50px">位置</th>
+												<th height="50px"  width='120px'>连续未开出期数</th>
+												<th height="50px" width='50px'>路珠</th>
+												<th height="50px" width='100px'>长龙统计</th>
+											</tr>											
+										</thead>
+										<tbody>
+												
+										</tbody>
+									</table>
+									<table id="kaiNo6" width="100%" border="0" cellspacing="1" cellpadding="1">
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<audio src="../../media/warn.wav" id="duSound" style="display: none;"></audio>
+					<!--<div class="contain_down">
+						<p>注： ab：是指“大小大小大小”“单双单双单双”“龙虎龙虎龙虎”此种属性的排列形态（包含反向），表格从此形态形成5期时开始统计。</p>
+						<p>abb：是指“大小小大小小”“单双双单双双”“龙虎虎龙虎虎”，此种属性的排列形态（包含反向）表格从此形态形成5期时开始统计。</p>
+						<p>aabb：是指“大大小小”“单单双双”“龙龙虎虎”此中属性的排列形态（包含反向），表格从此形态形成5期时开始统计。</p>
+						<p>举例说明第5期,如：大小小大小小，红色属性出现的那期即是第5期。</p>
+					</div>-->
+				</div>
+			</div>
+			<div id="fooderbox"></div>
+		</div>
+		<script>
+			var bgSelect = setInterval(function() {
+				$(".cltx_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".cltx_nav").length != 0) {
+					clearInterval(bgSelect);
+				}
+			}, 200)
+		</script>
+	</body>
+</html>

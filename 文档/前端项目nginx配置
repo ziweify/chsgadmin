@@ -1,0 +1,8 @@
+# 主要的SPA fallback配置
+location / {
+    try_files $uri $uri/ @fallback;
+}
+
+location @fallback {
+    rewrite ^.*$ /index.html last;
+}

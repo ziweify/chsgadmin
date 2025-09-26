@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+		<title>-中国体育、福利彩票、高频彩开奖结果查询调用接口API - 168彩票开奖网</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+		<link rel="apple-touch-icon" sizes="180x180" href="../../img/icon/favicon_152.png">
+		<meta name="description" content="168彩票开奖网提供中国体育彩票超级大乐透、排列三、排列五、七星彩、11选五、开奖结果查询，福利彩票双色球、3D、七乐彩、快3、时时彩、快乐8、北京赛车PK10、广东快乐十分等高频彩开奖结果查询调用接口。" />
+		<meta name="description" content="中国福利彩票北京赛车pk10开奖结果查询、历史开奖记录、开奖视频直播、杀号技巧软件分析预测网站。" />
+		<meta name="keywords" content="彩票开奖查询,彩票开奖,彩票开奖结果,福利彩票开奖结果,体育彩票开奖结果" />
+		<link rel="stylesheet" href="../../css/public.css?v=20228101654" />
+		<link rel="stylesheet" href="../../css/home.css?v=20228101654" />
+		<link rel="stylesheet" href="../../css/components.css?v=20228101654" />
+		<link rel="stylesheet" href="../../css/banner.css?v=20228101654" />
+		<script type="text/javascript" src="../../js/lib/jquery-1.9.1.js?v=20228101654"></script>
+		<script type="text/javascript" src="../../js/lib/jquery.event.drag-1.5.min.js?v=20228101654"></script>
+		<script type="text/javascript" src="../../js/lib/jquery.touchSlider.js?v=20228101654"></script>
+	</head>
+
+	<body class="homepage bodybox">
+		<div id="sidenav"></div>
+		<style>
+			.six-lottery{
+				height: 1.56rem !important;
+    			position: relative;
+			}
+			.numberbox{
+				display: flex;
+				margin-top: 0.1rem;
+				flex-wrap: wrap;
+			}
+			.numberbox .blue{
+				background-color: #0093e8;
+			}
+			.numberbox .red{
+				background-color: #f8223c;
+			}
+			.numberbox .green{
+				background-color: #1fc26b;
+			}
+			.numberbox .addpic{
+			    background: url(/img/six_lottery_plus.png) center / cover no-repeat !important;;
+			}
+			.numberbox li{
+				border-radius: 50%;
+				color: white;
+				line-height: 0.25rem;
+				text-align: center;
+				font-size: 0.15rem;
+				margin-right: 0.084rem;
+				width: 0.24rem;
+				height: 0.24rem;
+			}
+			.sh_xzlist{
+				width: 100%;
+				height: auto;
+				overflow: hidden;
+				margin-top: 7px;
+				margin-bottom: 7px;
+				font-size: 16px;
+				color: #333333;
+			}
+			.sh_xzlist li{
+			    width: .24rem;
+				height: auto;
+				overflow: hidden;
+				float: left;
+				text-align: center;
+				margin-right: 0.084rem;
+			}
+			.sh_xzlist li span{
+				display: block;
+				width: 100%;
+				height: 24px;
+			    font-size: 0.15rem;
+			}
+			.sixadv{			
+				position: absolute;
+				top: 48px;
+				right: 14px;
+			}
+			.six-lottery__next-draw-date{
+				color: #d7854d;
+			}
+			.lastsh_xzlist{
+				margin-left: .3rem;
+			}
+		</style>
+		<input type="hidden" name="index" id="index" value="index" />
+		<div class="pagediv">
+			<div id="appPromoteBanner" class="app-promote-banner" style="display: none;">
+				<div class="promo-container">
+					<img id="appLogo" src="/img/168-app-logo.jpg">
+					<div>
+						<div class="title">168开奖APP</div>
+						<div class="text">App在手，看奖不愁</div>
+					</div>
+				</div>
+				<div class="before-scroll"><a href="" class="blue-button app-download-button">立即下载</a></div>
+				<div class="after-scroll">
+					<div class="buttons-wrapper">
+						<!-- <div><a href="" class="orange-hollow-button open-app-button">打开</a></div> -->
+						<div><a href="" class="blue-button app-download-button">下载并打开</a></div>
+					</div>
+				</div>
+			</div>
+			<style>
+				.bodybox .headbox #hamburger {
+					fill: #c4c4c4;
+					height: auto;
+					margin-left: 0.1rem;
+					width: 24px;
+				}
+			</style>
+			<header class="headbox">
+				<!--<svg id="hamburger" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3" y="5" width="18" height="2"/>
+					<rect x="3" y="13" width="18" height="2"/>
+					<rect x="3" y="9" width="14" height="2"/>
+					<rect x="3" y="17" width="14" height="2"/>
+				</svg>-->
+				<div id="hamburger"></div>
+				<img src="../../img/logo_phone.png" class="logo" />
+				<div class="btnimg">
+					<span class="pcicon"></span>
+				</div>
+				<!-- <ul class="register">
+					<li id="loge"><a href="#">登录</a></li>
+					<li id="enroll"><a href="#">注册</a></li>
+					<li id="loginlist" style="display: none;"></li>
+				</ul> -->
+				<!-- <div id="menubtn"> -->
+					<!-- <div id="btnimg" class="btnimg">
+						<img src="../../img/menu.png" class="listimg" />
+					</div>
+					<div class="btnimg">
+						<span class="pcicon"></span>
+					</div>
+					<div class="btnimg" onclick="window.open('../wfgz_index/index.html','_self')">
+						<span class="wfgz">玩法</span>
+					</div> -->
+					<!-- <div id="deskout" class="btnimg">
+						<img src="../../img/desktop/btn_addmain.png" />
+					</div>
+					<div id='deskbox' style="display:none;"><div class='desk1'><span id="desk1close"></span></div><div class='desk2'><span id="desk2close"></span></div></div>
+				</div> -->
+			</header>
+			<div id="noticeContainer" class="notice" style="display: none;">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M11.8242 1.7445C11.6109 1.63138 11.3523 1.64108 11.1487 1.77682L5.75781 5.3449H3.15932C2.79411 5.3449 2.5 5.63901 2.5 6.00422V13.1662C2.5 13.5315 2.79411 13.8256 3.15932 13.8256H5.75781L11.1487 17.3936C11.4848 17.5779 11.7272 17.4777 11.8242 17.426C12.0375 17.3096 12.1733 17.0866 12.1733 16.8442V2.32625C12.1733 2.08386 12.0375 1.85762 11.8242 1.7445ZM3.81864 6.66354H5.23101V12.5069H3.81864V6.66354ZM10.8514 15.6161L6.54964 12.7687V6.40175L10.8514 3.5544V15.6161Z" fill="white"/>
+					<path d="M16.5651 5.22856C16.3098 4.96677 15.8896 4.96354 15.6311 5.21886C15.3725 5.47419 15.366 5.89111 15.6214 6.1529C17.4797 8.04359 17.4797 11.1237 15.6214 13.0143C15.366 13.2729 15.3466 13.7157 15.6278 13.9484C15.9672 14.2263 16.4326 14.0712 16.5619 13.9419C18.9244 11.5406 18.9244 7.6299 16.5651 5.22856Z" fill="white"/>
+					<path d="M14.5292 7.30025C14.2739 7.04169 13.8538 7.03523 13.5952 7.29055C13.3366 7.54588 13.3302 7.9628 13.5855 8.22459C14.3224 8.9744 14.3224 10.1961 13.5855 10.9459C13.3302 11.2045 13.3108 11.6472 13.5952 11.8799C13.9539 12.174 14.4 12.0027 14.5292 11.8702C15.7671 10.6098 15.7671 8.56071 14.5292 7.30025Z" fill="white"/>
+				</svg>
+				<div class="noticeWrapper">
+					<span id="noticeT">正在加载...</span>
+				</div>
+			</div>
+			<div class="bannerbox">
+				<div class="main_visual">
+					<div class="flicking_con">
+					</div>
+					<div class="main_image">
+						<ul>
+							<a target="_blank" href="">
+								<li>
+									<img src="../../img/001.png" />
+								</li>
+							</a>
+							<a target="_blank" href="">
+								<li><img src="../../img/002.png" /></li>
+							</a>
+							<a target="_blank" href="">
+								<li>
+									<img src="../../img/003.png" />
+								</li>
+							</a>
+						</ul>
+						<a href="javascript:;" id="btn_prev" class="displaynone"></a>
+						<a href="javascript:;" id="btn_next" class="displaynone"></a>
+					</div>
+				</div>
+			</div>
+			<!-- 首页菜单 start-->
+			<!-- <div class="iconHome">
+				<div class="colum">
+					<a href="../smtj_index/index.html">
+						<div class="item">
+							<div class="icon iconlmtj"></div>
+							<div class="czdt">两面推荐</div>
+						</div>
+					</a>
+					<a href="../profesRecom/index.html">
+						<div class="item">
+							<div class="icon iconzjtj"></div>
+							<div class="czdt">专家推荐</div>
+						</div>
+					</a>
+					<a href="../cltj_index/index.html">
+						<div class="item">
+							<div class="icon iconcltj"></div>
+							<div class="czdt">长龙提醒</div>
+						</div>
+					</a>
+					<a href="../buy_plan/kill_plan_index.html">
+						<div class="item">
+							<div class="icon iconshjh"></div>
+							<div class="czdt">杀号计划</div>
+						</div>
+					</a>
+				</div>
+				<div class="colum muneHide">
+					<div class="item" id="zhuidanInfo">
+						<div class="icon iconcprj"></div>
+						<div class="czdt">追单App</div>
+					</div> -->
+					<!-- 推荐App -->
+					<!-- <div class="zhuidan" id="zhuidanApp" style="display: none;">
+						<div class="zhuidanInfo">
+							<p class="headColor"></p>
+							<i class="padlock"></i>
+							<dl>
+								<dt class="header">追单App</dt>
+								<dd>全网最专业的彩票开奖数据分析</dd>
+								<dd class="button">
+									<button id="copy">点击复制</button>
+									<button id="goto">前往网址</button>
+								</dd>
+								<dd></dd>
+								<dd><img src="../../img/zhuidan/zdqr.png" class="QRCode" id="testImg"/></dd>
+								<dd class="hintInfo">扫一扫，下载移动客户端</dd>
+								<dd class="brand">(IOS,Android均可扫码下载)</dd>
+								<dd><button onclick="save()" class="saveInfo">保存QR码</button></dd>
+							</dl>
+							<div id="copySnackbar">下载地址复制成功</div>
+							<div id="downloadSnackbar">保存QR码成功</div>
+						</div>
+					</div>
+					<a class="Quizzes_center">
+						<div class="item">
+							<div class="icon iconjczx"></div>
+							<div class="czdt">竞猜中心</div>
+						</div>
+					</a>
+					<a href="../buy_plan/buy_plan_index.html" >
+						<div class="item">
+							<div class="icon icongcjh"></div>
+							<div class="czdt">购彩计划</div>
+						</div>
+					</a>
+					<a style="visibility: hidden;" >
+						<div class="item">
+							<div class="icon iconczdt"></div>
+							<div class="czdt">彩种大厅</div>
+						</div>
+					</a>
+				</div>
+				<div class="zipBtn" id="zipBtn"></div> -->
+				<!-- <a href="../smtj_index/business.html" id="business">
+					<div class="item">
+						<div class="icon businessImg"></div>
+						<div class="czdt">创业指南</div>
+					</div>
+				</a> -->
+			<!-- </div> -->
+
+			<!-- 首页菜单 end-->
+			<div class="czList" id="toRMC">
+				
+			</div>
+			<!-- <div id="footerDiv"></div> -->
+			<div id="btmQuickMenu"></div>
+		</div>
+		<div id="homepageBanner" class="homepage-banner">
+			<div class="homepage-banner__container">
+				<div class="relative">
+					<div id="homePageBannerCountdown"><span></span></div><div id="homepageBannerCloseBtn" class="close"></div><img  src="">
+				</div>
+			</div>
+		</div><!--/img/home_banner.png-->
+		<script>
+			$(document).ready(function(){
+				var showDate = new Date("2019/03/29 23:52:00").getTime();
+				var nowDate = new Date().getTime();
+				if(showDate - nowDate <= 0){
+					$("#cz_10002 .l1box>div:nth-child(2),#cz_10050 .l1box>div:nth-child(2)").text("停止销售").css({
+						"color":"#e63939"
+					})
+				}
+
+				ajaxRenderPreferredLotList(true);
+				$(".computer_ver,.pcicon").click(function() {
+					window.location.href = '//' + indexObj.YM();
+				});
+			})
+		</script>
+		
+		<script type="text/javascript" src="../../js/lib/config.js?v=20228101654"></script>
+		<script type="text/javascript" src="../../js/local/tools/tools.js?v=20228101653"></script>
+		<script type="text/javascript" src="../../js/local/public/home.js?v=20228101654"></script>
+		<script type="text/javascript" src="../../js/local/components/components.js?v=20228101654"></script>
+		<script type="text/javascript" src="../../js/lib/GA.js?v=20228101654"></script>
+	</body>
+
+</html>

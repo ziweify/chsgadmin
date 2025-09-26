@@ -1,0 +1,1 @@
+const t={api_host:"http://149.88.68.103:5200",ws_host:"ws://149.88.68.103:5200",image_host:"http://149.88.68.103:10009"},s=(t,s)=>{const o=t.__vccOpts||t;for(const[c,_]of s)o[c]=_;return o};export{s as _,t as c};

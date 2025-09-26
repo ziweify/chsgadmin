@@ -1,0 +1,40 @@
+#向用户表x_user添加version
+ALTER TABLE x_user ADD COLUMN version INT DEFAULT 1 COMMENT '版本号';·
+ALTER TABLE x_config ADD COLUMN mem_url varchar(50) DEFAULT '' COMMENT '会员端url';
+ALTER TABLE x_config ADD COLUMN open_register tinyint DEFAULT 1 COMMENT '是否开放会员';
+ALTER TABLE x_config ADD COLUMN autodelchsgtime tinyint DEFAULT 7 COMMENT '保留聊天记录天数';
+ALTER TABLE x_gamemsg ADD COLUMN ifok tinyint DEFAULT 1 COMMENT '是否启用 1：是 0：否';
+ALTER TABLE x_userroom ADD COLUMN auth_outbet_ip Varchar(20) DEFAULT '' COMMENT '授权飞单服务器ip';
+ALTER TABLE x_outbet_site ADD COLUMN auth_outbet_ip Varchar(20) DEFAULT '' COMMENT '授权飞单服务器ip';
+ALTER TABLE x_outbet_site ADD COLUMN online tinyint DEFAULT 0 COMMENT '在线状态 1：在线 0：离线';
+ALTER TABLE x_outbet_site ADD COLUMN cookie Varchar(5000) DEFAULT '' COMMENT 'cookie';
+ALTER TABLE x_outbet_site ADD COLUMN curl Varchar(200) DEFAULT '' COMMENT 'curl';
+ALTER TABLE x_outbet_site ADD COLUMN bz Varchar(200) DEFAULT '' COMMENT '备注';
+ALTER TABLE x_outbet_site ADD COLUMN sg_secretkey Varchar(100) DEFAULT '' COMMENT 'secretkey';
+ALTER TABLE x_outbet_site ADD COLUMN sg_kid Varchar(100) DEFAULT '' COMMENT 'kid';
+ALTER TABLE x_outbet_site ADD COLUMN errors INT default 0 COMMENT '错误次数';
+ALTER TABLE x_outbet_site ADD COLUMN updatetime INT default 0 COMMENT '更新时间';
+alter table x_game add column fenduan INT default 8 comment '飞单分段';
+alter table x_outbet_site add column proxy_ip varchar(50) default '' comment '代理ip';
+alter table x_config add column proxy_url varchar(200) default '' comment '代理url';
+alter table x_config add column use_proxy TINYINT(1) default 0 comment '是否使用代理 1：是 0：否';
+UPDATE x_config SET proxy_url = 'http://api.proxy.ip2world.com/getProxyIp?return_type=json&protocol=http&num=1&lb=1';
+
+#2025-07-24
+ALTER TABLE x_userroom ADD COLUMN outbet_overtime INT DEFAULT 0 COMMENT '飞单过期时间';
+ALTER TABLE x_config ADD COLUMN outbet_sy_count INT DEFAULT 1 COMMENT '每天可以试用飞单次数';
+ALTER TABLE x_config ADD COLUMN outbet_sy_time INT DEFAULT 15 COMMENT '每次试用时间，单位（分钟）';
+ALTER TABLE x_config ADD COLUMN outbet_money1 INT DEFAULT 100 COMMENT '开通飞单的一天价格';
+ALTER TABLE x_config ADD COLUMN outbet_money2 INT DEFAULT 100 COMMENT '开通飞单的一个月价格';
+ALTER TABLE x_user ADD COLUMN bsb_coin decimal(10,2) DEFAULT 0 COMMENT '百胜币余额';
+alter table x_money_log add column mtype TINYINT(1) default 1 comment '资金类 1：用户余额 2：百胜币';
+ALTER TABLE x_outbet_site ADD COLUMN abcd Varchar(10) DEFAULT 'A' COMMENT '盘口类型 ABCD';
+ALTER TABLE x_userroom ADD COLUMN notopen_bet INT DEFAULT 1 COMMENT '上期未开奖不准下注 1：是 0：否';
+ALTER TABLE x_kj ADD COLUMN up_time INT DEFAULT 0 COMMENT '上传开奖时间';
+ALTER TABLE x_kj ADD COLUMN up_from INT DEFAULT 1 COMMENT '开奖来源 1：服务器 2：软件';
+ALTER TABLE x_userreg ADD COLUMN token Varchar(50) DEFAULT '' COMMENT 'token';
+
+#2025-08-25
+ALTER TABLE x_userroom ADD COLUMN show_online_count TINYINT(1) DEFAULT 1 COMMENT '是否显示在线人数 1：是 0：否';
+ALTER TABLE x_user ADD COLUMN ignore_outbet TINYINT(1) DEFAULT 0 COMMENT '是否忽略飞单 1：是 0：否';
+ALTER TABLE x_lib ADD COLUMN ignore_outbet TINYINT(1) DEFAULT 0 COMMENT '是否忽略飞单 1：是 0：否';

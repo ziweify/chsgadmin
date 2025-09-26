@@ -1,0 +1,383 @@
+function yilouFc() {
+    for (var t = $("#trend_table2 tbody tr[class='yiloutr']"), e = t.length, s = t.filter(":first").children("td").size(), i = 2; i < s; i++) for (var a = 0; a <= e; a++) {
+        var n = t.eq(a).children("td").eq(i);
+        if ("0" == n.attr("title")) break;
+        n.addClass("yiloufc")
+    }
+}
+
+function fengeX() {
+    var t = $("#trend_table2 tbody tr");
+    t.length;
+    t.each(function (t, e) {
+        var s = $(this).find("td").length;
+        t > 0 && (t + 1) % 5 == 0 && $(e).after("<tr class='line_x' style='height:0px'><td class='botmline2' style='height:0px;background-color:#dbdbdb' colspan='" + s + "'></td></tr>")
+    })
+}
+
+function formatDate(t) {
+    var e = t.getFullYear(), s = t.getMonth() + 1;
+    s = s < 10 ? "0" + s : s;
+    var i = t.getDate();
+    return i = i < 10 ? "0" + i : i, e + "-" + s + "-" + i
+}
+
+function tongjiCount(t) {
+    var e = $(t), s = e.parent().find(".txtNum").val(), i = e.parent().find(".secType").val(),
+        a = e.parent().parent().find(".ifds").text(), n = "";
+    "单双" == a ? n = 1 == i ? "单" : "双" : "大小" == a ? n = 1 == i ? "大" : "小" : "龙虎" == a ? n = 1 == i ? "龙" : "虎" : "前后" == a && (n = 1 == i ? "前" : "后"), e.parent().parent().parent().parent().parent().find(".tablebox").html();
+    var o = 0;
+    e.parent().parent().parent().parent().parent().find(".tablebox").children().each(function (t) {
+        var e = $(this).find("p").length;
+        $(this).css({
+            "background-color": "",
+            color: "#666666"
+        }), e >= s && n == $(this).children("p").html() && ($(this).css({
+            "background-color": "rgb(253, 173, 86)",
+            color: "#fff"
+        }), o += 1)
+    }), e.parent().parent().find(".sec_count").text(o)
+}
+
+function doCheck(t, e) {
+    var s = $("." + t + "  .item_" + e + " .lz_table_head td .txtNum").val(),
+        i = $("." + t + "  .item_" + e + " .lz_table_head td .secType").val(), a = Number("0" + s), n = 0;
+    $("." + t + "  .item_" + e + " .lz_table_con td").each(function () {
+        $(this).removeClass("shaw"), $(this).children("p").html() == i && $(this).children("p").length >= a && ($(this).removeAttr("style"), $(this).addClass("shaw"), n++)
+    }), $("." + t + "  .item_" + e + " .lz_table_head td .sec_count").html(n), $("." + t + "  .item_" + e + "  .lz_table_head td .count").each(function () {
+        var s = $(this).attr("data"), i = 0;
+        $("." + t + "  .item_" + e + " .lz_table_con td p").each(function () {
+            $(this).html() == s && i++
+        }), $(this).html(i)
+    });
+    var o = 0, l = $("." + t + "  .item_" + e + " .lz_table_con td:first-child p:last ");
+    l.css("font-weight", "bold");
+    var r = setTimeout(function () {
+        l.fadeOut(100).fadeIn(100), 1 == ++o && (r = setInterval(arguments.callee, 600)), 30 == o && window.clearInterval(r)
+    }, 1e3)
+}
+
+function excutenum() {
+    return Math.floor(10 * Math.random())
+}
+
+function excutenum1_6() {
+    return Math.floor(6 * Math.random())
+}
+
+function sendj(t) {
+    var e = setTimeout("sendj()", 100), s = "";
+    lilength == t.length - 1 && (s = "li_after", clearTimeout(e), lilength = 0), $("#jnumber").append("<li class='nub" + t[lilength] + " " + s + "'></li>"), lilength++
+}
+
+function excutek() {
+    for (var t = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], e = 0, s = t.length; e < s; e++) {
+        var i = Math.floor(Math.random() * t.length);
+        res[e] = t[i], t.splice(i, 1)
+    }
+    for (var a = 0, s = jnumber.length; a < s; a++) jnumber[a].className = "nub" + res[a], a == s - 1 && (jnumber[a].style.marginRight = "0");
+    time++;
+    var n = setTimeout("excutek()", 200);
+    if (time >= 25) {
+        clearTimeout(n), $("#jnumber").html("");
+        sendj()
+    }
+}
+
+function listData(t, e) {
+    t = void 0 == t ? "" : t, e = void 0 == e ? "" : e, $.ajax({
+        url: urlbublic + "ElevenFive/queryElevnFiveTrendByIssue.do?issue=" + e + "&date=" + t,
+        type: "GET",
+        data: {lotCode: lotCode},
+        success: function (t) {
+            createHtmlList(t)
+        },
+        error: function (t) {
+            setTimeout(function () {
+                loadotherData()
+            }, config.listTime), config.ifdebug
+        }
+    })
+}
+
+function parseTonum(t) {
+    return 1 * t.charAt(0) <= 0 ? t.charAt(1) : t
+}
+
+function minci(t, e) {
+    if ("rank" == e) switch (1 * t) {
+        case 1:
+            return "冠军";
+        case 2:
+            return "亚军";
+        case 3:
+            return "三";
+        case 4:
+            return "四";
+        case 5:
+            return "五";
+        case 6:
+            return "六";
+        case 7:
+            return "七";
+        case 8:
+            return "八";
+        case 9:
+            return "九";
+        case 10:
+            return "十";
+        case 11:
+            return "冠亚和"
+    } else if ("state" == e) switch (1 * t) {
+        case 1:
+            return "单";
+        case 2:
+            return "双";
+        case 3:
+            return "大";
+        case 4:
+            return "小";
+        case 5:
+            return "龙";
+        case 6:
+            return "虎"
+    }
+}
+
+function getSystime() {
+    var t = new Date, e = t.getFullYear(), s = t.getMonth() + 1, i = t.getDate();
+    t.getDay(), t.getHours(), t.getMinutes(), t.getSeconds(), document.getElementById("Date");
+    return e + "-" + s + "-" + i
+}
+
+function clearinterval(t) {
+    clearInterval(intervalPk10)
+}
+
+function zoushiMethod(t, e) {
+    var s = $(e);
+    if (s.removeClass("hoverli"), "all" == t) (lmmssxmc = []).length >= 10 || $($("#biaozxz").find(".sinli")).each(function (t) {
+        $(this).hasClass("title") || $(this).hasClass("zhcheckall") || $(this).hasClass("zhclear") || (lmmssxmc.push($(this).find("i").text()), $(this).addClass("checked"))
+    }), config.ifdebug; else if ("zhclear" == t) $($("#biaozxz").find(".sinli")).each(function (t) {
+        $(this).hasClass("checked") && ($(this).removeClass("checked"), lmmssxmc = [])
+    }); else if ("zhchecksing" == t) {
+        var i = s.find("i").text();
+        if (s.hasClass("checked")) {
+            s.removeClass("checked");
+            for (var a = 0, n = lmmssxmc.length; a < n; a++) lmmssxmc[a] == i && lmmssxmc.splice(a, 1)
+        } else if (s.addClass("hoverli"), s.addClass("checked"), lmmssxmc.length <= 0) lmmssxmc.push(i); else {
+            for (var a = 0, n = lmmssxmc.length; a < n && lmmssxmc[a] != i; a++) ;
+            lmmssxmc.push(i)
+        }
+    }
+    config.ifdebug, $(lmmssxmc).each(function (t) {
+        $("#box" + $(this) + "4").show()
+    }), excuteZhmsSelect(lmmssxmc, ["4"])
+}
+
+function excuteZhmsSelect(t, e) {
+    $(t).each(function () {
+        "1" == this && $("#trend_table2 .yilou").find("span").hide()
+    })
+}
+
+function dxmsMethod() {
+    $($("#zhms").find("li")).each(function (t) {
+        config.ifdebug
+    })
+}
+
+function lmmsMethod() {
+    $($("#zhms").find("li")).each(function (t) {
+        config.ifdebug
+    })
+}
+
+function typeOf(t, e) {
+    if ("rank" == e) switch (1 * t) {
+        case 1:
+            return "冠军";
+        case 2:
+            return "亚军";
+        case 3:
+            return "第三名";
+        case 4:
+            return "第四名";
+        case 5:
+            return "第五名";
+        case 6:
+            return "第六名";
+        case 7:
+            return "第七名";
+        case 8:
+            return "第八名";
+        case 9:
+            return "第九名";
+        case 10:
+            return "第十名";
+        case 11:
+            return "冠亚和"
+    } else switch (1 * t) {
+        case 1:
+            return "单双";
+        case 2:
+            return "大小";
+        case 3:
+            return "龙虎";
+        case 4:
+            return "前后"
+    }
+}
+
+function createHtmlList(t) {
+    var e = null;
+    "object" != (void 0 === t ? "undefined" : _typeof(t)) ? e = JSON.parse(t) : (e = JSON.stringify(t), e = JSON.parse(e));
+    var s = e.result.data;
+    tools.toggleNoTodayOpenTip({data: s, nextCb: forRank, contentClass: "#waitBox", insertClass: ".listcontent .box"})
+}
+
+function bgPostionX(t) {
+    t.find(".tablebox td").length % 2 != 0 ? t.find(".item_con").css({"background-positionX": "0"}) : t.find(".item_con").css({"background-positionX": "-29px"})
+}
+
+function forRank(t) {
+    $("#trend_table2 tbody").empty(), $(t[0].bodyList).each(function (t) {
+        if (t > jsCode.count && -1 != $.inArray(lotCode, jsCode.code)) return !1;
+        var e = '<td class="leftth">' + this.issue + "</td>", s = this.code;
+        s = s.split(",");
+        var i = "";
+        $(s).each(function () {
+            i += '<span class="kaijnum">' + this + "</span>"
+        }), i = "<td>" + i + "</td>";
+        var a = "", n = this.array;
+        $(n).each(function () {
+            a += "<td " + (1 * this >= 0 ? "title='0'" : "class='rank1 yilou'") + "><span>" + Math.abs(this) + "</td>"
+        });
+        var o = "<tr class='yiloutr' height='32'>" + e + i + a + "</tr>";
+        $("#trend_table2 tbody").append(o)
+    }), drawLine(), $("#trend_table2 tbody").append($("#chartbottom tbody").html());
+    var e = "<td class='font14' colspan='2'>出现次数</td>", s = "<td class='font14' colspan='2'>平均遗漏</td>",
+        i = "<td class='font14' colspan='2'>最大遗漏</td>", a = "<td class='font14' colspan='2'>最大连出</td>",
+        n = "<td class='font14' colspan='2'>当前遗漏</td>";
+    $(t[0].missList).each(function (t) {
+        0 == t ? $(this.array).each(function () {
+            e += "<td class='font14'>" + Math.abs(this) + "</td>"
+        }) : 1 == t ? $(this.array).each(function () {
+            s += "<td class='font14'>" + Math.abs(this) + "</td>"
+        }) : 2 == t ? $(this.array).each(function () {
+            i += "<td class='font14'>" + Math.abs(this) + "</td>"
+        }) : 3 == t ? $(this.array).each(function () {
+            a += "<td class='font14'>" + Math.abs(this) + "</td>"
+        }) : 4 == t && $(this.array).each(function () {
+            n += "<td class='font14'>" + Math.abs(this) + "</td>"
+        })
+    }), $("#trend_table2 tbody").append("<tr>" + e + "</tr><tr>" + s + "</tr><tr>" + i + "</tr><tr>" + a + "</tr><tr style='display:none;'>" + n + "</tr>")
+}
+
+function drawLine() {
+    $("#chartLinediv canvas").remove(), tablename = "trend_table2", $("#" + tablename).find("tr").each(function () {
+        $(this).find("td").each(function (t) {
+            ($(this).hasClass("yilou") || 0 == $(this).attr("title")) && (t >= 2 && t <= 12 ? $(this).css({background: "#fcf8f3"}) : t >= 13 && t <= 23 ? $(this).css({background: "#f0f9fc"}) : t >= 24 && t <= 34 ? $(this).css({background: "#f0fcf0"}) : t >= 35 && t <= 45 ? $(this).css({background: "#f0f1fc"}) : t >= 46 && t <= 56 && $(this).css({background: "#f0fcf7"})), "0" == $(this).attr("title") && ($(this).index() >= 2 && $(this).index() <= 12 ? ($(this).attr("class", "hot " + $(this).removeClass("grey").attr("class")).find("span").attr("name", "hotSpan").text($(this).attr("name")).attr("class", "zoushiqiu bBK"), $(this).find("span").css("background", color[0])) : $(this).index() >= 12 && $(this).index() <= 23 ? ($(this).attr("class", "hot " + $(this).removeClass("grey").attr("class")).find("span").attr("name", "hotSpan").text($(this).attr("name")).attr("class", "zoushiqiu gB"), $(this).find("span").css("background", color[1])) : $(this).index() >= 24 && $(this).index() <= 34 ? ($(this).attr("class", "hot " + $(this).removeClass("grey").attr("class")).find("span").attr("name", "hotSpan").text($(this).attr("name")).attr("class", "zoushiqiu oB"), $(this).find("span").css("background", color[2])) : $(this).index() >= 32 && $(this).index() <= 45 ? ($(this).attr("class", "hot " + $(this).removeClass("grey").attr("class")).find("span").attr("name", "hotSpan").text($(this).attr("name")).attr("class", "zoushiqiu gqB"), $(this).find("span").css("background", color[3])) : $(this).index() >= 46 && $(this).index() <= 56 && ($(this).attr("class", "hot " + $(this).removeClass("grey").attr("class")).find("span").attr("name", "hotSpan").text($(this).attr("name")).attr("class", "zoushiqiu grB"), $(this).find("span").css("background", color[4])))
+        })
+    }), $("#" + tablename + " tr").eq($("#" + tablename + " tr").length - 8).find("td").removeClass("tdbb").addClass("tdbbs"), chartOfBaseTrend.shiyix5()
+}
+
+function diyString(t) {
+    var e = "";
+    return $(t).each(function () {
+        e += "&nbsp;" + this
+    }), e
+}
+
+function boxList(t, e) {
+    var s = "";
+    return 1 == t && 1 == e.state ? s = "" + t + e.state : 1 == t && 2 == e.state ? s = "" + t + e.state : 1 == t && 3 == e.state ? s = "" + t + e.state : 2 == t && 1 == e.state ? s = "" + t + e.state : 2 == t && 2 == e.state ? s = "" + t + e.state : 2 == t && 3 == e.state ? s = "" + t + e.state : 3 == t && 1 == e.state ? s = "" + t + e.state : 3 == t && 2 == e.state ? s = "" + t + e.state : 3 == t && 3 == e.state ? s = "" + t + e.state : 4 == t && 1 == e.state ? s = "" + t + e.state : 4 == t && 2 == e.state ? s = "" + t + e.state : 4 == t && 3 == e.state ? s = "" + t + e.state : 5 == t && 1 == e.state ? s = "" + t + e.state : 5 == t && 2 == e.state ? s = "" + t + e.state : 5 == t && 3 == e.state ? s = "" + t + e.state : 6 == t && 1 == e.state ? s = "" + t + e.state : 6 == t && 2 == e.state ? s = "" + t + e.state : 7 == t && 1 == e.state ? s = "" + t + e.state : 7 == t && 2 == e.state ? s = "" + t + e.state : 8 == t && 1 == e.state ? s = "" + t + e.state : 8 == t && 2 == e.state ? s = "" + t + e.state : 9 == t && 1 == e.state ? s = "" + t + e.state : 9 == t && 2 == e.state ? s = "" + t + e.state : 10 == t && 1 == e.state ? s = "" + t + e.state : 10 == t && 2 == e.state ? s = "" + t + e.state : 11 == t && 1 == e.state ? s = "" + t + e.state : 11 == t && 2 == e.state ? s = "" + t + e.state : 1 == t && 4 == e.state ? s = "" + t + e.state : 2 == t && 4 == e.state ? s = "" + t + e.state : 3 == t && 4 == e.state ? s = "" + t + e.state : 4 == t && 4 == e.state ? s = "" + t + e.state : 5 == t && 4 == e.state ? s = "" + t + e.state : 6 == t && 4 == e.state ? s = "" + t + e.state : 7 == t && 4 == e.state ? s = "" + t + e.state : 8 == t && 4 == e.state ? s = "" + t + e.state : 9 == t && 4 == e.state ? s = "" + t + e.state : 10 == t && 4 == e.state && (s = "" + t + e.state), s
+}
+
+function loadotherData() {
+    listData("", "30"), $(".listheadrl span").siblings().removeClass("checked"), $("#thirty").addClass("checked")
+}
+
+var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t) {
+    return typeof t
+} : function (t) {
+    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
+};
+$(function () {
+    $("#gotop").click(function () {
+        return $("body,html").animate({scrollTop: 0}, 500), $(this).hide(), !1
+    }), $(document).scroll(function () {
+        var t = $("chartLinediv").height();
+        config.ifdebug, t > 0 && t < 350 ? $(this).scrollTop() > 10 ? ($("#gotop").show(), $(this).scrollTop() > 15 && (config.ifdebug, $(".prev_li").css({top: -$(this).scrollTop() + "px"}), $(".next_li").css({top: -$(this).scrollTop() + "px"}))) : $("#gotop").hide() : t >= 350 && t < 1200 ? $(this).scrollTop() > 10 ? ($("#gotop").show(), $(this).scrollTop() > 15 && (config.ifdebug, $(".prev_li").css({top: -($(this).scrollTop() - 200) + "px"}), $(".next_li").css({top: -($(this).scrollTop() - 200) + "px"}))) : $("#gotop").hide() : $(this).scrollTop() > 10 ? ($("#gotop").show(), $(this).scrollTop() > 1050 ? ($(".prev_li").css({top: "-560px"}), $(".next_li").css({top: "-560px"})) : $(this).scrollTop() < 580 && ($(".prev_li").css({top: "30px"}), $(".next_li").css({top: "30px"}))) : $("#gotop").hide()
+    }), $("#hovediv").live("hover", function () {
+        var t = $("#waitBox").scrollLeft();
+        config.ifdebug, t <= 0 ? (t = 1e3, $(".prev_li").hide(), $(".next_li").show(), $(".prev_li,.next_li").live("hover", function () {
+            $(".next_li").show(), $(".prev_li").hide()
+        })) : t > 0 && t < s ? ($(".prev_li").show(), $(".next_li").show(), $(".prev_li,.next_li").live("hover", function () {
+            $(".prev_li").show(), $(".next_li").show()
+        })) : ($(".prev_li").show(), $(".next_li").hide(), $(".prev_li,.next_li").live("hover", function () {
+            $(".next_li").hide(), $(".prev_li").show()
+        }))
+    }), $("#hovediv").live("mouseout", function () {
+        $(".prev_li").hide(), $(".next_li").hide()
+    });
+    var t = $("#trend_table2").width(), e = $("#chartLinediv").width(), s = t - e, i = t - e, a = 1e3;
+    $(".next_li").click(function (t) {
+        config.ifdebug, i >= 1e3 ? ($("#waitBox").animate({scrollLeft: a}, 500), a += a, i -= 1e3, $(".prev_li").show()) : ($("#waitBox").animate({scrollLeft: i}, 500), $(".next_li").hide(), $(".prev_li").show(), $(".prev_li,.next_li").live("hover", function () {
+            $(".prev_li").show(), $(".next_li").hide()
+        }), $(".prev_li,.next_li").live("mouseout", function () {
+            $(".prev_li").show(), $(".next_li").hide()
+        }), $("#hovediv").live("hover", function () {
+            $(".next_li").hide(), $(".prev_li").show()
+        }), $("#hovediv").live("mouseout", function () {
+            $(".next_li").hide(), $(".prev_li").hide()
+        }), i = s)
+    }), $(".prev_li").click(function (t) {
+        var e = $("#waitBox").scrollLeft();
+        e >= 1e3 ? (e -= 1e3, $("#waitBox").animate({scrollLeft: e}, 500), $(".next_li").show(), $(".prev_li,.next_li").live("mouseout", function () {
+            $(".prev_li").show(), $(".next_li").show()
+        }), $(".prev_li,.next_li").live("hover", function () {
+            $(".prev_li").show(), $(".next_li").show()
+        })) : (e -= e, $("#waitBox").animate({scrollLeft: e}, 500), $(".prev_li").hide(), $(".next_li").show(), $(".prev_li,.next_li").live("hover", function () {
+            $(".prev_li").hide(), $(".next_li").show()
+        }), $(".prev_li,.next_li").live("mouseout", function () {
+            $(".prev_li").hide(), $(".next_li").show()
+        }), $("#hovediv").live("hover", function () {
+            $(".next_li").show(), $(".prev_li").hide()
+        }), $("#hovediv").live("mouseout", function () {
+            $(".next_li").hide(), $(".prev_li").hide()
+        }), a = 1e3)
+    }), $("#biaozxz .zhclear").live("click", function () {
+        zoushiMethod("zhclear", this)
+    }), $("#biaozxz .zhcheckall").live("click", function () {
+        zoushiMethod("all", this)
+    }), $("#biaozxz li").hover(function () {
+        $(this).hasClass("checked") && $(this).addClass("hoverli")
+    }, function () {
+        $(this).hasClass("hoverli") && $(this).removeClass("hoverli")
+    }), $("#biaozxz .sinli").live("click", function () {
+        $(this).removeClass("hoverli");
+        var t = $(this).find("i").text();
+        "1" == t ? $(this).hasClass("checked") ? ($(this).removeClass("checked"), $(".yilou span").css("display", "none")) : ($(this).addClass("hoverli"), $(this).addClass("checked"), $(".yilou span").css("display", "block")) : "2" == t ? $(this).hasClass("checked") ? ($(this).removeClass("checked"), $("#chartLinediv canvas").css("display", "none")) : ($(this).addClass("hoverli"), $(this).addClass("checked"), $("#chartLinediv canvas").css("display", "block")) : "3" == t ? $(this).hasClass("checked") ? ($(this).removeClass("checked"), $("#chartLinediv .yilou").removeClass("yiloufc")) : (yilouFc(), $(this).addClass("hoverli"), $(this).addClass("checked")) : "4" == t && ($(this).hasClass("checked") ? ($(this).removeClass("checked"), $("#trend_table2").find("tr[class='line_x']").remove()) : (fengeX(), $(this).addClass("hoverli"), $(this).addClass("checked")), $("#biaozxz").find("li").eq(2).hasClass("sinli checked") && drawLine("table_weizhi"))
+    });
+    $(".box .btnCheck").live("click", function () {
+        tongjiCount($(this))
+    }), $("#daxiaodsfb").delegate("li", "click", function () {
+    }), $("#waringbox").delegate("i", "click", function () {
+        $(this).parent().parent().hide("200")
+    }), $("#datebox").calendar({
+        trigger: "#date", zIndex: 999, format: "yyyy-mm-dd", onSelected: function (t, e, s) {
+            var i = (e = formatDate(e)).split("-");
+            checkseletime(i), listData(e, ""), config.ifdebug
+        }, onClose: function (t, e, s) {
+            config.ifdebug
+        }
+    })
+});
+var jnumber = $("#jnumber>li"), res = [], lilength = 0, time = 0;
+$(".bothover").hover(function () {
+    $(this).find(".toright").css("background-color", "#FFFFFF"), $(".botline").css("border", "none"), $(this).find(".childmenu").show()
+}, function () {
+    $(this).find(".toright").css("background-color", ""), $(".botline").css("border", ""), $(this).find(".childmenu").hide()
+});
+var intervalPk10 = null, lmmssxmc = [], lmmssxlz = [];

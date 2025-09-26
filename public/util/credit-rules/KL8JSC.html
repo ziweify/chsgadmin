@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://0123769548-zx.5ddp6kmp70.com/util/credit-rules/KL8JSC.html -->
+<html style="--primaryColor:#null;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style type="text/css">
+      :root {
+        font-size: 13px;
+      }
+
+      body {
+        font-family: "Microsoft YaHei", Tahoma, Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #333;
+        cursor: default;
+        text-decoration: none;
+      }
+
+      a[target] {
+        color: #2836f4;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+
+      p {
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+
+      ol,
+      ul {
+        padding-left: 20px;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+
+      ol li,
+      ul li {
+        margin: 8px 0;
+      }
+
+      ul.time-ul {
+        list-style-type: square;
+        margin-top: -10px;
+      }
+
+      ul.time-ul li {
+        margin: 5px 0;
+      }
+
+      ul.inner-ul {
+        list-style-type: circle;
+      }
+
+      .body-wrapper {
+        padding: 15px;
+      }
+
+      .stress {
+        font-weight: 600;
+      }
+
+      .rules .headline {
+        font-size: 1.05rem;
+      }
+
+      .rules ol li strong {
+        color: #000;
+      }
+    </style>
+  
+        <style>
+          body {
+            margin: 8px;
+          }
+          body.dark {
+            color: #fff !important;
+            background: #000;
+          }
+          body.dark strong {
+            color: #fff !important;
+          }
+          body a,
+          body.dark a {
+            color: var(--primaryColor) !important;
+          }
+          body.dark.bjl-rules.simple table th{
+            color: #000000;
+          }
+          body.dark.bjl-rules.simple table td {
+            color: #333333;
+          }
+          @media (min-width: 481px) and (max-width: 767px) {
+            body {
+              margin: 0;
+            }
+            #lottery {
+              display: none;
+            }
+          }
+          @media (min-width: 320px) and (max-width: 480px) {
+            body {
+              margin: 0;
+            }
+            #lottery {
+              display: none;
+            }
+          }
+        </style>
+      
+        <script type="text/javascript">
+          function checkDarkMode(currentUrl) {
+            var isDarkMode = getParameterByName("isDarkMode", currentUrl);
+            if (isDarkMode === "true") {
+              document.body.classList.add("dark");
+            }
+          }
+
+          function checkPrimaryColor(currentUrl) {
+            let root = document.documentElement;
+            const primaryColor = getParameterByName("primaryColor", currentUrl); 
+            root.style.setProperty('--primaryColor', "#" + primaryColor);
+          }
+          
+          function checkHrefShow(currentUrl) {
+            var isHrefShow = getParameterByName("isHrefShow", currentUrl);
+            if (isHrefShow === "false") {
+              document.querySelectorAll("a").forEach(function(item) {
+                item.href = "#";
+                item.removeAttribute("target");
+              })
+            }
+          }
+          
+          function change() {
+            var hrefShowParameter = getParameterByName("isHrefShow", location.href);
+            var darkModeParameter = getParameterByName("isDarkMode", location.href);
+            var primaryColorParameter = getParameterByName("primaryColor", location.href);
+              
+            location.href = document.getElementById("lottery").value + ".html?primaryColor="  + primaryColorParameter + ".html?isHrefShow=" + hrefShowParameter + "&isDarkMode=" + darkModeParameter;
+            checkHrefShow(location.href);
+            checkDarkMode(location.href);
+            checkPrimaryColor(location.href);
+          }
+
+          function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return "";
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+          }
+          
+          document.addEventListener("DOMContentLoaded", function() {
+            // var regex = /(http.+\.html)/g;
+            var currentUrl = location.href;
+            // var truncateUrl = currentUrl.match(regex)[0];
+            // var currentLotteryArr = truncateUrl.split("/");
+            // var currentLottery = currentLotteryArr[
+            //   currentLotteryArr.length - 1
+            // ].replace(".html", "");
+            // document.querySelector(
+            //   '#lottery option[value="' + currentLottery + '"]'
+            // ).selected = true;
+
+            var isHrefShow = getParameterByName("isHrefShow", currentUrl);
+            if (isHrefShow === "false") {
+              document.querySelectorAll("a").forEach(function(item) {
+                item.href = "#";
+                item.removeAttribute("target");
+              })
+            }
+            
+            checkHrefShow(currentUrl)
+            checkDarkMode(currentUrl);
+            checkPrimaryColor(currentUrl);
+          });
+        </script>
+      </head>
+
+  <body>
+    <div class="body-wrapper">
+      <div class="notice">
+        <h4>重要声明</h4>
+        <ol>
+          <li>客户一经在本公司开户或投注，即被视为已接受以下规则。</li>
+          <li>为避免出现争议，请您务必在下注之后查看「下注状况」。</li>
+          <li>任何投诉必须在开奖之前提出，公司不接受任何开奖之后的投诉。</li>
+          <li>
+            若公布赔率时出现任何打字错误或非故意人为失误，所有（相关）注单一律不算。
+          </li>
+          <li>
+            公布之所有赔率为浮动赔率，下注时请确认当前赔率及金额，下注确认后一律不能修改。
+          </li>
+          <li>
+            开奖后接受的投注，一律视为投机行为，[本局注单一律不返还本金及盈利]，敬请会员遵守游戏规则。
+          </li>
+          <li>
+            若本后台发现客户以不正当的手法投注或投注注单不正常，后台将有权「取消」相应之注单，客户不得有任何异议。
+          </li>
+          <li>
+            如因软件或线路问题导致交易内容或其他与账号设定不符合的情形，请在开奖前立即与本后台联络反映问题，否则本后台将以资料库中的数据为准。
+          </li>
+          <li>
+            倘若发生遭黑客入侵破坏行为或不可抗拒之灾害导致网站故障或资料损坏、数据丢失等情况，后台将以资料库数据为依据。如发现玩家使用不正当程序上获得利益，本公司有权要求取消所获得之不当得利。
+          </li>
+          <li>
+            各级管理人员及客户必须对本系统各项功能进行了解及熟悉，任何违反正常使用的操作，后台概不负责。
+          </li>
+          <li>请认真了解各款彩票游戏规则。</li>
+          <li>
+            如果会员信用额度超额或者为负数引起的争议，一律以公司处理为准。
+          </li>
+          <li>
+            客户有责任确保自己的账户及密码保密，如果因客户的账户、密码简单，或因泄露导致被盗用，造成的损失将由客户本人承担；同时应立即通知本公司，并更改其个人详细资料。
+          </li>
+          <li>
+            若官方福彩中心开奖错误导致本系统采集数据同时出错情况下，当期错误的所有注单以福彩中心官方当日最新数据为标准重新结算！在此特别声明，客户不得有任何异议。
+          </li>
+          <li>
+            本公司将不承担任何因客戶违反当地相关交易法令，所引起之任何责任。
+          </li>
+          <li>本系统所有投注皆含本金。</li>
+          <li>本公司有权保留一切争议事项及最后的决策权。</li>
+        </ol>
+      </div>
+
+      <div class="disclaimer">
+        <h4>
+          极速快乐8(原名：
+          <a href="http://speedylot88.com/speedy20-result.php" target="_blank">“Speed20”</a>)规则说明
+        </h4>
+        <p>
+          <strong>官方网站:</strong>
+          <a href="http://speedylot88.com/speedy20-result.php" target="_blank">http://speedylot88.com/speedy20-result.php</a>
+        </p>
+        <p>
+          “极速快乐8”为引进欧洲博彩公司开奖设备，由菲律宾博彩执照公司审核监控，联合开发的彩票游戏，营业时间为北京时间(GMT+8)每天上午06:59:15到凌晨05:59:15，每75秒开奖一次，每天开奖1104期。
+        </p>
+      </div>
+
+      <div class="rules">
+        <h4 class="headline">具体游戏规则如下:</h4>
+        <ol>
+          <!-- 1. -->
+          <li>
+            <strong>正码</strong>
+            <ul>
+              <li>
+                投注的1个号码与当期摇出的20个号码中的任1个号码相同，则中奖
+              </li>
+            </ul>
+          </li>
+          <!-- 2. -->
+          <li>
+            <strong>总和</strong>：以所有开出的全部20个号码加起来的和值来判定
+            <ul>
+              <li>
+                总和大/小：20个号码加总的和值大于810，为和大；20个号码加总的和值小于810，则为和小。
+              </li>
+              <li>
+                总和单/双：20个号码加总的和值为单，叫做和单；20个号码加总的和值为双，叫做和双。
+              </li>
+              <li>
+                总和810：20个号码加总的和值等于810，叫和值810。(当和值等于810,则大小退回本金)举例：开奖号码为1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20；那么此20个开奖号码的和值总和为210，则为小，为双。则投注小和双者中奖。投注大、单、和值810者不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 3. -->
+          <li>
+            <strong>总和过关</strong>：开出的20个号码的总和的游戏，分为「大单」，「小单」，「大双」和「小双」。
+            <ul>
+              <li>总和大于810为「总数大」,小于810为「总数小」。</li>
+              <li>总和为双数叫「双」，单数叫「单」。</li>
+              <li>
+                通过大小和单双组合产生「大单」，「小单」，「大双」和「小双」四种结果。
+              </li>
+              <li>总和等于810，则视为和局。</li>
+              <li>
+                举例：开奖号码为01、04、05、10、11、13、20、27、30、32、33、36、40、47、54、59、61、64、67、79，总和是693，总和小于810，并且是单数，则为「小单」。下注「小单」为赢，反之则输。
+              </li>
+            </ul>
+          </li>
+          <!-- 4. -->
+          <li>
+            <strong>前后和</strong>：开奖号码1至40为前盘号码，41至80为后盘号码。
+            <ul>
+              <li>
+                开出的20个号码中：如前盘号码（1-40）在此局开出号码数目占多数时，此局为：前(多)。
+              </li>
+              <li>
+                后盘号码（41-80）在此局开出号码数目占多数时，此局为:后(多)。
+              </li>
+              <li>
+                通前盘号码（1－40）和后盘号码（41-80）在此局开出的数目相同时（各10个数字），此局为：前后(和)。且投注前（多）或后（多）视为不中奖，不返回投注金额。
+              </li>
+              <li>
+                举例：此局开出1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20.
+                此局为：前(多)。
+              </li>
+              <li>
+                举例：此局开出41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60
+                此局为：后(多)。
+              </li>
+              <li>
+                举例：此局开出
+                1,2,3,4,5,6,7,8,9,10,41,42,43,44,45,46,47,48,49,50
+                此局为：前后(和)。
+              </li>
+            </ul>
+          </li>
+          <!-- 5. -->
+          <li>
+            <strong>单双和</strong>
+            <ul>
+              <li>
+                开奖号码中1，3，5，7，…，75，77，79为单数号码，2，4，6，8，……，76，78，80为双数号码。当期开出的20个中奖号码中，如单数号码数目占多数时（超过10个），则为单(多)，投注单(多)中奖；双数号码占多数时（超过10个），则为双(多)，投注双(多)中奖；如果单数和双数号码数目相同时（均为
+                10个），则为单双(和)，投注单双(和)者中奖。且投注单（多）或双（多）视为不中奖，不返回下注金额。
+              </li>
+              <li>
+                举例：此期开出1，3，5，7，9，11，13，15，17，19，21，22，24，26，28，30，32，34，46，68，
+                其中单数11个双数9个，此期为：单(多)。
+              </li>
+              <li>
+                举例：此期开出2，4，6，8，10，12，14，16，44，48，66，68，25，27，31，35，37，39，41，55，
+                其中双数12个单数8个，此期为：双(多)。
+              </li>
+              <li>
+                举例：此期开出2，4，6，8，10，12，14，16，18，20，41，43，45，47，49，51，53，55，57，59，
+                其中单数10个双数10个，此期为：单双(和)。
+              </li>
+            </ul>
+          </li>
+          <!-- 6. -->
+          <li>
+            <strong>五行</strong>
+            <ul>
+              <li>
+                开出的20个号码的总和分在5个段，以金、木、水、火、土命名：金（210～695）、木（696～763）、水（764～855）、火（856～923）和土（924～1410）。
+              </li>
+              <li>
+                举例：开奖号码为01、04、05、10、11、13、20、27、30、32、33、36、40、47、54、59、61、64、67、79，总和是693，<br>
+                则总分数在210－695段内，则开出的是「金」。下注「金」为赢，反之则输。
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  
+
+</body></html>

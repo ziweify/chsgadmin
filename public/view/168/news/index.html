@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+	<title>【彩票新闻】互联网彩票_最近彩票新闻_彩票行业新闻 - 168彩票开奖网</title>
+	<meta name="keywords" content="彩票新闻,互联网彩票,最近彩票新闻,彩票行业新闻" />
+	<meta name="description " content="168彩票开奖网彩票彩票新闻栏目提供最新的互联网彩票新闻、最近彩票新闻、彩票行业新闻等，同时提供各种彩票玩法、彩票开奖分析、彩票出号预测、购彩技巧推荐。" />
+	<link rel="stylesheet" href="/css/headorfood.css?v=20228171133" />
+	<link rel="stylesheet" href="/css/news.css?v=20228171133" />
+	<link rel="shortcut icon" href="/img/icon/168favicon.ico?v=20228171133">
+	<link rel="stylesheet" href="/css/user_adv.css?v=20228171133" />
+	<script src="/js/lib/bootstrap-3.3.0/js/tests/vendor/jquery.min.js"></script>
+	<script src="/js/lib/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="/js/lib/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="/js/lib/config.js?v=20228171133"></script>
+	<script type="text/javascript" src="/js/lib/GA.js?v=20228171133"></script>
+	<script type="text/javascript" src="/js/loacal/news/zx_lunbo.js?v=20228171133"></script>
+	<script type="text/javascript" src="/js/loacal/tools/tools.js?v=20228171133"></script>
+</head>
+
+<body>
+<div class="bodybox pk10lzzhfxymbox zsbox">
+	
+<!-- 时间：2016-12-12 描述：头部公共部分 -->
+<div id="headdivbox"></div>
+<div id="cny" style="display:none;">
+	<div class="cnyFrame">
+		<div class="cnyContainer">
+			<div class="cnyTanglung">
+				<div class="leftTanglung"><img src="../../img/Cow2/tanglung-left.png?v=20228171133" alt="" /></div>
+				<div class="rightTanglung"><img src="../../img/Cow2/tanglung-right.png?v=20228171133" alt="" /></div>
+			</div>
+			<div class="cnyCow">
+				<div class="cnyCowLeft"><img src="../../img/Cow2/Cow-left.png?v=20228171133" alt="" /></div>
+				<div class="cnyCowRight"><img src="../../img/Cow2/Cow-right.png?v=20228171133" alt="" /></div>
+			</div>
+		</div>
+	</div>
+	<div class="cnyMargin"></div>
+</div>
+<script type="text/javascript" src="/js/loacal/tools/tools.js?v=20228171133"></script>
+<script>
+	function redirectTo6hco() {
+	    var isDomainNoAdv = false;
+	    var target = '_blank';
+	    var sessionStorageName ="isDomainNoAdv"
+	    var noAdvUrl = "https://nd6hch003.com";
+	    var hasAdvUrl = 'https://6hch1.com';
+	    isDomainNoAdv = sessionStorage.getItem(sessionStorageName);
+	
+	    if (isDomainNoAdv === "true") {    
+	        window.open(noAdvUrl, target)
+	    } else if (isDomainNoAdv === "false"){
+	        window.open(hasAdvUrl, target)
+	    }
+	    else {
+	        $.ajax({
+	            type: "get",
+	            url: config.publicUrl + "parameters/getNoAdvertisingDomain.do",
+	            async: true,
+	            data: "",
+	            success: function(data) {
+	                if (typeof data == "string") {
+	                    data = JSON.parse(data);
+	                }
+	                var hideList = data.result.data.domainList;
+	                var checkurl = window.location.origin.split("//")[1].split(":")[0].replace("www.","");
+	                if (hideList == undefined || hideList == "" || hideList.indexOf(checkurl) != -1) {
+	                    sessionStorage.setItem(sessionStorageName, true);//no adv
+	                    window.open(noAdvUrl, target)
+	                }else{
+	                    sessionStorage.setItem(sessionStorageName, false);
+	                    window.open(hasAdvUrl, target)
+	                }
+	
+	            },
+	            error: function() {
+	                console.log("域名请求出错了");
+	            }
+	        });
+	    }
+	}
+	$(function() {
+		$("a[href^='https://6hch.cc']").on("click", function(e){
+		    e.preventDefault();
+		    redirectTo6hco();
+		})
+		//cny display frame
+		var cnyExpiry = '2021-02-28';
+		var CurrentDate = new Date();
+		cnyExpiry = new Date(cnyExpiry);
+		if (cnyExpiry > CurrentDate) {
+			$('#cny').css("display", "block");
+		}
+		
+		tools.advertisement(); //加载广告
+		tools.WWWD(); //天豪去掉试玩投注
+		tools.noAPP();
+		//手机端二维码
+		//二维码
+		$(".lasli_div>a,.mobilebox").on("mouseover", function(e) {
+			$(".mobiledetail").stop().animate({
+				height: "295px",
+				opacity: "1",
+				marginTop: "60px"
+			}, 200);
+			$(".mobilebox").css({
+				"overflow": "inherit"
+			});
+		});
+		$(".mobilebox").mouseout(function() {
+			$(".mobiledetail").stop().animate({
+				height: "0",
+				opacity: "1",
+				marginTop: "0"
+			}, 200);
+			$(".mobilebox").css({
+				"overflow": "inherit"
+			});
+		});
+		//彩票大厅
+		$(".cphost").on("mouseover", function() {
+			$(".cphost_pic1").hide();
+			$(".cphost_pic2").show();
+			$(".cphost_content").show();
+		});
+		$(".cphost").on("mouseout", function() {
+			$(".cphost_pic1").show();
+			$(".cphost_pic2").hide();
+			$(".cphost_content").hide();
+		});
+		//站长推荐
+		$("#zhusaHao_li").on("mouseover", function() {
+			$("#zhusaHao .master_pic1").hide();
+			$("#zhusaHao .master_pic2").show();
+			$(".zshContent").show();
+		});
+		$("#zhusaHao_li").on("mouseout", function() {
+			$("#zhusaHao .master_pic1").show();
+			$("#zhusaHao .master_pic2").hide();
+			$(".zshContent").hide();
+		});
+		$(".quiz-centre").on("mouseover", function() {
+			$(".master_pic3").hide();
+			$(".master_pic4").show();
+			$("#quiz_list").show();
+		})
+		$(".quiz-centre").on("mouseout", function() {
+			$(".master_pic3").show();
+			$(".master_pic4").hide();
+			$("#quiz_list").hide();
+		})
+		$("#namevd").on("mouseover", function() {
+			$("#pop-up").show();
+		})
+		$("#namevd").on("mouseout", function() {
+			$("#pop-up").hide();
+		})
+		// 两面推荐
+		$("#new_zhao").on("mouseover", function() { //鼠标移入
+			$("#twoRecomd .master_pic1").hide();
+			$("#twoRecomd .master_pic2").show();
+			$("#toRecomd").show();
+		})
+		$("#new_zhao").on("mouseout", function() { //鼠标移出
+			$("#twoRecomd .master_pic1").show();
+			$("#twoRecomd .master_pic2").hide();
+			$("#toRecomd").hide();
+		})
+		//点击竞猜中心到竞猜玩法说明
+		$('#jingczx').on('click',function(){
+			window.location.href = '/view/zhuiShaHao/businessGuessing.html';
+		})
+		$('#Quiz_show').on('click',function(){
+			window.location.href = '/view/zhuiShaHao/businessGuessing.html';
+		})
+		$("#quiz_list").find("li").on("click", function() {
+			var choose = $(this).attr("id");
+			var token = sessionStorage.getItem("tokens");
+			if(choose == "Beijing-car") { //北京PK10
+				if(token == undefined) {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?pk10";
+				} else {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?pk10?succeed";
+				}
+			} else if(choose == "SG-airship") { //SG飞艇
+				if(token == undefined) {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?sgAirship";
+				} else {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?sgAirship?succeed?logtop?"
+				}
+			} else if(choose == "Fast-cars") { //极速赛车
+				if(token == undefined) {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?jisusc";
+				} else {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?jisusc?succeed?logtop?"
+				}
+			} else if(choose == "Lucky-airship"){ //幸运飞艇
+				if(token == undefined){
+					window.location.href = '/view/Quizzes/guizzesCnter.html?xingyft'
+				} else {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?xingyft?succeed?logtop?"
+				}
+			} else if(choose == "AOZXY10"){ //澳洲幸运10
+				if(token == undefined){
+					window.location.href = '/view/Quizzes/guizzesCnter.html?aozxy10'
+				} else {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?aozxy10?succeed?logtop?"
+				}
+			} else if(choose == "JISUFT"){ //极速飞艇
+				if(token == undefined){
+					window.location.href = '/view/Quizzes/guizzesCnter.html?jisuft'
+				} else {
+					window.location.href = "/view/Quizzes/guizzesCnter.html?jisuft?succeed?logtop?"
+				}
+			}
+		})
+		tools.getQueryString = function(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.split('?').pop().match(reg);
+			if(r != null) return unescape(r[2]);
+			return null;
+		}
+		//彩种，鼠标移进来改变边框颜色,click 添加class
+		$("#zzpage>ul>li:not(.disabled)").on({
+			mouseenter: function() {
+				if($(this).hasClass("check")) {
+					return
+				}
+				$(this).css("border-color", "#FA8E19");
+			},
+			mouseout: function() {
+				if($(this).hasClass("check")) {
+					return
+				}
+				$(this).css("border-color", "#E0E0E0");
+			},
+			click: function() {
+				console.log(this)
+				var showElem = $(this).attr("data-text");
+				//判断是否在追杀号页面点击
+				var Location = window.location.href.indexOf("/view/zsh/index"); //index
+				if(Location == -1) {
+					window.open("/view/zsh/index.html?lottype=" + showElem, "_blank");
+				}
+				clearTimeout(timeOutInit);
+				FunObj.isRan(showElem);
+				$(this).addClass("check").css("border-color", "#FA8E19").siblings().removeClass("check");
+				$(".lotteryType>ul>li:not(.check)").css("border-color", "#E0E0E0");
+				lot_type = $(this).attr("data-text");
+				FunObj.orzhuihao(lot_type);
+				FunObj.introduction($(this).text());
+			}
+		})
+
+		$(".menuboxr").find(".nav_li").on("click", function() {
+			$(this).addClass("li_checked").siblings().removeClass("li_checked");
+		})
+		if($("#ifindex").val() == "index") {
+			$(".mobiledetailnew").remove();
+		};
+		//toolBoxs.setK(); //为开奖调用增加域名
+		var urlType = window.location.href;
+	});
+	function toM() {
+		var mUrl = "//m." + tools.YM() + "" + tools.getCom();
+		return mUrl;
+	}
+	//加载登录注册
+	//tools.loadloginR("login", "register");
+	//登录完成后执行
+	//tools.username();
+	//推荐拦hover 显示对应推荐的内容
+	$(".zztjbox").on("mousemove", "h1", function(e) {
+		var $this = $(e.target);
+		var cls = $this.attr("class");
+		$this.addClass("checkh1").siblings().removeClass("checkh1");
+		$("#" + cls).show().siblings(".lotteryType").hide();
+	});
+	//var filteredData = filterRemoveLotteryList(lotteryList['SGK3'],lotteryRemoveList)
+	//renderLotteryList("k3",filteredData)
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-8GZN0CR7N8"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-8GZN0CR7N8');
+</script> -->
+	<!--BigBox-->
+	<div class="BigBox">
+		<!--容器-->
+		<div class="container">
+			<!--位置-->
+			<div class="container_loc">
+				<!--<span>当前位置: 首页&gt; 资讯</span>-->
+			</div>
+			<!--详细信息-->
+			<div class="main">
+				<!--左边内容展示-->
+				<div class="left idnex_left">
+					<!--top-->
+					<div class="left_top1">
+						<div id="Box1" class="Box">
+							<div class="img_top1" id="bannerid">
+								<ul id="ul">
+								</ul>
+							</div>
+							<div id="spanner1" class="spanner1">
+							</div>
+						</div>
+
+						<div class="about_top1">
+							<a href="/news/detail-2438.html">
+								<h3 id=""> 前区 ( X4,  X5) 组合的位差分布属性</h3>
+							</a>
+							<p id="">若一旦X4位置的号码被确定为某具体号码d,则X5位置的号码最可能是d+1，d+2，d+3, d+4。
+反之，若一旦X5位置的号码被确定为某具体号码d,则X4位置的号码最可能是d-1，d-2, d-3, d-4。</p>
+							<ul id="">
+								
+								<input type="hidden" id="hotnewsulData" value="[{&#34;newsId&#34;:2438,&#34;releaseDate&#34;:&#34;&#34;,&#34;image&#34;:&#34;&#34;,&#34;title&#34;:&#34; 前区 ( X4,  X5) 组合的位差分布属性&#34;,&#34;labels&#34;:&#34;&#34;,&#34;pageView&#34;:&#34;&#34;,&#34;description&#34;:&#34;若一旦X4位置的号码被确定为某具体号码d,则X5位置的号码最可能是d+1，d+2，d+3, d+4。\n反之，若一旦X5位置的号码被确定为某具体号码d,则X4位置的号码最可能是d-1，d-2, d-3, d-4。&#34;},{&#34;newsId&#34;:2436,&#34;releaseDate&#34;:&#34;&#34;,&#34;image&#34;:&#34;&#34;,&#34;title&#34;:&#34;前区(X3，X4)组合的位差分布属性&#34;,&#34;labels&#34;:&#34;&#34;,&#34;pageView&#34;:&#34;&#34;,&#34;description&#34;:&#34;若一旦X3位置的号码被确定为某具体号码c，则X4位置的号码最可能是C+1，C+2, C+3，C+4。&#34;},{&#34;newsId&#34;:2413,&#34;releaseDate&#34;:&#34;&#34;,&#34;image&#34;:&#34;&#34;,&#34;title&#34;:&#34;前区(X2, X3)组合的位差分布属性&#34;,&#34;labels&#34;:&#34;&#34;,&#34;pageView&#34;:&#34;&#34;,&#34;description&#34;:&#34;对于彩票超级大乐透的前区组合(X2，X3)，因为只能是在号码2 - 33当中任意选择2个，所以总共也有  = 496种不同的组合。同样，也可以用“位差”将这496种组合统一起来。&#34;},{&#34;newsId&#34;:2412,&#34;releaseDate&#34;:&#34;&#34;,&#34;image&#34;:&#34;&#34;,&#34;title&#34;:&#34; 前区(X1, X2)组合的位差分布属性&#34;,&#34;labels&#34;:&#34;&#34;,&#34;pageView&#34;:&#34;&#34;,&#34;description&#34;:&#34;对于彩票超级大乐透的前区组合(X1，X2)，  因为只能是在号码1~32当中任意选择2个，所以总共有C3 =496种不同的组合，  然而这多达496种的组合之间有没有对我们更为有用的分布属性呢?回答是肯定的。&#34;},{&#34;newsId&#34;:2402,&#34;releaseDate&#34;:&#34;&#34;,&#34;image&#34;:&#34;&#34;,&#34;title&#34;:&#34;总结前面内容引入一个全新定义：位差（PD）&#34;,&#34;labels&#34;:&#34;&#34;,&#34;pageView&#34;:&#34;&#34;,&#34;description&#34;:&#34;位差就是指相邻的两个位置的号码的算术差值。“位置”的英文单词是Position;至于“差值”，小编习惯上用英文单词Difference (中文：差别、差异)来表示，所以“位差”简记为PD。&#34;}]">
+								
+								<li><img src="/img/zixun/dot.png?v=20228171133"><a href="/news/detail-2438.html"> 前区 ( X4,  X5) 组合的位差分布属性</a></li>
+								
+								<li><img src="/img/zixun/dot.png?v=20228171133"><a href="/news/detail-2436.html">前区(X3，X4)组合的位差分布属性</a></li>
+								
+								<li><img src="/img/zixun/dot.png?v=20228171133"><a href="/news/detail-2413.html">前区(X2, X3)组合的位差分布属性</a></li>
+								
+								<li><img src="/img/zixun/dot.png?v=20228171133"><a href="/news/detail-2412.html"> 前区(X1, X2)组合的位差分布属性</a></li>
+								
+								<li><img src="/img/zixun/dot.png?v=20228171133"><a href="/news/detail-2402.html">总结前面内容引入一个全新定义：位差（PD）</a></li>
+								
+								
+							</ul>
+						</div>
+					</div>
+					<div class="left_down">
+						<div class="left_down_nav">
+							<ul id="titlelist">
+								
+								
+								<li class="active2" id="1"><a href="javascript:void(0)" class="active1">高频彩</a></li>
+								
+								<li  id="6"><a href="javascript:void(0)" class="active1">行业新闻</a></li>
+								
+								
+							</ul>
+							<p class="floatRight"> <a href="/news/list-zx.html">更多</a></p>
+						</div>
+						<div class="left_list" id="listcontent">
+							
+							<input type="hidden" id="listcontentData" value="[{&#34;newsId&#34;:25733,&#34;releaseDate&#34;:&#34;2022-08-22&#34;,&#34;image&#34;:&#34;15223d56-d515-46d0-a2dd-17828fa72f0e.jpg&#34;,&#34;title&#34;:&#34;北京一彩站中福彩双色球2.45亿巨奖 头奖开50注533万&#34;,&#34;labels&#34;:&#34;&#34;,&#34;pageView&#34;:0,&#34;description&#34;:&#34;北京时间2022年8月21日，福彩双色球第22096期开奖，当期奖号为红球03 16 17 19 25 33，蓝球07。本期一等奖开出50注533万，其中北京中出46注头奖，经检索中奖地址为北京房山区燕山迎风街17号，编号为11139001&#34;},{&#34;newsId&#34;:25723,&#34;releaseDate&#34;:&#34;2022-08-22&#34;,&#34;image&#34;:&#34;cb84ecec-d920-473b-a676-d927acad69ca.png&#34;,&#34;title&#34;:&#34;22年超级大乐透096期 预测前区复式参考&#34;,&#34;labels&#34;:&#34;&#34;,&#34;pageView&#34;:0,&#34;description&#34;:&#34;开奖回顾：大乐透第2022095期奖号：05 08 22 25 35 + 02 07&#34;},{&#34;newsId&#34;:25722,&#34;releaseDate&#34;:&#34;2022-08-22&#34;,&#34;image&#34;:&#34;f1dd7795-868c-4942-a42f-6b8a63a38e39.png&#34;,&#34;title&#34;:&#34;22年超级大乐透096期 今期龙头凤尾参考&#34;,&#34;labels&#34;:&#34;&#34;,&#34;pageView&#34;:0,&#34;description&#34;:&#34;上期回顾：超级大乐透第2022095期开奖号码为：05 08 22 25 35 + 02 07&#34;}]">
+							
+							<div class="div_list">
+								<div class="div_inline">
+									<div class="div_l">
+										<a target="_blank" href="/news/detail-25733.html">
+											<img  src="//images.img861.com/15223d56-d515-46d0-a2dd-17828fa72f0e.jpg" onerror="method.defaultViewigm(this)"></a>
+									</div>
+									<div class="div_r">
+										<h3><a target="_blank" href="/news/detail-25733.html">北京一彩站中福彩双色球2.45亿巨奖 头奖开50注533万</a></h3>
+										<p>
+											北京时间2022年8月21日，福彩双色球第22096期开奖，当期奖号为红球03 16 17 19 25 33，蓝球07。本期一等奖开出50注533万，其中北京中出46注头奖，经检索中奖地址为北京房山区燕山迎风街17号，编号为11139001
+										</p>
+										<div>
+                                                <span class="span_l">
+                                                    <img src="/img/zixun/small_pic.png?v=20228171133" alt="">
+                                                    <span class="sum">0</span>
+                                                </span>
+											<span  class="span_r">
+                                                    <span> 2022-08-22</span>
+                                                </span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="div_list">
+								<div class="div_inline">
+									<div class="div_l">
+										<a target="_blank" href="/news/detail-25723.html">
+											<img  src="//images.img861.com/cb84ecec-d920-473b-a676-d927acad69ca.png" onerror="method.defaultViewigm(this)"></a>
+									</div>
+									<div class="div_r">
+										<h3><a target="_blank" href="/news/detail-25723.html">22年超级大乐透096期 预测前区复式参考</a></h3>
+										<p>
+											开奖回顾：大乐透第2022095期奖号：05 08 22 25 35 + 02 07
+										</p>
+										<div>
+                                                <span class="span_l">
+                                                    <img src="/img/zixun/small_pic.png?v=20228171133" alt="">
+                                                    <span class="sum">0</span>
+                                                </span>
+											<span  class="span_r">
+                                                    <span> 2022-08-22</span>
+                                                </span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="div_list">
+								<div class="div_inline">
+									<div class="div_l">
+										<a target="_blank" href="/news/detail-25722.html">
+											<img  src="//images.img861.com/f1dd7795-868c-4942-a42f-6b8a63a38e39.png" onerror="method.defaultViewigm(this)"></a>
+									</div>
+									<div class="div_r">
+										<h3><a target="_blank" href="/news/detail-25722.html">22年超级大乐透096期 今期龙头凤尾参考</a></h3>
+										<p>
+											上期回顾：超级大乐透第2022095期开奖号码为：05 08 22 25 35 + 02 07
+										</p>
+										<div>
+                                                <span class="span_l">
+                                                    <img src="/img/zixun/small_pic.png?v=20228171133" alt="">
+                                                    <span class="sum">0</span>
+                                                </span>
+											<span  class="span_r">
+                                                    <span> 2022-08-22</span>
+                                                </span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+						<div class="pageload" style="height:0;overflow: hidden;">
+							<span class="loadingbtn" id="loadmorebtn">加载更多</span>
+						</div>
+					</div>
+					<div class="play_rule">
+						<div>
+							<h2>玩法技巧</h2>
+							<p>
+								<a href="/news/wflist.html">更多</a>
+							</p>
+						</div>
+						<div class="rule_box">
+							
+							<input type="hidden" id="liDate" value="[{&#34;id&#34;:31,&#34;releaseDate&#34;:&#34;2022-05-14&#34;,&#34;image&#34;:&#34;f701f1cd-6640-4ba7-844d-0f52d8ed3548.jpg&#34;,&#34;title&#34;:&#34;时时彩龙虎技巧&#34;,&#34;pageView&#34;:725,&#34;description&#34;:&#34;彩民朋友可以通过这一方法将0-9这十个数字划分为三种类型，这样就能进一步缩小选号范围，这一方法正被广泛的运用于数字排序游戏中。&#34;,&#34;type&#34;:2},{&#34;id&#34;:3,&#34;releaseDate&#34;:&#34;2022-05-11&#34;,&#34;image&#34;:&#34;a72ddb00-4b7f-46ee-a20b-b036cc842ab1.jpg&#34;,&#34;title&#34;:&#34;时时彩利用奇数、偶数玩转三星&#34;,&#34;pageView&#34;:644,&#34;description&#34;:&#34;根据时时彩三星每位开奖号码的形态，我们可以将投注三星玩法的十个数，根据其奇偶形态的不同分为两类，跟以前的玩法有所不同。&#34;,&#34;type&#34;:2},{&#34;id&#34;:25,&#34;releaseDate&#34;:&#34;2022-05-10&#34;,&#34;image&#34;:&#34;23279d1c-1346-4117-9f88-e0409de1290f.jpg&#34;,&#34;title&#34;:&#34;11选5高手的技巧分享&#34;,&#34;pageView&#34;:499,&#34;description&#34;:&#34;相邻两期开奖号码完全不同的情况仅占1%，出现两个复码的情况高达82%以上&#34;,&#34;type&#34;:5},{&#34;id&#34;:29,&#34;releaseDate&#34;:&#34;2022-05-09&#34;,&#34;image&#34;:&#34;33eeb301-2a27-477a-8ec4-989bf10a1411.jpg&#34;,&#34;title&#34;:&#34;必看十大快三稳赚技巧方法&#34;,&#34;pageView&#34;:711,&#34;description&#34;:&#34;1. 看遗漏，找组合 2. 看奇偶，找对子 3. 看跨度，找切口 4. 看前十，找下移 5. 看隔期，打对子 6. 看和值，打直坐  7. 看走势，打靠背 8. 看奖号，打对码 9.看机遇，抓豹子 10. 看机会，抓回补\n　　&#34;,&#34;type&#34;:3},{&#34;id&#34;:28,&#34;releaseDate&#34;:&#34;2022-05-04&#34;,&#34;image&#34;:&#34;cdce7a87-4887-41c0-a00e-2f622b10a6a2.jpg&#34;,&#34;title&#34;:&#34;快乐十分大复式选号三大诀窍&#34;,&#34;pageView&#34;:506,&#34;description&#34;:&#34;小区原则。从快乐十分历期中奖号码中知道，快乐十分由于可划分为4个小区(每个小区5个号码)，中奖号码不是完全在每个小区出现，而常规下分布于3个小区。&#34;,&#34;type&#34;:4},{&#34;id&#34;:21,&#34;releaseDate&#34;:&#34;2022-04-25&#34;,&#34;image&#34;:&#34;c97f43bf-34f2-45a6-95be-6211e3c709de.jpg&#34;,&#34;title&#34;:&#34;幸运飞艇常见的玩法技巧荟萃&#34;,&#34;pageView&#34;:850,&#34;description&#34;:&#34;幸运飞艇里面的冠军和亚军之间的赔率一般都是属于七倍到九倍，这一类的玩法是从十辆飞艇里面选取自己喜欢的号码来进行投注&#34;,&#34;type&#34;:6},{&#34;id&#34;:20,&#34;releaseDate&#34;:&#34;2022-04-25&#34;,&#34;image&#34;:&#34;48389498-ec32-4767-81f7-3b4729250fe8.jpg&#34;,&#34;title&#34;:&#34;双色球18047期推荐&#34;,&#34;pageView&#34;:360,&#34;description&#34;:&#34;杀蓝球：01,02,03,06,09\n\n蓝球看好：04,05防09\n\n五码定蓝：04,05,07,08,10&#34;,&#34;type&#34;:6},{&#34;id&#34;:19,&#34;releaseDate&#34;:&#34;2022-04-19&#34;,&#34;image&#34;:&#34;&#34;,&#34;title&#34;:&#34;排列五复式选号技巧&#34;,&#34;pageView&#34;:360,&#34;description&#34;:&#34;排列5更要注意对下期号的遗传性。左右斜更要注意号的重号性。&#34;,&#34;type&#34;:6},{&#34;id&#34;:18,&#34;releaseDate&#34;:&#34;2022-04-19&#34;,&#34;image&#34;:&#34;&#34;,&#34;title&#34;:&#34;快乐十分复式选号诀窍&#34;,&#34;pageView&#34;:374,&#34;description&#34;:&#34;小区原则。从快乐十分历期中奖号码中知道，快乐十分由于可划分为4个小区（每个小区5个号码），中奖号码不是完全在每个小区出现，而常规下分布于3个小区。&#34;,&#34;type&#34;:4},{&#34;id&#34;:17,&#34;releaseDate&#34;:&#34;2022-04-19&#34;,&#34;image&#34;:&#34;&#34;,&#34;title&#34;:&#34;时时彩二星精准投注技巧&#34;,&#34;pageView&#34;:386,&#34;description&#34;:&#34;定位包号是“时时彩”二星的一种投注方式。时时彩的号码都是从0~9十个数中产生。&#34;,&#34;type&#34;:2}]">
+							
+							<ul class="pk10_rule">
+								
+								
+								<li>
+									<a href="wfdetail-31.html">
+										<splan class="lotype">[时时彩]</splan>时时彩龙虎技巧</a>
+								</li>
+								
+								
+								
+								<li>
+									<a href="wfdetail-3.html">
+										<splan class="lotype">[时时彩]</splan>时时彩利用奇数、偶数玩转三星</a>
+								</li>
+								
+								
+								
+								<li>
+									<a href="wfdetail-25.html">
+										<splan class="lotype">[11选5]</splan>11选5高手的技巧分享</a>
+								</li>
+								
+								
+								
+								<li>
+									<a href="wfdetail-29.html">
+										<splan class="lotype">[快三]</splan>必看十大快三稳赚技巧方法</a>
+								</li>
+								
+								
+								
+								<li>
+									<a href="wfdetail-28.html">
+										<splan class="lotype">[快乐十分]</splan>快乐十分大复式选号三大诀窍</a>
+								</li>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+							</ul>
+							<ul class="sscrule">
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li>
+									<a href="/news/wfdetail-21.html">
+										<splan class="lotype">[其它]</splan>幸运飞艇常见的玩法技巧荟萃</a>
+								</li>
+								
+								
+								
+								<li>
+									<a href="/news/wfdetail-20.html">
+										<splan class="lotype">[其它]</splan>双色球18047期推荐</a>
+								</li>
+								
+								
+								
+								<li>
+									<a href="/news/wfdetail-19.html">
+										<splan class="lotype">[其它]</splan>排列五复式选号技巧</a>
+								</li>
+								
+								
+								
+								<li>
+									<a href="/news/wfdetail-18.html">
+										<splan class="lotype">[快乐十分]</splan>快乐十分复式选号诀窍</a>
+								</li>
+								
+								
+								
+								<li>
+									<a href="/news/wfdetail-17.html">
+										<splan class="lotype">[时时彩]</splan>时时彩二星精准投注技巧</a>
+								</li>
+								
+								
+							</ul>
+							
+						</div>
+					</div>
+					<div class="link_box">
+						<!-- <div class="link_left">
+							<div>
+								<a href="/view/PK10/pk10kai.html">
+									<img src="/img/beijinpk.png?v=20228171133" alt="" />
+								</a>
+								<h2>北京PK拾</h2>
+							</div>
+							<div class="a_boxs">
+								<a href="/view/PK10/pk10kai_luzhufxzh.html">路珠分析</a>
+								<a href="/view/PK10/pk10_lenrefx.html">冷热分析</a>
+								<a href="/view/PK10/pk10_guanyahezs.html">冠亚和值走势</a>
+								<a href="/view/PK10/pk10_meiricltj.html">每日长龙统计</a>
+								<a href="/view/PK10/pk10_longhulz.html">龙虎路珠</a>
+								<a href="/view/PK10/pk10_haomaqhlz.html">前后路珠</a>
+								<a href="/view/PK10/pk10_haomagltj.html">号码规律统计</a>
+								<a href="/view/PK10/pk10_jinrihmtj.html">今日号码统计</a>
+								<a href="/view/PK10/pk10_weizhizs.html">位置走势</a>
+								<a href="/view/PK10/pk10_liangmsjtj.html">两面数据统计</a>
+								<a href="/view/PK10/pk10_longhutj.html">龙虎统计</a>
+							</div>
+						</div> 
+						<div class="link_left">
+							<div>
+								<a href="/view/happyCZ/ssc_index.html">
+									<img src="/img/small_logo/happyCZlogo.png?v=20228171133" alt="" />
+								</a>
+								<h2>重庆欢乐生肖</h2>
+							</div>
+							<div class="a_boxs">
+								<a href="/view/happyCZ/ssc_luzhufenxizh.html">路珠分析</a>
+								<a href="/view/happyCZ/ssc_lengrefx.html">冷热分析</a>
+								<a href="/view/happyCZ/ssc_jibenzs.html">基本走势</a>
+								<a href="/view/happyCZ/ssc_meiricltj.html">每日长龙统计</a>
+								<a href="/view/happyCZ/ssc_longhuzs.html">龙虎走势</a>
+								<a href="/view/happyCZ/ssc_haomalz.html">号码路珠</a>
+								<a href="/view/happyCZ/ssc_dinweizs.html">定位走势</a>
+								<a href="/view/happyCZ/ssc_zonghelz.html">总和路珠</a>
+								<a href="/view/happyCZ/ssc_linagmiansjtj.html">两面统计</a>
+								<a href="/view/happyCZ/ssc_xingtaizs.html">形态走势</a>
+								<a href="/view/happyCZ/ssc_daxiaodslz.html">单双大小路珠</a>
+							</div>
+						</div>-->
+					</div>
+				</div>
+
+				<!--右边内容展示-->
+				<div class="right">
+					<!--右一-->
+					<!--右一-->
+					<div class="right_one">
+						<div class="announce_down">
+							<h2>推荐彩种 <span clss="tjspan">RECOMMEND LOTTERY</span></h2>
+							<div class="tjlottey">
+											<ul>
+												<li>
+													<a target="_blank" href="https://6hch.cc/"><img src="/img/Revision_img/hksmsixlogo.png?v=202281711333" alt="香港彩" /></a>
+													<a target="_blank" href="https://6hch.cc/">香港彩</a>
+												</li>
+												<li>
+													<a target="_blank" href="/view/shishicai_sg/ssc_index.html"><img src="/img/Revision_img/sgssc.png?v=202281711333" alt="幸运时时彩" /></a>
+													<a target="_blank" href="/view/shishicai_sg/ssc_index.html">SG时时彩</a>
+												</li>
+												<li>
+													<a target="_blank" href="/view/kuai3_sg/kuai3_index.html"><img src="/img/Revision_img/sgk3.png?v=20228171133" alt="江苏快3" /></a>
+													<a target="_blank" href="/view/kuai3_sg/kuai3_index.html">SG快3</a>
+												</li>
+												<li>
+													<a target="_blank" href="/view/sgAirship/pk10kai.html"><img src="/img/Revision_img/sgAirship.png?v=20228171133" alt="SG飞艇" /></a>
+													<a target="_blank" href="/view/sgAirship/pk10kai.html">SG飞艇</a>
+												</li>
+												<li>
+													<a target="_blank" href="/view/shishicai_xy/ssc_index.html"><img src="/img/Revision_img/xyssc_.png?v=20228171133" alt="幸运时时彩" /></a>
+													<a target="_blank" href="/view/shishicai_xy/ssc_index.html">幸运时时彩</a>
+												</li>
+												<li class="first_li">
+													<a target="_blank" href="/view/shishicai_jisu/ssc_index.html"><img src="/img/Revision_img/ssc_jisu.png?v=20228171133" alt="极速时时彩" /></a>
+													<a target="_blank" href="/view/shishicai_jisu/ssc_index.html">极速时时彩</a>
+												</li>
+												<!-- <li>
+													<a target="_blank" href="/view/PK10/pk10kai.html"><img src="/img/Revision_img/bjpk10.png?v=20228171133" alt="北京PK10" /></a>
+													<a target="_blank" href="/view/PK10/pk10kai.html">北京PK10</a>
+												</li> -->
+
+												<li>
+													<a target="_blank" href="/view/aozxy5/ssc_index.html"><img src="/img/Revision_img/aozxy5.png?v=20228171133" alt="澳洲幸运5" /></a>
+													<a target="_blank" href="/view/aozxy5/ssc_index.html">澳洲幸运5</a>
+												</li>
+												<li class="last_li">
+													<a target="_blank" href="/view/aozxy10/pk10kai.html"><img src="/img/Revision_img/aozxy10.png?v=20228171133" alt="澳洲幸运10" /></a>
+													<a target="_blank" href="/view/aozxy10/pk10kai.html">澳洲幸运10</a>
+												</li>
+												<li>
+													<a target="_blank" href="/view/jisusaiche/pk10kai.html"><img src="/img/Revision_img/jisu_saiche.png?v=20228171133" alt="极速赛车" /></a>
+													<a target="_blank" href="/view/jisusaiche/pk10kai.html">极速赛车</a>
+												</li>
+												<li>
+													<a target="_blank" href="/view/PC_egxy28/PC_egxy28index.html"><img src="/img/Revision_img/pcdd.png?v=20228171133" alt="PC蛋蛋28" /></a>
+													<a target="_blank" href="/view/PC_egxy28/PC_egxy28index.html">PC蛋蛋28</a>
+												</li>
+												<!-- <li>
+													<a target="_blank" href="/view/cqnc/index.html"><img src="/img/Revision_img/cqnc.png?v=20228171133" alt="重庆幸运农场" /></a>
+													<a target="_blank" href="/view/cqnc/index.html">重庆幸运农场</a>
+												</li>
+
+												<li>
+													<a target="_blank" href="/view/klsf/klsf_index.html"><img src="/img/Revision_img/gdklsf.png?v=20228171133" alt="广东快乐十分" /></a>
+													<a target="_blank" href="/view/klsf/klsf_index.html">广东快乐十分</a>
+												</li>
+
+												<li>
+													<a target="_blank" href="/view/shiyix5_jiangxi/index.html"><img src="/img/Revision_img/11x5_jiangxi.png?v=20228171133" alt="江西11选5" /></a>
+													<a target="_blank" href="/view/shiyix5_jiangxi/index.html">江西11选5</a>
+												</li> -->
+
+												<!--<li>
+													<a target="_blank" href="/view/shishicai_cq/ssc_index.html"><img src="/img/Revision_img/cqssc.png?v=20228171133" alt="重庆时时彩" /></a>
+													<a target="_blank" href="/view/shishicai_cq/ssc_index.html">重庆时时彩</a>
+												</li>-->
+												<!-- <li>
+													<a target="_blank" href="/view/shiyix5_sd/index.html"><img src="/img/Revision_img/syydj.png?v=20228171133" alt="十一运夺金" /></a>
+													<a target="_blank" href="/view/shiyix5_sd/index.html">十一运夺金</a>
+												</li>
+												<li>
+													<a target="_blank" href="/view/shishicai_tj/ssc_index.html"><img src="/img/Revision_img/tjssc.png?v=20228171133" alt="天津时时彩" /></a>
+													<a target="_blank" href="/view/shishicai_tj/ssc_index.html">天津时时彩</a>
+												</li>
+												<li>
+													<a target="_blank" href="/view/kuai3/kuai3_index.html"><img src="/img/Revision_img/jsks.png?v=20228171133" alt="江苏快3" /></a>
+													<a target="_blank" href="/view/kuai3/kuai3_index.html">江苏快3</a>
+												</li> -->
+											</ul>
+											<span class="movedowm"><span></span></span>
+										</div>
+						</div>
+					</div>
+					<!--右二-->
+					<!-- <div class="right_two">
+						<div class="right_img1 adviertisement">
+							<a href="/view/PK10/pk10kai.html" target="_blank">
+								<img src="/img/adviertisement.png?v=20228171133" alt="" />
+							</a>
+						</div>
+					</div> -->
+					<!--右三-->
+					<div class="right_three" id="hotNews">
+						<h3>热门文章</h3>
+						<ul>
+							
+							<input type="hidden" id="hotNewData" value="[{&#34;programaName&#34;:&#34;高频彩&#34;,&#34;newsId&#34;:7279,&#34;title&#34;:&#34;幸运飞艇技巧之巧妙赢钱法&#34;,&#34;pageView&#34;:3535},{&#34;programaName&#34;:&#34;高频彩&#34;,&#34;newsId&#34;:8041,&#34;title&#34;:&#34;福彩双色球第20059期：防出偶数蓝球&#34;,&#34;pageView&#34;:3181},{&#34;programaName&#34;:&#34;高频彩&#34;,&#34;newsId&#34;:6753,&#34;title&#34;:&#34;这样玩幸运飞艇轻松提高中奖机率&#34;,&#34;pageView&#34;:3097},{&#34;programaName&#34;:&#34;高频彩&#34;,&#34;newsId&#34;:7117,&#34;title&#34;:&#34;幸运飞艇之抓取随机的概率的技巧&#34;,&#34;pageView&#34;:3013},{&#34;programaName&#34;:&#34;高频彩&#34;,&#34;newsId&#34;:4943,&#34;title&#34;:&#34;理性应对幸运飞艇开奖直播游戏&#34;,&#34;pageView&#34;:2423},{&#34;programaName&#34;:&#34;高频彩&#34;,&#34;newsId&#34;:6766,&#34;title&#34;:&#34;福彩双色球第2020028期预测：一码定蓝14&#34;,&#34;pageView&#34;:2393},{&#34;programaName&#34;:&#34;高频彩&#34;,&#34;newsId&#34;:6769,&#34;title&#34;:&#34;4月23日上海快3号码分析&#34;,&#34;pageView&#34;:2067},{&#34;programaName&#34;:&#34;高频彩&#34;,&#34;newsId&#34;:7170,&#34;title&#34;:&#34;幸运飞艇投注技巧之如何去压&#34;,&#34;pageView&#34;:1032}]">
+							
+                            <li>
+                                <a href="detail-7279.html"> <span>[高频彩]</span>幸运飞艇技巧之巧妙赢钱法</a>
+                            </li>
+							
+                            <li>
+                                <a href="detail-8041.html"> <span>[高频彩]</span>福彩双色球第20059期：防出偶数蓝球</a>
+                            </li>
+							
+                            <li>
+                                <a href="detail-6753.html"> <span>[高频彩]</span>这样玩幸运飞艇轻松提高中奖机率</a>
+                            </li>
+							
+                            <li>
+                                <a href="detail-7117.html"> <span>[高频彩]</span>幸运飞艇之抓取随机的概率的技巧</a>
+                            </li>
+							
+                            <li>
+                                <a href="detail-4943.html"> <span>[高频彩]</span>理性应对幸运飞艇开奖直播游戏</a>
+                            </li>
+							
+                            <li>
+                                <a href="detail-6766.html"> <span>[高频彩]</span>福彩双色球第2020028期预测：一码定蓝14</a>
+                            </li>
+							
+                            <li>
+                                <a href="detail-6769.html"> <span>[高频彩]</span>4月23日上海快3号码分析</a>
+                            </li>
+							
+                            <li>
+                                <a href="detail-7170.html"> <span>[高频彩]</span>幸运飞艇投注技巧之如何去压</a>
+                            </li>
+							
+							
+						</ul>
+					</div>
+
+					<!--<div class="right_five">
+                        <div class="right_five_one">
+                            <div class="right_five_img_one">
+                                <a href="/view/PK10/pk10kai.html"><img src="/img/small_logo/beijingpk10.png?v=20228171133" /></a>
+                            </div>
+                            <div class="right_five_cont_one">
+                                <h3>北京PK10</h3>
+                                <ul>
+                                    <li>
+                                        <a href="/view/PK10/pk10_weizhizs.html">位置走势</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/PK10/pk10kai_luzhufxzh.html">路珠分析</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/PK10/pk10_jinrihmtj.html">号码统计</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/PK10/pk10kai.html">开奖号码</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right_five_two">
+                            <div class="right_five_img_two">
+                                <a href="/view/klsf/klsf_index.html"><img src="/img/small_logo/guangdongklsf.png?v=202281711333" /></a>
+                            </div>
+                            <div class="right_five_cont_two">
+                                <h3>快乐十分</h3>
+                                <ul>
+                                    <li>
+                                        <a href="/view/klsf/klsf_jibenzs.html">基本走势</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/klsf/klsf_zonghelzfx.html">路珠分析</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/klsf/klsf_jinrihaomatj.html">号码统计</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/klsf/klsf_index.html">开奖号码</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right_five_three">
+                            <div class="right_five_img_three">
+                                <a href="/view/shishicai_cq/ssc_index.html"><img src="/img/small_logo/chognqingssc.png?v=20228171133" /></a>
+                            </div>
+                            <div class="right_five_cont_three">
+                                <h3>重庆时时彩</h3>
+                                <ul>
+                                    <li>
+                                        <a href="/view/shishicai_cq/ssc_jibenzs.html">基本走势</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/shishicai_cq/ssc_zhonghefx.html">路珠分析</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/shishicai_cq/ssc_haomatj.html">号码统计</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/shishicai_cq/ssc_index.html">开奖号码</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right_five_four">
+                            <div class="right_five_img_four">
+                                <a href="/view/kuai3/kuai3_index.html"><img src="/img/small_logo/jskuai3.png?v=20228171133" /></a>
+                            </div>
+                            <div class="right_five_cont_four">
+                                <h3>江苏快3</h3>
+                                <ul>
+                                    <li>
+                                        <a href="/view/kuai3/kuai3_jibenzs.html">基本走势</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/kuai3/kuai3_zonghelz.html">总和路珠</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/kuai3/kuai3_lishihaomatj.html">号码统计</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/kuai3/kuai3_index.html">开奖号码</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right_five_five">
+                            <div class="right_five_img_five">
+                                <a href="/view/cqnc/index.html"><img src="/img/small_logo/chongqingnc.png?v=20228171133" /></a>
+                            </div>
+                            <div class="right_five_cont_five">
+                                <h3>幸运农场</h3>
+                                <ul>
+                                    <li>
+                                        <a href="/view/cqnc/klsf_jibenzs.html">基本走势</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/cqnc/klsf_zonghelz.html">总和路珠</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/cqnc/klsf_jinrihaomatj.html">号码统计</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view/cqnc/index.html">开奖号码</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>-->
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="fooderbox"></div>
+<div class="fixedgoBack">
+	<div class="fix1200">
+		<ul>
+			<li>
+				<a class="kefuicon" target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?lang=&uin=800057725&cref=http://www.168kai.cc&ref=&pt=168%E5%BC%80%E5%A5%96%E7%BD%91&f=1&ty=1&ap=&as="></a>
+			</li>
+			<li>
+				<!--用户反馈模态框-->
+				<span class="fankuicon fankuicon_a" data-toggle="modal" data-target="#myModal">
+							<span class="fankuicons"></span>
+						</span>
+
+			</li>
+			<li>
+				<a class="topicon" id="gotop" href="javascript:"></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--模态框-->
+<div id="user_adv">
+<!--模态框-->
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" style="z-index: 999;" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="margin: 30px auto;margin-top: 130px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="../../img/index_r/close.png?v=20228171133" alt="" /></button>
+						<h4 class="modal-title" id="myModalLabel">在线反馈</h4>
+					</div>
+					<div class="modal-body">
+						<div class="info" id="info1" style="display: block;">
+							<div class="div_top">欢迎对开奖网提出宝贵的建议或意见</div>
+							<div class="div_middle">
+								<div class="middle_l">
+									<div class="l_div">称呼</div>
+									<div class="r_div"><input type="" placeholder="" class="input_l"  id="nickName"/></div>
+								</div>
+								<div class="middle_r">
+									<select name="" class="middle_select" id="linkType">
+										<option value="1">电话</option>
+										<option value="2">邮箱</option>
+										<option value="3">QQ</option>
+										<option value="4">微信</option>
+									</select>
+									<input type="text" class="input_r" id="linkNumber"/>
+								</div>
+							</div>
+							<div class="div_down">
+								<textarea name="" rows="" cols="" id="advice" placeholder="请写下您宝贵的意见..."></textarea>
+							</div>
+							<div>
+								<button type="button" class="btn btn_submit" id="btn_submit">提交</button>
+								<button type="button" class="btn btn_submiting" id="btn_submiting">正在提交...</button> 
+							</div>
+						</div><!--info1-->
+						<div class="info" id="info2" style="display: none;">
+							<div class="success_div">
+								<div class="pic"><img src="../../img/tishi.png?v=20228171133" alt=""/></div>
+								<div class="success_h">
+									<h1>提交成功</h1>
+									<p>感谢您反馈，我们将尽快做出相应的调整！</p>
+								</div>
+							</div>
+						</div><!--info2-->
+						<div class="info" id="info3" style="display: none;">
+							<div class="success_div">
+								<div class="pic"><img src="../../img/fankuidh.gif?v=20228171133" alt=""/></div>
+								<div class="success_h">
+									<h1>您已提交</h1>
+									<p>请您稍适休息，喝杯咖啡，谢谢您的支持！</p>
+								</div>
+							</div>
+						</div><!--info2-->
+					</div> 					
+				</div>
+			</div>
+		</div>
+</div>
+
+</body>
+<script type="text/javascript" src="/js/loacal/news/zixun_public.js?v=20228171133"></script>
+
+</html>

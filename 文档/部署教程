@@ -1,0 +1,9 @@
+##############################投注站#######################
+1、扩展安装：fileinfo、redis、Swoole4、opcache
+2、去除禁用函数：pcntl_signal、pcntl_alarm、proc_open、symlink、putenv、shell_exec、popen
+3、文件目录授权：
+    1：chmod -R 777 storage
+    2：chmod -R 777 bootstrap/cache
+    3：将public目录授权为www 777
+4、启用swoole命令
+    php bin/laravels start

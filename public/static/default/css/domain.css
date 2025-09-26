@@ -1,0 +1,22 @@
+#domainDetail .red-font{
+	color: #ff0000;
+}
+
+#domainDetail .table-header{
+	color:white;
+	background-color: #1b4075;
+}
+
+#domainDetail .font-center, #domainDetail td{
+	text-align: center;
+	padding: 5px 0px;
+}
+
+#domainDetail .label{
+	padding: 3px 0px;
+}
+
+#domainDetail .best-label{
+	padding-left: 3px;
+}
+

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://0123769548-zx.5ddp6kmp70.com/util/credit-rules/AULUCKY8.html -->
+<html style="--primaryColor:#null;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style type="text/css">
+      :root {
+        font-size: 13px;
+      }
+
+      body {
+        font-family: "Microsoft YaHei", Tahoma, Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #333;
+        cursor: default;
+        text-decoration: none;
+      }
+
+      a[target] {
+        color: #2836f4;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+
+      p {
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+
+      ol,
+      ul {
+        padding-left: 20px;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+
+      ol li,
+      ul li {
+        margin: 8px 0;
+      }
+
+      ul.time-ul {
+        list-style-type: square;
+        margin-top: -10px;
+      }
+
+      ul.time-ul li {
+        margin: 5px 0;
+      }
+
+      ul.inner-ul {
+        list-style-type: circle;
+      }
+
+      .body-wrapper {
+        padding: 15px;
+      }
+
+      .stress {
+        font-weight: 600;
+      }
+
+      .rules .headline {
+        font-size: 1.05rem;
+      }
+
+      .rules ol li strong {
+        color: #000;
+      }
+    </style>
+  
+        <style>
+          body {
+            margin: 8px;
+          }
+          body.dark {
+            color: #fff !important;
+            background: #000;
+          }
+          body.dark strong {
+            color: #fff !important;
+          }
+          body a,
+          body.dark a {
+            color: var(--primaryColor) !important;
+          }
+          body.dark.bjl-rules.simple table th{
+            color: #000000;
+          }
+          body.dark.bjl-rules.simple table td {
+            color: #333333;
+          }
+          @media (min-width: 481px) and (max-width: 767px) {
+            body {
+              margin: 0;
+            }
+            #lottery {
+              display: none;
+            }
+          }
+          @media (min-width: 320px) and (max-width: 480px) {
+            body {
+              margin: 0;
+            }
+            #lottery {
+              display: none;
+            }
+          }
+        </style>
+      
+        <script type="text/javascript">
+          function checkDarkMode(currentUrl) {
+            var isDarkMode = getParameterByName("isDarkMode", currentUrl);
+            if (isDarkMode === "true") {
+              document.body.classList.add("dark");
+            }
+          }
+
+          function checkPrimaryColor(currentUrl) {
+            let root = document.documentElement;
+            const primaryColor = getParameterByName("primaryColor", currentUrl); 
+            root.style.setProperty('--primaryColor', "#" + primaryColor);
+          }
+          
+          function checkHrefShow(currentUrl) {
+            var isHrefShow = getParameterByName("isHrefShow", currentUrl);
+            if (isHrefShow === "false") {
+              document.querySelectorAll("a").forEach(function(item) {
+                item.href = "#";
+                item.removeAttribute("target");
+              })
+            }
+          }
+          
+          function change() {
+            var hrefShowParameter = getParameterByName("isHrefShow", location.href);
+            var darkModeParameter = getParameterByName("isDarkMode", location.href);
+            var primaryColorParameter = getParameterByName("primaryColor", location.href);
+              
+            location.href = document.getElementById("lottery").value + ".html?primaryColor="  + primaryColorParameter + ".html?isHrefShow=" + hrefShowParameter + "&isDarkMode=" + darkModeParameter;
+            checkHrefShow(location.href);
+            checkDarkMode(location.href);
+            checkPrimaryColor(location.href);
+          }
+
+          function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return "";
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+          }
+          
+          document.addEventListener("DOMContentLoaded", function() {
+            // var regex = /(http.+\.html)/g;
+            var currentUrl = location.href;
+            // var truncateUrl = currentUrl.match(regex)[0];
+            // var currentLotteryArr = truncateUrl.split("/");
+            // var currentLottery = currentLotteryArr[
+            //   currentLotteryArr.length - 1
+            // ].replace(".html", "");
+            // document.querySelector(
+            //   '#lottery option[value="' + currentLottery + '"]'
+            // ).selected = true;
+
+            var isHrefShow = getParameterByName("isHrefShow", currentUrl);
+            if (isHrefShow === "false") {
+              document.querySelectorAll("a").forEach(function(item) {
+                item.href = "#";
+                item.removeAttribute("target");
+              })
+            }
+            
+            checkHrefShow(currentUrl)
+            checkDarkMode(currentUrl);
+            checkPrimaryColor(currentUrl);
+          });
+        </script>
+      </head>
+
+  <body>
+    <div class="body-wrapper">
+      <div class="notice">
+        <h4>重要声明</h4>
+        <ol>
+          <li>客户一经在本公司开户或投注，即被视为已接受以下规则。</li>
+          <li>为避免出现争议，请您务必在下注之后查看「下注状况」。</li>
+          <li>任何投诉必须在开奖之前提出，公司不接受任何开奖之后的投诉。</li>
+          <li>
+            若公布赔率时出现任何打字错误或非故意人为失误，所有（相关）注单一律不算。
+          </li>
+          <li>
+            公布之所有赔率为浮动赔率，下注时请确认当前赔率及金额，下注确认后一律不能修改。
+          </li>
+          <li>
+            开奖后接受的投注，一律视为投机行为，[本局注单一律不返还本金及盈利]，敬请会员遵守游戏规则。
+          </li>
+          <li>
+            若本后台发现客户以不正当的手法投注或投注注单不正常，后台将有权「取消」相应之注单，客户不得有任何异议。
+          </li>
+          <li>
+            如因软件或线路问题导致交易内容或其他与账号设定不符合的情形，请在开奖前立即与本后台联络反映问题，否则本后台将以资料库中的数据为准。
+          </li>
+          <li>
+            倘若发生遭黑客入侵破坏行为或不可抗拒之灾害导致网站故障或资料损坏、数据丢失等情况，后台将以资料库数据为依据。如发现玩家使用不正当程序上获得利益，本公司有权要求取消所获得之不当得利。
+          </li>
+          <li>
+            各级管理人员及客户必须对本系统各项功能进行了解及熟悉，任何违反正常使用的操作，后台概不负责。
+          </li>
+          <li>请认真了解各款彩票游戏规则。</li>
+          <li>
+            如果会员信用额度超额或者为负数引起的争议，一律以公司处理为准。
+          </li>
+          <li>
+            客户有责任确保自己的账户及密码保密，如果因客户的账户、密码简单，或因泄露导致被盗用，造成的损失将由客户本人承担；同时应立即通知本公司，并更改其个人详细资料。
+          </li>
+          <li>
+            若官方福彩中心开奖错误导致本系统采集数据同时出错情况下，当期错误的所有注单以福彩中心官方当日最新数据为标准重新结算！在此特别声明，客户不得有任何异议。
+          </li>
+          <li>
+            本公司将不承担任何因客戶违反当地相关交易法令，所引起之任何责任。
+          </li>
+          <li>本系统所有投注皆含本金。</li>
+          <li>本公司有权保留一切争议事项及最后的决策权。</li>
+        </ol>
+      </div>
+
+      <div class="disclaimer">
+        <h4>
+          澳洲幸运8(原名：<a href="https://sg-redirect.com/?url=http://www.au36luckylot.com/results/lucky-ball-8" target="_blank">“Lucky Ball 8”</a>)规则说明
+        </h4>
+        <p>
+          <strong>官方网站:</strong>
+          <a href="https://sg-redirect.com/?url=http://www.au36luckylot.com/results/lucky-ball-8" target="_blank">http://www.au36luckylot.com/results/lucky-ball-8</a>
+        </p>
+        <p>
+          该游戏的投注时间、开奖时间和开奖号码与“澳洲幸运8”完全同步，营业时间为北京时间(GMT+8)每天上午06:59到凌晨05:59，每5分钟开奖一次，每天开奖276期。
+        </p>
+      </div>
+
+      <div class="rules">
+        <h4 class="headline">具体游戏规则如下:</h4>
+        <ol>
+          <!-- 1. -->
+          <li>
+            <strong>两面</strong>：指单、双；大、小、尾大、尾小。
+            <ul>
+              <li>
+                <span class="stress">单、双</span>：号码为双数叫双，如8、16；号码为单数叫单，如19、5。
+              </li>
+              <li><span class="stress">大、小</span>：开出之号码大于或等于11为大，小于或等于10为小。</li>
+              <li>
+                <span class="stress">尾大、尾小</span>：开出之尾数大于或等于5为尾大，小于或等于4为尾小。
+              </li>
+              <li>
+                每一个号码为一投注组合，假如投注号码为开奖号码并在所投的球位置，视为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 2. -->
+          <li>
+            <strong>中发白</strong>
+            <ul>
+              <li><span class="stress">中</span>：开出之号码为01、02、03、04、05、06、07</li>
+              <li><span class="stress">发</span>：开出之号码为08、09、10、11、12、13、14</li>
+              <li><span class="stress">白</span>：开出之号码为15、16、17、18、19、20</li>
+            </ul>
+          </li>
+          <!-- 3. -->
+          <li>
+            <strong>方位</strong>
+            <ul>
+              <li><span class="stress">东</span>：开出之号码为01、05、09、13、17</li>
+              <li><span class="stress">南</span>：开出之号码为02、06、10、14、18</li>
+              <li><span class="stress">西</span>：开出之号码为03、07、11、15、19</li>
+              <li><span class="stress">北</span>：开出之号码为04、08、12、16、20</li>
+            </ul>
+          </li>
+          <!-- 4. -->
+          <li>
+            <strong>总和单双</strong>
+            <ul>
+              <li>
+                所有8个开奖号码的数字总和值是单数为总和单，如数字总和值是31、51；所有8个开奖号码的数字总和值是双数为总和双，如数字总和是42、80；假如投注组合符合中奖结果，视为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 5. -->
+          <li>
+            <strong>总和大小</strong>
+            <ul>
+              <li>
+                所有8个开奖号码的数字总和值85到132为总大；所有8个开奖号码的数字总和值36到83为总分小；所有8个开奖号码的数字总和值为84打和；如开奖号码为01、20、02、08、17、09、11，数字总和是68，则总分小。假如投注组合符合中奖结果，视为中奖，其余情形视为不中奖，打和不计算结果。
+              </li>
+            </ul>
+          </li>
+          <!-- 6. -->
+          <li>
+            <strong>总尾大小</strong>
+            <ul>
+              <li>
+                所有8个开奖号码的数字总和数值的个位数大于或等于5为总尾大，小于或等于4为总尾小；假如投注组合符合中奖结果，视为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 7. -->
+          <li>
+            <strong>选二任选</strong>
+            <ul>
+              <li>
+                指从01至20中任意选择2个号码对开奖号码中任意2个位置的投注。
+                投注号码与开奖号码中任意2个位置的号码相符，即中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 8. -->
+          <li>
+            <strong>选二连组</strong>
+            <ul>
+              <li>
+                指从01至20中任意选择2个号码对开奖号码中按开奖顺序出现的2个连续位置的投注。
+                投注号码与开奖号码中按开奖顺序出现的2个连续位置的号码相符（顺序不限），即中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 9. -->
+          <li>
+            <strong>选三任选</strong>
+            <ul>
+              <li>
+                指从01至20中任意选择3个号码对开奖号码中任意3个位置的投注。
+                投注号码与开奖号码中任意3个位置的号码相符，即中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 10. -->
+          <li>
+            <strong>选三前组</strong>
+            <ul>
+              <li>
+                指从01至20中任意选择3个号码对开奖号码中按开奖顺序出现的前3个连续位置的投注。
+                投注号码与开奖号码中按开奖顺序出现的前3个位置的号码相符（顺序不限），即中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 11. -->
+          <li>
+            <strong>选四任选</strong>
+            <ul>
+              <li>
+                指从01至20中任意选择4个号码，对开奖号码中任意4个位置的投注。
+                投注号码与开奖号码中任意4个位置的号码相符，即中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 12. -->
+          <li>
+            <strong>选五任选</strong>
+            <ul>
+              <li>
+                指从01至20中任意选择5个号码，对开奖号码中任意5个位置的投注。
+                投注号码与开奖号码中任意5个位置的号码相符，即中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 13. -->
+          <li>
+            <strong>.第一球~第四球龙虎</strong>
+            <ul>
+              <li>
+                <span class="stress">第一球 龙/虎</span>：
+                “第一球”号码大于“第八球”号码视为【龙】中奖、反之小于视为【虎】中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">第二球 龙/虎</span>：
+                “第二球”号码大于“第七球”号码视为【龙】中奖、反之小于视为【虎】中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">第三球 龙/虎</span>：
+                “第三球”号码大于“第六球”号码视为【龙】中奖、反之小于视为【虎】中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">第四球 龙/虎</span>：
+                “第四球”号码大于“第五球”号码视为【龙】中奖、反之小于视为【虎】中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 14. -->
+          <li>
+            <strong>正码</strong>
+            <ul>
+              <li>
+                从01至20中任意选择1个号码进行投注，
+                投注号码与开奖号码中任意1个位置的号码相符，即中奖。
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  
+
+</body></html>

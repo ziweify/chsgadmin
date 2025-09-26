@@ -1,0 +1,50 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"></head><body><header id="indexHeader">
+	<div class="top_menu_bar">
+		<span id="back"><a href="/html/components/more_menu.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M15.4952 19.5547C15.8016 19.8335 16.2759 19.8111 16.5547 19.5048C16.8335 19.1984 16.8111 18.7241 16.5048 18.4453L15.4952 19.5547ZM8 11.72L7.46206 11.1974C7.3205 11.3431 7.2441 11.54 7.25035 11.7431C7.2566 11.9461 7.34496 12.138 7.49522 12.2747L8 11.72ZM16.0379 4.52261C16.3266 4.22551 16.3197 3.75069 16.0226 3.46206C15.7255 3.17343 15.2507 3.18029 14.9621 3.47739L16.0379 4.52261ZM16.5048 18.4453L8.50478 11.1653L7.49522 12.2747L15.4952 19.5547L16.5048 18.4453ZM8.53794 12.2426L16.0379 4.52261L14.9621 3.47739L7.46206 11.1974L8.53794 12.2426Z" fill="black"></path>
+			</svg></a>
+		</span>
+		<!-- <div class="top_menu_left">
+			<a href="../../index.html"><img src="../../img/logo_phone.png" alt="" /></a>
+		</div> -->
+		<div class="top_menu_middle" id="caizhong_name">
+			<span id="titlespan"></span>
+		</div>
+		<span style="width: 30px;"></span>
+		<!--<div class="top_menu_more">
+			<span class="more_btn">
+			<span id="showtime"></span>
+			<input type="hidden" id="yearmothnday" />
+			<input type="text" id="beginTime" class="" readonly="disabled" />
+			</span>
+		</div>-->
+	</div>
+</header>
+<script>
+	$(function() {
+		$("#cZList").on("click","li",function(){
+			tools.openAllCz(false); //鍏抽棴鎵?鏈夊僵绉嶅垪琛&#65533;
+		});
+		$("#indexHeader").on("touchstart", "#caizhong_name", function() {
+//			bodyHtmlhide();
+           $("#cZList").scrollTop(-50);
+			$(".tabBox").removeClass("hasheight");
+    		 $("#touchlongmove").removeClass("gotop")
+        	$(".sort").removeClass("bgsize");
+        	// tools.openAllCz(true); //鎵撳紑鎵?鏈夊僵绉嶅垪琛&#65533;        		
+		});
+		//鎵?鏈夊僵绉&#65533;
+		$("#cZList .backbtn").on("click", "span:nth-child(1)", function() {
+			tools.openAllCz(false); //鍏抽棴鎵?鏈夊僵绉嶅垪琛&#65533;
+			bodyHtmlvis();
+		});
+		/*$("#indexHeader .top_menu_left").on("touchstart", "img", function() {
+			window.location.href="../../index.html";
+		});*/
+
+		// $('#back a').on("click", function() {
+		// 	window.history.back();
+		// });
+	});
+</script></body></html>

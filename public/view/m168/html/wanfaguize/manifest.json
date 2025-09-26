@@ -1,0 +1,1041 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0024)http://404.ident331.com/ -->
+<html class="hidden" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Page Not Found</title>
+    <style type="text/css">
+      html {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+      }
+
+      body {
+        position: absolute;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        font-family: Arial, "Microsoft YaHei";
+        background: rgb(93, 161, 206)
+          url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMjE2IDc4NiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEuNDE0MjE7Ij4KICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsLTM4MS44OTgsLTExMC42NjcpIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtNy42Mzc1NmUtMTYsMS4yNTA3OCwtMi41MDQ0MSwtMS41MjkyNWUtMTUsMjAzNy4yNSwtMTY2LjIxOSkiPgogICAgICAgICAgICA8cmVjdCB4PSIyMjEuMzcxIiB5PSIxNzUuNTEiIHdpZHRoPSI2MjcuODQ0IiBoZWlnaHQ9IjQ4NS40NjUiIHN0eWxlPSJmaWxsOnVybCgjX0xpbmVhcjEpOyIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iX0xpbmVhcjEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCg2MjcuODQ0LDAsMCw0ODUuNDY1LDIyMS4zNzEsNDE4LjI0MikiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYigxNDksMjEzLDIzMSk7c3RvcC1vcGFjaXR5OjEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYig0NywxMTMsMTgwKTtzdG9wLW9wYWNpdHk6MSIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+Cjwvc3ZnPgo=")
+          no-repeat;
+        background-size: cover;
+      }
+
+      .img-container {
+        width: 25%;
+        margin: 33vh auto;
+      }
+
+      .text-container span {
+        display: block;
+        text-align: center;
+        padding: 8px;
+        color: #fff;
+        font-size: 20px;
+        opacity: 0;
+        -webkit-transition: opacity 0.2s ease-in;
+        -o-transition: opacity 0.2s ease-in;
+        transition: opacity 0.2s ease-in;
+      }
+
+      .text-container span.show {
+        opacity: 1;
+      }
+
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+        .img-container {
+          width: 40%;
+        }
+
+        .text-container span {
+          font-size: 40px;
+        }
+
+        .clouds {
+          bottom: 10% !important;
+        }
+      }
+
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+        .img-container {
+          width: 40%;
+        }
+
+        .text-container span {
+          font-size: 40px;
+        }
+
+        .clouds {
+          bottom: 10% !important;
+        }
+      }
+
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .img-container {
+          width: 40%;
+        }
+
+        .text-container span {
+          font-size: 40px;
+        }
+
+        .clouds {
+          bottom: 10% !important;
+        }
+      }
+
+      .parachute-container {
+        -webkit-transform: translate3d(0, -30vh, 0);
+        transform: translate3d(0, -30vh, 0);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        -webkit-transition: -webkit-transform 10s ease-in-out;
+        transition: -webkit-transform 10s ease-in-out;
+        -o-transition: transform 10s ease-in-out;
+        transition: transform 10s ease-in-out;
+        transition: transform 10s ease-in-out, -webkit-transform 10s ease-in-out;
+      }
+
+      .parachute-container.show {
+        -webkit-transform: translate3d(0, 30vh, 0);
+        transform: translate3d(0, 30vh, 0);
+      }
+
+      .parachute {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 10%;
+        height: 17%;
+        background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMyIgZGF0YS1uYW1lPSJMYXllciAzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTcuNTYgMTU4LjQxIj48ZGVmcz48c3R5bGU+LmNscy0xLC5jbHMtNXtmaWxsOiNmZmY7fS5jbHMtMSwuY2xzLTIsLmNscy0zLC5jbHMtNCwuY2xzLTZ7ZmlsbC1ydWxlOmV2ZW5vZGQ7fS5jbHMtMntmaWxsOiNmMTY0NjU7fS5jbHMtM3tmaWxsOiNkM2UwZGY7fS5jbHMtNHtmaWxsOiNjNzQwM2Y7fS5jbHMtNntmaWxsOiNhOTdjNTA7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5wYXJhY2h1dGU8L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTM4NS41MywxNjdjNi4xOS0zMy42LTE0LjMzLTY1LjU0LTQ1LjgzLTcxLjM1cy02Mi4wNywxNi43Mi02OC4yNiw1MC4zMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzEuNDQgLTk0LjQpIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzg4LjM4LDE1MS41MWM0LjYyLTI1LjA2LTE3LjE3LTUwLjA5LTQ4LjY4LTU1LjlzLTYwLjc5LDkuOC02NS40MSwzNC44NloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzEuNDQgLTk0LjQpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzcyLjY4LDEzNi45M2wtNzguNTItMTQuNDhjMy40Ny0xOC44MiwyMy44Ni0zMC44NCw0NS41NC0yNi44NFMzNzYuMTUsMTE4LjExLDM3Mi42OCwxMzYuOTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjcxLjQ0IC05NC40KSIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTMyMC42OSwxMjIuODdsMjcuMDUsNWMzLTE2LjQzLS41Ny0zMC44Ny04LTMyLjI1UzMyMy43MiwxMDYuNDQsMzIwLjY5LDEyMi44N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzEuNDQgLTk0LjQpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMzcwLjYzLDE3MS45NWwtLjM0LS4wN2gwbC0uMzMtLjA3aDBsLS4zMi0uMDdoMGwtLjY0LS4xNmgwbC0uMjctLjA3aDBsLS4yOS0uMDhoLS4wN2wtLjI2LS4wOGgwbC0uMjgtLjA5aDBsLS4yNy0uMDloMGwtLjA2LDBMMzY3LDE3MWwtLjA2LDBoMGwtLjA2LDAtLjItLjA3LS4wOSwwLS4yNC0uMDloMHYuMTJoMFYxNzFoMHYuMDdoMHMwLC4wOSwwLC4xM2gwdjBjMCwuMDYsMCwuMTIsMCwuMTh2MGMwLC4wNywwLC4xMywwLC4yLS44MSw0LjM5LTcuNTIsNi44My0xNSw1LjQ1bC0uMy0uMDYtLjExLDAtLjIyLDAtLjA4LDAtLjI5LS4wNi0uMSwwLS4yMy0uMDYtLjA4LDAtLjI0LS4wNi0uMDgsMC0uMjktLjA4LS4wNiwwLS4yNS0uMDctLjA4LDAtLjIyLS4wNy0uMDgsMC0uMjgtLjA5LS4wOSwwLS4yMS0uMDctLjA5LDAtLjIxLS4wNy0uMTIsMC0uMjEtLjA4LS4xMiwwLS4xOC0uMDctLjA4LDAtLjI3LS4xMWgwbC0uMjQtLjEtLjA4LDAtLjIyLS4xLDAsMC0uMjYtLjEyLS4wNywwLS4xOS0uMDktLjA4LDAtLjItLjEsMCwwTDM0NSwxNzVsLS4wOCwwLS4xNi0uMDktLjA4LDAtLjItLjExLDAsMGgwbC0uMjEtLjEyLS4xLS4wNi0uMTMtLjA4LS4wOS0uMDUtLjIyLS4xNGgwbC0uMjEtLjE0LS4wOC0uMDUtLjE0LS4xLS4wOC0uMDUtLjE5LS4xNGgwbDAsMC0uMTUtLjExLS4wOC0uMDYtLjEzLS4xLS4wNy0uMDYtLjE4LS4xNS0uMDUsMC0uMTQtLjEyLS4wNy0uMDYtLjEzLS4xMSwwLDAtLjE2LS4xNS0uMDctLjA3LS4xLS4xLS4wNy0uMDctLjEtLjEtLjA3LS4wOC0uMTMtLjE0LS4wNS0uMDYtLjEtLjExLS4wNi0uMDYtLjEtLjEyLS4wOC0uMS0uMDktLjExLS4wNS0uMDctLjA4LS4xLS4wNi0uMDctLjEyLS4xNiwwLDAtLjA5LS4xMywwLS4wNy0uMDYtLjEtLjA1LS4wOGgwbC0uMDktLjE1aDBsMC0uMDgtLjA2LS4xLDAtLjA4LDAtLjA5LDAtLjA4YTQuODcsNC44NywwLDAsMS0uMDcsMS4xNGMtLjgxLDQuMzktNy41Miw2LjgzLTE1LDUuNDVzLTEyLjg3LTYuMDUtMTIuMDYtMTAuNDRhNC44Niw0Ljg2LDAsMCwxLC4zNC0xLjA5bC0uMDcuMDYtLjA4LjA3LS4wNy4wNi0uMDkuMDctLjA3LjA2aDBsLS4xNC4xaDBsLS4wNy4wNi0uMS4wNy0uMDcuMDUtLjEzLjA5LDAsMC0uMTcuMTEtLjA4LDAtLjExLjA3LS4wOCwwLS4xMi4wNy0uMTEuMDYtLjE0LjA4LS4wNywwLS4xNC4wNy0uMDcsMC0uMTcuMDgtLjEsMC0uMTMuMDYtLjA5LDAtLjEzLjA2LS4wOSwwLS4yMS4wOC0uMDYsMC0uMTYuMDYtLjA4LDAtLjE3LjA2LS4wNiwwLS4yMi4wNy0uMDksMC0uMTUsMC0uMDksMC0uMTguMDVoLS4wNmwtLjIzLjA2LS4wOSwwLS4xNiwwLS4wOSwwLS4yNS4wNmgwbC0uMjUuMDUtLjEsMC0uMTUsMC0uMTEsMC0uMjQsMEgzMDdsLS4yMywwaC0uMDlsLS4xOSwwaC0uMDlsLS4yNywwaDBsLS4yMywwaC0uMDlsLS4yMSwwaC0uMDhsLS4yOCwwaC0yLjMzbC0uMjksMGgtLjA5bC0uMjIsMGgtLjA5bC0uMjYsMGgtLjA2bC0uMywwaC0uMDhsLS4yNSwwaC0uMDhsLS4yMywwaC0uMWwtLjI5LDBoLS4wOGwtLjIzLDAtLjExLDAtLjMtLjA1Yy03LjQ3LTEuMzgtMTIuODctNi4wNS0xMi4wNi0xMC40NGE0LjgyLDQuODIsMCwwLDEsLjI2LS45aC0xLjM2bC0uMjksMGgwbC0uMjcsMEgyODZsLS4zMSwwaDBsLS4yOCwwaDBsLS42Ni0uMDhoMGwtLjMzLDBoMGwtLjM0LS4wNWgwbC0uMzQtLjA2Yy03LjQ3LTEuMzgtMTIuODctNi4wNS0xMi4wNi0xMC40NGwwLS4xOCwwLS4wNiwwLS4xMiwwLS4wNiwwLS4xNHYwbC4wNi0uMTcsMCwwLC4wNS0uMTMsMC0uMDYuMDUtLjEyLDAtLjA2LjA3LS4xNXYwaDBsLjA4LS4xNiwwLDAsLjA3LS4xMiwwLS4wNS4wOC0uMTIsMCwwLC4xMS0uMTYsMCwwLC4xLS4xMywwLDAsLjA5LS4xLDAtLjA2LjExLS4xM3YwaDBsLjE0LS4xNSwwLDAsLjEtLjEuMDUtLjA1LjEtLjA5LjA1LDAsLjE1LS4xMy4wNiwwLC4xLS4wOC4wOC0uMDYuMDktLjA3LjA4LS4wNi4xMy0uMSwwLDBoMGwuMTgtLjEyLjA2LDAsLjEzLS4wOC4wNywwLC4xNC0uMDgsMCwwLC4xOS0uMTEsMCwwLC4xNS0uMDguMDgsMCwuMTItLjA2LjA5LDAsLjE0LS4wNy4xMS0uMDUuMTYtLjA3LjA5LDAsLjEzLS4wNi4wOSwwLC4xNC0uMDUuMSwwaDBsLjItLjA3aDBsLjA5LDAsLjE0LS4wNS4xMSwwLC4xMywwLC4xLDAsLjE2LDAsLjEyLDAsLjE4LS4wNS4xMiwwLC4xMywwLC4xMywwLC4xMSwwLC4xNCwwaDBsLjIyLDAsLjEzLDAsLjEyLDAsLjE1LDAsLjExLDAsLjE1LDAsLjEsMCwuMTUsMCwuMjMsMGgwbC4xNywwaC4wOWwuMTYsMCwuMTMsMCwuMTQsMGgwbC4yNCwwLC4xNywwaC42M2wuMzcsMGguMDZjLTQuOTQtMi4wNy04LjA4LTUuNjYtNy40NS05LjA4LjgxLTQuMzksNy41Mi02LjgzLDE1LTUuNDVsLjMzLjA2aDBsLjI4LjA2SDI5MGwuMy4wN2gwbC42Mi4xNWgwbC4zLjA4aDBsLjMzLjA5aDBsLjMuMDloMGwuMjkuMDloLjA1bC4yNi4wOWgwbC4yOC4xaDBsLjI1LjA5LjA4LDAsLjI0LjA5LjA1LDAsLjI2LjExaDBsLjI2LjExLDAsMCwuMjUuMTFoMGwuMjYuMTJoMGwuMjMuMTFoMGwuMjQuMTIsMCwwLC4yMy4xMi4wNiwwYTYsNiwwLDAsMS0xLjQxLTQuNzdjLjgxLTQuMzksNy41Mi02LjgzLDE1LTUuNDUsNS40OSwxLDkuODcsMy44MSwxMS40OCw3YTQuODUsNC44NSwwLDAsMSwuMDctMS4xNGMuODEtNC4zOSw3LjUyLTYuODMsMTUtNS40NXMxMi44Nyw2LjA1LDEyLjA2LDEwLjQ0YTQuODcsNC44NywwLDAsMS0uMzQsMS4wOWMyLjYzLTIuMzcsNy43MS0zLjQzLDEzLjItMi40MSw3LjQ3LDEuMzgsMTIuODcsNi4wNSwxMi4wNiwxMC40NGE2LDYsMCwwLDEtMywzLjk1aC4wNmwuMjUsMGgwbC4yNywwaC4wNWwuMjYsMGgwbC4yOSwwaDBsLjI4LDBoMmwuMywwaDBsLjMxLDBoMGwuMzQsMGgwbC4zMSwwaDBsLjY0LjA4aDBsLjMxLDBoLjA2bC4yOCwwaDBsLjMzLjA2YzcuNDcsMS4zOCwxMi44Nyw2LjA1LDEyLjA2LDEwLjQ0bDAsLjE4LDAsLjA2LDAsLjEyLDAsLjA2LDAsLjE0djBsLS4wNi4xNywwLDAtLjA1LjEzLDAsLjA2LS4wNS4xMiwwLC4wNi0uMDcuMTV2MGgwbC0uMDguMTUsMCwwLS4wNy4xMiwwLC4wNS0uMDguMTIsMCwwLS4xMS4xNiwwLDAtLjEuMTMsMCwwLS4wOS4xLDAsLjA2LS4xMS4xM3YwaDBsLS4xMy4xNCwwLDAtLjEuMS0uMDUuMDUtLjEuMDktLjA1LDAtLjE1LjEzLS4wNiwwLS4xLjA4LS4wOC4wNi0uMDkuMDctLjA4LjA2LS4xMS4wOC0uMDguMDYtLjE1LjEtLjA2LDAtLjExLjA3LS4wOS4wNi0uMTEuMDctLjA3LDAtLjE4LjEtLjA3LDAtLjEzLjA3LS4wOCwwLS4xMi4wNi0uMSwwLS4xLDAtLjIyLjEtLjA4LDAtLjEyLjA1LS4xLDAtLjEyLDAtLjEsMC0uMTMuMDUtLjIuMDctLjEzLDAtLjA5LDAtLjEyLDAtLjEyLDAtLjEyLDAtLjEsMC0uMjQuMDctLjExLDAtLjE0LDAtLjA5LDAtLjE2LDBoLS4wNmwtLjE4LDAtLjIyLDAtLjE3LDBoLS4wNmwtLjE5LDBIMzgxbC0uMTksMGgwbC0uNjYuMWgwbC0uMiwwaC0uMDhsLS42Ny4wN2gwbC0uMjIsMGgtLjI4bC0uNDksMCwuMDksMCwuMy4xMy4xLDAsLjE0LjA2LjExLjA1LjE1LjA3LjExLjA1LjEzLjA3LjIyLjExaDBsLjExLjA2LjEzLjA3LjEzLjA3LjA5LjA1LjE0LjA4aDBsLjIuMTIuMTEuMDYuMTEuMDcuMTMuMDguMS4wNi4xMi4wOC4xMi4wOC4wOS4wNi4yLjEzLjEuMDcuMTEuMDguMS4wNy4xMi4wOS4wOS4wNy4xOS4xNGgwbDAsMCwuMTYuMTMuMDcuMDYuMTMuMS4wNy4wNi4xNC4xMiwwLDAsLjE4LjE2LjA2LjA1LjEyLjEyLjA2LjA2LjExLjExLjA2LjA2LjE2LjE2aDBsMCwwLC4xMi4xMy4wNi4wNi4xLjExLjA1LjA2LjExLjEzLDAsMCwuMTQuMTcsMCwwLC4xLjEzLjA1LjA3LjA5LjEyLDAsLjA1LjEyLjE3aDBsLjExLjE4LDAsLjA2LjA3LjEyLDAsLjA3LjA4LjE0LDAsMCwuMS4xOCwwLDAsLjA3LjEzLDAsLjA3LjA2LjEzLDAsLjA1LjA4LjE4aDB2MGwuMDYuMTcsMCwuMDYsMCwuMTMsMCwuMDUsMCwuMTZ2MGwwLC4xOXYwbDAsLjE0di4wNmwwLC4xNHYuMDVsMCwuMTdoMHYuMjVzMCwuMDksMCwuMTN2LjA2czAsLjA5LDAsLjE0djBjMCwuMDYsMCwuMTIsMCwuMTl2LjQ1bDAsLjE4QzM4NC44MSwxNzAuODgsMzc4LjEsMTczLjMyLDM3MC42MywxNzEuOTVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjcxLjQ0IC05NC40KSIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTI4MS4zMywxMzkuNDZjLTQuNzItMi4wOS03LjY3LTUuNTgtNy4wNi04LjkxLjgxLTQuMzksNy41Mi02LjgzLDE1LTUuNDVsLjMzLjA2aDBsLjA4LDBBMTI4Ljg5LDEyOC44OSwwLDAsMCwyODEuMzMsMTM5LjQ2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI3MS40NCAtOTQuNCkiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik0zNzUuODQsMTQxLjA3SDM3NmwuMzMuMDZjNy40NywxLjM4LDEyLjg3LDYuMDUsMTIuMDYsMTAuNDRsMCwuMTgsMCwuMDYsMCwuMTIsMCwuMDYsMCwuMTR2MGwtLjA2LjE3LDAsMC0uMDUuMTMsMCwuMDYtLjA1LjEyLDAsLjA2LS4wNy4xNXYwaDBsLS4wOC4xNSwwLDAtLjA3LjEyLDAsLjA1LS4wOC4xMiwwLDAtLjExLjE2LDAsMC0uMS4xMywwLDAtLjA5LjEsMCwuMDYtLjExLjEzdjBoMGwtLjEzLjE0LDAsMC0uMS4xLS4wNS4wNS0uMS4wOS0uMDUsMC0uMTUuMTMtLjA2LDAtLjEuMDgtLjA4LjA2LS4wOS4wNy0uMDguMDYtLjExLjA4LS4wOC4wNi0uMTUuMS0uMDYsMC0uMTEuMDctLjA5LjA2LS4xMS4wNy0uMDcsMC0uMTguMS0uMDcsMC0uMTMuMDctLjA4LDAtLjEyLjA2LS4xLDAtLjEsMC0uMjIuMS0uMDgsMC0uMTIuMDUtLjEsMC0uMTIsMC0uMSwwLS4xMy4wNS0uMi4wNy0uMTMsMC0uMDksMC0uMTIsMC0uMTIsMC0uMTIsMC0uMSwwLS4yNC4wNy0uMTEsMC0uMTQsMC0uMDksMC0uMTYsMGgtLjA2bC0uMTgsMC0uMjIsMC0uMTcsMGgtLjA2bC0uMTksMEgzODFsLS4xOSwwaDBsLS42Ni4xaDBsLS4yLDBoLS4wOGwtLjY3LjA3aDBsLS4yMiwwaC0uMzVBMTI4LjcxLDEyOC43MSwwLDAsMCwzNzUuODQsMTQxLjA3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI3MS40NCAtOTQuNCkiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik0zNjYuNjQsMTcwLjgzYy41NC0xNi42Mi0uODMtMzEuNjItMy44Ny00My44cS0xLS4zLTIuMTYtLjUxYy01LjQ5LTEtMTAuNTgsMC0xMy4yLDIuNDFhNC44Nyw0Ljg3LDAsMCwwLC4zNC0xLjA5Yy44MS00LjM5LTQuNTktOS4wNi0xMi4wNi0xMC40NHMtMTQuMTgsMS4wNi0xNSw1LjQ1YTQuODUsNC44NSwwLDAsMC0uMDcsMS4xNGMtMS42MS0zLjE1LTYtNi0xMS40OC03LS43NC0uMTQtMS40OC0uMjQtMi4yLS4zLTcuMTgsMTAuMjktMTMuODEsMjMuODItMTkuMjMsMzkuNTRoLjNhNC44Miw0LjgyLDAsMCwwLS4yNi45Yy0uODEsNC4zOSw0LjU5LDkuMDYsMTIuMDYsMTAuNDRsLjMuMDUuMTEsMCwuMjMsMGguMDhsLjI5LDBoLjFsLjIzLDBoLjA4bC4yNSwwaC4wOGwuMywwaC4wNmwuMjYsMGguMDlsLjIyLDBoLjA5bC4yOSwwaDIuMzNsLjI4LDBoLjA4bC4yMSwwaC4wOWwuMjMsMGgwbC4yNywwaC4wOWwuMTksMGguMDlsLjIzLDBoLjA1bC4yNCwwLC4xMSwwLC4xNSwwLC4xLDAsLjI1LS4wNWgwbC4yNS0uMDYuMDksMCwuMTYsMCwuMDksMCwuMjMtLjA2aC4wNmwuMTgtLjA1LjA5LDAsLjE1LDAsLjA5LDAsLjIyLS4wNy4wNiwwLC4xNy0uMDYuMDgsMEwzMTAsMTY3bC4wNiwwLC4yMS0uMDguMDksMCwuMTMtLjA2LjA5LDAsLjEzLS4wNi4xLDAsLjE3LS4wOC4wNywwLC4xNC0uMDcuMDcsMCwuMTQtLjA4LjExLS4wNi4xMi0uMDcuMDgsMCwuMTEtLjA3LjA4LDAsLjE3LS4xMSwwLDAsLjEzLS4wOS4wNy0uMDUuMS0uMDcuMDctLjA2aDBsLjE0LS4xaDBsLjA3LS4wNi4wOS0uMDcuMDctLjA2LjA4LS4wNy4wNy0uMDZhNC44Niw0Ljg2LDAsMCwwLS4zNCwxLjA5Yy0uODEsNC4zOSw0LjU5LDkuMDYsMTIuMDYsMTAuNDRzMTQuMTgtMS4wNiwxNS01LjQ1YTQuODcsNC44NywwLDAsMCwuMDctMS4xNGwwLC4wOCwwLC4wOSwwLC4wOC4wNi4xLDAsLjA4aDBsLjA5LjE1aDBsLjA1LjA4LjA2LjEsMCwuMDcuMDkuMTMsMCwwLC4xMi4xNi4wNi4wNy4wOC4xLjA1LjA3LjA5LjExLjA4LjEuMS4xMi4wNi4wNi4xLjExLjA1LjA2LjEzLjE0LjA3LjA4LjEuMS4wNy4wNy4xLjEuMDcuMDcuMTYuMTUsMCwwLC4xMy4xMS4wNy4wNi4xNC4xMi4wNSwwLC4xOC4xNS4wNy4wNi4xMy4xLjA4LjA2LjE1LjExLDAsMGgwbC4xOS4xNC4wOC4wNS4xNC4xLjA4LjA1LjIxLjE0aDBsLjIyLjE0LjA5LjA1LjEzLjA4LjEuMDYuMjEuMTJoMGwwLDAsLjIuMTEuMDgsMCwuMTYuMDkuMDgsMCwuMjQuMTMsMCwwLC4yLjEuMDgsMCwuMTkuMDkuMDcsMCwuMjYuMTIsMCwwLC4yMi4xLjA4LDAsLjI0LjFoMGwuMjcuMTEuMDgsMCwuMTguMDcuMTIsMCwuMjEuMDguMTIsMCwuMjEuMDcuMDksMCwuMjEuMDcuMDksMCwuMjguMDkuMDgsMCwuMjIuMDcuMDgsMCwuMjUuMDcuMDYsMCwuMjkuMDguMDgsMCwuMjQuMDYuMDgsMCwuMjMuMDYuMSwwLC4yOS4wNi4wOCwwLC4yMiwwLC4xMSwwLC4zLjA2YzcuNDcsMS4zOCwxNC4xOC0xLjA2LDE1LTUuNDUsMC0uMDcsMC0uMTMsMC0uMnYwYzAtLjA2LDAtLjEyLDAtLjE4djBoMHMwLS4wOSwwLS4xM2gwVjE3MWgwdi0uMDdoMHYtLjEyaDBsLjI0LjA5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI3MS40NCAtOTQuNCkiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0zNDQuNzIsMTIxLjQzYTIxLjIyLDIxLjIyLDAsMCwwLTE4LjkyLTMuNDljLTQuNCwxMi4yMy04LjkyLDI4LjY4LTEyLjg2LDQ3LjM0aDBsLjA3LS4wNnEtLjA3LjE2LS4xMy4zM2wtLjI3LDEuMzFjLS4yOCw0LjIyLDUsOC41NywxMi4xMyw5Ljg5czEzLjYyLS44NywxNC44Ni00LjkxbC4yMS0xLjMyYzAtLjEyLDAtLjI0LDAtLjM2bDAsLjA4aDBDMzQyLjgzLDE1MS40LDM0NC40NywxMzQuNDIsMzQ0LjcyLDEyMS40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzEuNDQgLTk0LjQpIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMjk0Ljk0LDEyNy4yOWEuNjIuNjIsMCwxLDEsMS4yNC0uMDZsNS41NCwxMDRhLjYyLjYyLDAsMCwxLTEuMjUuMDZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjcxLjQ0IC05NC40KSIvPjxwYXRoIGNsYXNzPSJjbHMtNSIgZD0iTTI4MS4xMSwxMzkuNzZhLjYyLjYyLDAsMCwxLDEuMjItLjI2bDE5LjM4LDkxLjYzYS42Mi42MiwwLDAsMS0xLjIyLjI2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI3MS40NCAtOTQuNCkiLz48cGF0aCBjbGFzcz0iY2xzLTUiIGQ9Ik0zNjkuMTUsMTQwLjY2YS42Mi42MiwwLDEsMSwxLjE0LjUxbC00Myw5NS4wN2EuNjIuNjIsMCwxLDEtMS4xNC0uNTFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjcxLjQ0IC05NC40KSIvPjxwYXRoIGNsYXNzPSJjbHMtNSIgZD0iTTM3OC4xMywxNTcuMjhhLjYyLjYyLDAsMCwxLDEsLjY5bC01MS45LDc4LjM2YS42Mi42MiwwLDEsMS0xLS42OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzEuNDQgLTk0LjQpIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMzIwLDEyMy44OWEuNjIuNjIsMCwxLDEsMS4yMy4yM0wzMDEuNzIsMjMxLjM3YS42Mi42MiwwLDAsMS0xLjIzLS4yM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzEuNDQgLTk0LjQpIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMzQ2Ljc5LDEyOC44M2EuNjIuNjIsMCwwLDEsMS4yMi4yNGwtMjAuNjUsMTA3YS42Mi42MiwwLDEsMS0xLjIyLS4yNFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzEuNDQgLTk0LjQpIi8+PHBvbHlnb24gY2xhc3M9ImNscy02IiBwb2ludHM9IjU2LjQ3IDE0MS43OSA1My4zNiAxNTguNDEgMjUuMzkgMTUzLjI1IDI4LjUgMTM2LjYzIDU2LjQ3IDE0MS43OSIvPjwvc3ZnPg==")
+          no-repeat;
+        background-size: 100% 100%;
+        -webkit-animation: shaking 3s infinite alternate;
+        animation: shaking 3s infinite alternate;
+      }
+
+      .clouds {
+        position: fixed;
+        bottom: 18%;
+        width: 100%;
+        -webkit-transition: opacity 2s ease-in-out,
+          -webkit-transform 2s ease-in-out;
+        transition: opacity 2s ease-in-out, -webkit-transform 2s ease-in-out;
+        -o-transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+        transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+        transition: transform 2s ease-in-out, opacity 2s ease-in-out,
+          -webkit-transform 2s ease-in-out;
+        opacity: 0;
+      }
+
+      #clouds-container1.clouds {
+        -webkit-transform: translate3d(-100vw, 0, 0);
+        transform: translate3d(-100vw, 0, 0);
+      }
+
+      #clouds-container2.clouds {
+        -webkit-transform: translate3d(100vw, 0, 0);
+        transform: translate3d(100vw, 0, 0);
+      }
+
+      #clouds-container1.clouds.show {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+
+      #clouds-container2.clouds.show {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+
+      .clouds svg {
+        width: 125%;
+        -webkit-transform: translate3d(-10%, 0, 0);
+        transform: translate3d(-10%, 0, 0);
+        position: absolute;
+      }
+
+      .clouds .cloud1 {
+        -webkit-animation: moving 5s infinite alternate;
+        animation: moving 5s infinite alternate;
+        left: -2%;
+        width: 639px;
+      }
+
+      .clouds .cloud2 {
+        -webkit-animation: moving 6s infinite alternate;
+        animation: moving 6s infinite alternate;
+        left: 35%;
+        width: 23%;
+      }
+
+      .clouds .cloud3 {
+        -webkit-animation: moving 4s infinite alternate;
+        animation: moving 4s infinite alternate;
+        right: 10%;
+        width: 678px;
+      }
+
+      .clouds .cloud4 {
+        right: -15%;
+        width: 450px;
+      }
+
+      @-webkit-keyframes moving {
+        from {
+          -webkit-transform: translate3d(-2%, 2%, 0);
+          transform: translate3d(-2%, 2%, 0);
+        }
+        to {
+          -webkit-transform: translate3d(2%, -2%, 0);
+          transform: translate3d(2%, -2%, 0);
+        }
+      }
+
+      @keyframes moving {
+        from {
+          -webkit-transform: translate3d(-2%, 2%, 0);
+          transform: translate3d(-2%, 2%, 0);
+        }
+        to {
+          -webkit-transform: translate3d(2%, -2%, 0);
+          transform: translate3d(2%, -2%, 0);
+        }
+      }
+
+      @-webkit-keyframes shaking {
+        from {
+          -webkit-transform: rotate(0deg) translate3d(0, 2%, 0);
+          transform: rotate(0deg) translate3d(0, 2%, 0);
+        }
+        to {
+          -webkit-transform: rotate(-20deg) translate3d(0, -2%, 0);
+          transform: rotate(-20deg) translate3d(0, -2%, 0);
+        }
+      }
+
+      @keyframes shaking {
+        from {
+          -webkit-transform: rotate(0deg) translate3d(0, 2%, 0);
+          transform: rotate(0deg) translate3d(0, 2%, 0);
+        }
+        to {
+          -webkit-transform: rotate(-20deg) translate3d(0, -2%, 0);
+          transform: rotate(-20deg) translate3d(0, -2%, 0);
+        }
+      }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="content">
+    <div class="img-container">
+      <svg
+        id="not_found"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 591.55 231.81"
+      >
+        <defs>
+          <style>
+            .text {
+              fill: none;
+              stroke: #fff;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 15px;
+            }
+          </style>
+        </defs>
+        <path
+          class="text"
+          d="M124.46,222.53L123.98,9.29L7.5,180.53L148.05,180.37"
+          style="stroke-dasharray: 561, 563; stroke-dashoffset: 0;"
+        ></path>
+        <path
+          class="text"
+          d="M188.44000000000003,115.91A108.41,108.41 0,1,1 405.26,115.91A108.41,108.41 0,1,1 188.44000000000003,115.91"
+          style="stroke-dasharray: 682, 684; stroke-dashoffset: 0;"
+        ></path>
+        <path
+          class="text"
+          d="M560.46,222.53L559.98,9.29L443.5,180.53L584.05,180.37"
+          style="stroke-dasharray: 561, 563; stroke-dashoffset: 0;"
+        ></path>
+      </svg>
+      <div class="text-container">
+        <span id="text">页面不存在哦!</span>
+      </div>
+      <div class="text-container"><span id="ip"></span></div>
+      <div class="text-container"><span id="url"></span></div>
+    </div>
+    <div class="parachute-container" id="parachute-container">
+      <div class="parachute"></div>
+    </div>
+    <div class="clouds" id="clouds-container1">
+      <svg
+        class="cloud1"
+        viewBox="0 0 639 196"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve"
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
+      >
+        <g transform="matrix(1,0,0,1,0.0158568,-28.18)">
+          <g id="cloud1" transform="matrix(1,0,0,1,60,-369.3)">
+            <path
+              d="M-37.57,444.73C-37.57,418.64 -13.77,397.48 15.59,397.48C38.53,397.48 58.08,410.4 65.53,428.48C78.075,419.52 95.405,420.855 106.43,431.63C112.503,424.69 121.289,420.703 130.512,420.703C141.389,420.703 151.548,426.25 157.43,435.4C167.692,426.976 180.594,422.419 193.87,422.53C204.348,422.477 214.645,425.282 223.65,430.64C231.65,418.57 246.4,410.46 263.29,410.46C287.08,410.46 306.64,426.52 309.01,447.11C316.736,444.01 325.378,444.057 333.07,447.24C339.104,440.935 347.462,437.364 356.19,437.364C373.744,437.364 388.19,451.81 388.19,469.364C388.19,471.434 387.989,473.499 387.59,475.53C394.804,476.936 401.601,479.974 407.46,484.41C415.88,475 428.86,468.96 443.46,468.96C468.85,468.96 489.46,487.25 489.46,509.82C489.46,509.82 566.89,511.53 578.04,593.25L-21.89,593.25C-21.89,593.25 -96,539.48 -37.57,444.73Z"
+              style="fill:white;fill-rule:nonzero;"
+            ></path>
+          </g>
+        </g>
+      </svg>
+      <svg
+        class="cloud2"
+        viewBox="0 0 355 218"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve"
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
+      >
+        <g transform="matrix(1,0,0,1,-499.124,-9.20248)">
+          <g id="cloud2" transform="matrix(1,0,0,1,60,-369.3)">
+            <path
+              d="M757,482.22L756.7,482.27C753.316,466.696 739.413,455.49 723.475,455.49C718.258,455.49 713.109,456.691 708.43,459C700.495,433.16 675.357,416.234 648.43,418.6C637.649,394.267 613.422,378.502 586.807,378.502C549.833,378.502 519.407,408.928 519.407,445.902C519.407,449.08 519.632,452.254 520.08,455.4L520.08,455.47C510.221,457.292 501.655,463.384 496.7,472.1C492.404,470.751 487.928,470.064 483.425,470.064C459.122,470.064 439.124,490.062 439.124,514.365C439.124,533.665 451.737,550.847 470.15,556.63C477.088,573.653 493.727,584.839 512.109,584.839C524.469,584.839 536.306,579.781 544.85,570.85C556.089,586.336 574.105,595.521 593.239,595.521C612.83,595.521 631.22,585.892 642.38,569.79C655.25,580.99 675.08,586.72 696.22,583.72C724.8,579.66 746.64,560.9 750.55,539.15C755.327,540.524 760.341,540.865 765.26,540.15C783.01,537.62 795.55,522.61 793.26,506.6C790.97,490.59 774.77,479.69 757,482.22Z"
+              style="fill:#f1f1f1;fill-rule:nonzero;"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="clouds" id="clouds-container2">
+      <svg
+        class="cloud3"
+        viewBox="0 0 678 208"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve"
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
+      >
+        <g transform="matrix(1,0,0,1,-694.9,0.01)">
+          <g id="cloud3" transform="matrix(1,0,0,1,60,-369.3)">
+            <path
+              d="M1288.19,419.44C1288.19,391.74 1262.93,369.29 1231.77,369.29C1207.42,369.29 1186.68,383 1178.77,402.22C1165.46,392.711 1147.07,394.126 1135.37,405.56C1128.93,398.177 1119.6,393.933 1109.8,393.933C1098.25,393.933 1087.46,399.833 1081.23,409.56C1070.34,400.617 1056.64,395.78 1042.55,395.9C1031.43,395.843 1020.51,398.817 1010.95,404.5C1002.47,391.69 986.81,383.08 968.88,383.08C943.64,383.08 922.88,400.08 920.35,421.98C912.151,418.693 902.982,418.743 894.82,422.12C888.415,415.483 879.578,411.73 870.354,411.73C851.702,411.73 836.354,427.078 836.354,445.73C836.354,447.874 836.557,450.014 836.96,452.12C829.303,453.614 822.089,456.84 815.87,461.55C806.93,451.55 793.15,445.15 777.68,445.15C750.74,445.15 728.9,464.57 728.9,488.51C728.9,488.51 646.72,490.32 634.9,577.05L1271.56,577.05C1271.56,577.05 1350.17,520 1288.19,419.44Z"
+              style="fill:white;fill-rule:nonzero;"
+            ></path>
+          </g>
+        </g>
+      </svg>
+      <svg
+        class="cloud4"
+        viewBox="0 0 355 218"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve"
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
+      >
+        <g transform="matrix(1,0,0,1,-499.124,-9.20248)">
+          <g id="cloud2" transform="matrix(1,0,0,1,60,-369.3)">
+            <path
+              d="M757,482.22L756.7,482.27C753.316,466.696 739.413,455.49 723.475,455.49C718.258,455.49 713.109,456.691 708.43,459C700.495,433.16 675.357,416.234 648.43,418.6C637.649,394.267 613.422,378.502 586.807,378.502C549.833,378.502 519.407,408.928 519.407,445.902C519.407,449.08 519.632,452.254 520.08,455.4L520.08,455.47C510.221,457.292 501.655,463.384 496.7,472.1C492.404,470.751 487.928,470.064 483.425,470.064C459.122,470.064 439.124,490.062 439.124,514.365C439.124,533.665 451.737,550.847 470.15,556.63C477.088,573.653 493.727,584.839 512.109,584.839C524.469,584.839 536.306,579.781 544.85,570.85C556.089,586.336 574.105,595.521 593.239,595.521C612.83,595.521 631.22,585.892 642.38,569.79C655.25,580.99 675.08,586.72 696.22,583.72C724.8,579.66 746.64,560.9 750.55,539.15C755.327,540.524 760.341,540.865 765.26,540.15C783.01,537.62 795.55,522.61 793.26,506.6C790.97,490.59 774.77,479.69 757,482.22Z"
+              style="fill:#f1f1f1;fill-rule:nonzero;"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <script type="application/javascript">
+      /**
+       * vivus - JavaScript library to make drawing animation on SVG
+       * @version v0.4.1
+       * @link https://github.com/maxwellito/vivus
+       * @license MIT
+       */
+      "use strict";
+      !(function() {
+        function t(t) {
+          if ("undefined" == typeof t)
+            throw new Error(
+              'Pathformer [constructor]: "element" parameter is required'
+            );
+          if (
+            t.constructor === String &&
+            ((t = document.getElementById(t)), !t)
+          )
+            throw new Error(
+              'Pathformer [constructor]: "element" parameter is not related to an existing ID'
+            );
+          if (
+            !(
+              t instanceof window.SVGElement ||
+              t instanceof window.SVGGElement ||
+              /^svg$/i.test(t.nodeName)
+            )
+          )
+            throw new Error(
+              'Pathformer [constructor]: "element" parameter must be a string or a SVGelement'
+            );
+          (this.el = t), this.scan(t);
+        }
+        function e(t, e, n) {
+          r(),
+            (this.isReady = !1),
+            this.setElement(t, e),
+            this.setOptions(e),
+            this.setCallback(n),
+            this.isReady && this.init();
+        }
+        (t.prototype.TYPES = [
+          "line",
+          "ellipse",
+          "circle",
+          "polygon",
+          "polyline",
+          "rect"
+        ]),
+          (t.prototype.ATTR_WATCH = [
+            "cx",
+            "cy",
+            "points",
+            "r",
+            "rx",
+            "ry",
+            "x",
+            "x1",
+            "x2",
+            "y",
+            "y1",
+            "y2"
+          ]),
+          (t.prototype.scan = function(t) {
+            for (
+              var e,
+                r,
+                n,
+                i,
+                a = t.querySelectorAll(this.TYPES.join(",")),
+                o = 0;
+              o < a.length;
+              o++
+            )
+              (r = a[o]),
+                (e = this[r.tagName.toLowerCase() + "ToPath"]),
+                (n = e(this.parseAttr(r.attributes))),
+                (i = this.pathMaker(r, n)),
+                r.parentNode.replaceChild(i, r);
+          }),
+          (t.prototype.lineToPath = function(t) {
+            var e = {},
+              r = t.x1 || 0,
+              n = t.y1 || 0,
+              i = t.x2 || 0,
+              a = t.y2 || 0;
+            return (e.d = "M" + r + "," + n + "L" + i + "," + a), e;
+          }),
+          (t.prototype.rectToPath = function(t) {
+            var e = {},
+              r = parseFloat(t.x) || 0,
+              n = parseFloat(t.y) || 0,
+              i = parseFloat(t.width) || 0,
+              a = parseFloat(t.height) || 0;
+            return (
+              (e.d = "M" + r + " " + n + " "),
+              (e.d += "L" + (r + i) + " " + n + " "),
+              (e.d += "L" + (r + i) + " " + (n + a) + " "),
+              (e.d += "L" + r + " " + (n + a) + " Z"),
+              e
+            );
+          }),
+          (t.prototype.polylineToPath = function(t) {
+            var e,
+              r,
+              n = {},
+              i = t.points.trim().split(" ");
+            if (-1 === t.points.indexOf(",")) {
+              var a = [];
+              for (e = 0; e < i.length; e += 2) a.push(i[e] + "," + i[e + 1]);
+              i = a;
+            }
+            for (r = "M" + i[0], e = 1; e < i.length; e++)
+              -1 !== i[e].indexOf(",") && (r += "L" + i[e]);
+            return (n.d = r), n;
+          }),
+          (t.prototype.polygonToPath = function(e) {
+            var r = t.prototype.polylineToPath(e);
+            return (r.d += "Z"), r;
+          }),
+          (t.prototype.ellipseToPath = function(t) {
+            var e = {},
+              r = parseFloat(t.rx) || 0,
+              n = parseFloat(t.ry) || 0,
+              i = parseFloat(t.cx) || 0,
+              a = parseFloat(t.cy) || 0,
+              o = i - r,
+              s = a,
+              h = parseFloat(i) + parseFloat(r),
+              l = a;
+            return (
+              (e.d =
+                "M" +
+                o +
+                "," +
+                s +
+                "A" +
+                r +
+                "," +
+                n +
+                " 0,1,1 " +
+                h +
+                "," +
+                l +
+                "A" +
+                r +
+                "," +
+                n +
+                " 0,1,1 " +
+                o +
+                "," +
+                l),
+              e
+            );
+          }),
+          (t.prototype.circleToPath = function(t) {
+            var e = {},
+              r = parseFloat(t.r) || 0,
+              n = parseFloat(t.cx) || 0,
+              i = parseFloat(t.cy) || 0,
+              a = n - r,
+              o = i,
+              s = parseFloat(n) + parseFloat(r),
+              h = i;
+            return (
+              (e.d =
+                "M" +
+                a +
+                "," +
+                o +
+                "A" +
+                r +
+                "," +
+                r +
+                " 0,1,1 " +
+                s +
+                "," +
+                h +
+                "A" +
+                r +
+                "," +
+                r +
+                " 0,1,1 " +
+                a +
+                "," +
+                h),
+              e
+            );
+          }),
+          (t.prototype.pathMaker = function(t, e) {
+            var r,
+              n,
+              i = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "path"
+              );
+            for (r = 0; r < t.attributes.length; r++)
+              (n = t.attributes[r]),
+                -1 === this.ATTR_WATCH.indexOf(n.name) &&
+                  i.setAttribute(n.name, n.value);
+            for (r in e) i.setAttribute(r, e[r]);
+            return i;
+          }),
+          (t.prototype.parseAttr = function(t) {
+            for (var e, r = {}, n = 0; n < t.length; n++) {
+              if (
+                ((e = t[n]),
+                -1 !== this.ATTR_WATCH.indexOf(e.name) &&
+                  -1 !== e.value.indexOf("%"))
+              )
+                throw new Error(
+                  "Pathformer [parseAttr]: a SVG shape got values in percentage. This cannot be transformed into 'path' tags. Please use 'viewBox'."
+                );
+              r[e.name] = e.value;
+            }
+            return r;
+          });
+        var r, n, i, a;
+        (e.LINEAR = function(t) {
+          return t;
+        }),
+          (e.EASE = function(t) {
+            return -Math.cos(t * Math.PI) / 2 + 0.5;
+          }),
+          (e.EASE_OUT = function(t) {
+            return 1 - Math.pow(1 - t, 3);
+          }),
+          (e.EASE_IN = function(t) {
+            return Math.pow(t, 3);
+          }),
+          (e.EASE_OUT_BOUNCE = function(t) {
+            var e = -Math.cos(0.5 * t * Math.PI) + 1,
+              r = Math.pow(e, 1.5),
+              n = Math.pow(1 - t, 2),
+              i = -Math.abs(Math.cos(2.5 * r * Math.PI)) + 1;
+            return 1 - n + i * n;
+          }),
+          (e.prototype.setElement = function(t, e) {
+            if ("undefined" == typeof t)
+              throw new Error(
+                'Vivus [constructor]: "element" parameter is required'
+              );
+            if (
+              t.constructor === String &&
+              ((t = document.getElementById(t)), !t)
+            )
+              throw new Error(
+                'Vivus [constructor]: "element" parameter is not related to an existing ID'
+              );
+            if (((this.parentEl = t), e && e.file)) {
+              var r = document.createElement("object");
+              r.setAttribute("type", "image/svg+xml"),
+                r.setAttribute("data", e.file),
+                r.setAttribute("built-by-vivus", "true"),
+                t.appendChild(r),
+                (t = r);
+            }
+            switch (t.constructor) {
+              case window.SVGSVGElement:
+              case window.SVGElement:
+              case window.SVGGElement:
+                (this.el = t), (this.isReady = !0);
+                break;
+              case window.HTMLObjectElement:
+                var n, i;
+                (i = this),
+                  (n = function(e) {
+                    if (!i.isReady) {
+                      if (
+                        ((i.el =
+                          t.contentDocument &&
+                          t.contentDocument.querySelector("svg")),
+                        !i.el && e)
+                      )
+                        throw new Error(
+                          "Vivus [constructor]: object loaded does not contain any SVG"
+                        );
+                      return i.el
+                        ? (t.getAttribute("built-by-vivus") &&
+                            (i.parentEl.insertBefore(i.el, t),
+                            i.parentEl.removeChild(t),
+                            i.el.setAttribute("width", "100%"),
+                            i.el.setAttribute("height", "100%")),
+                          (i.isReady = !0),
+                          i.init(),
+                          !0)
+                        : void 0;
+                    }
+                  }),
+                  n() || t.addEventListener("load", n);
+                break;
+              default:
+                throw new Error(
+                  'Vivus [constructor]: "element" parameter is not valid (or miss the "file" attribute)'
+                );
+            }
+          }),
+          (e.prototype.setOptions = function(t) {
+            var r = [
+                "delayed",
+                "sync",
+                "async",
+                "nsync",
+                "oneByOne",
+                "scenario",
+                "scenario-sync"
+              ],
+              n = ["inViewport", "manual", "autostart"];
+            if (void 0 !== t && t.constructor !== Object)
+              throw new Error(
+                'Vivus [constructor]: "options" parameter must be an object'
+              );
+            if (((t = t || {}), t.type && -1 === r.indexOf(t.type)))
+              throw new Error(
+                "Vivus [constructor]: " +
+                  t.type +
+                  " is not an existing animation `type`"
+              );
+            if (
+              ((this.type = t.type || r[0]),
+              t.start && -1 === n.indexOf(t.start))
+            )
+              throw new Error(
+                "Vivus [constructor]: " +
+                  t.start +
+                  " is not an existing `start` option"
+              );
+            if (
+              ((this.start = t.start || n[0]),
+              (this.isIE =
+                -1 !== window.navigator.userAgent.indexOf("MSIE") ||
+                -1 !== window.navigator.userAgent.indexOf("Trident/") ||
+                -1 !== window.navigator.userAgent.indexOf("Edge/")),
+              (this.duration = a(t.duration, 120)),
+              (this.delay = a(t.delay, null)),
+              (this.dashGap = a(t.dashGap, 1)),
+              (this.forceRender = t.hasOwnProperty("forceRender")
+                ? !!t.forceRender
+                : this.isIE),
+              (this.reverseStack = !!t.reverseStack),
+              (this.selfDestroy = !!t.selfDestroy),
+              (this.onReady = t.onReady),
+              (this.map = []),
+              (this.frameLength = this.currentFrame = this.delayUnit = this.speed = this.handle = null),
+              (this.ignoreInvisible = t.hasOwnProperty("ignoreInvisible")
+                ? !!t.ignoreInvisible
+                : !1),
+              (this.animTimingFunction = t.animTimingFunction || e.LINEAR),
+              (this.pathTimingFunction = t.pathTimingFunction || e.LINEAR),
+              this.delay >= this.duration)
+            )
+              throw new Error(
+                "Vivus [constructor]: delay must be shorter than duration"
+              );
+          }),
+          (e.prototype.setCallback = function(t) {
+            if (t && t.constructor !== Function)
+              throw new Error(
+                'Vivus [constructor]: "callback" parameter must be a function'
+              );
+            this.callback = t || function() {};
+          }),
+          (e.prototype.mapping = function() {
+            var t, e, r, n, i, o, s, h;
+            for (
+              h = o = s = 0, e = this.el.querySelectorAll("path"), t = 0;
+              t < e.length;
+              t++
+            )
+              (r = e[t]),
+                this.isInvisible(r) ||
+                  ((i = { el: r, length: Math.ceil(r.getTotalLength()) }),
+                  isNaN(i.length)
+                    ? window.console &&
+                      console.warn &&
+                      console.warn(
+                        "Vivus [mapping]: cannot retrieve a path element length",
+                        r
+                      )
+                    : (this.map.push(i),
+                      (r.style.strokeDasharray =
+                        i.length + " " + (i.length + 2 * this.dashGap)),
+                      (r.style.strokeDashoffset = i.length + this.dashGap),
+                      (i.length += this.dashGap),
+                      (o += i.length),
+                      this.renderPath(t)));
+            for (
+              o = 0 === o ? 1 : o,
+                this.delay =
+                  null === this.delay ? this.duration / 3 : this.delay,
+                this.delayUnit = this.delay / (e.length > 1 ? e.length - 1 : 1),
+                this.reverseStack && this.map.reverse(),
+                t = 0;
+              t < this.map.length;
+              t++
+            ) {
+              switch (((i = this.map[t]), this.type)) {
+                case "delayed":
+                  (i.startAt = this.delayUnit * t),
+                    (i.duration = this.duration - this.delay);
+                  break;
+                case "oneByOne":
+                  (i.startAt = (s / o) * this.duration),
+                    (i.duration = (i.length / o) * this.duration);
+                  break;
+                case "sync":
+                case "async":
+                case "nsync":
+                  (i.startAt = 0), (i.duration = this.duration);
+                  break;
+                case "scenario-sync":
+                  (r = i.el),
+                    (n = this.parseAttr(r)),
+                    (i.startAt = h + (a(n["data-delay"], this.delayUnit) || 0)),
+                    (i.duration = a(n["data-duration"], this.duration)),
+                    (h =
+                      void 0 !== n["data-async"]
+                        ? i.startAt
+                        : i.startAt + i.duration),
+                    (this.frameLength = Math.max(
+                      this.frameLength,
+                      i.startAt + i.duration
+                    ));
+                  break;
+                case "scenario":
+                  (r = i.el),
+                    (n = this.parseAttr(r)),
+                    (i.startAt = a(n["data-start"], this.delayUnit) || 0),
+                    (i.duration = a(n["data-duration"], this.duration)),
+                    (this.frameLength = Math.max(
+                      this.frameLength,
+                      i.startAt + i.duration
+                    ));
+              }
+              (s += i.length),
+                (this.frameLength = this.frameLength || this.duration);
+            }
+          }),
+          (e.prototype.drawer = function() {
+            var t = this;
+            if (((this.currentFrame += this.speed), this.currentFrame <= 0))
+              this.stop(), this.reset();
+            else {
+              if (!(this.currentFrame >= this.frameLength))
+                return (
+                  this.trace(),
+                  (this.handle = n(function() {
+                    t.drawer();
+                  })),
+                  void 0
+                );
+              this.stop(),
+                (this.currentFrame = this.frameLength),
+                this.trace(),
+                this.selfDestroy && this.destroy();
+            }
+            this.callback(this),
+              this.instanceCallback &&
+                (this.instanceCallback(this), (this.instanceCallback = null));
+          }),
+          (e.prototype.trace = function() {
+            var t, e, r, n;
+            for (
+              n =
+                this.animTimingFunction(this.currentFrame / this.frameLength) *
+                this.frameLength,
+                t = 0;
+              t < this.map.length;
+              t++
+            )
+              (r = this.map[t]),
+                (e = (n - r.startAt) / r.duration),
+                (e = this.pathTimingFunction(Math.max(0, Math.min(1, e)))),
+                r.progress !== e &&
+                  ((r.progress = e),
+                  (r.el.style.strokeDashoffset = Math.floor(
+                    r.length * (1 - e)
+                  )),
+                  this.renderPath(t));
+          }),
+          (e.prototype.renderPath = function(t) {
+            if (this.forceRender && this.map && this.map[t]) {
+              var e = this.map[t],
+                r = e.el.cloneNode(!0);
+              e.el.parentNode.replaceChild(r, e.el), (e.el = r);
+            }
+          }),
+          (e.prototype.init = function() {
+            (this.frameLength = 0),
+              (this.currentFrame = 0),
+              (this.map = []),
+              new t(this.el),
+              this.mapping(),
+              this.starter(),
+              this.onReady && this.onReady(this);
+          }),
+          (e.prototype.starter = function() {
+            switch (this.start) {
+              case "manual":
+                return;
+              case "autostart":
+                this.play();
+                break;
+              case "inViewport":
+                var t = this,
+                  e = function() {
+                    t.isInViewport(t.parentEl, 1) &&
+                      (t.play(), window.removeEventListener("scroll", e));
+                  };
+                window.addEventListener("scroll", e), e();
+            }
+          }),
+          (e.prototype.getStatus = function() {
+            return 0 === this.currentFrame
+              ? "start"
+              : this.currentFrame === this.frameLength
+              ? "end"
+              : "progress";
+          }),
+          (e.prototype.reset = function() {
+            return this.setFrameProgress(0);
+          }),
+          (e.prototype.finish = function() {
+            return this.setFrameProgress(1);
+          }),
+          (e.prototype.setFrameProgress = function(t) {
+            return (
+              (t = Math.min(1, Math.max(0, t))),
+              (this.currentFrame = Math.round(this.frameLength * t)),
+              this.trace(),
+              this
+            );
+          }),
+          (e.prototype.play = function(t, e) {
+            if (((this.instanceCallback = null), t && "function" == typeof t))
+              (this.instanceCallback = t), (t = null);
+            else if (t && "number" != typeof t)
+              throw new Error("Vivus [play]: invalid speed");
+            return (
+              e &&
+                "function" == typeof e &&
+                !this.instanceCallback &&
+                (this.instanceCallback = e),
+              (this.speed = t || 1),
+              this.handle || this.drawer(),
+              this
+            );
+          }),
+          (e.prototype.stop = function() {
+            return this.handle && (i(this.handle), (this.handle = null)), this;
+          }),
+          (e.prototype.destroy = function() {
+            this.stop();
+            var t, e;
+            for (t = 0; t < this.map.length; t++)
+              (e = this.map[t]),
+                (e.el.style.strokeDashoffset = null),
+                (e.el.style.strokeDasharray = null),
+                this.renderPath(t);
+          }),
+          (e.prototype.isInvisible = function(t) {
+            var e,
+              r = t.getAttribute("data-ignore");
+            return null !== r
+              ? "false" !== r
+              : this.ignoreInvisible
+              ? ((e = t.getBoundingClientRect()), !e.width && !e.height)
+              : !1;
+          }),
+          (e.prototype.parseAttr = function(t) {
+            var e,
+              r = {};
+            if (t && t.attributes)
+              for (var n = 0; n < t.attributes.length; n++)
+                (e = t.attributes[n]), (r[e.name] = e.value);
+            return r;
+          }),
+          (e.prototype.isInViewport = function(t, e) {
+            var r = this.scrollY(),
+              n = r + this.getViewportH(),
+              i = t.getBoundingClientRect(),
+              a = i.height,
+              o = r + i.top,
+              s = o + a;
+            return (e = e || 0), n >= o + a * e && s >= r;
+          }),
+          (e.prototype.getViewportH = function() {
+            var t = this.docElem.clientHeight,
+              e = window.innerHeight;
+            return e > t ? e : t;
+          }),
+          (e.prototype.scrollY = function() {
+            return window.pageYOffset || this.docElem.scrollTop;
+          }),
+          (r = function() {
+            e.prototype.docElem ||
+              ((e.prototype.docElem = window.document.documentElement),
+              (n = (function() {
+                return (
+                  window.requestAnimationFrame ||
+                  window.webkitRequestAnimationFrame ||
+                  window.mozRequestAnimationFrame ||
+                  window.oRequestAnimationFrame ||
+                  window.msRequestAnimationFrame ||
+                  function(t) {
+                    return window.setTimeout(t, 1e3 / 60);
+                  }
+                );
+              })()),
+              (i = (function() {
+                return (
+                  window.cancelAnimationFrame ||
+                  window.webkitCancelAnimationFrame ||
+                  window.mozCancelAnimationFrame ||
+                  window.oCancelAnimationFrame ||
+                  window.msCancelAnimationFrame ||
+                  function(t) {
+                    return window.clearTimeout(t);
+                  }
+                );
+              })()));
+          }),
+          (a = function(t, e) {
+            var r = parseInt(t, 10);
+            return r >= 0 ? r : e;
+          }),
+          "function" == typeof define && define.amd
+            ? define([], function() {
+                return e;
+              })
+            : "object" == typeof exports
+            ? (module.exports = e)
+            : (window.Vivus = e);
+      })();
+    </script>
+    <script type="text/javascript">
+      var myVivus = new Vivus("not_found");
+      myVivus.play(1, fadeIn());
+
+      var page = location.href;
+      var response = httpGet("https://www.cloudflare.com/cdn-cgi/trace");
+      var dataArr = response.split("\n");
+      var data = {};
+
+      for (var i = 0; i < dataArr.length; i++) {
+        var objMapper = dataArr[i].split("=");
+        var key = objMapper[0];
+        var value = objMapper[1];
+        data[key] = value;
+      }
+
+      document.getElementById("ip").innerText = "您的IP:" + data.ip;
+      document.getElementById("url").innerHTML = "当前地址:" + page;
+
+      function fadeIn() {
+        document.getElementById("clouds-container1").classList.add("show");
+        document.getElementById("clouds-container2").classList.add("show");
+        document.getElementById("parachute-container").classList.add("show");
+        setTimeout(function() {
+          document.getElementById("text").classList.add("show");
+          document.getElementById("ip").classList.add("show");
+          document.getElementById("url").classList.add("show");
+        }, 1500);
+      }
+
+      function httpGet(theUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, false); // false for synchronous request
+        xmlHttp.send(null);
+        return xmlHttp.responseText;
+      }
+    </script>
+  </body>
+</html>

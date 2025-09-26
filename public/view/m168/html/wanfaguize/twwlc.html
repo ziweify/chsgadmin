@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+		<title>台湾威力彩玩法规则-中国体育、福利彩票、高频彩开奖结果查询调用接口API - 168彩票开奖网</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+		<link rel="apple-touch-icon" sizes="180x180" href="../../img/icon/favicon_152.png">
+		<meta name="description" content="168彩票开奖网提供中国体育彩票超级大乐透、排列三、排列五、七星彩、11选五、开奖结果查询，福利彩票双色球、3D、七乐彩、快3、时时彩、快乐8、北京赛车PK10、广东快乐十分等高频彩开奖结果查询调用接口。" />
+		<meta name="description" content="中国福利彩票北京赛车pk10开奖结果查询、历史开奖记录、开奖视频直播、杀号技巧软件分析预测网站。" />
+		<meta name="keywords" content="彩票开奖查询,彩票开奖,彩票开奖结果,福利彩票开奖结果,体育彩票开奖结果" />
+		<link rel="stylesheet" href="../../css/public.css?v=20228101654" />
+		<link rel="stylesheet" href="../../css/home.css?v=20228101654" />
+		<link rel="stylesheet" href="../../css/components.css?v=20228101654" />
+		<script type="text/javascript" src="../../js/lib/jquery-1.9.1.js?v=20228101654"></script>
+	</head>
+
+    <style>
+		.tableHead{
+			width: 100%;
+			height: 36px;
+			line-height: 35px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #000;
+		}
+		.tableHead span{
+			width: 33.33%;
+			text-align: center;
+			background: #ffcc66;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+		}
+        table {
+            border-spacing: 0;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+        }
+        th {
+            /* width: 33.33%; */
+			text-align: center;
+			background: #ffcc66;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+        }
+        td {
+            border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+        }
+        td.ball-img img {
+            margin: 1px;
+        }
+        .table-with-balls td:nth-child(3) {
+            text-align:center;
+        }
+		.tableHead1{
+			height: 50px;
+			position: relative;
+			border-bottom: 1px solid #000;
+		}
+		.tableHead1 span{
+		    width: 33.1%;
+		    display: inline-block;
+		    border-right: 1px solid #000;
+		}
+		.list{
+	        height: 50px;
+		    position: absolute;
+		    top: 0px;
+		    width: 164px;
+		}
+		.list img{
+		    margin-top: 13px;
+		}
+		.list img:first-child{
+		    margin-left: 5px;
+		}
+		.listNb{
+		    position: absolute;
+    		right: 0;
+		    height: 50px;
+		    line-height: 50px;
+		    text-align: center;
+		}
+		.tableText:nth-child(odd),
+		.tableHead1:nth-child(even),
+        tr:nth-child(odd){
+			background: #efefef;
+		}
+		.tableText:nth-child(even),
+		.tableBonus:nth-child(odd),
+		.tableHead1:nth-child(odd),
+        tr:nth-child(even){
+			background: #fef9dc;
+		}
+		.tableText span:last-child,
+		.tableBonus span:last-child,
+		.tableHead1 span:last-child,
+		.tableHead span:last-child{
+			border-right: none;
+		}
+		.tableBonus{
+			width: 100%;
+		    height: 40px;
+		    line-height: 40px;
+		    display: inline-block;
+		    border-bottom: 1px solid #000;
+		}
+		.tableBonus span{
+			width: 16.66%;
+			height: auto;
+			text-align: center;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+		}
+		.tableBonus:last-child{
+			border-bottom: none;
+		}
+		.tableBonus:nth-child(odd){
+			background: #ffcc66;
+		}
+		.tableText{
+			width: 100%;
+		    height: 40px;
+		    line-height: 40px;
+		    border-bottom: 1px solid #000;
+		}
+		.tableText span{
+			width: 33.33%;
+			height: auto;
+			text-align: center;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+		}
+		.tableText:first-child{
+			background: #ffcc66;
+		}
+        .img-ori-size img {
+            width: auto !important;
+            max-width: 100%;
+        }
+	</style>
+
+	<body class="bodybox fixed-menu-padding-bottom">
+        <div class="page-header">
+            <span id="back"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4952 19.5547C15.8016 19.8335 16.2759 19.8111 16.5547 19.5048C16.8335 19.1984 16.8111 18.7241 16.5048 18.4453L15.4952 19.5547ZM8 11.72L7.46206 11.1974C7.3205 11.3431 7.2441 11.54 7.25035 11.7431C7.2566 11.9461 7.34496 12.138 7.49522 12.2747L8 11.72ZM16.0379 4.52261C16.3266 4.22551 16.3197 3.75069 16.0226 3.46206C15.7255 3.17343 15.2507 3.18029 14.9621 3.47739L16.0379 4.52261ZM16.5048 18.4453L8.50478 11.1653L7.49522 12.2747L15.4952 19.5547L16.5048 18.4453ZM8.53794 12.2426L16.0379 4.52261L14.9621 3.47739L7.46206 11.1974L8.53794 12.2426Z"/>
+                </svg></a>
+            </span>
+            <div class="navList"><span>玩法</span></div>
+            <span style="width:24px;">&nbsp;</span>
+        </div>
+        <div class="page-content">
+            <div class="centered-subtitle">台湾威力彩</div>
+            <dl style="font-size: 15px;line-height: 25px;color: #6d6d6d;position: relative;">
+                <dt style="font-size: 18px;color: #000;">► 基本玩法</dt>
+                <dd style="padding-left: 24px;vertical-align: baseline;width: 100%;box-sizing: border-box;display: inline-block;">
+                    威力彩是一種樂透型遊戲，其選號分為兩區，您必須從第1個選號區中的01~38 的號碼中任選6個號碼，並從第2個選號區中的01~08的號碼中任選1個號碼進行投注，
+                    這六個+一個號碼即為您的投注號碼。開獎時，開獎單位將從第1區01~38的號碼中隨機開出六個號碼，再從第2區01~08的號碼中隨機開出一個號碼，這一組六個+一個號碼，
+                    就是該期威力彩的中獎號碼，也稱為「獎號」。您第1區的選號中，如果對中當期第1區開出之任一個獎號，而第2區亦對中當期第2區開出之獎號，即為中獎(普獎)，並可依規定兌領獎金。
+                </dd>
+                </br></br></br>
+                <dd style="width: 100%;"><img src="../../img/wanfgzimg/supterlotto_image01.jpg"></dd>
+                <dt style="font-size: 18px;color: #000;margin-left: 24px">各獎項的中獎方式如下表：</dt>
+                <table class="table-with-balls">
+                    <tr>
+                        <th>中獎方式</th>
+                        <th>中獎方式圖示</th>
+                        <th>獎項</th>
+                    </tr>
+                    <tr>
+                        <td>第1區六個獎號全中，</br>且第2區亦對中獎號</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>頭獎</td>
+                    </tr>
+                    <tr>
+                        <td>第1區六個獎號全中，</br>但第2區未對中</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" /></td>
+                        <td>貳獎</td>
+                    </tr>
+                    <tr>
+                        <td>第1區對中任五個獎號，</br>且第2區亦對中獎號</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>參獎</br>NT$150,000</td>
+                    </tr>
+                    <tr>
+                        <td>第1區對中任五個獎號，</br>但第2區未對中</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" /></td>
+                        <td>肆獎</br>NT$20,000</td>
+                    </tr>
+                    <tr>
+                        <td>第1區對中任四個獎號，</br>且第2區亦對中獎號</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>伍獎</br>NT$4,000</td>
+                    </tr>
+                    <tr>
+                        <td>第1區對中任四個獎號，</br>但第2區未對中</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" /></td>
+                        <td>陸獎</br>NT$800</td>
+                    </tr>
+                    <tr>
+                        <td>第1區對中任三個獎號，</br>且第2區亦對中獎號</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>柒獎</br>NT$400</td>
+                    </tr>
+                    <tr>
+                        <td>第1區對中任二個獎號，</br>且第2區亦對中獎號</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>捌獎</br>NT$200</td>
+                    </tr>
+                    <tr>
+                        <td>第1區對中任三個獎號，</br>但第2區未中獎號</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" />
+                            <img src="../../img/wanfgzimg/icon_greenball.gif" /></td>
+                        <td>玖獎</br>NT$100</td>
+                    </tr>
+                    <tr>
+                        <td>第1區對中任一個獎號，</br>且第2區亦對中獎號</td>
+                        <td class="ball-img img-ori-size"></td>
+                        <td>普獎</br>NT$100</td>
+                    </tr>
+                </table>
+            </dl>
+            </br></br>
+            <dl>
+                <dt style="font-size: 18px;color: #000;">► 獎金分配方式</dt>
+                <dd class="bonus">
+                    <p style="padding-left: 24px;">1: 當期總投注金額（銷售收入）乘以總獎金支出率即為當期『總獎金』。本遊戲之總獎金支出率=55%。</p>
+                    <p style="padding-left: 24px;">2: 參獎、肆獎、伍獎、陸獎、柒獎及捌獎每注獎金分別固定為新臺幣150,000元、20,000元、4,000元、800元、400元及200元，玖獎及普獎每注獎金固定為新臺幣100元。</p>
+                    <p style="padding-left: 24px;">3: 頭獎及貳獎之實際中獎獎金係由總獎金扣除參獎至普獎之總額後，依下列獎金分配比率及實際中獎注數分配之（計算至元為止，元以下無條件捨去。該捨去部分所產生之款項將視為逾期未兌領獎金，全數歸入公益彩券盈餘）。</p>
+                </dd>
+                <table style="text-align: center;">
+                    <tr>
+                        <th>獎項</th>
+                        <th>頭獎</th>
+                        <th>貳獎</th>
+                        <th>合計</th>
+                    </tr>
+                    <tr>
+                        <td>獎金分配比率</td>
+                        <td>89%</td>
+                        <td>11%</td>
+                        <td>100%</td>
+                    </tr>
+                </table>
+                <dd class="bonus">
+                    <p style="padding-left: 24px;">4: 頭、貳獎若無人獲得該獎，其獎金列入下一期同等獎項獎金內，此即為『累積獎金』。頭、貳獎如有『累積獎金』，則各獎分別加上其『累積獎金』。</p>
+                    <p style="padding-left: 24px;">5: 如當期頭獎有人中獎，且當期頭獎分配加計上期頭獎累積獎金後，仍未達新臺幣2億元時，當期頭獎獎金以新臺幣2億元整計算。</p>
+                    <p style="padding-left: 24px;">6: 頭、貳獎之每一獎項，其獎金均由得該獎之中獎注數均分（計算至元，元以下無條件捨去）。如係一注中獎則為獨得；如無中獎注數，則獎金列入次期該獎之『累積獎金』。</p>
+                    <p style="padding-left: 24px;">7: 參獎至普獎採固定獎額之方式分配之，<span style="color: red;">惟如因熱門號碼開出，致參獎至普獎之獎金合計總數逾當期『總獎金』之百分之七十時，則參獎至玖獎仍依原固定金額分配，普獎獎額改依當期『總獎金』之百分之七十扣除參獎至玖獎獎金總額後由普獎之中獎人平分（計算至元為止，元以下無條件捨去。該捨去部分所產生之款項將視為逾期未兌領獎金，全數歸入公益彩券盈餘），其餘各獎（頭、貳獎）仍依原分配比例分配。</span></p>
+                </dd>
+            </dl>
+            </br></br>
+            <dl>
+                <dt style="font-size: 18px;color: #000;">► 投注方式及進階玩法</dt>
+                <dd>
+                    <p style="padding-left: 24px;">您可以利用以下三種方式投注威力彩：</p>
+                    <p style="padding-left: 24px;">一、使用選號單進行投注：</p>
+                    <p style="padding-left: 55px;" class="img-ori-size">
+                        每張威力彩選號單最多可劃記5組選號，每組選號各含有2個選號區。投注時需在第1區內所含38個號碼中任選6個號碼，在第2區內所含8個號碼中任選1個號碼，以形成一注有效的選號。您可以依照自己的喜好，自由選用以下幾種不同的方式填寫選號單，進行投注。<br>
+                        * 注意，在同一張選號單上，各選號區可分別採用不同的投注方式。<br>
+                        選號單之正確劃記方式有三種，塗滿<img src="../../img/wanfgzimg/draw_01.png" /> 、打叉<img src="../../img/wanfgzimg/draw_02.png" />或打勾<img src="../../img/wanfgzimg/draw_03.png" />，但請勿超過格線。填寫步驟如下：<br />
+                        <span style="color: #660066;">1.劃記選號</span><br />
+                        <span style="padding-left: 10px; color: #FF3300;">A.自行選號</span><br />
+                        <span style="padding-left: 20px;">
+                            在第1區內所含38個號碼中任選6個號碼，在第2區內所含8個號碼中任選1個號碼，以完成一組完整的選號。<br />
+                            <img src="../../img/wanfgzimg/supterlotto_image02_a.gif" />
+                        </span><br />
+                        <span style="padding-left: 10px; color: #FF3300;">B.全部快選</span><br />
+                        <span style="padding-left: 20px;">
+                            在選號區中，劃記「快選」，投注機將為您隨機產生一組選號 ( 第1區6個號碼+第2區1個號碼 ) 。<br />
+                            <img src="../../img/wanfgzimg/supterlotto_image02_b.gif" />
+                        </span><br />
+                        <span style="padding-left: 10px; color: #FF3300;">C.部分快選</span><br />
+                        <span style="padding-left: 20px;">
+                            您也可以只填選一部分選號，並劃記快選，投注機將為您挑出剩下的號碼。 以下圖為例，如果您在第1區選擇了6、12、25、37等四個號碼且第2區未選擇任何號碼，並劃記「快選」，第1區剩下的二個號碼和第2區的一個號碼，將由投注機隨機快選產生。<br />
+                            <img src="../../img/wanfgzimg/supterlotto_image02_c.gif" />
+                        </span><br />
+                        <span style="padding-left: 10px; color: #FF3300;">D.系統組合</span><br />
+                        <span style="margin-left: 20px;">
+                            第1區單獨採用系統組合：<br />
+                            第1區可一次投注7~16個幸運號碼，將您要投注的7~16個號碼同時劃記在第1區內即可，電腦系統將就您的選號排列出第1區所有可能的號碼組合。第1區單獨採用系統組合時，產生之總注數及總投注金額請詳見下表：<br />
+                            第1區單獨採系統組合時之總注數與總投注金額一覽表<br />
+                            <table style="text-align: center;">
+                                <tr>
+                                    <th>選號數</th>
+                                    <th>總注數</th>
+                                    <th>總投注金額</th>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>7</td>
+                                    <td>700</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>28</td>
+                                    <td>2,800</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>84</td>
+                                    <td>8,400</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>210</td>
+                                    <td>21,000</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>462</td>
+                                    <td>46,200</td>
+                                </tr>
+                            </table>
+                            <table style="text-align: center;">
+                                <tr>
+                                    <th>選號數</th>
+                                    <th>總注數</th>
+                                    <th>總投注金額</th>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>924</td>
+                                    <td>92,400</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>1716</td>
+                                    <td>171,600</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>3003</td>
+                                    <td>300,300</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>5005</td>
+                                    <td>500,500</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>8008</td>
+                                    <td>800,800</td>
+                                </tr>
+                            </table><br />
+                            <p style="margin-left: 50px;">
+                                第2區單獨採用系統組合：<br />
+                                第2區可一次投注2~ 8個幸運號碼，將您要投注的所有號碼同時劃記在第2區內即可，電腦系統將就您的選號排列出第2區所有可能的號碼組合。第2區單獨採用系統組合時，產生之總注數及總投注金額請詳見下表：<br />
+                                第2區單獨採系統組合時之總注數與總投注金額一覽表<br />
+                            </p>
+                            <table style="text-align: center;">
+                                <tr>
+                                    <th>選號數</th>
+                                    <th>總注數</th>
+                                    <th>總投注金額</th>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>300</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>4</td>
+                                    <td>400</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>500</td>
+                                </tr>
+                            </table>
+                            <table style="text-align: center;">
+                                <tr>
+                                    <th>選號數</th>
+                                    <th>總注數</th>
+                                    <th>總投注金額</th>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>600</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>7</td>
+                                    <td>700</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>800</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </table>
+                        </span><br />
+                        <span style="padding-left: 50px;color: #FF3300;">E.系統配號</span><br />
+                        <p style="margin-left: 70px;">
+                            在第1區選號時，如果您只對5個號碼有把握，您可以只填選這5個號碼，電腦系統將就您選的5個號碼與剩下的33個號碼自動進行配對出33組第1區的選號。本功能僅提供在第1區以自選5個號碼與其餘33個號碼進行配號。
+                        </p>
+                        <span style="padding-left: 50px;color: #FF3300;">F.複合式系統投注</span><br />
+                        <span>
+                            <p style="margin-left: 70px;">
+                                您在第1區和第2區同時進行系統投注時，總注數將等於第1區系統投注所產生之總注數乘以第2區系統投注所產生之總注數。例如：如果您在第1區以8個號碼進行系統組合，在第2區以2個號碼進行系統組合，則您的總投注注數將為56注（28×2＝56）。
+                            </p>
+                            <span style="padding-left: 50px;color: #660066;">2.劃記投注期數</span><br />
+                            <p style="margin-left: 70px;">
+                                您可以選擇就您的投注內容連續投注2~10期（含當期），您的投注號碼在您所選擇的期數內皆可對獎，惟在多期投注期間不得中途要求退/換彩券；如您在多期投注期間內對中任一期的獎項，可直接至任一投注站或中國信託商業銀行(股)公司指定兌獎處兌獎，不需等到最後一期開獎結束。兌獎時，投注站或中國信託商業銀行(股)公司指定兌獎處將回收您的彩券，並同時列印一張「交換票」給您，供您在剩餘的有效期數內對獎。
+                            </p>
+                            <span class="img-ori-size"><img style="margin-left: 0px;" src="../../img/wanfgzimg/supterlotto_image02_d.gif" /></span>
+                        </span><br />
+                    </p>
+                    <p style="padding-left: 24px;">二、口頭投注</p>
+                    <p style="margin-left: 50px;">您也可以口頭告知電腦型彩券經銷商您要選的號碼、投注方式、投注期數等投注內容，並透過經銷商操作投注機，直接進行投注。</p>
+                    <p style="padding-left: 24px;">三、智慧型手機電子選號單(QR Code)投注</p>
+                    <p style="margin-left: 50px;">
+                        如果您的智慧型手機為iOS或Android之作業系統，您可先下載「台灣彩券」APP，並利用APP中的「我要選號」功能，填寫投注內容。每張電子選號單皆將產生一個QRcode，至投注站掃描該QR Code，即可自動印出彩券，付費後即完成交易。<br />
+                        <img src="../../img/wanfgzimg/supterlotto_image03.jpg" />
+                    </p>
+                </dd>
+                <br /><br />
+                <dl>
+                    <dt style="font-size: 18px;color: #000;">►  預購服務</dt>
+                    <dd style="margin-left: 25px;">
+                        <p>1: 本遊戲提供預購服務，您可至投注站預先購買當期起算9期內的任一期非當期彩券。</p>
+                        <p>2: 預購方式以告知投注站人員或智慧型手機電子選號單(QR Code)投注為之，故選號單不另提供預購投注選項。</p>
+                    </dd>
+                </dl>
+                <br /><br />
+                <dl>
+                    <dt style="font-size: 18px;color: #000;">►  售價</dt>
+                    <dd style="margin-left: 25px;">
+                        <p>1: 威力彩每注售價為新臺幣100元（第一區六個號碼+第二區一個號碼所形成的一組選號稱為一注）。</p>
+                        <p>2: 總投注金額＝投注總注數x100元x期數。</p>
+                    </dd>
+                </dl>
+                <br /><br />
+                <dl>
+                    <dt style="font-size: 18px;color: #000;">►  券面資訊</dt>
+                    <dd style="margin-left: 25px;">
+                        <img src="../../img/wanfgzimg/supterlotto_image04.jpg" /><br />
+                        <p>注意事項：彩券銷售後如遇有加開期數之情況，預購及多期投注之期數將順延。若彩券上的資料和電腦紀錄的資料不同，以電腦紀錄資料為準。</p>
+                    </dd>
+                </dl>
+            </dl>
+        </div>
+		<div id="btmQuickMenu"></div>
+        <script type="text/javascript" src="../../js/lib/config.js?v=20228101654"></script>
+        <script type="text/javascript" src="../../js/local/tools/tools.js?v=20228101654"></script>
+		<!-- <script type="text/javascript" src="../../js/local/public/home.js?v=20228101654"></script> -->
+		<script type="text/javascript" src="../../js/local/components/components.js?v=20228101654"></script>
+        <script type="text/javascript" src="../../js/lib/GA.js?v=20228101654"></script>
+    </body>
+</html>

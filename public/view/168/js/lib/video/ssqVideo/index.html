@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="fonts/fonts.css" />
+		<link rel="stylesheet" href="css/ssq_video.css" />
+		<script src="js/jquery-2.1.0.js"></script>
+		<script src="js/index.js?v=20228171133"></script>
+	</head>
+
+	<body>
+		<div id="videobox">
+			<div class="content">
+				<!--<div class="head">
+					福彩3D开奖视频
+					<div class="btn">
+						<ul>
+							<li class="closevideo"><i class="iconfont"></i></li>
+							<li class="small">小屏</li>
+							<li class="big">中屏</li>
+						</ul>
+					</div>
+				</div>-->
+				<div class="animate">
+					<div class="cqncAnimate">
+						<div class="bodybg"><img src="img/background.png" /></div>
+						<div class="loading">
+							<div class="loadtxt">
+								LOADING...
+							</div>
+							<!--<button id="startGame">点我开奖</button>
+							<button id="games">倒计时完成点我启动开奖动画</button><br />
+							<button id="showEnd">点我，开始逐个生成中奖号码</button>-->
+						</div>
+						<div class="position">
+							<ul>
+								<li class="logo"></li>
+								<li class="issue">第&nbsp;<span id="issue">111111</span>&nbsp;期</li>
+								<li class="headCode">
+									<ul>
+										<li class="redCode"><span>1</span></li>
+										<li class="redCode"><span>1</span></li>
+										<li class="redCode"><span>1</span></li>
+										<li class="redCode"><span>1</span></li>
+										<li class="redCode"><span>1</span></li>
+										<li class="redCode"><span>1</span></li>
+										<li class="addF"><i></i></li>
+										<li class="blueCode"><span>1</span></li>
+									</ul>
+								</li>
+								<li class="kaiTime">
+									<p>下期：</p>
+									<div id="times">
+										<span id="data">2018-1-21</span>
+										<span id="kaiTime">17:00:00</span>
+									</div>
+								</li>
+								<li id="soundBth" class="soundsOn"></li>
+								<audio src="sound/3dbj2.mp3" id="audioidBg" loop="loop"></audio>
+								<audio src="sound/3d2.mp3" id="audioidKai" loop="loop"></audio>
+							</ul>
+						</div>
+						<div class="tryKai">
+							<span class="jzCheck" style="display: none;">开奖中，禁止模拟！</span>
+							<span id="tryBtn"></span>
+						</div>
+						<div class="cutTime">
+							<div>
+								<span id="hourtxt">00:00:00</span>
+								<span id="opening">开奖中...</span>
+							</div>
+						</div>
+						<!--管道中静止号码球区域-->
+						<div class="runCode">
+							<div class="codeArea leftArea" id="lAreaDiv">
+								<ul id="firBlue">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<ul id="secBlue">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+							<div class="codeArea rightArea" id="rAreaDiv">
+								<ul id="redFir">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<ul id="redSec">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<ul id="redThr">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<ul id="redFou">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+						<!--开奖区单个号码球展示区域-->
+						<div class="showCode">
+							<span id="leftShow">
+								<i style="display: none;">0</i>
+							</span>
+							<span id="rightShow">
+								<i style="display: none;">1</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

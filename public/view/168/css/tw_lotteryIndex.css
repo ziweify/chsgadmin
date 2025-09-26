@@ -1,0 +1,138 @@
+#cqSsc .tw_Lottery {
+    width: 100%;
+    display: flex
+}
+
+#cqSsc .tw_Lottery .haomaqur_l, #cqSsc .tw_Lottery .haomaqur_r {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center
+}
+
+#cqSsc .tw_Lottery .haomaqur_l .linetit, #cqSsc .tw_Lottery .haomaqur_r .linetit {
+    width: 100%;
+    margin-top: 17px
+}
+
+#cqSsc .tw_Lottery #timebox {
+    width: 100%
+}
+
+#cqSsc .tw_Lottery #timebox .cuttime {
+    display: block
+}
+
+#cqSsc .tw_Lottery #ifSoundOpen, #cqSsc .tw_Lottery #soundSet {
+    width: 100%;
+    height: 45px;
+    margin-left: 0;
+    padding-top: 10px;
+    position: relative
+}
+
+#cqSsc .tw_Lottery #ifSoundOpen .ifSoundOpen, #cqSsc .tw_Lottery #soundSet .ifSoundOpen {
+    position: static;
+    margin: 0 auto
+}
+
+#cqSsc .tw_Lottery #ifSoundOpen .ifSoundOpen .ifSoundIcon, #cqSsc .tw_Lottery #soundSet .ifSoundOpen .ifSoundIcon {
+    right: 65px;
+    top: 17px;
+    z-index: 1
+}
+
+#cqSsc .tw_Lottery #soundSet .soundbtn {
+    position: absolute;
+    left: 7%;
+    margin: 0 auto
+}
+
+#cqSsc .numblueHead {
+    background: url(../img/icon/bjpknum.png?v=20228171133) no-repeat -286px -236px !important
+}
+
+#cqSsc .numbTail {
+    background: url(../img/icon/bjpknum.png?v=20228171133) no-repeat -91px -47px !important
+}
+
+#cqSsc .powerHead {
+    background: url(../img/icon/bjpknum.png?v=20228171133) no-repeat -378px -236px !important
+}
+
+#cqSsc .Today539 {
+    color: #000;
+    background: url(../img/icon/bjpknum.png?v=20228171133) no-repeat -332px -236px !important
+}
+
+#jrsmhmtj .tw_numblue, #jrsmhmtj .tw_Today539 {
+    background: url(../img/icon/bjpknum2.png?v=20228171133) no-repeat -291px -373px !important
+}
+
+#jrsmhmtj .twLottery {
+    background: url(../img/icon/bjpknum2.png?v=20228171133) no-repeat 0 -373px !important
+}
+
+#jrsmhmtj .tw_power {
+    background: url(../img/icon/bjpknum2.png?v=20228171133) no-repeat -90px -373px !important
+}
+
+#jrsmhmtjTab thead > tr > th {
+    height: 50px
+}
+
+#jrsmhmtjTab tbody > tr:nth-child(odd) td {
+    background: #fff
+}
+
+#jrsmhmtjTab tbody > tr:nth-child(2n) td {
+    background: #ededed
+}
+
+.bodybox .kaijiangjl .jrsmhmtj table tr .blueqiu > ul {
+    max-width: inherit
+}
+
+.bodybox .kaijiangjl .jrsmhmtj table tr td {
+    height: 50px
+}
+
+.DateTime {
+    margin-left: 8px;
+    margin-right: 8px
+}
+
+#TiemDate {
+    width: 50%;
+    float: right;
+    text-align: right;
+    position: relative
+}
+
+#TiemDate, #TiemDate h3 {
+    display: inline-block;
+    height: 40px
+}
+
+#TiemDate h3 {
+    width: auto;
+    line-height: 40px
+}
+
+#TiemDate .date {
+    height: 35px;
+    width: 35%;
+    text-align: center
+}
+
+#TiemDate:before {
+    content: "";
+    width: 25px;
+    display: inline-block;
+    position: absolute;
+    right: 176px;
+    top: 8px;
+    height: 25px;
+    background: url(../img/icon/bjpknum.png?v=20228171133) no-repeat -227px -338px;
+    background-size: 40rem
+}

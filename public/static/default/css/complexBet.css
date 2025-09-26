@@ -1,0 +1,101 @@
+
+
+
+.editComplexDetail {
+
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+}
+
+.editComplexDetail::before {
+    background-image: url(/static/default/images/complex_bet_edit.png);
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+
+.deleteComplexDetail {
+
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+}
+
+.deleteComplexDetail::before {
+    background-image: url(/static/default/images/complex_bet_del.png);
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+
+.complexDetailStatus {
+
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+}
+
+
+.complexDetailStatus::before {
+    content: "";
+    width: 15px;
+    height: 16px;
+    background-image: url(/static/default/images/complex_bet_inactive.png);
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.complexDetailStatus.active::before {
+    background-image: url(/static/default/images/complex_bet_active.png);
+}
+
+
+
+
+.showComplexDetail {
+
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+}
+
+.showcomplexdetail::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url(/static/default/images/complex_bet_info.png);
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+.plan1Description {
+
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+}

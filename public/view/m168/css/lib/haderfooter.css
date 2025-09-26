@@ -1,0 +1,146 @@
+.pagediv{
+	/*min-height:4.35rem*/
+}
+.headbox {
+	height: 0.44rem;
+	line-height: 0.44rem;
+	width: 100%;
+	padding: 0 0.1rem;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	box-sizing: border-box;
+	background: #fff;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.headbox div,.five_box {
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	height: 100%;
+	width:33.333%;
+	font-size: 0.18rem;
+	color: #333;
+	text-align: center;
+	box-sizing: border-box;
+}
+.logo_view a{
+	width: 0.83rem;
+}
+.five_box{
+	line-height: .44rem;
+	text-align: left;
+	padding-left: .1rem;
+	box-sizing: border-box;
+}
+.go168{
+	width: 80%;
+	float: right;
+}
+.lotTiltile{
+	color:#FF0812;
+	font-size: .18rem;
+}
+.lotTiltile:after{
+	content: "";
+	width:.1rem;
+	height: .24rem ;
+	display: inline-block;
+	position: absolute;
+    top: .12rem;
+    right: .05rem;
+    background: url(../../img/xiaol.png?v=2022761130) -1.015rem -3.27rem no-repeat;
+    background-size: 4.78rem;
+}
+.main_visual {
+	position: relative;
+}
+
+.headbox div a {
+	height: 100%;
+	line-height: 0.15rem;
+	/*width: 0.83rem;*/
+}
+
+.headbox div a i {
+	display: inline-block;
+	width: 0.83rem;
+	height: 0.2333rem;
+	background: #fff url("../../img/xiaol.png?v=2022761130") -1.43rem -1.183rem;
+	background-size: 3.1866rem auto;
+	vertical-align: middle;
+	margin-top: 0.08rem;
+	box-sizing: border-box;		
+}
+
+.headbox .menubtn a {
+	float: right;
+	margin-right: 0;
+	/*width: 0.25rem;*/
+	text-align: right;
+}
+
+.headbox .menubtn a i {
+	height: 0.25rem;
+	width: 0.21rem;
+	background-position: -0.17rem -1.2rem;
+}
+
+#footerDiv {
+	margin-top: 0.1rem;
+	background: #fff;
+	border-top: 1px solid #DEDEDF;
+}
+
+#footerDiv .foo_box {
+	height: 1.1rem;
+	padding: 0.2rem 0.35rem 0;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	font-size: 0.12rem;
+}
+
+#footerDiv .foo_box a {
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	text-align: center;
+	color: #666;
+}
+
+#footerDiv .foo_box a dt {
+	margin-bottom: 0.075rem;
+}
+
+#footerDiv .foo_box a dt span {
+	display: inline-block;
+	height: 0.5rem;
+	width: 0.5rem;
+	background: #fff url("../../img/xiaol.png?v=2022761130") -0.07333rem -0.649rem no-repeat;
+	background-size: 3.18rem auto;
+}
+
+#footerDiv .foo_box a dt .app_down {
+	background-position: -1.276rem -0.649rem;
+}
+#footerDiv .foo_box a dt .ServiceOnline {
+	background: #fff url("../../img/serverOnline.png?v=2022761130") 0 0 no-repeat;
+	background-size: 99% !important;
+}
+#footerDiv .foo_box a dt .fank {
+	background-position: -0.684rem -0.649rem;
+}
+
+#footerDiv .copy {
+	font-size: 0.11rem;
+	background: #f0eff5;
+	height: 0.44rem;
+	line-height: 0.44rem;
+	text-align: center;
+	color: #666;
+}
+/* .kjwurl{
+	display: none !important;
+} */

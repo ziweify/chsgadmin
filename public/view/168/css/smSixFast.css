@@ -1,0 +1,981 @@
+.checked {
+    background: #f8223c;
+    border: 1px solid transparent
+}
+
+body {
+    font-family: 微软雅黑
+}
+
+#headdivbox {
+   /* border-top: 2px solid #f8223c*/
+}
+
+.BigBox {
+    width: 100%
+}
+
+.BigBox, .box {
+    height: auto;
+    overflow: hidden;
+    background: #f1f1f1
+}
+
+.box {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px
+}
+
+.fastSix:after {
+    display: none !important
+}
+
+.box_l {
+    float: left;
+    width: 100px;
+    height: auto;
+    overflow: hidden;
+    margin-right: 20px
+}
+
+.box_l .year {
+    display: block;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #3b3c42;
+    color: #fff;
+    font-size: 18px
+}
+
+.box_l .years_list {
+    height: 615px;
+    overflow: hidden;
+    overflow-y: scroll
+}
+
+.box_l .years_list li {
+    width: 100px;
+    height: 40px;
+    color: #333;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    cursor: pointer
+}
+
+.box_l .years_list .active, .box_l .years_list li:hover {
+    color: #f8223c;
+    background: #f1f1f1
+}
+
+.box_l .years_list::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: #f5f5f5
+}
+
+.box_l .years_list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 75%, .6);
+    border-radius: 10px;
+    background-color: #f5f5f5
+}
+
+.box_l .years_list::-webkit-scrollbar-thumb {
+    width: 12px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .2)
+}
+
+.box_r {
+    float: left;
+    width: 1200px;
+    height: auto;
+    min-height: 360px;
+    overflow: hidden;
+    background: #fff
+}
+
+.box_r .listhead > span {
+    margin-left: 20px;
+    color: #000;
+    font-weight: 600;
+    font-size: 20px
+}
+
+.box_r .listhead > span.checksapn {
+    color: #6b6b6b;
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: 500;
+    border: 1px solid #fff;
+    cursor: pointer
+}
+
+.box_r .listhead > span.active {
+    color: #f33;
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: 500;
+    border: 1px solid #f33;
+    border-radius: 4px
+}
+
+.box_r .listhead > span.active:after {
+    display: inline-block;
+    position: relative;
+    top: 11px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    content: "";
+    background: url(../img/icon/fast.png) 0 0 no-repeat
+}
+
+.box_r .listhead {
+    height: 59px;
+    line-height: 59px;
+    font-family: 微软雅黑;
+    border-bottom: 1px solid #e6e6e6
+}
+
+.box_r .listhead .ch-right {
+    float: right;
+    margin-right: 20px
+}
+
+.box_r .listhead .ch-right .listheadrr {
+    margin-right: 10px
+}
+
+.box_r .listhead .ch-right .listheadrr .rightime {
+    float: left
+}
+
+.box_r .listhead .ch-right .listheadrr .rightime #dateframe {
+    width: 210px;
+    position: relative;
+    z-index: 1;
+    left: -1px;
+    top: 0;
+    height: 26px;
+    margin-left: 10px
+}
+
+.box_r .listhead .ch-right .listheadrr .rightime #dateframe .dropicond {
+    position: absolute;
+    top: 28px;
+    left: 200px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    right: 5px;
+    z-index: 0;
+    background: url(../img/icon/bjpknum.png?v=2017981058) no-repeat -295px -250px
+}
+
+.box_r .listhead .ch-right .listheadrr .rightime #dateframe:before {
+    content: "";
+    width: 25px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    height: 25px;
+    background: url(../img/icon/bjpknum.png) no-repeat -163px -239px
+}
+
+.box_r .listhead .ch-right .listheadrr .rightime input {
+    background: none;
+    padding-left: 30px;
+    cursor: pointer;
+    width: 194px;
+    height: 28px;
+    border: 1px solid #dbdbdb;
+    outline: none;
+    background-color: #fff;
+    color: #999
+}
+
+.box_r .listhead .ch-right .listheadrr .rightime {
+    float: right;
+    margin-left: 5px
+}
+
+.box_r .listhead .ch-right .listheadrr .date_text {
+    float: left
+}
+
+.box_r .listhead .ch-right .listheadrr .date_text span {
+    margin-left: 15px;
+    font-size: 12px;
+    color: #333;
+    font-weight: 500
+}
+
+.box_r .listhead .ch-right .listheadrr .date_text button {
+    font-size: 12px;
+    color: #333;
+    margin-left: 15px;
+    background: none;
+    border: 0;
+    outline: none;
+    cursor: pointer
+}
+
+.box_r .listhead .ch-right .listheadrr .date_text button.active {
+    background: #f33;
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px 12px
+}
+
+.box_r .listhead .ch-right .btnBox {
+    float: right;
+    margin-left: 20px
+}
+
+.box_r .listhead .ch-right .btnBox button {
+    padding: 5px 20px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px
+}
+
+.box_r .listhead .ch-right .btnBox button.btn_red {
+    background: #c30;
+    display: none
+}
+
+.box_r .listhead .ch-right .btnBox button.btn_yellow {
+    background: #fa8e19;
+    margin-left: 5px
+}
+
+.box_r .listbox > div {
+    padding-left: 20px
+}
+
+.box_r .listbox_2 {
+    margin-bottom: 20px;
+    width: 1200px;
+    overflow: auto;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 10px 50px;
+    display: none;
+    box-sizing: border-box
+}
+
+.box_r .listbox_2 .ptitle {
+    font-weight: 600;
+    font-size: 16px
+}
+
+.box_r .listbox {
+    margin-bottom: 20px;
+    width: 1200px
+}
+
+.box_r .listbox .hmfb {
+    border-bottom: 1px solid #e6e6e6;
+    height: auto;
+    overflow: hidden
+}
+
+.box_r .listbox .hmfb h1 {
+    font-size: 18px;
+    color: #2f4143;
+    font-family: 微软雅黑
+}
+
+.box_r .listbox .hmfb ul {
+    height: 55px;
+    line-height: 55px;
+    width: 1158px
+}
+
+.box_r .listbox .hmfb ul input {
+    margin-right: 5px
+}
+
+.box_r .listbox .hmfb li {
+    float: left;
+    height: inherit;
+    font-size: 14px;
+    color: #666;
+    margin: 0 10px
+}
+
+.box_r .listbox .hmfb .title {
+    margin-left: 0;
+    font-size: 16px
+}
+
+.box_r .listbox .hmfb .first_li {
+    margin-left: -10px
+}
+
+.box_r .listbox .hmfb .return {
+    width: 80px;
+    height: 30px;
+    background: #43a2e6;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    overflow: hidden;
+    border-radius: 2px
+}
+
+.box_r .listbox .hmfb .xzsx a {
+    display: inline-block;
+    width: auto;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 13px;
+    border-radius: 2px;
+    border: 1px solid #e6e6e6
+}
+
+.box_r .listbox .hmfb .xzsx .checked {
+    color: #fff;
+    border-radius: 4px;
+    border: 0
+}
+
+.box_r .listbox .hmfb .xzhm li, .box_r .listbox .hmfb .xztj li {
+    width: auto;
+    height: 25px;
+    line-height: 25px;
+    position: relative
+}
+
+.box_r .listbox .hmfb .xzhm i, .box_r .listbox .hmfb .xztj i {
+    display: inline-block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    margin-top: 5px;
+    border: 1px solid #e6e6e6
+}
+
+.box_r .listbox .hmfb .xzhm li:hover a, .box_r .listbox .hmfb .xztj li:hover a {
+    color: #f8223c
+}
+
+.box_r .listbox .hmfb .xzhm li:hover i, .box_r .listbox .hmfb .xztj li:hover i {
+    border: 1px solid #f8223c
+}
+
+.box_r .listbox .hmfb .xzhm .active i, .box_r .listbox .hmfb .xztj .active i {
+    border: 1px solid #f8223c;
+    background: url(../img/icon/active-icon.png) 0 -1px no-repeat
+}
+
+.box_r .listbox .hmfb .xzhm .active a, .box_r .listbox .hmfb .xztj .active a {
+    color: #f8223c
+}
+
+.box_r .listbox .hmfb .xzhm .active:hover i, .box_r .listbox .hmfb .xztj .active:hover i {
+    background: url(../img/icon/active-icon.png) -31px -1px no-repeat
+}
+
+.box_r .listbox .hmfb .xzhm a, .box_r .listbox .hmfb .xztj a {
+    display: inline-block;
+    margin-left: 22px;
+    color: #333
+}
+
+.box_r .listbox .hmfb .xzhm li {
+    margin-top: 20px
+}
+
+.box_r .listbox .hmfb .xztj li {
+    margin-top: 10px
+}
+
+.box_r .listbox .boyOrgirl, .box_r .listbox .fiveElement, .box_r .listbox .fourSeasons, .box_r .listbox .homeOrbeast, .box_r .listbox .qinqsh, .box_r .listbox .threeColor, .box_r .listbox .topOrbottom {
+    display: none
+}
+
+.box_r .listbox .hmfbTable {
+    width: 1158px;
+    background: #fff;
+    margin-top: 20px;
+    position: relative
+}
+
+.box_r .listbox .hmfbTable .box-title ul li {
+    font-family: 微软雅黑\ 16px;
+    font-size: 16px;
+    background: #f5f5f5
+}
+
+.box_r .listbox .hmfbTable .paddingTop48 {
+    padding-top: 48px
+}
+
+.box_r .listbox .hmfbTable .paddingTop48 > ul:first-child {
+    border-top: 1px solid #e6e6e6
+}
+
+.box_r .listbox .hmfbTable .explain {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    height: 28px;
+    transition: height .3s;
+    -moz-transition: height .3s;
+    -webkit-transition: height .3s;
+    -o-transition: height .3s;
+    overflow: hidden;
+    background: #edf4fa;
+    border: 1px solid #dadcdb;
+    margin-bottom: 20px
+}
+
+.box_r .listbox .hmfbTable .explain.auHeight {
+    height: auto
+}
+
+.box_r .listbox .hmfbTable .explain p {
+    line-height: 28px;
+    margin-left: 52px;
+    margin-bottom: 6px;
+    color: #555
+}
+
+.box_r .listbox .hmfbTable .explain p span {
+    color: #0079f4
+}
+
+.box_r .listbox .hmfbTable .explain p.no_mar {
+    margin-left: 10px
+}
+
+.box_r .listbox .box-title ul li ul {
+    border-top: 0 !important
+}
+
+.box_r .listbox .hisNUm_box {
+    width: 100%;
+    border-top: 0
+}
+
+.box_r .listbox .hisNUm_box ul {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box
+}
+
+.box_r .listbox .hisNUm_box ul li {
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    float: left;
+    border-right: 1px solid #e6e6e6;
+    line-height: 60px;
+    font-size: 14px
+}
+
+.box_r .listbox .hisNUm_box ul .Time_box {
+    width: 15%;
+    border-left: 1px solid #e6e6e6;
+    white-space: nowrap
+}
+
+.box_r .listbox .hisNUm_box ul .Time_box span:first-child {
+    margin-right: 5px
+}
+
+.box_r .listbox .hisNUm_box ul .red {
+    background: #f8223c
+}
+
+.box_r .listbox .hisNUm_box ul .blue {
+    background: #0093e8
+}
+
+.box_r .listbox .hisNUm_box ul .green {
+    background: #1fc26b
+}
+
+.box_r .listbox .hisNUm_box ul .hisNum_detail {
+    width: 33.6%
+}
+
+.box_r .listbox .hisNUm_box ul .hisNum_detail li {
+    width: 16.6%;
+    border: 0
+}
+
+.box_r .listbox .hisNUm_box ul .hisNum_detail li span:first-child {
+    margin-top: 10px;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px
+}
+
+.box_r .listbox .hisNUm_box ul .hisNum_detail li span:first-child + span {
+    margin-left: -2px
+}
+
+.box_r .listbox .hisNUm_box ul .temaNum {
+    width: 6.6%;
+    border-right: 0
+}
+
+.box_r .listbox .hisNUm_box ul .temaNum span:first-child {
+    margin-top: 10px;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px
+}
+
+.box_r .listbox .hisNUm_box ul .temaNum span:first-child + span {
+    margin-left: -2px
+}
+
+.box_r .listbox .hisNUm_box ul .dansh_ {
+    border-left: 1px solid #e6e6e6
+}
+
+.box_r .listbox .hisNUm_box ul .Daxia_dansh:last-child {
+    border: 0;
+    border-right: 1px solid #e6e6e6
+}
+
+.box_r .listbox .number_box li:nth-child(4) {
+    width: 5.6%
+}
+
+.box_r .listbox .number_box li:nth-child(5) {
+    width: 4.7%
+}
+
+.box_r .listbox .number_box li:nth-child(6) {
+    width: 4.65%
+}
+
+.box_r .listbox .number_box li:nth-child(7) {
+    width: 5.6%
+}
+
+.box_r .listbox .number_box li:nth-child(8) {
+    width: 4.1%
+}
+
+.box_r .listbox .number_box li:nth-child(9) {
+    width: 4.15%
+}
+
+.box_r .listbox .number_box li:nth-child(10) {
+    width: 5.3%
+}
+
+.box_r .listbox .number_box li:nth-child(11) {
+    width: 5.4%
+}
+
+.box_r .listbox .number_box li:nth-child(12) {
+    width: 5.3%
+}
+
+.box_r .listbox #zhmaZS {
+    display: none
+}
+
+.box_r .listbox #zhmaZS ul {
+    height: 70px
+}
+
+.box_r .listbox #zhmaZS ul:first-child li {
+    line-height: 68px;
+    font-size: 18px
+}
+
+.box_r .listbox #zhmaZS ul .qishou {
+    width: 90px;
+    border-left: 1px solid #e6e6e6
+}
+
+.box_r .listbox #zhmaZS ul .zhmaLi {
+    width: 15.37%
+}
+
+.box_r .listbox #zhmaZS ul .zhmaLi ul li {
+    font-size: 15px;
+    padding: 13px 0;
+    text-align: center;
+    width: 16.6%;
+    line-height: 44px
+}
+
+.box_r .listbox #zhmaZS ul .zhmaLi ul li span {
+    padding: 4px;
+    border-radius: 50%;
+    padding-right: 6px;
+    color: #fff;
+    display: block;
+    height: 26px;
+    width: 26px;
+    box-sizing: border-box;
+    line-height: 20px;
+    margin-top: 11px;
+    margin-left: 1px
+}
+
+.box_r .listbox #zhmaZS ul .zhmaLi ul li:last-child {
+    border-right: 0
+}
+
+.box_r .listbox #zhmaZS ul .zhmaLi ul li:nth-child(n+4) p {
+    line-height: 20px;
+    margin-bottom: 5px
+}
+
+.box_r .listbox #shxiaolz {
+    display: none
+}
+
+.box_r .listbox #shxiaolz ul.shxiaoul {
+    height: 60px;
+    font-size: 16px;
+    background: #f5f5f5
+}
+
+.box_r .listbox #shxiaolz ul .sxqishou {
+    width: 170px;
+    border-left: 1px solid #e6e6e6
+}
+
+.box_r .listbox #shxiaolz ul .sxqishou span:first-child {
+    margin-right: 15px
+}
+
+.box_r .listbox #shxiaolz ul .shxiaoKai {
+    width: 226px
+}
+
+.box_r .listbox #shxiaolz ul .shxiaoKai ul li {
+    font-size: 16px;
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 15.5px
+}
+
+.box_r .listbox #shxiaolz ul .shxiaoKai ul li:first-child {
+    margin-left: 9px
+}
+
+.box_r .listbox #shxiaolz ul .zoxiao {
+    width: 130px
+}
+
+.box_r .listbox #shxiaolz ul .shxiaotma {
+    width: 65px
+}
+
+.box_r .listbox #shxiaolz ul .shxiaotma span {
+    padding: 4px;
+    border-radius: 50%;
+    padding-right: 6px;
+    color: #fff;
+    display: block;
+    height: 26px;
+    width: 26px;
+    box-sizing: border-box;
+    line-height: 20px;
+    margin: 0 auto;
+    margin-top: 15.5px
+}
+
+.box_r .listbox #shxiaolz ul .shxiaoLi {
+    width: 81px;
+    border-left: 1px solid #e5e5e5
+}
+
+.box_r .listbox #shxiaolz ul .shxiaoLi span {
+    color: #999;
+    margin-left: 7px
+}
+
+.box_r .listbox #shxiaolz ul .shxiaoLi b {
+    color: #666
+}
+
+.box_r .listbox #shxiaolz ul .zoxiao_danx, .box_r .listbox #shxiaolz ul .zoxiao_num {
+    width: 65px
+}
+
+.box_r .listbox #shxiaolz ul .zoxiao, .box_r .listbox #shxiaolz ul .zoxiao_num {
+    border-left: 1px solid #e5e5e5
+}
+
+.box_r .listbox #termalz {
+    display: none
+}
+
+.box_r .listbox #termalz .paddingTop48 {
+    padding-top: 0
+}
+
+.box_r .listbox #termalz .paddingTop48 ul {
+    height: 50px
+}
+
+.box_r .listbox #termalz .paddingTop48 ul.termaul {
+    height: 60px;
+    background: #f5f5f5
+}
+
+.box_r .listbox #termalz .paddingTop48 ul.termaul li {
+    font-size: 16px;
+    color: #333
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termaqishou {
+    width: 168px;
+    border-left: 1px solid #e5e5e5
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termaqishou span {
+    color: #333
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termaqishou span:first-child {
+    color: #aeaeae;
+    margin-right: 10px
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .terma_ {
+    width: 80px;
+    border-right-width: 2px
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .terma_ span {
+    width: 28px;
+    height: 28px;
+    display: block;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 11px;
+    line-height: 28px
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termadaxi {
+    width: 82px;
+    border-right: 0
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termabante {
+    width: 85px;
+    border-right: 2px solid #e5e5e5
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termazoo {
+    width: 83px;
+    border-right: 2px solid #e5e5e5
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termazoo span:first-child {
+    margin-right: 7px
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termacolor {
+    width: 83px
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termacolor span:first-child {
+    margin-right: 6px
+}
+
+.box_r .listbox #termalz .paddingTop48 ul .termabanbanbo {
+    width: 83px
+}
+
+.box_r .listbox #termalz .paddingTop48 ul.temaulList li {
+    font-size: 14px;
+    line-height: 50px;
+    color: #666
+}
+
+.box_r .listbox #termalz .paddingTop48 ul.temaulList .termadaxi {
+    border-right: 1px solid #e5e5e5
+}
+
+.box_r #noMoreDate {
+    display: none;
+    width: 1160px;
+    margin: 0 auto;
+    height: 80px;
+    text-align: center;
+    font-size: 18px;
+    color: #ccc;
+    margin-top: 65px
+}
+
+#ABimg_box {
+    background: #f8f8f8
+}
+
+#ABimg_btn button {
+    border: 1px solid #ccc;
+    line-height: 30px;
+    margin-left: 30px;
+    width: 80px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    outline: 0;
+    margin-left: 45px;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 16px
+}
+
+#ABimg_btn .active {
+    background: #797979;
+    color: #fff;
+    border-color: #555
+}
+
+#add_ABimg {
+    text-align: center;
+    padding-bottom: 10px
+}
+
+#add_ABimg img {
+    max-width: 990px
+}
+
+.tema_box {
+    width: 24.3%
+}
+
+.tema_box, .zonghe {
+    border: 0 !important
+}
+
+.zonghe {
+    width: 20.5%;
+    border-left: 1px solid #e6e6e6 !important
+}
+
+.in_ul li:first-child {
+    border-bottom: 1px solid #e6e6e6
+}
+
+.in_ul li {
+    line-height: 25px !important;
+    height: 50% !important;
+    float: left;
+    width: 23%;
+    box-sizing: border-box;
+    font-size: 14px !important
+}
+
+.in_ul li:nth-child(2), .in_ul li:nth-child(5) {
+    width: 27%
+}
+
+.in_ul li:last-child {
+    border: 0
+}
+
+.tema_box li:first-child {
+    width: 100% !important
+}
+
+.tema_box li {
+    width: 17% !important
+}
+
+.tema_box li:nth-child(3) ~ li {
+    width: 22% !important
+}
+
+.inline {
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+    margin: 0 auto
+}
+
+.inline ul {
+    width: 1160px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 20px;
+    border-bottom: 1px dashed #dbdbdb
+}
+
+.inline .luzhu {
+    border-bottom: none
+}
+
+.inline li {
+    float: left;
+    height: 50px;
+    margin: 0 12px;
+    font-size: 14px;
+    color: #555
+}
+
+.inline li a:hover {
+    color: #f8223c
+}
+
+.inline li .checked {
+    color: #fff;
+    line-height: 30px
+}
+
+.inline li .checked:hover {
+    color: #fff
+}
+
+.inline .title {
+    margin-left: 0;
+    font-size: 16px;
+    color: #333
+}
+
+.inline .first_li {
+    margin-left: 0
+}
+
+.inline .luzhu a {
+    height: 30px;
+    width: auto;
+    line-height: 30px;
+    margin-top: 9px
+}

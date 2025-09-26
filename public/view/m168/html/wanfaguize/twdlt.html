@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+		<title>台湾大乐透玩法规则-中国体育、福利彩票、高频彩开奖结果查询调用接口API - 168彩票开奖网</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+		<link rel="apple-touch-icon" sizes="180x180" href="../../img/icon/favicon_152.png">
+		<meta name="description" content="168彩票开奖网提供中国体育彩票超级大乐透、排列三、排列五、七星彩、11选五、开奖结果查询，福利彩票双色球、3D、七乐彩、快3、时时彩、快乐8、北京赛车PK10、广东快乐十分等高频彩开奖结果查询调用接口。" />
+		<meta name="description" content="中国福利彩票北京赛车pk10开奖结果查询、历史开奖记录、开奖视频直播、杀号技巧软件分析预测网站。" />
+		<meta name="keywords" content="彩票开奖查询,彩票开奖,彩票开奖结果,福利彩票开奖结果,体育彩票开奖结果" />
+		<link rel="stylesheet" href="../../css/public.css?v=20228101654" />
+		<link rel="stylesheet" href="../../css/home.css?v=20228101654" />
+		<link rel="stylesheet" href="../../css/components.css?v=20228101654" />
+		<script type="text/javascript" src="../../js/lib/jquery-1.9.1.js?v=20228101654"></script>
+	</head>
+
+    <style>
+		.tableHead{
+			width: 100%;
+			height: 36px;
+			line-height: 35px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #000;
+		}
+		.tableHead span{
+			width: 33.33%;
+			text-align: center;
+			background: #ffcc66;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+		}
+        table {
+            border-spacing: 0;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+        }
+        th {
+            width: 33.33%;
+			text-align: center;
+			background: #ffcc66;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+        }
+        td {
+            border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+        }
+        td.ball-img img {
+            margin: 1px;
+        }
+        .table-with-balls td:nth-child(3) {
+            text-align:center;
+        }
+		.tableHead1{
+			height: 50px;
+			position: relative;
+			border-bottom: 1px solid #000;
+		}
+		.tableHead1 span{
+		    width: 33.1%;
+		    display: inline-block;
+		    border-right: 1px solid #000;
+		}
+		.list{
+	        height: 50px;
+		    position: absolute;
+		    top: 0px;
+		    width: 164px;
+		}
+		.list img{
+		    margin-top: 13px;
+		}
+		.list img:first-child{
+		    margin-left: 5px;
+		}
+		.listNb{
+		    position: absolute;
+    		right: 0;
+		    height: 50px;
+		    line-height: 50px;
+		    text-align: center;
+		}
+		.tableText:nth-child(odd),
+		.tableHead1:nth-child(even),
+        tr:nth-child(odd){
+			background: #efefef;
+		}
+		.tableText:nth-child(even),
+		.tableBonus:nth-child(odd),
+		.tableHead1:nth-child(odd),
+        tr:nth-child(even){
+			background: #fef9dc;
+		}
+		.tableText span:last-child,
+		.tableBonus span:last-child,
+		.tableHead1 span:last-child,
+		.tableHead span:last-child{
+			border-right: none;
+		}
+		.tableBonus{
+			width: 100%;
+		    height: 40px;
+		    line-height: 40px;
+		    display: inline-block;
+		    border-bottom: 1px solid #000;
+		}
+		.tableBonus span{
+			width: 16.66%;
+			height: auto;
+			text-align: center;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+		}
+		.tableBonus:last-child{
+			border-bottom: none;
+		}
+		.tableBonus:nth-child(odd){
+			background: #ffcc66;
+		}
+		.tableText{
+			width: 100%;
+		    height: 40px;
+		    line-height: 40px;
+		    border-bottom: 1px solid #000;
+		}
+		.tableText span{
+			width: 33.33%;
+			height: auto;
+			text-align: center;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+		}
+		.tableText:first-child{
+			background: #ffcc66;
+		}
+        .img-ori-size img {
+            width: auto !important;
+            max-width: 100%;
+        }
+	</style>
+
+	<body class="bodybox fixed-menu-padding-bottom">
+        <div class="page-header">
+            <span id="back"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4952 19.5547C15.8016 19.8335 16.2759 19.8111 16.5547 19.5048C16.8335 19.1984 16.8111 18.7241 16.5048 18.4453L15.4952 19.5547ZM8 11.72L7.46206 11.1974C7.3205 11.3431 7.2441 11.54 7.25035 11.7431C7.2566 11.9461 7.34496 12.138 7.49522 12.2747L8 11.72ZM16.0379 4.52261C16.3266 4.22551 16.3197 3.75069 16.0226 3.46206C15.7255 3.17343 15.2507 3.18029 14.9621 3.47739L16.0379 4.52261ZM16.5048 18.4453L8.50478 11.1653L7.49522 12.2747L15.4952 19.5547L16.5048 18.4453ZM8.53794 12.2426L16.0379 4.52261L14.9621 3.47739L7.46206 11.1974L8.53794 12.2426Z"/>
+                </svg></a>
+            </span>
+            <div class="navList"><span>玩法</span></div>
+            <span style="width:24px;">&nbsp;</span>
+        </div>
+        <div class="page-content">
+            <div class="centered-subtitle">台湾大乐透</div>
+            <dl style="font-size: 15px;line-height: 25px;color: #6d6d6d;position: relative;">
+                <dt style="font-size: 18px;color: #000;">► 基本玩法</dt>
+                <dd style="padding-left: 24px;width: 100%;box-sizing: border-box;">
+                    大樂透是一種樂透型遊戲。您必須從01~49中任選6個號碼進行投注。開獎時，開獎單位將隨機開出六個號碼加一個特別號，
+                    這一組號碼就是該期大樂透的中獎號碼，也稱為「獎號」。您的六個選號中，如果有三個以上（含三個號碼）對中當期開出之六個號碼（
+                    特別號只適用於貳獎、肆獎、陸獎和柒獎），即為中獎，並可依規定兌領獎金。
+                </dd>
+                </br></br></br>
+                <dd style="width: 100%;"><img src="../../img/wanfgzimg/loto_image01.jpg"></dd>
+                <dt style="font-size: 18px;color: #000;margin-left: 24px">各獎項的中獎方式如下表：</dt>
+                <table class="table-with-balls">
+                    <tr>
+                        <th>中獎方式</th>
+                        <th>中獎方式圖示</th>
+                        <th>獎項</th>
+                    </tr>
+                    <tr>
+                        <td>與當期六個獎號完全相同者</td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>頭獎</td>
+                    </tr>
+                    <tr>
+                        <td>對中當期獎號之任五碼＋特別號 </td>
+                        <td class="ball-img img-ori-size"><img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_01yellowball.jpg" /></td>
+                        <td>貳獎</td>
+                    </tr>
+                    <tr>
+                        <td>對中當期獎號之任五碼</td>
+                        <td class="img-ori-size"><img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>參獎</td>
+                    </tr>
+                    <tr>
+                        <td>對中當期獎號之任四碼＋特別號</td>
+                        <td class="img-ori-size"><img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_01yellowball.jpg" /></td>
+                        <td>肆獎</td>
+                    </tr>
+                    <tr>
+                        <td>對中當期獎號之任四碼</td>
+                        <td class="img-ori-size"><img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>伍獎NT$2,000</td>
+                    </tr>
+                    <tr>
+                        <td>對中當期獎號之任三碼＋特別號</td>
+                        <td class="img-ori-size"><img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_01yellowball.jpg" /></td>
+                        <td>陸獎 NT$1,000</td>
+                    </tr>
+                    <tr>
+                        <td>對中當期獎號之任兩碼＋特別號</td>
+                        <td class="img-ori-size"><img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_01yellowball.jpg" /></td>
+                        <td>柒獎NT$400</td>
+                    </tr>
+                    <tr>
+                        <td>對中當期獎號之任三碼</td>
+                        <td class="img-ori-size"><img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" />
+                            <img src="../../img/wanfgzimg/icon_in_02redball.jpg" /></td>
+                        <td>普獎 NT$400</td>
+                    </tr>
+                </table>
+            </dl>
+            </br></br>
+            <dl>
+                <dt style="font-size: 18px;color: #000;">► 獎金分配方式</dt>
+                <dd class="bonus">
+                    <p style="padding-left: 24px;">1: 當期總投注金額（銷售收入）乘以總獎金支出率即為當期『總獎金』。本遊戲之總獎金支出率=56%。</p>
+                    <p style="padding-left: 24px;">2: 伍獎獎金固定為每注新臺幣2,000元；陸獎獎金固定為每注新臺幣1,000元；柒獎及普獎獎金固定為每注新臺幣400元。</p>
+                    <p style="padding-left: 24px;">3: 頭獎至肆獎之實際中獎金額係由總獎金扣除伍獎至普獎後之餘額，再依下列獎金分配比率及實際中獎注數分配之（計算至元為止，元以下無條件捨去。該捨去部分所產生之款項將視為逾期未兌領獎金，全數歸入公益彩券盈餘）。</p>
+                </dd>
+                <table style="text-align: center;">
+                    <tr style="background: #ffcc66;">
+                        <td>獎項</td>
+                        <td>頭獎</td>
+                        <td>貳獎</td>
+                        <td>參獎</td>
+                        <td>肆獎</td>
+                        <td>合計</td>
+                    </tr>
+                    <tr>
+                        <td>獎金分配比率</td>
+                        <td>82%</td>
+                        <td>6.5%</td>
+                        <td>7%</td>
+                        <td>4.5%</td>
+                        <td>100%</td>
+                    </tr>
+                </table>
+                <dd class="bonus">
+                    <p style="padding-left: 24px;">4: 如當期頭獎有人中獎，且當期頭獎分配加計上期頭獎累積獎金後，仍未達新臺幣1億元時，當期頭獎獎金以新臺幣1億元整計算。</p>
+                    <p style="padding-left: 24px;">5: 頭獎至肆獎開獎後若無人獲得各該獎項，其獎金將累積納入次期各該獎項。</p>
+                    <p style="padding-left: 24px;">6: 伍獎至普獎係採固定獎金方式分配之，<span style="color: red;">惟如因熱門號碼開出，致使伍獎至普獎獎金合計超過當期總獎金之65%時，伍獎、陸獎和柒獎仍依原固定金額分配，普獎獎額改依當期總獎金之65%扣除伍獎、陸獎和柒獎獎金總額後由普獎中獎注數均分（計算至元為止，元以下無條件捨去。該捨去部分所產生之款項將視為逾期未兌領獎金，全數歸入公益彩券盈餘），其餘各獎〈頭、貳、參、肆獎〉仍依原分配比率分配之。</span></p>
+                </dd>
+            </dl>
+            </br></br>
+            <dl>
+                <dt style="font-size: 18px;color: #000;">► 投注方式及進階玩法</dt>
+                <dd>
+                    <p style="padding-left: 24px;">您可以利用以下三種方式投注大樂透：</p>
+                    <p style="padding-left: 24px;">一、使用選號單進行投注：</p>
+                    <p style="padding-left: 55px;" class="img-ori-size">
+                        每張大樂透選號單上都有5個選號區，最多可以投注5組選號。每個選號區都設有49個號碼(01~49)，您可以依照自己的喜好，自由選用以下幾種不同的方式填寫選號單，進行投注。<br>
+                        * 注意，在同一張選號單上，各選號區可分別採用不同的投注方式。<br>
+                        選號單之正確劃記方式有三種，塗滿<img src="../../img/wanfgzimg/draw_01.png" /> 、打叉<img src="../../img/wanfgzimg/draw_02.png" />或打勾<img src="../../img/wanfgzimg/draw_03.png" />，但請勿超過格線。填寫步驟如下：<br />
+                        <span style="color: #660066;">1.劃記選號</span><br />
+                        <span style="padding-left: 10px; color: #FF3300;">A.自行選號</span><br />
+                        <span style="padding-left: 20px;">
+                            在選號區中，自行從01~49的號碼中填選6個號碼進行投注。<br />
+                            <img src="../../img/wanfgzimg/loto_image1_a.gif" />
+                        </span><br />
+                        <span style="padding-left: 10px; color: #FF3300;">B.全部快選</span><br />
+                        <span style="padding-left: 20px;">
+                            在選號區中，劃記「快選」，投注機將隨機產生一組6個號碼。<br />
+                            <img src="../../img/wanfgzimg/loto_image1_b.gif" />
+                        </span><br />
+                        <span style="padding-left: 10px; color: #FF3300;">C.部分快選</span><br />
+                        <span style="padding-left: 20px;">
+                            您也可以在選號區中選擇1~5個號碼，並劃記「快選」，投注機將隨機為你選出剩下的號碼，產生一組6個號碼。 以下圖為例，如果您只選擇3、17、34、41等四個號碼，並劃記「快選」，剩下二個號碼將由投注機隨機快選產生。<br />
+                            <img src="../../img/wanfgzimg/loto_image1_c.gif" />
+                        </span><br />
+                        <span style="padding-left: 10px; color: #FF3300;">D.系統組合</span><br />
+                        <span style="padding-left: 20px;">
+                            您可以在選號區中選擇7~16個號碼進行投注，系統將就選號單上的選號排列出所有可能的號碼組合。 例如您選擇用5、10、18、24、32、33、47等七個號碼進行投注， 則投注機所排列出的所有號碼組合將為：<br />
+                            第一注：5、10、18、24、32、33<br />
+                            第二注：5、10、18、24、32、47<br />
+                             第三注：5、10、18、24、33、47<br />
+                            第四注：5、10、18、32、33、47<br />
+                             第五注：5、10、24、32、33、47<br />
+                            第六注：5、18、24、32、33、47<br />	
+                            第七注：10、18、24、32、33、47<br />		
+                                     系統組合所產生的總注數和總投注金額將因您所選擇的號碼數量而異。請參見下表：<br />	
+
+                            <table style="text-align: center;">
+                                <tr>
+                                    <th>選號數</th>
+                                    <th>總注數</th>
+                                    <th>總投注金額</th>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>7</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>28</td>
+                                    <td>1,400</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>84</td>
+                                    <td>4,200</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>210</td>
+                                    <td>10,500</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>462</td>
+                                    <td>23,100</td>
+                                </tr>
+                            </table>
+                            <table style="text-align: center;">
+                                <tr>
+                                    <th>選號數</th>
+                                    <th>總注數</th>
+                                    <th>總投注金額</th>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>924</td>
+                                    <td>46,200</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>1716</td>
+                                    <td>85,800</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>3003</td>
+                                    <td>150,150</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>5005</td>
+                                    <td>250,250</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>8008</td>
+                                    <td>400,400</td>
+                                </tr>
+                            </table>
+                        </span><br />
+                        <span style="padding-left: 50px;color: #FF3300;">E.系統配號</span><br />
+                        <span>
+                            <p style="margin-left: 70px;">
+                                您可以在選號區中選擇5個號碼進行投注，系統將就您的選號和剩下的44個號碼，自動進行配對，組合出44注選號。 如果您選擇用1、2、3、4、5等五個號碼進行投注，則投注機所排列出的所有號碼組合將為：<br />
+                                第一注：1、2、3、4、5、6 <br />
+                                第二注：1、2、3、4、5、7 <br />
+                                 第三注：1、2、3、4、5、8 <br />
+                                 ： <br />
+                                 ： <br />
+                                 第四十三注：1、2、3、4、5、48 <br />
+                                 第四十四注：1、2、3、4、5、49 <br />
+                                * 注意，每次系統配號將固定產生44注，投注金額固定為新臺幣2,200元。<br />
+                            </p>
+                            <span style="padding-left: 50px;color: #660066;">2.劃記投注期數</span><br />
+                            <p style="margin-left: 70px;">
+                                您可以選擇就您的投注內容連續投注2~10期（含當期），您的投注號碼在您所選擇的期數內皆可對獎，惟在多期投注期間不得中途要求退/換彩券；如您在多期投注期間內對中任一期的獎項，可直接至任一投注站或中國信託商業銀行(股)公司指定兌獎處兌獎，不需等到最後一期開獎結束。兌獎時，投注站或中國信託商業銀行(股)公司指定兌獎處將回收您的彩券，並同時列印一張「交換票」給您，供您在剩餘的有效期數內對獎。
+                            </p>
+                            <img style="margin-left: 0px;" src="../../img/wanfgzimg/loto_image1_d.gif" />
+                        </span><br />
+                    </p>
+                    <p style="padding-left: 24px;">二、口頭投注</p>
+                    <p style="margin-left: 50px;">您也可以口頭告知電腦型彩券經銷商您要選的號碼、投注方式、投注期數等投注內容，並透過經銷商操作投注機，直接進行投注。</p>
+                    <p style="padding-left: 24px;">三、智慧型手機電子選號單(QR Code)投注</p>
+                    <p style="margin-left: 50px;">
+                        如果您的智慧型手機為iOS或Android之作業系統，您可先下載「台灣彩券」APP，並利用APP中的「我要選號」功能，填寫投注內容。每張電子選號單皆將產生一個QRcode，至投注站掃描該QR Code，即可自動印出彩券，付費後即完成交易。<br />
+                        <img src="../../img/wanfgzimg/loto_image03.jpg" />
+                    </p>
+                </dd>
+                <br /><br />
+                <dl>
+                    <dt style="font-size: 18px;color: #000;">►  預購服務</dt>
+                    <dd style="margin-left: 25px;">
+                        <p>1: 本遊戲提供預購服務，您可至投注站預先購買當期起算9期內的任一期非當期彩券。</p>
+                        <p>2: 預購方式以告知投注站人員或智慧型手機電子選號單(QR Code)投注為之，故選號單不另提供預購投注選項。</p>
+                    </dd>
+                </dl>
+                <br /><br />
+                <dl>
+                    <dt style="font-size: 18px;color: #000;">►  售價</dt>
+                    <dd style="margin-left: 25px;">
+                        <p>1: 大樂透每注售價為新臺幣50元（六個號碼所形成的一組選號稱為一注）。</p>
+                        <p>2: 如投注多期，則總投注金額為原投注金額乘以投注期數之總和。</p>
+                    </dd>
+                </dl>
+                <br /><br />
+                <dl>
+                    <dt style="font-size: 18px;color: #000;">►  券面資訊</dt>
+                    <dd style="margin-left: 25px;">
+                        <img src="../../img/wanfgzimg/loto_image04.jpg" /><br />
+                        <p>注意事項：彩券銷售後如遇有加開期數之情況，預購及多期投注之期數將順延。若彩券上的資料和電腦紀錄的資料不同，以電腦紀錄資料為準。</p>
+                    </dd>
+                </dl>
+            </dl>
+        </div>
+		<div id="btmQuickMenu"></div>
+        <script type="text/javascript" src="../../js/lib/config.js?v=20228101654"></script>
+        <script type="text/javascript" src="../../js/local/tools/tools.js?v=20228101654"></script>
+		<!-- <script type="text/javascript" src="../../js/local/public/home.js?v=20228101654"></script> -->
+		<script type="text/javascript" src="../../js/local/components/components.js?v=20228101654"></script>
+        <script type="text/javascript" src="../../js/lib/GA.js?v=20228101654"></script>
+    </body>
+</html>

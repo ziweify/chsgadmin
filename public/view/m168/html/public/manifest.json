@@ -1,0 +1,16 @@
+{
+	"name" : "168",
+	"short_name": "168",
+	"icons": [
+		{
+			"src": "../../img/icon/favicon_152.png",
+			"type": "image/png",
+			"sizes": "152x152"
+		}
+	],
+	"Scope": "/",
+	"start_url": "/html/public/home.html",
+	"background_color": "#3367D6",
+	"display": "standalone",
+	"theme_color": "#3367D6"
+}

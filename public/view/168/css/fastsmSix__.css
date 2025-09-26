@@ -1,0 +1,373 @@
+body {
+    background: #f0f0f0
+}
+
+.boxsiz {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.haomaquh {
+    height: auto !important
+}
+
+.soundDef {
+    background: url(../img/icon/soundKinds.png) no-repeat 0 0
+}
+
+.sound1 {
+    background: url(../img/icon/soundKinds.png) no-repeat -31px 0
+}
+
+.sound2 {
+    background: url(../img/icon/soundKinds.png) no-repeat -62px 0
+}
+
+.sound3 {
+    background: url(../img/icon/soundKinds.png) no-repeat -93px 0
+}
+
+.sound4 {
+    background: url(../img/icon/soundKinds.png) no-repeat -124px 0
+}
+
+.sound5 {
+    background: url(../img/icon/soundKinds.png) no-repeat -155px 0
+}
+
+.soundDefY {
+    background: url(../img/icon/soundKinds.png) no-repeat 0 -29px
+}
+
+.sound1Y {
+    background: url(../img/icon/soundKinds.png) no-repeat -31px -29px
+}
+
+.sound2Y {
+    background: url(../img/icon/soundKinds.png) no-repeat -62px -29px
+}
+
+.sound3Y {
+    background: url(../img/icon/soundKinds.png) no-repeat -93px -29px
+}
+
+.sound4Y {
+    background: url(../img/icon/soundKinds.png) no-repeat -124px -29px
+}
+
+.sound5Y {
+    background: url(../img/icon/soundKinds.png) no-repeat -155px -29px
+}
+
+.bodybox .liline {
+    color: #ccc !important
+}
+
+@keyframes a {
+    0% {
+        opacity: .2
+    }
+    50% {
+        opacity: 1
+    }
+    to {
+        opacity: .2
+    }
+}
+
+.bodybox .haomabox {
+    width: 1200px;
+    height: auto;
+    margin: 20px auto 0
+}
+
+.bodybox .haomabox .waring {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    color: #f1010a;
+    padding-left: 30px;
+    display: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.bodybox .haomabox .waring .flash {
+    width: 100%;
+    height: 40px;
+    -webkit-animation: a 2s infinite ease-in-out;
+    background: rgba(250, 142, 25, .2);
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.bodybox .haomabox .waring .flash i {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../img/icon/bjpknum.png) no-repeat -392px -202px
+}
+
+.bodybox .haomaqu {
+    width: 1200px;
+    background: #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.bodybox .haomaqu .haomaqul {
+    width: 760px;
+    display: inline-block;
+    float: left
+}
+
+.bodybox .haomaqu .haomaqul .haomaline {
+    width: 887px;
+    height: 100%;
+    clear: both
+}
+
+.bodybox .haomaqu .haomaqul .haomaline div {
+    display: inline-block;
+    float: left
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .haomaimg {
+    width: 90px;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+    border-right: 1px solid #f0f0f0;
+    margin-top: 26px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .haomaimg img {
+    width: 100px;
+    height: 100px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #666;
+    overflow: hidden;
+    display: block;
+    width: 610px;
+    border-right: 1px solid #f0f0f0
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit {
+    width: 100%
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .hLeftDiv {
+    float: left;
+    width: 50%
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .hLeftDiv .klsf {
+    font-size: 18px;
+    color: #333;
+    font-weight: 800;
+    margin-right: 10px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .hLeftDiv .preDrawIssue {
+    margin: 0 5px;
+    color: #f44a07
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .hRightDiv {
+    width: 50%;
+    float: right;
+    height: 20px;
+    line-height: 20px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .hRightDiv .drawCount, .bodybox .haomaqu .haomaqul .haomaline .numberqu .nuberqutit .hRightDiv .sdrawCount {
+    margin: 0 10px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao {
+    margin-top: 15px;
+    display: block;
+    position: relative
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul {
+    width: 100%;
+    overflow: hidden
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul li {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+    border-radius: 50%
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul li i {
+    position: absolute;
+    left: 38px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul li img {
+    width: 40px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul li:nth-last-child {
+    margin-left: 30px !important
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul .numblue, .bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul .numred {
+    margin-right: 17px;
+    height: 36px;
+    width: 36px;
+    color: #fff
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul .li_after {
+    margin-right: 0
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul.new_sh_xzlist, .bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul.sh_xzlist {
+    min-height: 75px !important
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul.new_sh_xzlist li, .bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul.sh_xzlist li {
+    height: auto !important
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul.new_sh_xzlist li span, .bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul.sh_xzlist li span {
+    color: #333;
+    display: block;
+    line-height: 32px;
+    font-size: 16px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao .addLiuHe {
+    position: absolute;
+    left: 345px;
+    top: 0;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/icon/xiaoliuico.png) no-repeat -180px -20px
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .totalScore {
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 40px;
+    color: #333
+}
+
+.bodybox .haomaqu .haomaqur {
+    flex: 1;
+    float: right;
+    display: inline-block
+}
+
+.bodybox .haomaqu .haomaqur .line {
+    width: 160px;
+    height: auto;
+    overflow: hidden;
+    color: #666
+}
+
+.bodybox .haomaqu .haomaqur .linetit {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px
+}
+
+.bodybox .haomaqu .haomaqur .linetit .nextIssue {
+    color: #f44a07;
+    margin: 0 5px
+}
+
+.bodybox .haomaqu .haomaqur .linetime {
+    height: 40px;
+    line-height: 40px
+}
+
+.bodybox .haomaqu .haomaqur .linetime .bgtime {
+    height: 40px;
+    width: 40px;
+    background: #444553;
+    color: #ffd200;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px
+}
+
+.bodybox .haomaqu .haomaqur .linetime .opening {
+    width: 100%;
+    height: 100%;
+    background: #212224;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #f7f200;
+    padding-left: 30px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 18px;
+    text-align: left;
+    display: none
+}
+
+.bodybox .haomaqu .haomaqur .linetime span {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px
+}
+
+.bodybox .haomaqu .haomaqur .haomaqur_l {
+    width: 200px;
+    float: left;
+    margin-left: 20px
+}
+
+.bodybox .haomaqu .haomaqur .haomaqur_r {
+    float: left;
+    width: 190px;
+    height: 100px;
+    margin-top: 20px;
+    border-left: 1px solid #f0f0f0
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao .numberbox li:nth-child(6) {
+    margin-right: 10px !important
+}
+
+.bodybox .haomaqu .haomaqul .haomaline .numberqu .kajianhao ul li.addpic {
+    margin-right: 0 !important
+}

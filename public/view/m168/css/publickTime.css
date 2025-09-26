@@ -1,0 +1,313 @@
+body > div {
+    font-size: .12rem
+}
+
+.headfixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background: #efeff4
+}
+
+.body-content__video {
+    margin-top: 1.1rem;
+    background: #fff;
+    height: 4.3rem
+}
+
+.num_history {
+    margin-top: 0.01rem;
+}
+
+.jumphk {
+    position: fixed;
+    top: -50rem;
+    right: 0;
+    background: rgba(0, 0, 0, .3);
+    height: 100% !important;
+    box-shadow: 0 0 .1rem rgba(255, 48, 71, .2);
+    z-index: 2;
+    transition: top .3s;
+    width: 100% !important
+}
+
+.jumphk ul {
+    padding: 0 .1rem;
+    position: relative;
+    height: 100%;
+    background: #fff;
+    width: 29%;
+    float: right
+}
+
+.jumphk ul:before {
+    content: "";
+    position: absolute;
+    top: -.099rem;
+    left: .5rem;
+    width: 0;
+    height: 0;
+    border-width: 0 .1rem .1rem;
+    border-style: solid;
+    border-color: transparent transparent #fff
+}
+
+.jumphk ul li {
+    border-bottom: 1px solid #ededed;
+    height: .5rem
+}
+
+.jumphk ul li:first-child {
+    height: .5rem;
+    line-height: .5rem
+}
+
+.jumphk ul li a {
+    color: #2d2d2d !important;
+    line-height: .44rem !important;
+    float: none !important;
+    text-align: center !important;
+    font-size: .16rem
+}
+
+.timebox {
+    background: #fff;
+    height: .5rem;
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf
+}
+
+.timebox .ye_timelist {
+    width: 75%;
+    float: left;
+    margin-top: .1rem;
+    overflow: scroll
+}
+
+.timebox .ye_timelist ul {
+    width: 150%;
+    overflow: hidden;
+    height: .4rem
+}
+
+.timebox .ye_timelist ul li {
+    float: left;
+    line-height: .25rem;
+    width: .25rem;
+    height: .25rem;
+    text-align: center;
+    margin-left: .1rem
+}
+
+.timebox .ye_timelist ul .checkdate {
+    background: #ea3723;
+    color: #fff;
+    border-radius: 50%;
+    position: relative
+}
+
+.timebox .ye_timelist ul .checkdate:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: .28rem;
+    right: .08rem;
+    width: .08rem;
+    height: .08rem;
+    background: #cbcbcb;
+    border-radius: 50%
+}
+
+.timebox .top_menu_more {
+    width: 25%;
+    position: relative;
+    float: right;
+    overflow: hidden
+}
+
+.timebox .top_menu_more .list_shadow {
+    position: absolute;
+    width: .1rem;
+    height: .12rem;
+    left: .036rem;
+    top: .16rem;
+    background-size: contain;
+    border-left: 1px solid #a8b4d6;
+    background-color: rgba(244, 245, 246, .3)
+}
+
+.timebox .top_menu_more .more_btn {
+    display: block;
+    width: .79rem;
+    height: .4rem;
+    line-height: .4rem;
+    padding-left: .1rem;
+    position: relative
+}
+
+.timebox .top_menu_more .more_btn:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: .18rem;
+    right: .13rem;
+    width: .12rem;
+    height: .12rem;
+    background: url(../img/xiaol.png) -1.19rem -1.28rem no-repeat;
+    background-size: 3.1866rem auto
+}
+
+#showtime {
+    top: .03rem;
+    right: -.1rem;
+    width: 100%;
+    z-index: 1
+}
+
+#showtime, #showtime:before {
+    position: absolute;
+    display: inline-block;
+    height: .2rem
+}
+
+#showtime:before {
+    content: "";
+    top: .1rem;
+    left: -.05rem;
+    width: .01rem;
+    border-left: 1px solid #acb2be
+}
+
+#beginTime {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: .1rem;
+    left: 0;
+    z-index: 1;
+    height: .22rem;
+    color: transparent;
+    outline: none
+}
+
+.menubtn .jumphk {
+    width: 100% !important
+}
+
+.menubtn > a {
+    line-height: .4rem !important;
+    color: #ff0812
+}
+
+.go168_gray {
+    overflow: hidden;
+    background: #fff
+}
+
+.go168_gray .marginbottom {
+    background: #e2e1e5;
+    height: .1rem;
+    width: 100%
+}
+
+.go168_gray > div {
+    float: left;
+    width: 50%;
+    height: .55rem
+}
+
+.go168_gray > div:first-child a {
+    width: 80%
+}
+
+.go168_gray > div a {
+    line-height: .5rem
+}
+
+.go168_gray > div a img {
+    width: 100%;
+    vertical-align: middle
+}
+
+.go168_gray > div.menubtn > a {
+    display: table;
+    width: 50% !important;
+    text-align: center;
+    font-size: .18rem;
+    color: #333;
+    line-height: .5rem !important;
+    float: right
+}
+
+.go168_gray > div.menubtn > a i {
+    display: inline-block;
+    background: url(../img/xiaol.png) -1.43rem -1.183rem;
+    background-size: 3.1866rem auto;
+    vertical-align: middle;
+    margin-top: .08rem;
+    box-sizing: border-box;
+    margin-left: .05rem;
+    height: .25rem !important;
+    width: .12rem !important;
+    background-position: -1.19rem -1.28rem !important
+}
+
+.pagediv .fixedTwo {
+    width: 100%;
+    background: #fff
+}
+
+.pagediv .fixedTwo .menubtn {
+    height: .4rem;
+    border-bottom: 1px solid #ebebeb;
+    overflow: hidden
+}
+
+.pagediv .fixedTwo .menubtn > a {
+    display: table;
+    width: 50% !important;
+    text-align: right;
+    padding-right: .1rem;
+    font-size: .18rem;
+    color: #333;
+    line-height: .4rem !important;
+    float: right
+}
+
+.pagediv .fixedTwo .menubtn > a i {
+    display: inline-block;
+    background: url(../img/xiaol.png) -1.43rem -1.183rem;
+    background-size: 3.1866rem auto;
+    vertical-align: middle;
+    margin-top: .08rem;
+    box-sizing: border-box;
+    margin-left: .05rem;
+    height: .25rem !important;
+    width: .12rem !important;
+    background-position: -1.19rem -1.28rem !important
+}
+
+#datePlugin {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+header .calendar {
+    color: #ff0812 !important
+}
+
+.headbox .menubtn > a:after {
+    content: "";
+    width: .06rem;
+    height: .24rem;
+    display: inline-block;
+    position: absolute;
+    top: .09rem;
+    right: .03rem;
+    background: url(../img/xiaol.png) -.68rem -2.15rem;
+    background-size: 3.1866rem auto
+}

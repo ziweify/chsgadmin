@@ -1,0 +1,191 @@
+html, body {
+	height: 100%;
+}
+
+.top_info .title {
+	min-width: 160px;
+}
+
+.top_info .refresh {
+	margin-left: 15px;
+}
+
+.top_info .input_panel input {
+	width: 95px;
+	height: 18px;
+}
+
+.top_info .right button {
+	margin-top: 3px;
+}
+
+#resetBetButton {
+	margin: 3px 0 0 15px;
+}
+
+#resetTax {
+	color: red;
+}
+
+.left_panel {
+	float: left;
+	border: 1px solid #b9c2cb;
+	background: white;
+	padding: 0;
+	margin: 1px 10px 0 2px;
+	width: 200px;
+}
+
+.left_panel li {
+	height: 26px;
+	line-height: 26px;
+	border-top: 1px solid #b9c2cb;
+	padding: 0 5px;
+	text-indent: 10px;
+}
+
+.left_panel .title {
+	background: #F2F2F2;
+	color: #344b50;
+	height: 26px;
+	line-height: 26px;
+	font-weight: bold;
+	border-top: none;
+	text-align: center;
+}
+
+.left_panel span {
+	float: right;
+}
+
+.data_table .online .s1 {
+	background: url("images/icons/u1.gif") no-repeat;
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin: auto;
+}
+
+.data_table .online .s0 {
+	background: url("images/icons/u0.gif") no-repeat;
+	width: 10px;
+	height: 10px;
+	display: block;
+	margin: auto;
+}
+
+.data_table .time {
+	width: 200px;
+}
+
+.tax_list .data_table th, .tax_param .data_table tbody th {
+	color: #344b50;
+	line-height: 20px;
+	background: #F2F2F2;
+}
+
+.tax_list .data_table .reset {
+	color: red;
+}
+
+.tax_list .template {
+	width: 115px;
+}
+
+.tax_list .template select {
+	max-width: 80px;
+}
+
+.tax_list .logs {
+	background: url(images/icons/44.gif) no-repeat left center;
+	padding-left: 14px;
+	margin-left: 10px;
+}
+
+.data_table td {
+	text-align: center;
+}
+
+.tax_param, .tax_bets {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.tax_param input[type=checkbox], .tax_param label {
+	cursor: pointer;
+}
+
+.tax_param .main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.tax_param .main .data_panel, .tax_bets .contents {
+	flex: 1;
+	overflow-y: auto;
+}
+
+.data_table .tax {
+	width: 50px;
+	text-align: center;
+}
+
+.tax_param .changed {
+	background: aqua;
+}
+
+.tax_param .data_panel tbody th {
+	width: 80px;
+}
+
+.tax_param .data_panel tbody td {
+	width: 60px;
+}
+
+.tax_param .data_footer {
+	height: 60px;
+}
+
+.input-select {
+	position: absolute;
+	z-index: 1;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #000;
+	background: #fff;
+}
+
+.input-select li {
+	user-select: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+.input-select .active {
+	font-weight: bold;
+	background: #82c0ff;
+}
+
+.tax_param .color {
+	background-image: url("images/td_ts.gif");
+	background-repeat: no-repeat;
+	background-position: left -50px;
+}
+
+.tax_param .t_BALL {
+	background-position: left top;
+}
+
+.tax_param .t_LM {
+	background-position: left -150px;
+}
+
+.tax_param .t_MP {
+	background-position: left -100px;
+}
+
+.tax_param .t_ITEM {
+	background-position: left -200px;
+}

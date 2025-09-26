@@ -1,0 +1,150 @@
+@CHARSET "UTF-8";
+
+.data_table tbody td {
+	text-align: center;
+}
+
+.info_table tbody td {
+	text-align: left;
+}
+
+.data_table .drawNumber {
+	color: #299a26;
+}
+
+.data_table .text {
+	color: #2836f4;
+}
+
+.data_table .odds {
+	color: red;
+	font-weight: bold;
+	font-family: Verdana, Arial, Sans;
+}
+
+.data_table .money {
+	text-align: right;
+}
+
+.data_table thead .result {
+	color: red;
+}
+
+.data_table .dividend span,.top_info .bet_date select {
+	color: #2836f4;
+}
+
+.data_table .color {
+	color: #2836f4;
+	font-weight: bold;
+}
+
+.data_table .minus {
+	color: red;
+}
+
+.data_table .back,.data_table .share span {
+	font-weight: bold;
+}
+
+.top_info .bet_date {
+	color: #2836f4;
+	font-weight: bold;
+	float: left;
+	margin-right: 15px;
+}
+
+.note {
+	text-align: center;
+	color: #2836f4;
+	font-weight: bold;
+}
+
+.top_info .input {
+	width: 100px;
+	height: 18px;
+}
+
+.top_info .submit {
+	padding: 0;
+	margin: 0;
+	height: 22px;
+	width: 38px;
+}
+
+.data_table .cancelled {
+	text-decoration: line-through;
+}
+
+.data_table .dividend .cancelled {
+	text-decoration: none;
+	color: red;
+}
+
+.data_table .restore {
+	color: red;
+}
+
+.data_table tfoot th {
+	height: 26px;
+	text-align: right;
+	padding-right: 5px;
+}
+
+.th_icon {
+	width: 21px;
+	height: 20px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	opacity: 0.5;
+	cursor: pointer;
+	background-image:url(../../images/player/filterbtn_before.jpg);
+	border: 1px;
+}
+
+.th_icon1 {
+	width: 21px;
+	height: 20px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	opacity: 0.5;
+	cursor: pointer;
+	background-image:url(../../images/player/filterbtn_before.jpg);
+	border: 1px;
+}
+
+.th_icon2 {
+	width: 21px;
+	height: 20px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	opacity: 0.5;
+	cursor: pointer;
+	background-image:url(../../images/player/filterbtn_before.jpg);
+	border: 1px;
+}
+
+
+.th_search {
+	width: 200px;
+	height: 20px;
+	max-width: 0;
+	transition: all .5s ease;
+	position: absolute;
+	right: 22px;
+	top: 1px;
+	box-sizing: border-box;
+	opacity: 0;
+}
+
+.th_search.expanded {
+	opacity: 1;
+}
+
+.th-box {
+	position: relative;
+	width: 200px;
+}

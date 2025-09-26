@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+.list {
+	margin-top: 10px;
+}
+
+.data_table .time {
+	color: olivedrab;
+	font-weight: bold;
+	width: 80px;
+}
+
+.data_table .ip{
+	width: 120px;
+}
+
+.data_table .op {
+	width: 70px;
+}
+
+.data_table .lastpage{
+	width: 250px;
+}
+
+.data_table .minus,.data_table .minus:hover {
+	color: red;
+}
+
+.data_table .plus,.data_table .plus:hover {
+	color: #339166;
+}

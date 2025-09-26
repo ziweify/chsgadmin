@@ -1,0 +1,23 @@
+.data_table thead td {
+	color: #344b50;
+	line-height: 20px;
+	background: #F2F2F2;
+	font-weight: bolder;
+}
+
+.site_table td {
+	text-align: center;
+}
+
+.s-1 {
+	color: green;
+	font-weight: bolder;
+}
+
+.s-2 {
+	color: #ff8040;
+}
+
+.s-0 {
+	color: red;
+}

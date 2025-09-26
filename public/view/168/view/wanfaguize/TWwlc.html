@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+		<title>台湾威力彩玩法规则</title>
+		<link rel="stylesheet" href="../../css/headorfood.css?v=20227151437" />
+		<link rel="stylesheet" href="../../css/guizejianjie.css?v=20227151437" />
+		<link rel="shortcut icon" href="../../img/icon/168favicon.ico?v=20227151437">
+		<link rel="stylesheet" href="../../css/user_adv.css?v=20227151437" />
+		<link rel="stylesheet" href="../../css/home.css?v=20227151437" />
+		<script src="../../js/lib/bootstrap-3.3.0/js/tests/vendor/jquery.min.js"></script>
+		<script src="../../js/lib/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../js/lib/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../../js/lib/config.js?v=20227151437"></script>
+		<script type="text/javascript" src="../../js/lib/GA.js?v=20227151437"></script>
+		<script type="text/javascript" src="../../js/loacal/wanfaguize/wfgz_hf.js?v=20227151437"></script>
+	</head>
+	<style>
+		.tableHead{
+			width: 100%;
+			height: 36px;
+			line-height: 35px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #000;
+		}
+		.tableHead span{
+			width: 33.33%;
+			text-align: center;
+			background: #ffcc66;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+		}
+		.tableHead1{
+			height: 50px;
+			position: relative;
+			border-bottom: 1px solid #000;
+		}
+		.tableHead1 span{
+		    width: 33.1%;
+		    display: inline-block;
+		    border-right: 1px solid #000;
+		}
+		.list{
+	        height: 50px;
+		    position: absolute;
+		    top: 0px;
+		    width: 164px;
+		}
+		.list img{
+		    width: 18px;
+		    margin-top: 15px;
+		}
+		.list img:first-child{
+		    margin-left: 5px;
+		}
+		.listNb{
+		    position: absolute;
+    		right: 0;
+		    height: 50px;
+		    line-height: 50px;
+		    text-align: center;
+		}
+		.tableText:nth-child(odd),
+		.tableHead1:nth-child(even){
+			background: #efefef;
+		}
+		.tableText:nth-child(even),
+		.tableBonus:nth-child(odd),
+		.tableHead1:nth-child(odd){
+			background: #fef9dc;
+		}
+		.tableText span:last-child,
+		.tableBonus span:last-child,
+		.tableHead1 span:last-child,
+		.tableHead span:last-child{
+			border-right: none;
+		}
+		.tableBonus{
+			width: 100%;
+		    height: 40px;
+		    line-height: 40px;
+		    display: inline-block;
+		    border-bottom: 1px solid #000;
+		}
+		.tableBonus span{
+			width: 25%;
+			height: auto;
+			text-align: center;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+		}
+		.tableBonus:last-child{
+			border-bottom: none;
+		}
+		.tableBonus:nth-child(odd){
+			background: #ffcc66;
+		}
+		.tableText{
+			width: 100%;
+		    height: 40px;
+		    line-height: 40px;
+		    border-bottom: 1px solid #000;
+		}
+		.tableText span{
+			width: 33.33%;
+			height: auto;
+			text-align: center;
+			display: inline-block;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+		}
+		.tableText:first-child{
+			background: #ffcc66;
+		}
+	</style>
+	<body>
+		<div class="bodybox">
+			<div id="headdivbox"></div>
+
+			<!--规则展示-->
+			<div class="guize">
+				<div class="guize_intro">首页 &gt;台湾威力彩玩法规则</div>
+				<div class="guize_menu">
+					<ul id="rule-submenu">
+						<li class="guize_head">
+							<strong>玩法规则</strong>
+						</li>
+						<li class="hover">
+							<a href="PK10_wanfaguize.html"><strong>PK10</strong></a>
+						</li>
+						<!--<li class="hover">
+							<a href="tencent_ffc_wanfaguize.html"><strong>腾讯分分彩</strong></a>
+						</li>-->
+						<!--<li class="hover">
+							<a href="CQssc_wanfaguize.html"><strong>重庆时时彩</strong></a>
+						</li>-->
+						<li class="hover">
+							<a href="hayypCZ_wanfaguize.html"><strong>重庆欢乐生肖</strong></a>
+						</li>
+						<li class="hover">
+							<a href="XJssc_wanfaguize.html"><strong>新疆时时彩</strong></a>
+						</li>
+						<li class="hover">
+							<a href="TJssc_wanfaguize.html"><strong>天津时时彩</strong></a>
+						</li>
+						<li class="hover">
+							<a href="tw5fc_wanfaguize.html"><strong>台湾5分彩</strong></a>
+						</li>
+						<li class="hover">
+							<a href="GDklsf_wanfaguize.html"><strong>广东快乐十分</strong></a>
+						</li>
+						<li class="hover">
+							<a href="GD11x5_wanfaguize.html"><strong>广东11选5</strong></a>
+						</li>
+						<li class="hover">
+							<a href="JSK3_wanfaguize.html"><strong>江苏快3</strong></a>
+						</li>
+						<li class="hover">
+							<a href="SYYDJ_wanfaguize.html"><strong>十一运夺金</strong></a>
+						</li>
+						<li class="hover">
+							<a href="CQXYNC_wanfaguize.html"><strong>重庆幸运农场</strong></a>
+						</li>
+						<li class="hover">
+							<a href="KUAI3_wanfaguize.html"><strong>快3</strong></a>
+						</li>
+						<li class="hover">
+							<a href="SYX5_wanfaguize.html"><strong>11选5</strong></a>
+						</li>
+						<li class="hover">
+							<a href="BJKL8_wanfaguize.html"><strong>北京快乐8</strong></a>
+						</li>
+						<li class="hover">
+							<a href="GXKLSF.html"><strong>广西快乐十分</strong></a>
+						</li>
+						<li class="hover">
+							<a href="EGXY28.html"><strong>PC蛋蛋幸运28</strong></a>
+						</li>
+						<li class="hover">
+							<a href="CJDLT.html"><strong>超级大乐透</strong></a>
+						</li>
+						<li class="hover">
+							<a href="FCSD.html"><strong>福彩3D</strong></a>
+						</li>
+						<li class="hover">
+							<a href="FCQLT.html"><strong>福彩七乐彩</strong></a>
+						</li>
+						<li class="hover">
+							<a href="FCSSQ.html"><strong>福彩双色球</strong></a>
+						</li>
+						<li class="hover">
+							<a href="PLS.html"><strong>体彩排列3</strong></a>
+						</li>
+						<li class="hover">
+							<a href="PLW.html"><strong>体彩排列5</strong></a>
+						</li>
+						<li class="hover">
+							<a href="QXC.html"><strong>体彩七星彩</strong></a>
+						</li>
+						<li class="hover">
+							<a href="TWBG_wanfaguize.html"><strong>台湾宾果</strong></a>
+						</li>
+						<li class="hover">
+							<a href="TWdlt.html"><strong>台湾大乐透</strong></a>
+						</li>
+						<li class="active">
+							<a href="TWwlc.html"><strong>台湾威力彩</strong></a>
+						</li>
+						<li class="hover">
+							<a href="TWjr539.html"><strong>台湾今彩539</strong></a>
+						</li>
+					</ul>
+				</div>
+				<!--规则详情-->
+				<div class="guize_detail">
+					<div class="container" style="margin-top: 0px;">
+						<p style="margin-top:21px;margin-bottom:21px;text-align:center">
+							<strong><span style="font-family: 微软雅黑;font-size: 19px;font-weight: 900;"><span style="font-family:微软雅黑">台湾威力彩玩法规则</span></span></strong>
+						</p>
+						<dl style="font-size: 15px;line-height: 25px;color: #6d6d6d;position: relative;">
+							<dt style="font-size: 18px;color: #000;">► 基本玩法</dt>
+							<dd style="margin-left: 24px;vertical-align: baseline;width: 60%;display: inline-block;">
+								威力彩是一種樂透型遊戲，其選號分為兩區，您必須從第1個選號區中的01~38 的號碼中任選6個號碼，並從第2個選號區中的01~08的號碼中任選1個號碼進行投注，
+								這六個+一個號碼即為您的投注號碼。開獎時，開獎單位將從第1區01~38的號碼中隨機開出六個號碼，再從第2區01~08的號碼中隨機開出一個號碼，這一組六個+一個號碼，
+								就是該期威力彩的中獎號碼，也稱為「獎號」。您第1區的選號中，如果對中當期第1區開出之任一個獎號，而第2區亦對中當期第2區開出之獎號，即為中獎(普獎)，並可依規定兌領獎金。
+							</dd>
+							</br></br></br>
+							<dd style="width: 30%;float: right;position: absolute;right: 0;top: 0;"><img src="../../img/wanfgzimg/supterlotto_image01.jpg?v=20227151437"></dd>
+							<dt style="font-size: 18px;color: #000;margin-left: 24px">各獎項的中獎方式如下表：</dt>
+							<dd style="width: 60%;display: inline-block;margin-left: 24px;border: 1px solid #000;">
+								<div class="tableHead"><span>中獎方式 </span><span>中獎方式圖示</span><span>獎項 </span></div>
+								<div class="tableHead1">
+									<span>第1區六個獎號全中，</br>且第2區亦對中獎號</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_in_02redball.jpg?v=20227151437" />
+									</span>
+									<span class="listNb">頭獎</span>
+								</div>
+								<div class="tableHead1">
+									<span>第1區六個獎號全中，</br>但第2區未對中</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+									</span>
+									<span class="listNb">貳獎</span>
+								</div>
+								<div class="tableHead1">
+									<span> 第1區對中任五個獎號，</br>且第2區亦對中獎號</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_in_02redball.jpg?v=20227151437" />
+									</span>
+									<span class="listNb" style="height: auto;line-height: inherit;">參獎</br>NT$150,000</span>
+								</div>
+								<div class="tableHead1">
+									<span>第1區對中任五個獎號，</br>但第2區未對中</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+									</span>
+									<span class="listNb" style="height: auto;line-height: inherit;">肆獎</br>NT$20,000</span>
+								</div>
+								<div class="tableHead1">
+									<span>第1區對中任四個獎號，</br>且第2區亦對中獎號</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_in_02redball.jpg?v=20227151437" />
+									</span>
+									<span class="listNb" style="height: auto;line-height: inherit;">伍獎</br>NT$4,000</span>
+								</div>
+								<div class="tableHead1">
+									<span>第1區對中任四個獎號，</br>但第2區未對中</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+									</span>
+									<span class="listNb" style="height: auto;line-height: inherit;">陸獎</br>NT$800</span>
+								</div>
+								<div class="tableHead1">
+									<span>第1區對中任三個獎號，</br>且第2區亦對中獎號</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_in_02redball.jpg?v=20227151437" />
+									</span>
+									<span class="listNb" style="height: auto;line-height: inherit;">柒獎</br>NT$400</span>
+								</div>
+								<div class="tableHead1">
+									<span>第1區對中任二個獎號，</br>且第2區亦對中獎號</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_in_02redball.jpg?v=20227151437" />
+									</span>
+									<span class="listNb" style="height: auto;line-height: inherit;">捌獎</br>NT$200</span>
+								</div>
+								<div class="tableHead1">
+									<span>第1區對中任三個獎號，</br>但第2區未中獎號</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+									</span>
+									<span class="listNb" style="height: auto;line-height: inherit;">玖獎</br>NT$100</span>
+								</div>
+								<div class="tableHead1">
+									<span>第1區對中任一個獎號，</br>且第2區亦對中獎號</span>
+									<span class="list">
+										<img src="../../img/wanfgzimg/icon_greenball.gif?v=20227151437" />
+										<img src="../../img/wanfgzimg/icon_in_02redball.jpg?v=20227151437" />
+									</span>
+									<span class="listNb" style="height: auto;line-height: inherit;">普獎</br>NT$100</span>
+								</div>
+							</dd>
+						</dl>
+						</br></br>
+						<dl>
+							<dt style="font-size: 18px;color: #000;">► 獎金分配方式</dt>
+							<dd class="bonus">
+								<p style="padding-left: 24px;">1: 當期總投注金額（銷售收入）乘以總獎金支出率即為當期『總獎金』。本遊戲之總獎金支出率=55%。</p>
+								<p style="padding-left: 24px;">2: 參獎、肆獎、伍獎、陸獎、柒獎及捌獎每注獎金分別固定為新臺幣150,000元、20,000元、4,000元、800元、400元及200元，玖獎及普獎每注獎金固定為新臺幣100元。</p>
+								<p style="padding-left: 24px;">3: 頭獎及貳獎之實際中獎獎金係由總獎金扣除參獎至普獎之總額後，依下列獎金分配比率及實際中獎注數分配之（計算至元為止，元以下無條件捨去。該捨去部分所產生之款項將視為逾期未兌領獎金，全數歸入公益彩券盈餘）。</p>
+							</dd>
+							<dd style="width: 100%;height: auto;display: inline-block;border: 1px solid #000;">
+								<div class="tableBonus"><span>獎項</span><span>頭獎</span><span>貳獎</span><span>合計</span></div>
+								<div class="tableBonus"><span>獎金分配比率</span><span>89%</span><span>11%</span><span>100%</span></div>
+							</dd>
+							<dd class="bonus">
+								<p style="padding-left: 24px;">4: 頭、貳獎若無人獲得該獎，其獎金列入下一期同等獎項獎金內，此即為『累積獎金』。頭、貳獎如有『累積獎金』，則各獎分別加上其『累積獎金』。</p>
+								<p style="padding-left: 24px;">5: 如當期頭獎有人中獎，且當期頭獎分配加計上期頭獎累積獎金後，仍未達新臺幣2億元時，當期頭獎獎金以新臺幣2億元整計算。</p>
+								<p style="padding-left: 24px;">6: 頭、貳獎之每一獎項，其獎金均由得該獎之中獎注數均分（計算至元，元以下無條件捨去）。如係一注中獎則為獨得；如無中獎注數，則獎金列入次期該獎之『累積獎金』。</p>
+								<p style="padding-left: 24px;">7: 參獎至普獎採固定獎額之方式分配之，<span style="color: red;">惟如因熱門號碼開出，致參獎至普獎之獎金合計總數逾當期『總獎金』之百分之七十時，則參獎至玖獎仍依原固定金額分配，普獎獎額改依當期『總獎金』之百分之七十扣除參獎至玖獎獎金總額後由普獎之中獎人平分（計算至元為止，元以下無條件捨去。該捨去部分所產生之款項將視為逾期未兌領獎金，全數歸入公益彩券盈餘），其餘各獎（頭、貳獎）仍依原分配比例分配。</span></p>
+							</dd>
+						</dl>
+						</br></br>
+						<dl>
+							<dt style="font-size: 18px;color: #000;">► 投注方式及進階玩法</dt>
+							<dd>
+								<p style="padding-left: 24px;">您可以利用以下三種方式投注威力彩：</p>
+								<p style="padding-left: 24px;">一、使用選號單進行投注：</p>
+								<p style="padding-left: 55px;">
+									每張威力彩選號單最多可劃記5組選號，每組選號各含有2個選號區。投注時需在第1區內所含38個號碼中任選6個號碼，在第2區內所含8個號碼中任選1個號碼，以形成一注有效的選號。您可以依照自己的喜好，自由選用以下幾種不同的方式填寫選號單，進行投注。<br>
+									* 注意，在同一張選號單上，各選號區可分別採用不同的投注方式。<br>
+                    				選號單之正確劃記方式有三種，塗滿<img src="../../img/wanfgzimg/draw_01.png?v=20227151437" /> 、打叉<img src="../../img/wanfgzimg/draw_02.png?v=20227151437" />或打勾<img src="../../img/wanfgzimg/draw_03.png?v=20227151437" />，但請勿超過格線。填寫步驟如下：<br />
+                    				<span style="color: #660066;">1.劃記選號</span><br />
+                    				<span style="padding-left: 10px; color: #FF3300;">A.自行選號</span><br />
+                    				<span style="padding-left: 20px;">
+                    					在第1區內所含38個號碼中任選6個號碼，在第2區內所含8個號碼中任選1個號碼，以完成一組完整的選號。<br />
+                    					<img src="../../img/wanfgzimg/supterlotto_image02_a.gif?v=20227151437" />
+                    				</span><br />
+                    				<span style="padding-left: 10px; color: #FF3300;">B.全部快選</span><br />
+                    				<span style="padding-left: 20px;">
+                    					在選號區中，劃記「快選」，投注機將為您隨機產生一組選號 ( 第1區6個號碼+第2區1個號碼 ) 。<br />
+                    					<img src="../../img/wanfgzimg/supterlotto_image02_b.gif?v=20227151437" />
+                    				</span><br />
+                    				<span style="padding-left: 10px; color: #FF3300;">C.部分快選</span><br />
+                    				<span style="padding-left: 20px;">
+                    					您也可以只填選一部分選號，並劃記快選，投注機將為您挑出剩下的號碼。 以下圖為例，如果您在第1區選擇了6、12、25、37等四個號碼且第2區未選擇任何號碼，並劃記「快選」，第1區剩下的二個號碼和第2區的一個號碼，將由投注機隨機快選產生。<br />
+                    					<img src="../../img/wanfgzimg/supterlotto_image02_c.gif?v=20227151437" />
+                    				</span><br />
+                    				<span style="padding-left: 10px; color: #FF3300;">D.系統組合</span><br />
+                    				<span style="margin-left: 20px;">
+                    					第1區單獨採用系統組合：<br />
+                    					第1區可一次投注7~16個幸運號碼，將您要投注的7~16個號碼同時劃記在第1區內即可，電腦系統將就您的選號排列出第1區所有可能的號碼組合。第1區單獨採用系統組合時，產生之總注數及總投注金額請詳見下表：<br />
+                    					第1區單獨採系統組合時之總注數與總投注金額一覽表<br />
+                    				    <ul style="width: 100%;height: auto;">
+                    				    	<li style="width: 40%;display: inline-block; border: 1px solid #000;margin-left: 53px;">
+                    				    		<div class="tableText"><span>選號數 </span><span>總注數</span><span>總投注金額 </span></div>
+                    				    		<div class="tableText"><span>7</span><span>7</span><span>700</span></div>
+                    				    		<div class="tableText"><span>8</span><span>28</span><span>2,800</span></div>
+                    				    		<div class="tableText"><span>9</span><span>84</span><span>8,400</span></div>
+                    				    		<div class="tableText"><span>10</span><span>210</span><span>21,000</span></div>
+                    				    		<div class="tableText"><span>11</span><span>462</span><span>46,200</span></div>
+                    				    	</li>
+                    				    	<li style="width: 40%;display: inline-block; border: 1px solid #000;margin-left: 10px;">
+                    				    		<div class="tableText"><span>選號數 </span><span>總注數</span><span>總投注金額 </span></div>
+                    				    		<div class="tableText"><span>12</span><span>924</span><span>92,400</span></div>
+                    				    		<div class="tableText"><span>13</span><span>1716</span><span>171,600</span></div>
+                    				    		<div class="tableText"><span>14</span><span>3003</span><span>300,300</span></div>
+                    				    		<div class="tableText"><span>15</span><span>5005</span><span>500,500</span></div>
+                    				    		<div class="tableText"><span>16</span><span>8008</span><span>800,800</span></div>
+                    				    	</li>
+                    				    </ul><br />
+                				    	<p style="margin-left: 50px;">
+                				    		第2區單獨採用系統組合：<br />
+	                				    	第2區可一次投注2~ 8個幸運號碼，將您要投注的所有號碼同時劃記在第2區內即可，電腦系統將就您的選號排列出第2區所有可能的號碼組合。第2區單獨採用系統組合時，產生之總注數及總投注金額請詳見下表：<br />
+	                				    	第2區單獨採系統組合時之總注數與總投注金額一覽表<br />
+                				    	</p>
+                				    	<ul style="width: 100%;height: auto;">
+                    				    	<li style="width: 40%;display: inline-block; border: 1px solid #000;margin-left: 53px;">
+                    				    		<div class="tableText"><span>選號數 </span><span>總注數</span><span>總投注金額 </span></div>
+                    				    		<div class="tableText"><span>2</span><span>2</span><span>200</span></div>
+                    				    		<div class="tableText"><span>3</span><span>3</span><span>300</span></div>
+                    				    		<div class="tableText"><span>4</span><span>4</span><span>400</span></div>
+                    				    		<div class="tableText"><span>5</span><span>5</span><span>500</span></div>
+                    				    	</li>
+                    				    	<li style="width: 40%;display: inline-block; border: 1px solid #000;margin-left: 10px;">
+                    				    		<div class="tableText"><span>選號數 </span><span>總注數</span><span>總投注金額 </span></div>
+                    				    		<div class="tableText"><span>6</span><span>6</span><span>600</span></div>
+                    				    		<div class="tableText"><span>7</span><span>7</span><span>700</span></div>
+                    				    		<div class="tableText"><span>8</span><span>8</span><span>800</span></div>
+                    				    		<div class="tableText"><span>-</span><span>-</span><span>-</span></div>
+                    				    	</li>
+                    				    </ul>
+                    				</span><br />
+                    				<span style="padding-left: 50px;color: #FF3300;">E.系統配號</span><br />
+                    				<p style="margin-left: 70px;">
+                						在第1區選號時，如果您只對5個號碼有把握，您可以只填選這5個號碼，電腦系統將就您選的5個號碼與剩下的33個號碼自動進行配對出33組第1區的選號。本功能僅提供在第1區以自選5個號碼與其餘33個號碼進行配號。
+                					</p>
+                					<span style="padding-left: 50px;color: #FF3300;">F.複合式系統投注</span><br />
+                    				<span>
+                    					<p style="margin-left: 70px;">
+                    						您在第1區和第2區同時進行系統投注時，總注數將等於第1區系統投注所產生之總注數乘以第2區系統投注所產生之總注數。例如：如果您在第1區以8個號碼進行系統組合，在第2區以2個號碼進行系統組合，則您的總投注注數將為56注（28×2＝56）。
+                    					</p>
+                    					<span style="padding-left: 50px;color: #660066;">2.劃記投注期數</span><br />
+                    					<p style="margin-left: 70px;">
+                    						您可以選擇就您的投注內容連續投注2~10期（含當期），您的投注號碼在您所選擇的期數內皆可對獎，惟在多期投注期間不得中途要求退/換彩券；如您在多期投注期間內對中任一期的獎項，可直接至任一投注站或中國信託商業銀行(股)公司指定兌獎處兌獎，不需等到最後一期開獎結束。兌獎時，投注站或中國信託商業銀行(股)公司指定兌獎處將回收您的彩券，並同時列印一張「交換票」給您，供您在剩餘的有效期數內對獎。
+                    					</p>
+                    					<img style="margin-left: 70px;" src="../../img/wanfgzimg/supterlotto_image02_d.gif?v=20227151437" />
+                    				</span><br />
+								</p>
+								<p style="padding-left: 24px;">二、口頭投注</p>
+								<p style="margin-left: 50px;">您也可以口頭告知電腦型彩券經銷商您要選的號碼、投注方式、投注期數等投注內容，並透過經銷商操作投注機，直接進行投注。</p>
+								<p style="padding-left: 24px;">三、智慧型手機電子選號單(QR Code)投注</p>
+								<p style="margin-left: 50px;">
+									如果您的智慧型手機為iOS或Android之作業系統，您可先下載「台灣彩券」APP，並利用APP中的「我要選號」功能，填寫投注內容。每張電子選號單皆將產生一個QRcode，至投注站掃描該QR Code，即可自動印出彩券，付費後即完成交易。<br />
+									<img src="../../img/wanfgzimg/supterlotto_image03.jpg?v=20227151437" />
+								</p>
+							</dd>
+							<br /><br />
+							<dl>
+								<dt style="font-size: 18px;color: #000;">►  預購服務</dt>
+								<dd style="margin-left: 25px;">
+									<p>1: 本遊戲提供預購服務，您可至投注站預先購買當期起算9期內的任一期非當期彩券。</p>
+									<p>2: 預購方式以告知投注站人員或智慧型手機電子選號單(QR Code)投注為之，故選號單不另提供預購投注選項。</p>
+								</dd>
+							</dl>
+							<br /><br />
+							<dl>
+								<dt style="font-size: 18px;color: #000;">►  售價</dt>
+								<dd style="margin-left: 25px;">
+									<p>1: 威力彩每注售價為新臺幣100元（第一區六個號碼+第二區一個號碼所形成的一組選號稱為一注）。</p>
+									<p>2: 總投注金額＝投注總注數x100元x期數。</p>
+								</dd>
+							</dl>
+							<br /><br />
+							<dl>
+								<dt style="font-size: 18px;color: #000;">►  券面資訊</dt>
+								<dd style="margin-left: 25px;">
+									<img src="../../img/wanfgzimg/supterlotto_image04.jpg?v=20227151437" /><br />
+									<p>注意事項：彩券銷售後如遇有加開期數之情況，預購及多期投注之期數將順延。若彩券上的資料和電腦紀錄的資料不同，以電腦紀錄資料為準。</p>
+								</dd>
+							</dl>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<div id="fooderbox"></div>
+		</div>
+		<div class="fixedgoBack">
+			<div class="fix1200">
+				<ul>
+					<li>
+						<a rel="nofollow" class="kefuicon" target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?lang=&uin=800057725&cref=http://www.168kai.cc&ref=&pt=168%E5%BC%80%E5%A5%96%E7%BD%91&f=1&ty=1&ap=&as="></a>
+					</li>
+					<li>
+						<!--用户反馈模态框-->
+						<span class="fankuicon fankuicon_a" data-toggle="modal" data-target="#myModal">
+							<span class="fankuicons"></span>
+						</span>
+
+					</li>
+					<li>
+						<a rel="nofollow" class="topicon" id="gotop" href="javascript:"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--模态框-->
+		<!-- 模态框（Modal） -->
+		<div id="user_adv"></div>
+
+	</body>
+
+</html>

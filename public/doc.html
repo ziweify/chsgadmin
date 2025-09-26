@@ -1,0 +1,126 @@
+域名：
+
+所有接口统一参数说明
+success=>成功或者失败，true成功，false失败 message=>提示信息 data=>返回的json数据
+
+1、获取图片验证码
+方法：POST
+接口：/api/captcha
+返回参数说明：key=>验证码秘钥，登陆或者注册时提供。base64=>图片验证码的base64编码。
+
+2、注册
+方法：POST
+接口：api/register
+传参：account=>用户名 password=>密码 nickname=>昵称 code=>验证码 key=>验证码秘钥
+
+3、登陆
+方法：POST
+接口：api/login
+传参：account=>用户名 password=>密码 code=>验证码 key=>验证码秘钥 logintype=>登陆类型，1为app登陆，2为H5登陆
+返回参数说明： token=>用户token，websocket连接时也需要 userInfo=>用户信息json
+
+
+注意：以下接口都需要token验证，使用请求头Authorization传入token
+
+4、获取历史房间列表
+方法：GET
+接口：/api/getHistoryRoomList
+返回参数说明：avatar=>用户头像 nickname=>用户昵称 roomid=>房间号 roomName=>房间名 roomAvatar=>头像
+
+5、上传头像
+方法：POST
+接口：/api/uploadheadimg
+传参：file=>头像文件
+
+6、更新昵称
+方法：POST
+接口：/api/updateNickName
+传参：nickname=>昵称
+
+7、更新密码
+方法：POST
+接口：/api/updatePwd
+传参：oldPwd=>原密码 newPwd=>新密码 reNewPwd=>确认新密码
+
+
+8、获取彩种、封盘时间、上期开奖结果-也可以通过websocket获取，事件名=periodListOrSingle
+方法：GET
+接口：/api/periodListOrSingle
+传参：gid=>彩种id，可以不传，不传的话加载所有彩种
+返回参数说明：
+    gid=>彩种id
+    gname=>彩种名称
+    template=>彩种模版，PK10和SSC两种，SSC是五个球的，PK10是10个球的，很多彩种都是一样的，只是名字不同，用这个区分
+    stopstatus=>当天是否已停盘，1是，0否
+    djs=>倒计时，秒单位，如果是负数，说明封盘中
+    nowSaleTime=>开盘时间
+    nowSealTime=>封盘时间
+    nowOpenTime=>开奖时间
+    sysTime>当前系统时间
+    period=>当前期数
+    upPeriod=>上期期数
+    openNum=>上期开奖结果
+
+9、获取房间公告
+方法：GET
+接口：/api/getRoomNotice
+返回参数说明：notice=>公告内容
+
+10、是否是代理
+方法：GET
+接口：/api/userIsAgent
+返回参数说明：isagent=>1为是，0为否
+
+11、是否已开启下分密码
+方法：GET
+接口：/api/haveTpsw
+返回参数说明：enabledTPsw=>1为是，0为否
+
+12、开启下分密码
+方法：POST
+接口：/api/setTpsw
+传参：psw=>下分密码
+
+13、关闭下分密码
+方法：POST
+接口：/api/closeTpsw
+传参：psw=>下分密码
+
+14、修改下分密码
+方法：POST
+接口：/api/resetTpsw
+传参：old=>原密码 psw=>新密码
+
+15、获取某个彩种的开奖时间信息
+方法：GET
+接口：/api/period
+传参：gid=>彩种ID
+返回参数说明：
+    gid=>彩种id
+    period=>当前期数
+    nowSaleTime=>当前开盘时间
+    nowSealTime=>当前封盘时间
+    nowOpenTime=>当前开奖时间
+    sysTime>当前系统时间
+    nextPeriod=>下一期期数
+    nextNowSaleTime=>下一期开盘时间
+    nextNowSealTime=>下一期封盘时间
+    nextNowOpenTime=>下一期开奖时间
+    stopstatus=>当天是否已停盘，1是，0否
+
+16、当期开奖结果
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

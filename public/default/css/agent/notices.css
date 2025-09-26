@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+
+.data_table tbody tr {
+	height: 26px;
+	line-height: 17px;
+}
+
+.data_table .created {
+	width: 12%;
+}
+
+.data_table .top {
+	height: 80px;
+	font-weight: bold;
+}
+
+.data_list .status {
+	width: 60px;
+	color: red;
+}
+
+.data_list .status span {
+	color: #299a26;
+}
+
+.data_list .oper {
+	width: 70px;
+}
+
+.data_table a {
+	color: red;
+}
+
+.data_table .wrap {
+	width: 800px;
+	text-indent: 1em;
+	text-align: left;
+}
+
+.data_table .lottery {
+	color: blue;
+}
+
+#rules {
+	position: absolute;
+	background-color: #F9F9EA;
+	width: 800px;
+}
+
+#rules .right {
+	text-align: right;
+	margin-right: 100px;
+}

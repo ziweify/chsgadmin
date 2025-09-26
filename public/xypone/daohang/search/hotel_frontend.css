@@ -1,0 +1,502 @@
+html {
+  _width: 100%;
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: Arial,sans-serif;
+  height: 100%; }
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p {
+  padding: 0;
+  margin: 0; }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  *caption-side: top;
+  *border-collapse: collapse;
+  *empty-cells: hide; }
+
+input, textarea, a, select {
+  outline: none; }
+
+input, textarea {
+  padding: 3px; }
+
+input[type=button], input[type=submit] {
+  cursor: pointer; }
+
+ol, ul {
+  list-style: none; }
+
+li {
+  list-style-type: none; }
+
+img {
+  vertical-align: top;
+  border: 0; }
+
+.tl {
+  text-align: left; }
+
+.tc {
+  text-align: center; }
+
+.tr {
+  text-align: right; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.m10 {
+  margin: 10px; }
+
+.m5 {
+  margin: 5px; }
+
+.ml20 {
+  margin-left: 20px; }
+
+.mr20 {
+  margin-right: 20px; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.mt5 {
+  margin-top: 5px; }
+
+.mr5 {
+  margin-right: 5px; }
+
+.pb5 {
+  padding-bottom: 5px; }
+
+.pt5 {
+  padding-top: 5px; }
+
+.pt10 {
+  padding-top: 10px; }
+
+.pb10 {
+  padding-bottom: 10px; }
+
+.breakword {
+  word-break: break-all;
+  word-wrap: break-word; }
+
+.vt {
+  vertical-align: top; }
+
+.vm {
+  vertical-align: middle; }
+
+address, cite, code, em, th, i {
+  font-weight: normal;
+  font-style: normal; }
+
+.hide {
+  display: none; }
+
+.vhide {
+  visibility: hidden; }
+
+.ime-dis {
+  ime-mode: disabled; }
+
+.inlineblock {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
+
+.clearfix {
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  overflow: hidden; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.bold {
+  font-weight: bold; }
+
+.f14 {
+  font-size: 14px; }
+
+.f16 {
+  font-size: 16px; }
+
+.f18 {
+  font-size: 16px; }
+
+.f20 {
+  font-size: 20px; }
+
+.green {
+  color: green; }
+
+.blue {
+  color: blue; }
+
+.white {
+  color: white; }
+
+.gray {
+  color: #666; }
+
+.yellow {
+  color: yellow; }
+
+.red {
+  color: red; }
+
+.black {
+  color: #000; }
+
+.t-1 {
+  border-collapse: collapse;
+  width: 100%; }
+  .t-1 td, .t-1 th {
+    border: 1px solid #b9c2cb;
+    height: 22px;
+    padding: 5px 10px; }
+  .t-1 th {
+    font-weight: bold;
+    color: #35406d; }
+  .t-1 .bg1 td, .t-1 .bg1 th {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #fef4ea 51%, #fef4ea 100%); }
+  .t-1 tfoot td {
+    background: #e6e6fa; }
+
+@media only screen and (max-device-width: 1024px) {
+  body {
+    min-width: unset;
+    min-height: unset; } }
+
+body {
+  background-color: #0B263B;
+  width: 100%; }
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1200px;
+  overflow: auto;
+  background: url("/xypone/common/images/bg_pc.jpg") no-repeat center top; }
+  .wrapper .header {
+    width: 100%; }
+    .wrapper .header .left-nav, .wrapper .header .right-nav {
+      height: 85px;
+      width: 324px;
+      line-height: 85px;
+      vertical-align: top; }
+      .wrapper .header .left-nav a, .wrapper .header .right-nav a {
+        color: #ffffff;
+        font-size: 20px; }
+    .wrapper .header .left-nav a {
+      margin-left: 80px; }
+    .wrapper .header .right-nav a {
+      margin-right: 80px; }
+    .wrapper .header .logo-content {
+      width: 360px;
+      margin-top: 20px; }
+    .wrapper .header .logo {
+      width: 274px;
+      height: 181px;
+      background: url("/xypone/common/images/logo.png") no-repeat; }
+  .wrapper .header-mobile {
+    display: none; }
+  .wrapper .container {
+    width: 100%;
+    color: #ffffff; }
+    .wrapper .container.safe-code .text-hotel-system-en {
+      margin-top: 136px;
+      font-size: 70px; }
+    .wrapper .container.safe-code .text-hotel-system-cn {
+      margin-top: 40px;
+      font-size: 36px; }
+    .wrapper .container.safe-code .search-content {
+      margin-top: 50px; }
+    .wrapper .container.safe-code .search {
+      width: 331px;
+      height: 44px;
+      line-height: 44px;
+      border: 2px solid #ff5848;
+      border-radius: 24px;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: left;
+      padding-left: 15px; }
+    .wrapper .container.safe-code .search-ico {
+      width: 34px;
+      height: 34px;
+      background: url(/xypone/common/images/search.png);
+      vertical-align: middle; }
+    .wrapper .container.safe-code .keywords {
+      width: 250px;
+      height: 24px;
+      font-size: 24px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: #ffffff;
+      vertical-align: middle; }
+    .wrapper .container.safe-code input:-webkit-autofill,
+    .wrapper .container.safe-code input:-webkit-autofill:hover,
+    .wrapper .container.safe-code input:-webkit-autofill:focus,
+    .wrapper .container.safe-code input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-text-fill-color: #fff !important; }
+    .wrapper .container.safe-code .submit-content .submit-btn {
+      width: 350px;
+      height: 48px;
+      line-height: 48px;
+      border-radius: 24px;
+      background: #ff5843;
+      border: 0px;
+      border-radius: 24px;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bolder;
+      -webkit-appearance: none; }
+    .wrapper .container.speed .layout-outer {
+      width: 703px;
+      height: 640px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin-top: 10px;
+      margin-bottom: 20px; }
+    .wrapper .container.speed .hd {
+      height: 36px; }
+    .wrapper .container.speed .lottos-color {
+      color: #fff7a2; }
+    .wrapper .container.speed .lottos-url-color {
+      color: #f5a32f; }
+    .wrapper .container.speed .wrap-speed {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bolder; }
+      .wrapper .container.speed .wrap-speed thead, .wrapper .container.speed .wrap-speed .reference-title {
+        color: #ff5848;
+        font-size: 20px;
+        font-weight: bolder;
+        vertical-align: top; }
+        .wrapper .container.speed .wrap-speed thead .wrap-speed-url-title, .wrapper .container.speed .wrap-speed .reference-title .wrap-speed-url-title {
+          display: inline-block;
+          *display: inline;
+          zoom: 1; }
+        .wrapper .container.speed .wrap-speed thead .wrap-speed-url-text, .wrapper .container.speed .wrap-speed .reference-title .wrap-speed-url-text {
+          color: #ffffff;
+          font-size: 14px; }
+      .wrapper .container.speed .wrap-speed td {
+        height: 35px; }
+      .wrapper .container.speed .wrap-speed .wrap-speed-port {
+        color: #ffffff; }
+      .wrapper .container.speed .wrap-speed .wrap-speed-url a, .wrapper .container.speed .wrap-speed .reference-url a {
+        color: #1fb9ef; }
+      .wrapper .container.speed .wrap-speed .bottomInfo-color {
+        color: #1fb9ef; }
+      .wrapper .container.speed .wrap-speed .wrap-speed-time, .wrapper .container.speed .wrap-speed .reference-time {
+        position: relative;
+        color: #02e4e6; }
+        .wrapper .container.speed .wrap-speed .wrap-speed-time .faster, .wrapper .container.speed .wrap-speed .reference-time .faster {
+          position: absolute;
+          top: -5px;
+          right: 15px;
+          width: 34px;
+          height: 34px;
+          background: url("/Images/Hotel/optimumline.png"); }
+    .wrapper .container.speed .bd-select, .wrapper .container.speed .bd-device {
+      margin-top: 186px;
+      width: 350px; }
+      .wrapper .container.speed .bd-select .btn-select, .wrapper .container.speed .bd-select .btn-device, .wrapper .container.speed .bd-device .btn-select, .wrapper .container.speed .bd-device .btn-device {
+        width: 350px;
+        height: 49px;
+        line-height: 49px;
+        color: #ffffff;
+        border-radius: 24px;
+        font-size: 20px; }
+        .wrapper .container.speed .bd-select .btn-select.first, .wrapper .container.speed .bd-select .btn-device.first, .wrapper .container.speed .bd-device .btn-select.first, .wrapper .container.speed .bd-device .btn-device.first {
+          background-color: #ff5843; }
+        .wrapper .container.speed .bd-select .btn-select.second, .wrapper .container.speed .bd-select .btn-device.second, .wrapper .container.speed .bd-device .btn-select.second, .wrapper .container.speed .bd-device .btn-device.second {
+          margin-top: 44px;
+          background-color: #23bc68; }
+        .wrapper .container.speed .bd-select .btn-select.third, .wrapper .container.speed .bd-select .btn-device.third, .wrapper .container.speed .bd-device .btn-select.third, .wrapper .container.speed .bd-device .btn-device.third {
+          margin-top: 44px;
+          background-color: #23bcb9; }
+          .wrapper .container.speed .bd-select .btn-select.third.hide, .wrapper .container.speed .bd-select .btn-device.third.hide, .wrapper .container.speed .bd-device .btn-select.third.hide, .wrapper .container.speed .bd-device .btn-device.third.hide {
+            display: none; }
+        .wrapper .container.speed .bd-select .btn-select:hover, .wrapper .container.speed .bd-select .btn-device:hover, .wrapper .container.speed .bd-device .btn-select:hover, .wrapper .container.speed .bd-device .btn-device:hover {
+          text-decoration: none; }
+
+.browserSupport {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  width: 240px;
+  height: 62px;
+  background: url("/xypone/common/images/img_sixtroptimizationn_browser.png") no-repeat; }
+
+.invisbleBtn, .invisbleBtn a {
+  display: inline-block;
+  width: 47px;
+  height: 62px;
+  background-color: #646464;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.landscape-mask {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-size: 21px;
+  text-align: center; }
+
+@media only screen and (max-device-width: 1024px) {
+  body {
+    background-color: #ffffff; }
+  .wrapper {
+    /*background: url("/Images/Hotel/front/bg_mobile.jpg") no-repeat center top;*/
+    background-size: cover;
+    min-height: unset;
+    max-width: unset;
+    min-width: unset; }
+    .wrapper .header {
+      display: none; }
+    .wrapper .header-mobile {
+      display: block;
+      margin-top: 20px; }
+      .wrapper .header-mobile .logo-content {
+        width: 375px;
+        position: relative; }
+      .wrapper .header-mobile .logo {
+        margin-left: 10px;
+        width: 274px;
+        height: 181px;
+        background: url("/xypone/common/images/logo.png") no-repeat; }
+      .wrapper .header-mobile .btn-menu {
+        width: 34px;
+        height: 34px;
+        background: url("/Images/Hotel/front/menu.png") no-repeat;
+        position: absolute;
+        top: 50px;
+        right: 22px; }
+    .wrapper .container.safe-code .text-hotel-system-en {
+      margin-top: 40px;
+      font-size: 54px; }
+    .wrapper .container.safe-code .text-hotel-system-cn {
+      margin-top: 16px;
+      font-size: 36px; }
+    .wrapper .container.safe-code .search-content {
+      margin-top: 50px; }
+    .wrapper .container.safe-code .search {
+      width: 331px;
+      height: 44px;
+      line-height: 44px;
+      border: 2px solid #ff5848;
+      border-radius: 24px;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: left;
+      padding-left: 15px; }
+    .wrapper .container.safe-code .search-ico {
+      width: 34px;
+      height: 34px;
+     /* background: url(/Images/Hotel/front/search.png);*/
+      vertical-align: middle; }
+    .wrapper .container.safe-code .keywords {
+      width: 250px;
+      height: 24px;
+      font-size: 24px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: #ffffff; }
+    .wrapper .container.safe-code .submit-content .submit-btn {
+      width: 350px;
+      height: 48px;
+      line-height: 48px;
+      border-radius: 24px;
+      background: #ff5843;
+      border: 0px;
+      border-radius: 24px;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bolder;
+      -webkit-appearance: none; }
+    .wrapper .container.speed .layout-outer {
+      width: 100%; }
+    .wrapper .container.speed .wrap-speed {
+      width: 320px;
+      margin-left: 15px;
+      margin-right: unset; }
+      .wrapper .container.speed .wrap-speed thead, .wrapper .container.speed .wrap-speed .reference-title {
+        font-size: 16px;
+        font-weight: bolder; }
+        .wrapper .container.speed .wrap-speed thead .wrap-speed-url-text, .wrapper .container.speed .wrap-speed .reference-title .wrap-speed-url-text {
+          display: none; }
+      .wrapper .container.speed .wrap-speed td {
+        height: 30px; }
+      .wrapper .container.speed .wrap-speed .wrap-speed-time .faster, .wrapper .container.speed .wrap-speed .reference-time .faster {
+        right: -32px; }
+    .wrapper .container.speed .bd-select, .wrapper .container.speed .bd-device {
+      margin-top: 144px;
+      width: 100%; }
+  .mobile-menu-container-mask {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    right: 0; }
+  .mobile-menu-container {
+    height: 100%;
+    width: 50%;
+    min-width: 256px;
+    background-color: #000000;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0; }
+    .mobile-menu-container .mobile-menu {
+      margin-top: 28px; }
+    .mobile-menu-container .mobile-menu-item {
+      margin-top: 28px;
+      padding-right: 20px; }
+      .mobile-menu-container .mobile-menu-item a {
+        font-size: 24px;
+        color: #ffffff; }
+  .browserSupport {
+    display: none; } }
+
+@media only screen and (max-device-width: 1024px) and (min-aspect-ratio: 13 / 9) and (max-width: 750px) {
+  .landscape-mask {
+    display: block; }
+  .wrapper {
+    display: none; } }

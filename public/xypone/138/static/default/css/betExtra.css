@@ -1,0 +1,74 @@
+  .fht-table-wrapper {
+    border: 1px solid #dee2e6;
+  }
+
+  .fht-tbody {
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .bet-extra-table-wrapper {
+    height: 100px;
+    width: 610px;
+    position: relative;
+    background: #fff;
+    color: #000;
+  }
+
+  .bet-extra-table {
+    border-collapse: collapse;
+  }
+
+  .bet-extra-table thead {
+    text-align: left;
+    color: #1b2976;
+    font-weight: bold;
+  }
+
+  .bet-extra-table tr {
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .bet-extra-table thead tr th {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f0f0f0));
+    background: -webkit-linear-gradient(top, #fff, #f0f0f0);
+    background: -o-linear-gradient(top, #fff, #f0f0f0);
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+    padding: 4px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .bet-extra-table thead tr th:not(:last-child) {
+    border-right: 1px solid #dee2e6;
+  }
+
+  .bet-extra-table tbody tr td {
+    padding: 4px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .bet-extra-table tbody tr td:not(:last-child) {
+    border-right: 1px solid #dee2e6;
+  }
+
+  .bet-extra-table tfoot span {
+    font-weight: bold;
+  }
+
+  .bet-extra-table tfoot tr td {
+    padding: 4px;
+    height: 25px;
+    line-height: 25px;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+  }
+
+  .bet-extra-table tfoot tr td:not(:last-child) {
+    border-right: 1px solid #dee2e6;
+  }
+
+  .bet-extra-table .details {
+    color: #55b5e8;
+    font-weight: bold;
+  }

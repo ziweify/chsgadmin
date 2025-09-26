@@ -1,0 +1,67 @@
+<!--头部公共部分-->
+<div id="appPromoteBanner" class="app-promote-banner" style="display: none">
+	<div class="promo-container">
+		<img id="appLogo" src="/img/168-app-logo.jpg" width="24" height="24">
+		<div>
+			<div class="title">168开奖APP</div>
+		</div>
+	</div>
+	<div class="">
+		<div class="buttons-wrapper">
+			<!-- <div><a href="" class="orange-hollow-button open-app-button">打开</a></div> -->
+			<div><a href="" id="" class="blue-button app-download-button">下载并打开</a></div>
+		</div>
+	</div>
+</div>
+<header id="indexHeader">
+	<div class="top_menu_bar">
+		<span id="lotMainBack"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M15.4952 19.5547C15.8016 19.8335 16.2759 19.8111 16.5547 19.5048C16.8335 19.1984 16.8111 18.7241 16.5048 18.4453L15.4952 19.5547ZM8 11.72L7.46206 11.1974C7.3205 11.3431 7.2441 11.54 7.25035 11.7431C7.2566 11.9461 7.34496 12.138 7.49522 12.2747L8 11.72ZM16.0379 4.52261C16.3266 4.22551 16.3197 3.75069 16.0226 3.46206C15.7255 3.17343 15.2507 3.18029 14.9621 3.47739L16.0379 4.52261ZM16.5048 18.4453L8.50478 11.1653L7.49522 12.2747L15.4952 19.5547L16.5048 18.4453ZM8.53794 12.2426L16.0379 4.52261L14.9621 3.47739L7.46206 11.1974L8.53794 12.2426Z" fill="black"></path>
+			</svg></a>
+		</span>
+		<!-- <div class="top_menu_left">
+			<a href="../../index.html"><img src="../../img/logo_phone.png" alt="" /></a>
+		</div> -->
+		<div class="top_menu_middle" id="caizhong_name">
+			<span id="titlespan"></span>
+		</div>
+		<span class="lot_rule_wrap"><a href="" id="lotRule"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M8.14 0C3.64 0 0 3.64 0 8.14C0 12.64 3.64 16.28 8.14 16.28C12.64 16.28 16.28 12.64 16.28 8.14C16.28 3.64 12.64 0 8.14 0ZM9.12 11.44C9.12 11.98 8.68 12.42 8.14 12.42C7.6 12.42 7.16 11.98 7.16 11.44V7.64C7.16 7.1 7.6 6.66 8.14 6.66C8.68 6.66 9.12 7.1 9.12 7.64V11.44ZM8.14 5.8C7.6 5.8 7.16 5.36 7.16 4.82C7.16 4.28 7.6 3.84 8.14 3.84C8.68 3.84 9.12 4.28 9.12 4.82C9.12 5.36 8.68 5.8 8.14 5.8Z" fill="black"/>
+			</svg></a>
+		</span>
+		<!--<div class="top_menu_more">
+			<span class="more_btn">
+			<span id="showtime"></span>
+			<input type="hidden" id="yearmothnday" />
+			<input type="text" id="beginTime" class="" readonly="disabled" />
+			</span>
+		</div>-->
+	</div>
+</header>
+<script>
+	$(function() {
+		$("#cZList").on("click","li",function(){
+			tools.openAllCz(false); //关闭所有彩种列表
+		});
+		$("#indexHeader").on("touchstart", "#caizhong_name", function() {
+//			bodyHtmlhide();
+           $("#cZList").scrollTop(-50);
+			$(".tabBox").removeClass("hasheight");
+    		 $("#touchlongmove").removeClass("gotop")
+        	$(".sort").removeClass("bgsize");
+        	// tools.openAllCz(true); //打开所有彩种列表        		
+		});
+		//所有彩种
+		$("#cZList .backbtn").on("click", "span:nth-child(1)", function() {
+			tools.openAllCz(false); //关闭所有彩种列表
+			bodyHtmlvis();
+		});
+		/*$("#indexHeader .top_menu_left").on("touchstart", "img", function() {
+			window.location.href="../../index.html";
+		});*/
+
+		// $('#back a').on("click", function() {
+		// 	window.history.back();
+		// });
+	});
+</script>

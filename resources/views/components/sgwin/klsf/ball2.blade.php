@@ -1,0 +1,189 @@
+<table class="table_ball">
+    <tbody><tr class="head"><th>号码</th><th>赔率</th><th class="ha">金额</th><th>号码</th><th>赔率</th><th class="ha">金额</th><th>号码</th><th>赔率</th><th class="ha">金额</th><th>号码</th><th>赔率</th><th class="ha">金额</th></tr>
+    <tr>
+        <th class="GB2_01 name" id="t_B2_01" title="第二球 01"><input type="hidden" id="k_B2_01" value="BALL"><span class="b01">01</span></th>
+
+        <td class="GB2_01 odds" id="o_B2_01">19.859</td>
+        <td class="GB2_01 amount ha" id="a_B2_01"><input name="B2_01" class="ba"></td>
+
+        <th class="GB2_06 name" id="t_B2_06" title="第二球 06"><input type="hidden" id="k_B2_06" value="BALL"><span class="b06">06</span></th>
+
+        <td class="GB2_06 odds" id="o_B2_06">19.859</td>
+        <td class="GB2_06 amount ha" id="a_B2_06"><input name="B2_06" class="ba"></td>
+
+        <th class="GB2_11 name" id="t_B2_11" title="第二球 11"><input type="hidden" id="k_B2_11" value="BALL"><span class="b11">11</span></th>
+
+        <td class="GB2_11 odds" id="o_B2_11">19.859</td>
+        <td class="GB2_11 amount ha" id="a_B2_11"><input name="B2_11" class="ba"></td>
+
+        <th class="GB2_16 name" id="t_B2_16" title="第二球 16"><input type="hidden" id="k_B2_16" value="BALL"><span class="b16">16</span></th>
+
+        <td class="GB2_16 odds" id="o_B2_16">19.859</td>
+        <td class="GB2_16 amount ha" id="a_B2_16"><input name="B2_16" class="ba"></td>
+    </tr>
+    <tr>
+        <th class="GB2_02 name" id="t_B2_02" title="第二球 02"><input type="hidden" id="k_B2_02" value="BALL"><span class="b02">02</span></th>
+
+        <td class="GB2_02 odds" id="o_B2_02">19.859</td>
+        <td class="GB2_02 amount ha" id="a_B2_02"><input name="B2_02" class="ba"></td>
+
+        <th class="GB2_07 name" id="t_B2_07" title="第二球 07"><input type="hidden" id="k_B2_07" value="BALL"><span class="b07">07</span></th>
+
+        <td class="GB2_07 odds" id="o_B2_07">19.859</td>
+        <td class="GB2_07 amount ha" id="a_B2_07"><input name="B2_07" class="ba"></td>
+
+        <th class="GB2_12 name" id="t_B2_12" title="第二球 12"><input type="hidden" id="k_B2_12" value="BALL"><span class="b12">12</span></th>
+
+        <td class="GB2_12 odds" id="o_B2_12">19.859</td>
+        <td class="GB2_12 amount ha" id="a_B2_12"><input name="B2_12" class="ba"></td>
+
+        <th class="GB2_17 name" id="t_B2_17" title="第二球 17"><input type="hidden" id="k_B2_17" value="BALL"><span class="b17">17</span></th>
+
+        <td class="GB2_17 odds" id="o_B2_17">19.859</td>
+        <td class="GB2_17 amount ha" id="a_B2_17"><input name="B2_17" class="ba"></td>
+    </tr>
+    <tr>
+        <th class="GB2_03 name" id="t_B2_03" title="第二球 03"><input type="hidden" id="k_B2_03" value="BALL"><span class="b03">03</span></th>
+
+        <td class="GB2_03 odds" id="o_B2_03">19.859</td>
+        <td class="GB2_03 amount ha" id="a_B2_03"><input name="B2_03" class="ba"></td>
+
+        <th class="GB2_08 name" id="t_B2_08" title="第二球 08"><input type="hidden" id="k_B2_08" value="BALL"><span class="b08">08</span></th>
+
+        <td class="GB2_08 odds" id="o_B2_08">19.859</td>
+        <td class="GB2_08 amount ha" id="a_B2_08"><input name="B2_08" class="ba"></td>
+
+        <th class="GB2_13 name" id="t_B2_13" title="第二球 13"><input type="hidden" id="k_B2_13" value="BALL"><span class="b13">13</span></th>
+
+        <td class="GB2_13 odds" id="o_B2_13">19.859</td>
+        <td class="GB2_13 amount ha" id="a_B2_13"><input name="B2_13" class="ba"></td>
+
+        <th class="GB2_18 name" id="t_B2_18" title="第二球 18"><input type="hidden" id="k_B2_18" value="BALL"><span class="b18">18</span></th>
+
+        <td class="GB2_18 odds" id="o_B2_18">19.859</td>
+        <td class="GB2_18 amount ha" id="a_B2_18"><input name="B2_18" class="ba"></td>
+    </tr>
+    <tr>
+        <th class="GB2_04 name" id="t_B2_04" title="第二球 04"><input type="hidden" id="k_B2_04" value="BALL"><span class="b04">04</span></th>
+
+        <td class="GB2_04 odds" id="o_B2_04">19.859</td>
+        <td class="GB2_04 amount ha" id="a_B2_04"><input name="B2_04" class="ba"></td>
+
+        <th class="GB2_09 name" id="t_B2_09" title="第二球 09"><input type="hidden" id="k_B2_09" value="BALL"><span class="b09">09</span></th>
+
+        <td class="GB2_09 odds" id="o_B2_09">19.859</td>
+        <td class="GB2_09 amount ha" id="a_B2_09"><input name="B2_09" class="ba"></td>
+
+        <th class="GB2_14 name" id="t_B2_14" title="第二球 14"><input type="hidden" id="k_B2_14" value="BALL"><span class="b14">14</span></th>
+
+        <td class="GB2_14 odds" id="o_B2_14">19.859</td>
+        <td class="GB2_14 amount ha" id="a_B2_14"><input name="B2_14" class="ba"></td>
+
+        <th class="GB2_19 name" id="t_B2_19" title="第二球 19"><input type="hidden" id="k_B2_19" value="BALL"><span class="b19">19</span></th>
+
+        <td class="GB2_19 odds" id="o_B2_19">19.859</td>
+        <td class="GB2_19 amount ha" id="a_B2_19"><input name="B2_19" class="ba"></td>
+    </tr>
+    <tr>
+        <th class="GB2_05 name" id="t_B2_05" title="第二球 05"><input type="hidden" id="k_B2_05" value="BALL"><span class="b05">05</span></th>
+
+        <td class="GB2_05 odds" id="o_B2_05">19.859</td>
+        <td class="GB2_05 amount ha" id="a_B2_05"><input name="B2_05" class="ba"></td>
+
+        <th class="GB2_10 name" id="t_B2_10" title="第二球 10"><input type="hidden" id="k_B2_10" value="BALL"><span class="b10">10</span></th>
+
+        <td class="GB2_10 odds" id="o_B2_10">19.859</td>
+        <td class="GB2_10 amount ha" id="a_B2_10"><input name="B2_10" class="ba"></td>
+
+        <th class="GB2_15 name" id="t_B2_15" title="第二球 15"><input type="hidden" id="k_B2_15" value="BALL"><span class="b15">15</span></th>
+
+        <td class="GB2_15 odds" id="o_B2_15">19.859</td>
+        <td class="GB2_15 amount ha" id="a_B2_15"><input name="B2_15" class="ba"></td>
+
+        <th class="GB2_20 name" id="t_B2_20" title="第二球 20"><input type="hidden" id="k_B2_20" value="BALL"><span class="b20">20</span></th>
+
+        <td class="GB2_20 odds" id="o_B2_20">19.859</td>
+        <td class="GB2_20 amount ha" id="a_B2_20"><input name="B2_20" class="ba"></td>
+    </tr>
+    <tr>
+        <th class="GDX2_D name" id="t_DX2_D" title="第二球 大"><input type="hidden" id="k_DX2_D" value="DX">大</th>
+
+        <td class="GDX2_D odds" id="o_DX2_D">1.986</td>
+        <td class="GDX2_D amount ha" id="a_DX2_D"><input name="DX2_D" class="ba"></td>
+        <th class="GDS2_D name" id="t_DS2_D" title="第二球 单"><input type="hidden" id="k_DS2_D" value="DS">单</th>
+
+        <td class="GDS2_D odds" id="o_DS2_D">1.986</td>
+        <td class="GDS2_D amount ha" id="a_DS2_D"><input name="DS2_D" class="ba"></td>
+        <th class="GWDX2_D name" id="t_WDX2_D" title="第二球 尾大"><input type="hidden" id="k_WDX2_D" value="WDX">尾大</th>
+
+        <td class="GWDX2_D odds" id="o_WDX2_D">1.986</td>
+        <td class="GWDX2_D amount ha" id="a_WDX2_D"><input name="WDX2_D" class="ba"></td>
+        <th class="GHDS2_D name" id="t_HDS2_D" title="第二球 合数单"><input type="hidden" id="k_HDS2_D" value="HDS">合数单</th>
+
+        <td class="GHDS2_D odds" id="o_HDS2_D">1.986</td>
+        <td class="GHDS2_D amount ha" id="a_HDS2_D"><input name="HDS2_D" class="ba"></td>
+    </tr>
+    <tr>
+        <th class="GDX2_X name" id="t_DX2_X" title="第二球 小"><input type="hidden" id="k_DX2_X" value="DX">小</th>
+
+        <td class="GDX2_X odds" id="o_DX2_X">1.986</td>
+        <td class="GDX2_X amount ha" id="a_DX2_X"><input name="DX2_X" class="ba"></td>
+        <th class="GDS2_S name" id="t_DS2_S" title="第二球 双"><input type="hidden" id="k_DS2_S" value="DS">双</th>
+
+        <td class="GDS2_S odds" id="o_DS2_S">1.986</td>
+        <td class="GDS2_S amount ha" id="a_DS2_S"><input name="DS2_S" class="ba"></td>
+        <th class="GWDX2_X name" id="t_WDX2_X" title="第二球 尾小"><input type="hidden" id="k_WDX2_X" value="WDX">尾小</th>
+
+        <td class="GWDX2_X odds" id="o_WDX2_X">1.986</td>
+        <td class="GWDX2_X amount ha" id="a_WDX2_X"><input name="WDX2_X" class="ba"></td>
+        <th class="GHDS2_S name" id="t_HDS2_S" title="第二球 合数双"><input type="hidden" id="k_HDS2_S" value="HDS">合数双</th>
+
+        <td class="GHDS2_S odds" id="o_HDS2_S">1.986</td>
+        <td class="GHDS2_S amount ha" id="a_HDS2_S"><input name="HDS2_S" class="ba"></td>
+    </tr>
+    <tr>
+        <th class="GFW2_0 name" id="t_FW2_0" title="第二球 东"><input type="hidden" id="k_FW2_0" value="FW">东</th>
+
+        <td class="GFW2_0 odds" id="o_FW2_0">3.699</td>
+        <td class="GFW2_0 amount ha" id="a_FW2_0"><input name="FW2_0" class="ba"></td>
+        <th class="GFW2_1 name" id="t_FW2_1" title="第二球 南"><input type="hidden" id="k_FW2_1" value="FW">南</th>
+
+        <td class="GFW2_1 odds" id="o_FW2_1">3.699</td>
+        <td class="GFW2_1 amount ha" id="a_FW2_1"><input name="FW2_1" class="ba"></td>
+        <th class="GFW2_2 name" id="t_FW2_2" title="第二球 西"><input type="hidden" id="k_FW2_2" value="FW">西</th>
+
+        <td class="GFW2_2 odds" id="o_FW2_2">3.699</td>
+        <td class="GFW2_2 amount ha" id="a_FW2_2"><input name="FW2_2" class="ba"></td>
+        <th class="GFW2_3 name" id="t_FW2_3" title="第二球 北"><input type="hidden" id="k_FW2_3" value="FW">北</th>
+
+        <td class="GFW2_3 odds" id="o_FW2_3">3.699</td>
+        <td class="GFW2_3 amount ha" id="a_FW2_3"><input name="FW2_3" class="ba"></td>
+    </tr>
+    <tr>
+        <th class="GZFB2_0 name" id="t_ZFB2_0" title="第二球 中"><input type="hidden" id="k_ZFB2_0" value="ZFB">中</th>
+
+        <td class="GZFB2_0 odds" id="o_ZFB2_0">2.726</td>
+        <td class="GZFB2_0 amount ha" id="a_ZFB2_0"><input name="ZFB2_0" class="ba"></td>
+        <th class="GZFB2_1 name" id="t_ZFB2_1" title="第二球 发"><input type="hidden" id="k_ZFB2_1" value="ZFB">发</th>
+
+        <td class="GZFB2_1 odds" id="o_ZFB2_1">2.726</td>
+        <td class="GZFB2_1 amount ha" id="a_ZFB2_1"><input name="ZFB2_1" class="ba"></td>
+        <th class="GZFB2_2 name" id="t_ZFB2_2" title="第二球 白"><input type="hidden" id="k_ZFB2_2" value="ZFB">白</th>
+
+        <td class="GZFB2_2 odds" id="o_ZFB2_2">2.906</td>
+        <td class="GZFB2_2 amount ha" id="a_ZFB2_2"><input name="ZFB2_2" class="ba"></td>
+        <th id="e_EP0" class="GEP0 name empty"></th><td class="GEP0 odds empty"></td><td class="GEP0 amount ha"></td>
+    </tr>
+    <tr>
+        <th class="GLH2_L name" id="t_LH2_L" title="第二球 龙"><input type="hidden" id="k_LH2_L" value="LH">龙</th>
+
+        <td class="GLH2_L odds" id="o_LH2_L">1.986</td>
+        <td class="GLH2_L amount ha" id="a_LH2_L"><input name="LH2_L" class="ba"></td>
+        <th class="GLH2_H name" id="t_LH2_H" title="第二球 虎"><input type="hidden" id="k_LH2_H" value="LH">虎</th>
+
+        <td class="GLH2_H odds" id="o_LH2_H">1.986</td>
+        <td class="GLH2_H amount ha" id="a_LH2_H"><input name="LH2_H" class="ba"></td>
+        <th id="e_EP1" class="GEP1 name empty"></th><td class="GEP1 odds empty"></td><td class="GEP1 amount ha"></td>
+        <th id="e_EP2" class="GEP2 name empty"></th><td class="GEP2 odds empty"></td><td class="GEP2 amount ha"></td>
+    </tr>
+    </tbody></table>

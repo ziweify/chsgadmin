@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://0123769548-zx.5ddp6kmp70.com/util/credit-rules/SSCJSC.html -->
+<html style="--primaryColor:#null;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style type="text/css">
+      :root {
+        font-size: 13px;
+      }
+
+      body {
+        font-family: "Microsoft YaHei", Tahoma, Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #333;
+        cursor: default;
+        text-decoration: none;
+      }
+
+      a[target] {
+        color: #2836f4;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+
+      p {
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+
+      ol,
+      ul {
+        padding-left: 20px;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+
+      ol li,
+      ul li {
+        margin: 8px 0;
+      }
+
+      ul.time-ul {
+        list-style-type: square;
+        margin-top: -10px;
+      }
+
+      ul.time-ul li {
+        margin: 5px 0;
+      }
+
+      ul.inner-ul {
+        list-style-type: circle;
+      }
+
+      .body-wrapper {
+        padding: 15px;
+      }
+
+      .stress {
+        font-weight: 600;
+      }
+
+      .rules .headline {
+        font-size: 1.05rem;
+      }
+
+      .rules ol li strong {
+        color: #000;
+      }
+    </style>
+  
+        <style>
+          body {
+            margin: 8px;
+          }
+          body.dark {
+            color: #fff !important;
+            background: #000;
+          }
+          body.dark strong {
+            color: #fff !important;
+          }
+          body a,
+          body.dark a {
+            color: var(--primaryColor) !important;
+          }
+          body.dark.bjl-rules.simple table th{
+            color: #000000;
+          }
+          body.dark.bjl-rules.simple table td {
+            color: #333333;
+          }
+          @media (min-width: 481px) and (max-width: 767px) {
+            body {
+              margin: 0;
+            }
+            #lottery {
+              display: none;
+            }
+          }
+          @media (min-width: 320px) and (max-width: 480px) {
+            body {
+              margin: 0;
+            }
+            #lottery {
+              display: none;
+            }
+          }
+        </style>
+      
+        <script type="text/javascript">
+          function checkDarkMode(currentUrl) {
+            var isDarkMode = getParameterByName("isDarkMode", currentUrl);
+            if (isDarkMode === "true") {
+              document.body.classList.add("dark");
+            }
+          }
+
+          function checkPrimaryColor(currentUrl) {
+            let root = document.documentElement;
+            const primaryColor = getParameterByName("primaryColor", currentUrl); 
+            root.style.setProperty('--primaryColor', "#" + primaryColor);
+          }
+          
+          function checkHrefShow(currentUrl) {
+            var isHrefShow = getParameterByName("isHrefShow", currentUrl);
+            if (isHrefShow === "false") {
+              document.querySelectorAll("a").forEach(function(item) {
+                item.href = "#";
+                item.removeAttribute("target");
+              })
+            }
+          }
+          
+          function change() {
+            var hrefShowParameter = getParameterByName("isHrefShow", location.href);
+            var darkModeParameter = getParameterByName("isDarkMode", location.href);
+            var primaryColorParameter = getParameterByName("primaryColor", location.href);
+              
+            location.href = document.getElementById("lottery").value + ".html?primaryColor="  + primaryColorParameter + ".html?isHrefShow=" + hrefShowParameter + "&isDarkMode=" + darkModeParameter;
+            checkHrefShow(location.href);
+            checkDarkMode(location.href);
+            checkPrimaryColor(location.href);
+          }
+
+          function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return "";
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+          }
+          
+          document.addEventListener("DOMContentLoaded", function() {
+            // var regex = /(http.+\.html)/g;
+            var currentUrl = location.href;
+            // var truncateUrl = currentUrl.match(regex)[0];
+            // var currentLotteryArr = truncateUrl.split("/");
+            // var currentLottery = currentLotteryArr[
+            //   currentLotteryArr.length - 1
+            // ].replace(".html", "");
+            // document.querySelector(
+            //   '#lottery option[value="' + currentLottery + '"]'
+            // ).selected = true;
+
+            var isHrefShow = getParameterByName("isHrefShow", currentUrl);
+            if (isHrefShow === "false") {
+              document.querySelectorAll("a").forEach(function(item) {
+                item.href = "#";
+                item.removeAttribute("target");
+              })
+            }
+            
+            checkHrefShow(currentUrl)
+            checkDarkMode(currentUrl);
+            checkPrimaryColor(currentUrl);
+          });
+        </script>
+      </head>
+
+  <body>
+    <div class="body-wrapper">
+      <div class="notice">
+        <h4>重要声明</h4>
+        <ol>
+          <li>客户一经在本公司开户或投注，即被视为已接受以下规则。</li>
+          <li>为避免出现争议，请您务必在下注之后查看「下注状况」。</li>
+          <li>任何投诉必须在开奖之前提出，公司不接受任何开奖之后的投诉。</li>
+          <li>
+            若公布赔率时出现任何打字错误或非故意人为失误，所有（相关）注单一律不算。
+          </li>
+          <li>
+            公布之所有赔率为浮动赔率，下注时请确认当前赔率及金额，下注确认后一律不能修改。
+          </li>
+          <li>
+            开奖后接受的投注，一律视为投机行为，[本局注单一律不返还本金及盈利]，敬请会员遵守游戏规则。
+          </li>
+          <li>
+            若本后台发现客户以不正当的手法投注或投注注单不正常，后台将有权「取消」相应之注单，客户不得有任何异议。
+          </li>
+          <li>
+            如因软件或线路问题导致交易内容或其他与账号设定不符合的情形，请在开奖前立即与本后台联络反映问题，否则本后台将以资料库中的数据为准。
+          </li>
+          <li>
+            倘若发生遭黑客入侵破坏行为或不可抗拒之灾害导致网站故障或资料损坏、数据丢失等情况，后台将以资料库数据为依据。如发现玩家使用不正当程序上获得利益，本公司有权要求取消所获得之不当得利。
+          </li>
+          <li>
+            各级管理人员及客户必须对本系统各项功能进行了解及熟悉，任何违反正常使用的操作，后台概不负责。
+          </li>
+          <li>请认真了解各款彩票游戏规则。</li>
+          <li>
+            如果会员信用额度超额或者为负数引起的争议，一律以公司处理为准。
+          </li>
+          <li>
+            客户有责任确保自己的账户及密码保密，如果因客户的账户、密码简单，或因泄露导致被盗用，造成的损失将由客户本人承担；同时应立即通知本公司，并更改其个人详细资料。
+          </li>
+          <li>
+            若官方福彩中心开奖错误导致本系统采集数据同时出错情况下，当期错误的所有注单以福彩中心官方当日最新数据为标准重新结算！在此特别声明，客户不得有任何异议。
+          </li>
+          <li>
+            本公司将不承担任何因客戶违反当地相关交易法令，所引起之任何责任。
+          </li>
+          <li>本系统所有投注皆含本金。</li>
+          <li>本公司有权保留一切争议事项及最后的决策权。</li>
+        </ol>
+      </div>
+
+      <div class="disclaimer">
+        <h4>
+          极速时时彩(原名：<a href="http://speedylot88.com/speedy5-result.php" target="_blank">“Speed5”</a>)规则说明
+        </h4>
+        <p>
+          <strong>官方网站:</strong>
+          <a href="http://speedylot88.com/speedy5-result.php" target="_blank">http://speedylot88.com/speedy5-result.php</a>
+        </p>
+        <p>
+          “极速时时彩”为引进欧洲博彩公司开奖设备，由菲律宾博彩执照公司审核监控，联合开发的彩票游戏，营业时间为北京时间(GMT+8)每天上午06:59:15到凌晨05:59:15，每75秒开奖一次，每天开奖1104期。
+        </p>
+      </div>
+
+      <div class="rules">
+        <h4 class="headline">具体游戏规则如下:</h4>
+        <ol>
+          <!-- 1. -->
+          <li>
+            <strong>第一球~第五球</strong>
+            <ul>
+              <li>
+                <span class="stress">第一球特~第五球：</span>于万仟佰拾个任选一位，自0~9任选1个号进行投注，当开奖结果与所选的定位与号码相同且顺序一致时，即为中奖。如第一球开出号码8，下注第一球为8为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">单双大小：</span>根据相应单项投注第一球特 ~
+                第五球特开出的球号，判断胜负。
+              </li>
+              <li>
+                <span class="stress">大小：</span>数字为5、6、7、8、9时为“大”，若为0、1、2、3、4时为“小”，当投注位数大小与开奖结果的位数大小相符时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">单双：</span>数字为1、3、5、7、9时为“单”，若为0、2、4、6、8时为“双”，当投注位数单双与开奖结果的位数单双相符时，即为中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 2. -->
+          <li>
+            <strong>总和-龙虎和</strong>
+            <ul>
+              <li>
+                <span class="stress">总和大小：</span>加总当期开奖结果五个彩球号码，总和值0~22为小、23~45为大，当投注之注项与开奖结果相符时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">总和单双：</span>加总当期开奖结果五个彩球号码，以其加总值的单双作为开奖依据，当投注之注项与开奖结果相符时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">龙：</span>开出之号码第一球（万位）的中奖号码大于第五球（个位）的中奖号码（0为最小，9为最大），如出和局为打和。如第一球开出9，第五球开出2，投注“龙”即为中奖。
+              </li>
+              <li>
+                <span class="stress">虎：</span>开出之号码第一球（万位）的中奖号码小于第五球（个位）的中奖号码（0为最小，9为最大），如出和局为打和。如第一球开出7，第五球开出9，投注“虎”即为中奖。
+              </li>
+              <li>
+                <span class="stress">和：</span>开出之号码第一球（万位）的中奖号码等于第五球（个位）的中奖号码。如万位开出1，个位开出1，投注“和”即为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 3. -->
+          <li>
+            <strong>前三、中三、后三特殊玩法</strong>
+            <ul>
+              <li>前三定义： [万位、仟位、佰位]</li>
+              <li>中三定义： [仟位、佰位、拾位]</li>
+              <li>后三定义： [佰位、拾位、个位]</li>
+              <li>
+                <span class="stress">豹子：</span>三字同号，例如：111、222。----如中奖号码的三位数字相同，则投注豹子者视为中奖，其它视为不中奖。
+              </li>
+              <li>
+                <span class="stress">顺子：</span>三位数字相连，不分顺序。----如中奖号码为123、901、321、546等，则投注顺子者视为中奖，其它视为不中奖。
+              </li>
+              <li>
+                <span class="stress">对子：</span>任意两位数字相同（不包括豹子）。----如中奖号码为001，112、696，则投注对子者视为中奖，其它视为不中奖。如果开奖号码为豹子,则投注对子视为不中奖。
+              </li>
+              <li>
+                <span class="stress">半顺：</span>任意两位数字相连，不分顺序（不包括顺子、对子）。----如中奖号码为125、540、390、706，则投注半顺者视为中奖，其它视为不中奖。如果开奖号码为顺子、对子,则投注半顺视为不中奖。
+              </li>
+              <li>
+                <span class="stress">杂六：</span>不包括豹子、顺子、对子、半顺的所有中奖号码。----如中奖号码为157，中奖号码位数之间无关联性，则投注杂六者视为中奖，其它视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 4. -->
+          <li>
+            <strong>一字组合</strong>
+            <ul>
+              <li>
+                <span class="stress">前三：</span>0~9任选1个号进行投注，当开奖结果[万位、仟位、佰位]任一数与所选的号码相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">中三：</span>0~9任选1个号进行投注，当开奖结果[仟位、佰位、拾位]任一数与所选的号码相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">后三：</span>0~9任选1个号进行投注，当开奖结果[佰位、拾位、个位]任一数与所选的号码相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">全五：</span>0~9任选1个号进行投注，当开奖结果[万位、仟位、佰位、拾位、个位]任一数与所选的号码相同时，即为中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 5. -->
+          <li>
+            <strong>二字组合</strong>
+            <ul>
+              <li>
+                <span class="stress">前三：</span>0~9任选2个号进行投注，当开奖结果[万位、仟位、佰位]任二数与所选的号码相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">中三：</span>0~9任选2个号进行投注，当开奖结果[仟位、佰位、拾位]任二数与所选的号码相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">后三：</span>0~9任选2个号进行投注，当开奖结果[佰位、拾位、个位]任二数与所选的号码相同时，即为中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 6. -->
+          <li>
+            <strong>二字定位</strong>
+            <ul>
+              <li>
+                <span class="stress">万千：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第一球（万位）及第二球（千位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">万佰：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第一球（万位）及第三球（佰位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">万拾：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第一球（万位）及第四球（拾位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">万个：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第一球（万位）及第五球（个位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">千佰：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第二球（千位）及第三球（佰位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">千拾：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第二球（千位）及第四球（拾位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">千个：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第二球（千位）及第五球（个位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">佰拾：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第三球（佰位）及第四球（拾位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">佰个：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第三球（佰位）及第五球（个位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">拾个：</span>在0~9中按顺序选择二个号码下注。如下注号码与开出之号码的第四球（拾位）及第五球（个位）相同且顺序一至则视为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 7. -->
+          <li>
+            <strong>二字和数</strong>
+            <ul>
+              <li>
+                <span class="stress">万千：</span>如开出之号码的第一球（万位）及第二球（千位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">万佰：</span>如开出之号码的第一球（万位）及第三球（佰位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">万拾：</span>如开出之号码的第一球（万位）及第四球（拾位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">万个：</span>如开出之号码的第一球（万位）及第五球（个位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">千佰：</span>如开出之号码的第二球（千位）及第三球（佰位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">千拾：</span>如开出之号码的第二球（千位）及第四球（拾位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">千个：</span>如开出之号码的第二球（千位）及第五球（个位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">佰拾：</span>如开出之号码的第三球（佰位）及第四球（拾位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">佰个：</span>如开出之号码的第三球（佰位）及第五球（个位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">拾个：</span>如开出之号码的第四球（拾位）及第五球（个位）总和值与下注选择的数值相同，则视为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 8. -->
+          <li>
+            <strong>二字和数尾数</strong>
+            <ul>
+              <li>
+                <span class="stress">万千：</span>开奖结果万仟二位数的总和值尾数若与投注万仟二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">万佰：</span>开奖结果万佰二位数的总和值尾数若与投注万佰二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">万拾：</span>开奖结果万拾二位数的总和值尾数若与投注万拾二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">万个：</span>开奖结果万个二位数的总和值尾数若与投注万个二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">千佰：</span>开奖结果仟佰二位数的总和值尾数若与投注仟佰二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">千拾：</span>开奖结果仟拾二位数的总和值尾数若与投注仟拾二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">千个：</span>开奖结果仟个二位数的总和值尾数若与投注仟个二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">佰拾：</span>开奖结果佰拾二位数的总和值尾数若与投注佰拾二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">佰个：</span>开奖结果佰个二位数的总和值尾数若与投注佰个二位数的总和值尾数相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">拾个：</span>开奖结果拾个二位数的总和值尾数若与投注拾个二位数的总和值尾数相同时，即为中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 9. -->
+          <li>
+            <strong>三字组合</strong>
+            <ul>
+              <li>
+                <span class="stress">前三：</span>在0~9中选择三个号码下注（不分顺序）。如下注号码在开出之号码的第一球（万位）、第二球（千位）及第三球（佰位）中出现（不分顺序）则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">中三：</span>在0~9中选择三个号码下注（不分顺序）。如下注号码在开出之号码的第二球（千位）、第三球（佰位）及第四球（拾位）中出现（不分顺序）则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">后三：</span>在0~9中选择三个号码下注（不分顺序）。如下注号码在开出之号码的第三球（佰位）、第四球（拾位）及第五球（个位）中出现（不分顺序）则视为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 10. -->
+          <li>
+            <strong>三字定位</strong>
+            <ul>
+              <li>
+                <span class="stress">前三：</span>在0~9中按顺序选择三个号码下注。如下注号码与开出之号码的第一球（万位）、第二球（千位）及第三球（佰位）相同且顺序一致则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">中三：</span>在0~9中按顺序选择三个号码下注。如下注号码与开出之号码的第二球（千位）、第三球（佰位）及第四球（拾位）相同且顺序一致则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">后三：</span>在0~9中按顺序选择三个号码下注。如下注号码与开出之号码的第三球（佰位）、第四球（拾位）及第五球（个位）相同且顺序一致则视为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 11. -->
+          <li>
+            <strong>三字和数</strong>
+            <ul>
+              <li>
+                <span class="stress">前三：</span>开奖结果的第一球（万位）、第二球（千位）及第三球（佰位）总和值若与投注前三数字的总和值相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">中三：</span>开奖结果的第二球（千位）、第三球（佰位）及第四球（拾位）总和值若与投注前三数字的总和值相同时，即为中奖。
+              </li>
+              <li>
+                <span class="stress">后三：</span>开奖结果的第三球（佰位）、第四球（拾位）及第五球（个位）总和值若与投注前三数字的总和值相同时，即为中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 12. -->
+          <li>
+            <strong>三字和数尾数</strong>
+            <ul>
+              <li>
+                <span class="stress">前三：</span>在0~9中选择一个号码下注。如下注号码与开出之号码的第一球（万位）、第二球（千位）及第三球（佰位）总和值之尾数相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">中三：</span>在0~9中选择一个号码下注。如下注号码与开出之号码的第二球（千位）、第三球（佰位）及第四球（拾位）总和值之尾数相同，则视为中奖，其余情形视为不中奖。
+              </li>
+              <li>
+                <span class="stress">后三：</span>在0~9中选择一个号码下注。如下注号码与开出之号码的第三球（佰位）、第四球（拾位）及第五球（个位）总和值之尾数相同，则视为中奖，其余情形视为不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 13. -->
+          <li>
+            <strong>组选三</strong>
+            <ul>
+              <li>
+                在前三球、中三球、后三球中挑选5~10个号码，不同个数号码有其相对应的赔率。当开奖结果都出现在所下注的号码中，且其中有一个号码重复则算中奖。
+              </li>
+              <li>举例：112、344，若是开出豹子视为不中奖 (扣除本金)。。</li>
+              <li>【附注】："豹子"为三字同号，例如：111、222。</li>
+            </ul>
+          </li>
+          <!-- 14. -->
+          <li>
+            <strong>组选六</strong>
+            <ul>
+              <li>
+                在前三球、中三球、后三球中挑选4~8个号码，不同个数号码有其相对应的赔率。当开奖结果都出现在所下注的号码中，且没有任何号码重复，则视为中奖。
+              </li>
+              <li>
+                举例：如果是选择(1、2、3、4)，则开奖结果为123、124、134、234都中奖，其他都是不中奖。例如：112、133、145、444等都是不中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 15. -->
+          <li>
+            <strong>复式组合</strong>
+            <ul>
+              <li>
+                在前三球、中三球、后三球中分别选择号码组合。例如在后三选择3x2x4，即佰位数选3个号码，拾位数选2个号码，个位数选4个号码或选择3x3x3，如每个位数所选择的号码都对应出现在开奖结果中，则为中奖。
+                此游戏选号有以下限制：
+              </li>
+              <li>每一位数最少要选择1个号码，最多选10个号码。</li>
+              <li>
+                三个位数共选取号码数量，最少需选择9个号，最多选择21个号码。
+              </li>
+            </ul>
+          </li>
+          <!-- 16. -->
+          <li>
+            <strong>跨度</strong>
+            <ul>
+              <li>
+                <span class="stress">前三：</span>以开奖结果[万位、仟位、佰位]的最大差距（跨度），作为中奖依据。会员可以选择0~9的任一跨度。※举例：开奖结果为3、4、8、7、6。中奖的跨度为5。（最大号码8减最小号码3=5）。
+              </li>
+              <li>
+                <span class="stress">中三：</span>以开奖结果[仟位、佰位、拾位]的最大差距（跨度），作为中奖依据。会员可以选择0~9的任一跨度。※举例：开奖结果为3、4、8、7、6。中奖的跨度为4。（最大号码8减最小号码4=4）。
+              </li>
+              <li>
+                <span class="stress">后三：</span>以开奖结果[佰位、拾位、个位]的最大差距（跨度），作为中奖依据。会员可以选择0~9的任一跨度。※举例：开奖结果为3、4、8、7、6。中奖的跨度为2。（最大号码8减最小号码6=2）。
+              </li>
+              <li>若开奖结果三号码都相同，投注0者中奖，其馀为不中奖。</li>
+            </ul>
+          </li>
+          <!-- 17 -->
+          <li>
+            <strong>斗牛</strong>
+            <ul>
+              <li>
+                <span>中奖说明</span>：开奖号码任意3个号码相加的和为10的倍数（0为10）即为有牛，否则为无牛，剩余的两个号码和数的尾数即为牛几。所选的形态与开奖的形态相同，即为中奖。
+              </li>
+              <li>
+                <span class="stress">牛牛</span>：开奖号：56937，任意3个号码的和值为10的倍数，后剩余的两个号码和值也为10的倍数（0看做10），即为中奖
+              </li>
+              <li>
+                <span class="stress">无牛</span>：开奖号：22381，任意3个号码相加无法组成10的倍数，即中奖。
+              </li>
+              <li>
+                <span class="stress">牛八</span>：开奖号：99253，任意3个号码和值为10的倍数（2+3+5或9+9+2），剩余的2个号码和值为尾数为8（9+9或5+3），即为中奖。
+              </li>
+              <li>
+                <span class="stress">牛大</span>：牌型为，牛牛，牛9、牛8、牛7、牛6，即中奖。
+              </li>
+              <li>
+                <span class="stress">牛小</span>：牌型为，牛5，牛4、牛3、牛2、牛1，即中奖。
+              </li>
+              <li>
+                <span class="stress">牛单</span>：牌型为，牛1，牛3、牛5、牛7、牛9，即中奖。
+              </li>
+              <li>
+                <span class="stress">牛双</span>：牌型为，牛2，牛4、牛6、牛8、牛牛，即中奖。
+              </li>
+            </ul>
+          </li>
+          <!-- 18 -->
+          <li>
+            <strong>斗牛梭哈</strong>
+            <ul>
+              <li>
+                <span>五条</span>：开奖的五个号码全部相同，例如：22222、66666、88888 投注：五条
+                中奖，其它不中奖。
+              </li>
+              <li>
+                <span>四条</span>：开奖的五个号码中有四个号码相同，例如：22221、66663、88885
+                投注：四条 中奖，其它不中奖。
+              </li>
+              <li>
+                <span>葫芦</span>：开奖的五个号码中有三个号码相同(三条)另外两个号码也相同(一对)，例如：22211、66633。
+                投注：葫芦 中奖，其它不中奖。
+              </li>
+              <li>
+                <span>顺子</span>：开奖的五个号码位置不限，出现包含下例十组号码：01234、12345、23456、34567、45678、56789、67890、78901、89012、90123，出现以上号码即算中奖。投注：顺子
+                中奖，其它不中奖。
+              </li>
+              <li>
+                <span>三条</span>：开奖的五个号码中有三个号码相同另外两个不相同，例如：13511、20252、22231、66623、88895
+                投注：三条 中奖，其它不中奖。
+              </li>
+              <li>
+                <span>两对</span>：开奖的五个号码中有两组号码相同，例如：22166、66355、82668
+                投注：两对 中奖，其它不中奖。
+              </li>
+              <li>
+                <span>一对</span>：开奖的五个号码中只有一组号码相同，例如：22168、66315、82968
+                投注：一对 中奖，其它不中奖。
+              </li>
+              <li>
+                <span>高牌</span>：开奖号码不是五条、四条、葫芦、三条、顺子、两对、一对的其它所有开奖号码，例如：23186、13579、21968
+                投注：高牌 中奖，其它不中奖。
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  
+
+</body></html>

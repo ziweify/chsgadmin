@@ -1,0 +1,1 @@
+var lotCode=lotCode.pailie3,boxId="#headerData",headMethod={};headMethod.loadHeadData=function(e){setTimeout(function(){pubmethod.ajaxHead.qgc(e)},config.kaiCountTimes)},headMethod.headData=function(e,a){pubmethod.creatHead.qgc(e,a),tools.resetRed(a),tools.setTimefun_fc3d()};

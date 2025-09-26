@@ -1,0 +1,155 @@
+@CHARSET "UTF-8";
+
+.data_table td {
+	text-align: center;
+	padding: 0 1px;
+}
+
+.data_table tbody th {
+	background: #F2F2F2;
+}
+
+.oddspanel .limit * {
+	color: red;
+}
+
+.data_table input {
+	width: 60px;
+}
+
+.data_table .flag {
+	width: 70px;
+}
+
+.data_table .selected,.data_table .selected th {
+	background: #ffc214
+}
+
+.tab {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tab li {
+	float: left;
+	cursor: pointer;
+	height: 26px;
+	line-height: 26px;
+	margin: 0 5px;
+}
+
+.tab .on {
+	color: red;
+}
+
+.quick {
+	width: 100%;
+	border-bottom: #b5d6e6 1px solid;
+	border-right: #b5d6e6 1px solid;
+}
+
+.quick th,.quick td {
+	border-top: 1px solid #b9c2cb;
+	border-left: 1px solid #b9c2cb;
+	height: 24px;
+	line-height: 24px;
+}
+
+.quick tbody th {
+	background: #F2F2F2;
+}
+
+.quick .title {
+	width: 34%;
+}
+
+.quick .range {
+	width: 10%;
+}
+
+.quick .control {
+	width: 80px;
+}
+
+.quick .t_btn {
+	height: 40px;
+}
+
+.quick .button {
+	margin: 0 5px;
+}
+
+.game_tab .on {
+	color: #FF8C3F;
+	font-weight: bold;
+}
+
+.game_tab label {
+	margin-top: 10px;
+	float: left;
+}
+
+.panel {
+	margin-bottom: 20px;
+}
+
+.t_BALL .color {
+	background-position: right top;
+}
+
+.t_LM .color {
+	background-position: right -150px;
+}
+
+.t_MP .color {
+	background-position: right -100px;
+}
+
+.t_ITEM .color {
+	background-position: right -200px;
+}
+
+.data_table .color {
+	background-image: url("images/td_ts.gif");
+	background-position: right -50px;
+	background-repeat: no-repeat;
+}
+
+#quickSetting .input_panel input {
+	width: 60px;
+}
+
+#quickSetting .menu a {
+	margin: 0 5px;
+}
+
+#details {
+	background: white;
+}
+
+.quick_panel tbody th {
+	width: 240px;
+}
+
+td .changed {
+	background: #8EFF7A;
+}
+
+tbody .max,.max input {
+	color: red;
+}
+
+.game_tab_class ul {
+	float: left;
+}
+
+.game_tab_class input {
+	float: right;
+	margin: 3px 5px 0 0;
+	color: red;
+}
+
+.odds_down tbody th {
+	width: 150px;
+}
