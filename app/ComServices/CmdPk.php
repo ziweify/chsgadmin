@@ -20,19 +20,12 @@ class CmdPk extends CmdBase
     //    当梭哈时候, 需要提供 amount金额.
     public function commandBetting($content, $amount_all = 0, $json = false)
     {
-        //分割字符串
-        $words = explode("#", $content);
-        foreach ($words as $word) {
-            
-        }
-
         $err = '';
         $data = null;
         $status = 0;
         try
         {
             //分开成两条
-            //preg_match("/^([0-9]+)([大小单双龙]+)\/?(\d+)?$/u", $content, $matches);
             preg_match("/^([0-9]+)([大小单双龙虎]+)\/?(\d*|梭哈)$/u", $content, $matches);
             $count = count($matches);
             if($count > 0){
@@ -42,13 +35,7 @@ class CmdPk extends CmdBase
             }
 
             //大小单双龙 -- 
-            //适配以下
-            //1346/大单10/1000
-            //1236/大/1000
-            //1234大1000
-            //preg_match("/^([0-9]+)?\/?([大小单双龙0123456789]+)\/?(\d+)+$/u", $content, $matches);
             preg_match("/^([0-9]+)?\/?([大小单双龙虎0123456789]+)\/?(\d*|梭哈)$/u", $content, $matches);
-            //var_dump($matches);  
             $count = count($matches);
             if($count > 0){
                 $status = 1;
@@ -56,10 +43,8 @@ class CmdPk extends CmdBase
                 return;
             }
 
-
             //和类型
             preg_match("/^(冠亚和|和|冠亚)\/?([0-9大小单双]+)\/(\d*|梭哈)+$/u", $content, $matches);
-            //dump($matches);
             if(count($matches)){
                 $status = 1;
                 $data = $this->BetArrayGyh($matches[1], $matches[2], $matches[3], $amount_all, $err); 
@@ -68,7 +53,6 @@ class CmdPk extends CmdBase
 
             //位置类型
             preg_match("/^(\d+)\/(\d+)\/(\d*|梭哈)+$/u", $content, $matches);
-            //dump($matches);
             if(count($matches)){
                 $status = 1;
                 $data = $this->BetArrayWeizhi($matches[1], $matches[2], $matches[3], $amount_all, $err); 
@@ -77,15 +61,11 @@ class CmdPk extends CmdBase
 
             //前三类型
             preg_match("/^(前|后)(一|二|三|四|五|六|七|八|九|十|1|2|3|4|5|6|7|8|9|0)\/?(\d+)\/(\d*|梭哈)+$/u", $content, $matches);
-            //dump($matches);
             if(count($matches)){
                 $status = 1;
                 $data = $this->BetArrayQianhou($matches[1], $matches[2], $matches[3], $matches[4], $err); 
                 return;
             }
-
-            //梭哈类型
-            //要匹配两种类型 1/123/梭哈  =>  1车下123等额
 
         }
         catch(\Exception $e)

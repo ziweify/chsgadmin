@@ -20,6 +20,28 @@ class CmdBingo extends CmdBase
     //    当梭哈时候, 需要提供 amount金额.
     public function commandBetting($content, $amount_all = 0, $json = false)
     {
+        try {
+            // 优先使用统一词法分析引擎
+            $unifiedParser = new UnifiedBettingParser();
+            $result = $unifiedParser->parseBetting($content, $amount_all);
+            
+            if ($result['status'] > 0) {
+                return $this->CmdResult($result['status'], $result['data'], $result['msg'], $json);
+            }
+            
+            // 如果统一解析失败，尝试原有解析方案作为备用
+            return $this->legacyCommandBetting($content, $amount_all, $json);
+            
+        } catch (\Exception $e) {
+            return $this->CmdResult(-1, [], $e->getMessage(), $json);
+        }
+    }
+    
+    /**
+     * 原有解析方案作为备用
+     */
+    private function legacyCommandBetting($content, $amount_all = 0, $json = false)
+    {
         $err = '';
         $data = null;
         $status = 0;
@@ -46,10 +68,8 @@ class CmdBingo extends CmdBase
             $err = $e->getMessage();
             $status = -1;
         }
-        finally
-        {
-            return $this->CmdResult($status, $data, $err, $json);
-        }
+        
+        return $this->CmdResult($status, $data, $err, $json);
     }
 
     /**

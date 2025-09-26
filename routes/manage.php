@@ -19,6 +19,15 @@ Route::get('/test-redirect', function(Request $request) {
     return swoole_redirect('/test-middleware');
 });
 
+//测试宾果游戏下注词法分析器
+Route::get('/test-betting-parser', 'Manage\TestBettingParser@test');
+Route::get('/test-betting-parser-custom', 'Manage\TestBettingParser@testCustom');
+
+//简单测试路由
+Route::get('/test-simple', function() {
+    return response()->json(['message' => 'Simple test works', 'time' => time()]);
+});
+
 //测试URL生成
 Route::get('/test-url', function(Request $request) {
     return response()->json([
