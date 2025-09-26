@@ -36,6 +36,12 @@ Route::prefix('api')->group(function (){
             Route::get('/getBettingCenterRecords','Member\app\CommonController@getBettingCenterRecords');//获取打单中心记录
             Route::get('/getTodayBettingFailCount','Member\app\CommonController@getTodayBettingFailCount');//获取今日失败次数
             Route::post('/increaseBettingFailCount','Member\app\CommonController@increaseBettingFailCount');//增加失败次数
+            Route::get('/getBettingConfig','Member\app\CommonController@getBettingConfig');//获取打单配置
+            Route::get('/getBettingSites','Member\app\CommonController@getBettingSites');//获取打单站点
+            Route::post('/updateBettingConfig','Member\app\CommonController@updateBettingConfig');//更新打单配置
+            Route::post('/updateSiteStatus','Member\app\CommonController@updateSiteStatus');//更新站点状态
+            Route::post('/deleteSite','Member\app\CommonController@deleteSite');//删除站点
+            Route::post('/addSite','Member\app\CommonController@addSite');//添加站点
         });
     });
     Route::prefix('member')->group(function (){

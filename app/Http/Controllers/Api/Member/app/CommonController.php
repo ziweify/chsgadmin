@@ -260,7 +260,7 @@ class CommonController
     }
 
     /**
-     * 获取打单中心记录
+     * 获取打单中心记录 - 真实数据
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
@@ -269,49 +269,57 @@ class CommonController
         $gid = $request->input('gid');
         $uid = $request->uid;
         $ruid = $request->ruid;
+        $page = $request->input('page', 1);
+        $pageSize = $request->input('pageSize', 10);
         
-        // 生成更丰富的示例数据
-        $records = [
-            [
-                'period' => '91',
-                'gameName' => '宾果',
-                'betCount' => 8,
-                'createdTime' => date('H:i:s'),
-                'status' => '成功'
-            ],
-            [
-                'period' => '90',
-                'gameName' => '宾果',
-                'betCount' => 5,
-                'createdTime' => date('H:i:s', time() - 300),
-                'status' => '失败',
-                'failReason' => '余额不足'
-            ],
-            [
-                'period' => '89',
-                'gameName' => '宾果',
-                'betCount' => 3,
-                'createdTime' => date('H:i:s', time() - 600),
-                'status' => '成功'
-            ],
-            [
-                'period' => '88',
-                'gameName' => '宾果',
-                'betCount' => 12,
-                'createdTime' => date('H:i:s', time() - 900),
-                'status' => '失败',
-                'failReason' => '投注金额超限'
-            ],
-            [
-                'period' => '87',
-                'gameName' => '宾果',
-                'betCount' => 6,
-                'createdTime' => date('H:i:s', time() - 1200),
-                'status' => '成功'
-            ]
-        ];
-        
-        return AppJson::success('获取成功', ['records' => $records]);
+        try {
+            // 获取当前日期，查询今日的打单记录
+            $thisdate = \App\ort\common\ComFunc::getthisdateend();
+            $db = \Illuminate\Support\Facades\DB::connection();
+            
+            // 获取当前的打单表名
+            $flytb = \App\ort\sgwin\SGUtils::getcureflytable(false);
+            
+            // 检查表是否存在
+            $tables = $db->select("SHOW TABLES LIKE '$flytb'");
+            if (empty($tables)) {
+                return AppJson::success('获取成功', ['records' => [], 'total' => 0]);
+            }
+            
+            // 查询打单记录
+            $query = $db->table($flytb)
+                ->where('ruid', $ruid);
+                
+            if ($gid) {
+                $query->where('gid', $gid);
+            }
+            
+            $totalCount = $query->count();
+            
+            $records = $query->orderBy('id', 'desc')
+                ->offset(($page - 1) * $pageSize)
+                ->limit($pageSize)
+                ->get();
+            
+            // 获取游戏名称缓存
+            $gameNames = [];
+            foreach ($records as &$record) {
+                if (!isset($gameNames[$record->gid])) {
+                    $gameNames[$record->gid] = \App\Models\Game\Game::where('gid', $record->gid)->value('gname');
+                }
+                $record->gname = $gameNames[$record->gid] ?? '未知游戏';
+            }
+            
+            return AppJson::success('获取成功', [
+                'records' => $records,
+                'total' => $totalCount,
+                'hasMore' => $totalCount > $page * $pageSize
+            ]);
+            
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('获取打单记录失败: ' . $e->getMessage());
+            return AppJson::error('获取失败');
+        }
     }
     
     /**
@@ -354,5 +362,161 @@ class CommonController
         Cache::put($cacheKey, $currentCount + 1, $expiresAt);
         
         return AppJson::success('更新成功', ['failCount' => $currentCount + 1]);
+    }
+    
+    /**
+     * 获取打单配置
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getBettingConfig(Request $request)
+    {
+        $ruid = $request->ruid;
+        
+        try {
+            $config = \App\Models\Game\Userroom::where('userid', $ruid)
+                ->select(['outbet_switch', 'outbet_mode', 'outbet_overtime'])
+                ->first();
+            
+            if (!$config) {
+                return AppJson::error('用户房间配置不存在');
+            }
+                
+            $result = [
+                'enabled' => $config->outbet_switch == 1,
+                'mode' => $config->outbet_mode ?? 3,
+                'overtime' => $config->outbet_overtime ?? 30
+            ];
+            
+            return AppJson::success('获取成功', $result);
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('获取打单配置失败: ' . $e->getMessage());
+            return AppJson::error('获取配置失败: ' . $e->getMessage());
+        }
+    }
+    
+    /**
+     * 获取打单站点列表
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getBettingSites(Request $request)
+    {
+        $ruid = $request->ruid;
+        
+        try {
+            $sites = \App\Models\Game\OutbetSite::where('ruid', $ruid)
+                ->select(['id', 'name', 'type', 'enabled', 'lixiancount', 'onlinecount', 'yichangcount', 'totalbalance', 'totalbet', 'totalwin', 'main_fu_type', 'create_time'])
+                ->get();
+                
+            $result = [];
+            foreach ($sites as $site) {
+                // 主副站类型映射
+                $mainFuTypeMap = [
+                    1 => '主站',
+                    2 => '副站',
+                    3 => '混合'
+                ];
+                
+                $result[] = [
+                    'id' => $site->id,
+                    'name' => $site->name,
+                    'type' => $site->type,
+                    'enabled' => $site->enabled == 1,
+                    'offlineCount' => $site->lixiancount ?? 0,
+                    'onlineCount' => $site->onlinecount ?? 0,
+                    'errorCount' => $site->yichangcount ?? 0,
+                    'balance' => number_format($site->totalbalance ?? 0, 2),
+                    'totalbet' => number_format($site->totalbet ?? 0, 2),
+                    'totalwin' => number_format($site->totalwin ?? 0, 2),
+                    'main_fu_typestr' => $mainFuTypeMap[$site->main_fu_type] ?? '-',
+                    'create_time' => date('Y-m-d H:i', strtotime($site->create_time))
+                ];
+            }
+            
+            return AppJson::success('获取成功', $result);
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('获取打单站点失败: ' . $e->getMessage());
+            return AppJson::error('获取站点失败');
+        }
+    }
+    
+    /**
+     * 更新打单配置
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function updateBettingConfig(Request $request)
+    {
+        $ruid = $request->ruid;
+        $enabled = $request->input('enabled', false);
+        $mode = $request->input('mode', 3);
+        
+        try {
+            \App\Models\Game\Userroom::where('userid', $ruid)->update([
+                'outbet_switch' => $enabled ? 1 : 0,
+                'outbet_mode' => $mode
+            ]);
+            
+            return AppJson::success('配置更新成功');
+        } catch (\Exception $e) {
+            return AppJson::error('更新配置失败');
+        }
+    }
+    
+    /**
+     * 更新站点状态
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function updateSiteStatus(Request $request)
+    {
+        $ruid = $request->ruid;
+        $id = $request->input('id');
+        $enabled = $request->input('enabled', false);
+        
+        try {
+            \App\Models\Game\OutbetSite::where(['id' => $id, 'ruid' => $ruid])
+                ->update(['enabled' => $enabled ? 1 : 0]);
+                
+            return AppJson::success('状态更新成功');
+        } catch (\Exception $e) {
+            return AppJson::error('状态更新失败');
+        }
+    }
+    
+    /**
+     * 删除站点
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function deleteSite(Request $request)
+    {
+        $ruid = $request->ruid;
+        $id = $request->input('id');
+        
+        try {
+            $deleted = \App\Models\Game\OutbetSite::where(['id' => $id, 'ruid' => $ruid])
+                ->delete();
+                
+            if ($deleted) {
+                return AppJson::success('删除成功');
+            } else {
+                return AppJson::error('站点不存在');
+            }
+        } catch (\Exception $e) {
+            return AppJson::error('删除失败');
+        }
+    }
+    
+    /**
+     * 添加站点 (暂时返回提示)
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function addSite(Request $request)
+    {
+        // TODO: 实现添加站点功能
+        return AppJson::error('添加站点功能开发中');
     }
 }
